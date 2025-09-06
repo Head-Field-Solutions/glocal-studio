@@ -1,0 +1,273 @@
+.masterHead {
+	width: 100%;
+	background: url("../assets/images/masterhead-bg.jpg") no-repeat top center;
+	background-size: cover;
+}
+
+.scrollableContainer {
+	overflow: hidden;
+	width: 100%;
+}
+
+.scrollableText {
+	font-size: clamp(8rem, 16vw, 16rem);
+	background-image: linear-gradient(to left, #ff005b, #00d4f3);
+	color: #ddd;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+	text-transform: uppercase;
+	line-height: 0.8;
+	font-weight: 300;
+}
+
+.strongerTeamsSection {
+	padding-top: 40px;
+}
+
+.smartHiringContent {
+	margin-top: 16px;
+}
+
+.weSpecializeText {
+	font-size: 20px;
+}
+
+.teamImage {
+	width: 100%;
+	display: flex;
+}
+
+.girlOnCallSection {
+	position: relative;
+}
+
+.girlOnCallImage {
+	width: 145%;
+	display: flex;
+	position: absolute;
+	bottom: 0;
+	left: -45%;
+}
+
+.weHandleSection {
+	background: #000 url("../assets/images/we-handle-section-bg.jpg") no-repeat bottom center;
+	background-size: contain;
+	padding-bottom: 240px;
+}
+
+.weHandleSubHeading {
+	color: #fff;
+}
+
+.weHandleHeading {
+	margin-bottom: 40px;
+}
+
+.simpleSection {
+	position: relative;
+}
+
+.textCenter {
+	text-align: center;
+}
+
+.caseStudySection {
+	padding-bottom: 140px;
+}
+
+.caseStudyImage {
+	text-align: center;
+
+	img {
+		width: 100%;
+	}
+}
+
+.caseStudyContent {
+	margin-top: -60px;
+}
+
+.caseStudyText {
+	font-size: 20px;
+}
+
+.pinkText {
+	color: #e4176c;
+}
+
+.blueText {
+	color: #28b3db;
+}
+
+.caseStudyList {
+	margin: 60px 0 120px;
+	position: relative;
+}
+
+// .processSection {
+// 	border-bottom: 32px solid #000;
+// }
+
+.processFirstSection {
+	padding: 100px;
+}
+
+.processBlackSection {
+	background: #000000;
+	color: #fff;
+	padding: 100px 100px 600px;
+}
+
+.processHeading {
+	color: #fff;
+	font-weight: 400;
+}
+
+.processText {
+	font-size: 20px;
+	margin: 40px 0;
+}
+
+.processButton {
+	position: relative;
+	z-index: 1;
+}
+
+.positionRelative {
+	position: relative;
+}
+
+.processSectionImage {
+	width: 100%;
+	display: block;
+	position: absolute;
+	bottom: 0;
+}
+
+.processBulletList {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	max-width: 75%;
+}
+
+.processBulletItem {
+	border-bottom: 1px solid #DBDBDB;
+	padding-bottom: 32px;
+	margin-bottom: 32px;
+	display: flex;
+
+	&:last-child {
+		margin-bottom: 0;
+		padding-bottom: 0;
+		border-bottom: 0;
+	}
+}
+
+.bulletIconImage {
+	width: 75px;
+}
+
+.processBulletText {
+	margin-left: 32px;
+}
+
+.bulletHeading {
+	font-size: 30px;
+	margin-bottom: 12px;
+	line-height: 1.2;
+	font-weight: 500;
+}
+
+.smartHiringButtons > div > div {
+	margin: 0;
+}
+
+.noMargin {
+	margin-right: 0;
+	margin-top: 32px;
+}
+
+@media screen and (max-width: 899px) {
+	.masterHead{
+		margin-bottom: 30px;
+	}
+
+	.weHandleSection{
+		padding-bottom: 140px;
+	}
+
+	.caseStudyContent{
+		margin-top: 32px;
+	}
+
+	.strongerTeamsSection{
+		padding-top: 0;
+	}
+
+	.teamImageContainer{
+		margin: 0 -80vw;
+		width: 200vw;
+	}
+
+	.processFirstSection {
+		padding: 50px 30px;
+	}
+
+	.processBulletList{
+		max-width: 100%;
+	}
+
+	.simpleSectionHeading{
+		font-weight: 500;
+		font-size: 60px;
+	}
+
+	.caseStudySection{
+		padding-bottom: 100px;
+	}
+
+	.caseStudyText {
+		margin-top: 32px;
+	}
+
+	.caseStudyContent{
+		.caseStudyHeading{
+			font-weight: 500;
+			font-size: 60px;
+		}
+		.colorfulText{
+			margin: 15px 0;
+		}
+	}
+
+	.processSectionImage {
+		position: static;
+	}
+
+	.processBlackSection {
+		padding: 60px 30px;
+		.processHeading{
+			font-size: 72px;
+			text-align: center;
+			line-height: 85px;
+		}
+	}
+
+	.bulletHeading{
+		font-size: 24px;
+	}
+
+	.scrollableText {
+		margin-top: 5px;
+        font-size: clamp(6rem, 16vw, 16rem);
+        font-weight: 400;
+	}
+	.noMargin{
+		margin-top: 0;
+	}
+	// .caseStudyList{
+	// 	margin-top: 130px;
+	// }
+}
