@@ -1,0 +1,59 @@
+// SVG Mask Demo SCSS Module
+.container {
+  height: 250vh;
+  position: relative;
+  z-index: 1;
+	background-color: #060010;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.mask {
+  height: 100%;
+  overflow: hidden;
+  mask-image: url(https://blog.olivierlarose.com/medias/images/svg-mask-scroll/shape.svg);
+  mask-repeat: no-repeat;
+  mask-position: center center;
+  z-index: 4;
+  position: relative;
+
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.background {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: #000;
+  top: 0;
+  z-index: 4;
+}
+
+.shadowContainer {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shadow {
+  position: absolute;
+
+  svg {
+    height: 30vh;
+
+    @media (min-width: 800px) {
+      height: 66vh;
+    }
+  }
+}

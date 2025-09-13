@@ -9,7 +9,6 @@ export { default as GridScrollSection } from "./GridScrollSection";
 export { default as CaseStudyList } from "./CaseStudyList";
 export { default as CaseStudyCard } from "./CaseStudyCard";
 export { default as GlassContainer } from "./GlassContainer";
-export { default as ScheduleMeet } from "./ScheduleMeet";
 export { default as InputField } from "./InputField";
 export { default as ColorfulText } from "./ColorfulText";
 export { default as Modal } from "./Modal";

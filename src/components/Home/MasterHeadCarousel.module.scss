@@ -2,133 +2,40 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 125vh;
+  height: 100vh;
   width: 100%;
   left: 0;
   top: 0;
-}
-
-.scene {
-  perspective: 1000px;
-  overflow: hidden;
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 125vh;
-  width: 100vw;
-  left: 0;
-  top: 0;
-}
-
-.card {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-
-	&__img {
-		width: 8em;
-		border-radius: 5px;
-		aspect-ratio: 2/3;
-		background-position: center;
-		background-size: cover;
-	}
 }
 
 .headings {
   text-align: center;
   position: relative;
   z-index: 10;
-	width: 45%;
+	width: 70%;
+}
+
+.mainHeading {
+	color: #ece9e2;
+	text-transform: uppercase;
+	font-weight: 300;
+	line-height: 0.7;
+}
+
+.uppercase {
+	text-transform: uppercase;
 }
 
 .text {
   font-size: 20px;
   line-height: normal;
-  color: #000;
-
-	&__uppercase {
-		text-transform: uppercase;
-	}
-}
-
-.futureHiringText {
-	font-size: 16px;
-}
-
-.headingMain {
-	font-size: clamp(2.5rem, 5vw, 4.5rem);
-	color: rgb(0, 0, 0);
-	letter-spacing: -1px;
-	line-height: 1.2;
-	font-weight: 600;
-}
-
-.headingSecondary {
-	font-size: clamp(2.5rem, 5vw, 3.6rem);
-	color: rgb(0, 0, 0);
-	letter-spacing: -1px;
-	line-height: 1.2;
-	margin-bottom: 20px;
+  color: #fff;
 }
 
 .textSmallBox {
-	width: 70%;
-	margin: 4px auto 0;
+	margin: 32px auto 0;
 }
 
-
-@media screen and (max-width: 899px) {
-  .scene {
-    height: 510px;
-    position: relative;
-  }
-  .content{
-    height: auto;
-    margin-top: 80px;
-    flex-direction: column;
-  }
-  
-  .headingMain{
-    font-size: clamp(2.1rem, 5vw, 4.5rem);
-    
-  }
-  .card {
-    &__img {
-      width: 80px;
-    }
-  }
-  .headings{
-    max-width: 260px;
-    margin-top: -320px;
-    .futureHiringText{
-      font-size: 10px;
-    }
-    h1{
-        font-size: clamp(2.5rem, 5vw, 5rem);
-    }
-    .headingSecondary{
-      font-size: 20px;
-    }
-  }
-	.text {
-    &__colorful {
-      font-size: 10px;
-    }
-  }
-  
-  .sub_content{
-    text-align: center;
-    position: relative;
-    padding: 0 30px;
-    margin-top: 160px;
-    
-    .text {
-      font-size: 18px;
-      &__colorful {
-        width: 100%;
-      }
-    }
-  }
+.buttons {
+	margin-top: 32px;
 }

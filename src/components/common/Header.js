@@ -13,7 +13,7 @@ import { ContactFormContext } from '@/context/ContactFormContext';
 
 import { routes } from "@/utils/routesPath";
 
-import { EmailIcon, PhoneIcon, Logo } from "@/components/Icons";
+import logo from "@/assets/images/logo.webp";
 
 import MegaMenu from "./MegaMenu";
 import Menu from "./Menu";
@@ -109,7 +109,8 @@ function Header() {
 					className={styles.logoContainer}
 				>
 					<div>
-						<Logo
+						<img
+							src={logo}
 							className={styles.logo}
 							alt="Glocal Studio"
 							onClick={handleLogoClick}
@@ -179,13 +180,6 @@ function Header() {
 									>
 										<span>{routes["contact-us"].label}</span>
 									</Link>
-									{/* <Link
-										to={routes.faq.href}
-										data-replace={routes.faq.label}
-										className={styles.headerLink}
-									>
-										<span>{routes.faq.label}</span>
-									</Link> */}
 								</div>
 							</Grid>
 							<Grid
@@ -203,7 +197,7 @@ function Header() {
 									wrapperStyle={{ marginRight: 0 }}
 									onClick={() => toggleContactForm()}
 								>
-									get in touch
+									get a free quote
 								</LinkButton>
 							</Grid>
 							<MenuDesktop
@@ -232,22 +226,6 @@ function Header() {
 						</>
 					)
 				}
-			</Grid>
-			<Grid container size={12} alignItems="center" className={styles.bottomSection}>
-				<Grid size={{xs: 12, md: 6}} className={styles.slogan}
-					sx={{textAlign: {xs: "center", md: "left"}}}
-				>
-					think <span className={styles.globalColor}>global</span><span className={styles.commaColor}>,</span> <span className={styles.workColor}>work</span> local.
-				</Grid>
-				{!isMobile && (
-				<Grid size={6} className={styles.contactInfo}>
-					<PhoneIcon fill="#FF005B" width="20px" height="20px" />
-					<a href="tel:+17323444260">+1 (732) 344 4260</a>
-					<a href="tel:+919179387208">+91 (917) 938 7208</a>
-					<EmailIcon fill="#00D4F3" width="24px" height="24px" />
-					<a href="mailto:enquiry@glocalassist.com">enquiry@glocalassist.com</a>
-				</Grid>
-				)}
 			</Grid>
 		</AppBar>
 	);

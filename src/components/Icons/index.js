@@ -21,7 +21,6 @@ export { default as CircleLoader } from "./CircleLoader";
 export { default as CircleArrow } from "./CircleArrow";
 export { default as CloseIcon } from "./CloseIcon";
 export { default as ChevronArrow } from "./ChevronArrow";
-export { default as Logo } from "./Logo";
 export { default as LinkedInNew } from "./LinkedinNew";
 export { default as PlusIcon } from "./Plus";
 export { default as MinusIcon } from "./Minus";

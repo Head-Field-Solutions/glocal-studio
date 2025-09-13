@@ -1,50 +1,38 @@
-import React, { useRef } from 'react';
-import { useScroll } from 'framer-motion';
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-import { useDevice } from '@/context/DeviceContext';
+import { Container, Grid2 as Grid } from '@mui/material';
 
 import MasterHeadCarousel from "@/components/Home/MasterHeadCarousel";
-import ScrollableMotionText from "@/components/Home/ScrollableMotionText";
+import MaskVideoSection from "@/components/Home/MaskVideoSection";
+
+import masterHeadVideo from "@/assets/videos/home-masterhead-video.mp4";
 
 import * as styles from "./Home.module.scss";
 
 function Home() {
-
-	const scrollabelContainerRef = useRef();
-
-	const { isMobile } = useDevice();
-
-	const { scrollYProgress } = useScroll({
-    target: scrollabelContainerRef,
-    offset: ['start end', 'end start']
-  });
-
   return (
 		<>
 			<Helmet>
-        <title>Professional Virtual Assistant Services | Glocal Assist</title>
+        <title>The Worlds Leading Studio You Can Trust | Glocal Studio</title>
 				<meta name="description" content="Streamline your business with professional virtual assistant services. Get remote administrative support, scheduling, customer care, and more. Enhance productivity today!" />
       </Helmet>
 			<section className={styles.masterHead}>
 				<MasterHeadCarousel />
+				<video muted autoPlay controls={false} loop playsInline className={styles.masterHeadVideo}>
+					<source src={masterHeadVideo} />
+				</video>
 			</section>
-			<section className={styles.scrollableContainer} ref={scrollabelContainerRef} >
-				<ScrollableMotionText
-					direction="right"
-					left={isMobile ? "-20%" : "-5%"}
-					progress={scrollYProgress}
-				>
-					<span className={styles.scrollableText}>we are global</span>
-				</ScrollableMotionText>
-				<ScrollableMotionText
-					direction="left"
-					left={isMobile ? "-20%" : "-25%"}
-					progress={scrollYProgress}
-				>
-					<span className={styles.scrollableText}>virtual assistant</span>
-				</ScrollableMotionText>
+			<section className={styles.videoSectionContent}>
+				<Container maxWidth="xl">
+					<Grid container justifyContent="center">
+						<Grid size={10} className={styles.videoSectionText}>
+							Experience high-end 3D rendering without the high-end cost.<br />
+							We deliver mind-blowing visualizations for interiors, exteriors, products, and more—at a price point you won't believe.
+						</Grid>
+					</Grid>
+				</Container>
 			</section>
+			<MaskVideoSection />
 		</>
   );
 }

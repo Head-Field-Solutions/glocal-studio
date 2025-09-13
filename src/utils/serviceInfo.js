@@ -5,7 +5,7 @@ import { routes } from "./routesPath";
 export const servicesInfo = {
 	"administrative-tasks": {
 		"seoContent": {
-			"title": "Admin Support | Glocal Assist"
+			"title": "Admin Support | Glocal Studio"
 		},
 		"title":"Admin Support",
 		"background": "",
@@ -73,7 +73,7 @@ export const servicesInfo = {
   },
 	"digital-marketing-services": {
 		"seoContent": {
-			"title": "Digital Marketing Services | Glocal Assist"
+			"title": "Digital Marketing Services | Glocal Studio"
 		},
 		"title":"Digital Marketing Services",
 		"background": "",
@@ -132,7 +132,7 @@ export const servicesInfo = {
 	},
 	"customer-support-and-experience": {
 		"seoContent": {
-			"title": "Customer Support & Experience | Glocal Assist"
+			"title": "Customer Support & Experience | Glocal Studio"
 		},
 		"title":"Customer Support & Experience",
 		"background": "",
@@ -200,7 +200,7 @@ export const servicesInfo = {
 	},
 	"website-revamp-and-optimization": {
 		"seoContent": {
-			"title": "Website Revamp & Optimization | Glocal Assist"
+			"title": "Website Revamp & Optimization | Glocal Studio"
 		},
 		"title":"Website Revamp & Optimization",
 		"background": "",
@@ -259,7 +259,7 @@ export const servicesInfo = {
 	},
 	"creative-services": {
 		"seoContent": {
-			"title": "Creative Services | Glocal Assist"
+			"title": "Creative Services | Glocal Studio"
 		},
 		"title":"Creative Services",
 		"background": "",
@@ -327,7 +327,7 @@ export const servicesInfo = {
 	},
 	"software-and-app-development": {
 		"seoContent": {
-			"title": "Software & App Development | Glocal Assist"
+			"title": "Software & App Development | Glocal Studio"
 		},
 		"title":"Software & App Development",
 		"background": "",
@@ -392,7 +392,7 @@ export const servicesInfo = {
 	},
 	"finance-and-accounting": {
 		"seoContent": {
-			"title": "Finance & Accounting | Glocal Assist"
+			"title": "Finance & Accounting | Glocal Studio"
 		},
 		"title":"Finance & Accounting",
 		"background": "",
@@ -460,7 +460,7 @@ export const servicesInfo = {
 	},
 	"engineering-services": {
 		"seoContent": {
-			"title": "Engineering Services | Glocal Assist"
+			"title": "Engineering Services | Glocal Studio"
 		},
 		"title":"Engineering Services",
 		"background": "",

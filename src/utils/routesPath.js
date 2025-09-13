@@ -25,8 +25,8 @@ export const routes = {
 		href: "/services"
 	},
 	caseStudy: {
-		label: 'Case Studies',
-		href: "/case-studies"
+		label: 'Why Choose Us?',
+		href: "/why-choose-us"
 	},
 	"contact-us": {
 		label: 'Contact Us',

@@ -3,7 +3,7 @@ const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require("copy-webpack-plugin");
 const LoadablePlugin = require("@loadable/webpack-plugin");
-const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
+// const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 
 const isProduction = process.env.NODE_ENV === 'production';
 
@@ -67,7 +67,7 @@ module.exports = {
       },
 			{
         /* Fonts and Images */
-        test: /\.(png|gif|jpg|jpeg|svg|ttf|eot|svg|otf|woff(2)?)(\?[a-z0-9]+)?$/,
+        test: /\.(png|gif|jpg|jpeg|webp|svg|mp4|ttf|eot|svg|otf|woff(2)?)(\?[a-z0-9]+)?$/,
         type: 'asset/resource',
 				generator: {
           filename: '[name]-[contenthash:8][ext]', // Keep original filenames

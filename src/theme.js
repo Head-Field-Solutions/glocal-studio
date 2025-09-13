@@ -4,7 +4,7 @@ const theme = createTheme({
   palette: {
     mode: 'light',
 		background: {
-			default: "#fff"
+			default: "#060010"
 		},
 		focused: {
 			color: "#1D1916"

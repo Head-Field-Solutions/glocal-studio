@@ -296,7 +296,7 @@ const getClientEmailContent = () => `<!DOCTYPE html>
                                   <td class="pad" style="padding-right:20px;padding-top:20px;width:100%;padding-left:0">
                                     <div align="center" class="alignment">
                                       <div class="fullWidth" style="max-width:300px">
-                                        <img alt="Glocal Assist" height="auto" src="${imagePath}/main.jpg" style="display:block;height:auto;border:0;width:100%" title="Glocal Assist" width="300" />
+                                        <img alt="Glocal Studio" height="auto" src="${imagePath}/main.jpg" style="display:block;height:auto;border:0;width:100%" title="Glocal Studio" width="300" />
                                       </div>
                                     </div>
                                   </td>
@@ -383,7 +383,7 @@ const getClientEmailContent = () => `<!DOCTYPE html>
                                 <td class="pad" style="width:100%;padding-right:0;padding-left:0">
                                   <div align="center" class="alignment">
                                     <div style="max-width:203.333px">
-                                      <img alt="Glocal Assist" height="auto" src="${imagePath}/1.jpg" style="display:block;height:auto;border:0;width:100%" title="Glocal Assist" width="203.333" />
+                                      <img alt="Glocal Studio" height="auto" src="${imagePath}/1.jpg" style="display:block;height:auto;border:0;width:100%" title="Glocal Studio" width="203.333" />
                                     </div>
                                   </div>
                                 </td>
@@ -403,7 +403,7 @@ const getClientEmailContent = () => `<!DOCTYPE html>
                                 <td class="pad" style="width:100%;padding-right:0;padding-left:0">
                                   <div align="center" class="alignment">
                                     <div style="max-width:203.333px">
-                                      <img alt="Glocal Assist" height="auto" src="${imagePath}/2.jpg" style="display:block;height:auto;border:0;width:100%" title="Glocal Assist" width="203.333" />
+                                      <img alt="Glocal Studio" height="auto" src="${imagePath}/2.jpg" style="display:block;height:auto;border:0;width:100%" title="Glocal Studio" width="203.333" />
                                     </div>
                                   </div>
                                 </td>
@@ -423,7 +423,7 @@ const getClientEmailContent = () => `<!DOCTYPE html>
                                 <td class="pad" style="width:100%;padding-right:0;padding-left:0">
                                   <div align="center" class="alignment">
                                     <div style="max-width:203.333px">
-                                      <img alt="Glocal Assist" height="auto" src="${imagePath}/3.jpg" style="display:block;height:auto;border:0;width:100%" title="Glocal Assist" width="203.333" />
+                                      <img alt="Glocal Studio" height="auto" src="${imagePath}/3.jpg" style="display:block;height:auto;border:0;width:100%" title="Glocal Studio" width="203.333" />
                                     </div>
                                   </div>
                                 </td>
@@ -671,7 +671,7 @@ const handleSendEmail = (formData, res) => {
 		<html>
 		<body>
 			Dear Admin,<br /><br />
-			At the outset Glocal Assist has received a new contact enquiry. Please find the details below:<br />
+			At the outset Glocal Studio has received a new contact enquiry. Please find the details below:<br />
 			Name: ${name}<br />
 			Email: ${email}<br />
 			Phone: ${phone}<br />
@@ -683,11 +683,11 @@ const handleSendEmail = (formData, res) => {
 		</html>`;
 	sendAdminEmail.sender = {
 		email: 'info@glocalassist.com',
-		name: 'Glocal Assist'
+		name: 'Glocal Studio'
 	};
 	sendAdminEmail.to = [{
 		email: "info@glocalassist.com",
-		name: "Glocal Assist"
+		name: "Glocal Studio"
 	}];
 	sendAdminEmail.replyTo = {
 		"email": email,
@@ -700,7 +700,7 @@ const handleSendEmail = (formData, res) => {
 	sendClientEmail.htmlContent = getClientEmailContent(name);
 	sendClientEmail.sender = {
 		email: 'info@glocalassist.com',
-		name: 'Glocal Assist'
+		name: 'Glocal Studio'
 	};
 	sendClientEmail.to = [{
 		email,
@@ -708,7 +708,7 @@ const handleSendEmail = (formData, res) => {
 	}];
 	sendClientEmail.replyTo = {
 		"email": 'info@glocalassist.com',
-		"name": 'Glocal Assist'
+		"name": 'Glocal Studio'
 	};
 
 	Promise.all([

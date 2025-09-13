@@ -1,22 +1,26 @@
 
 .footer {
-	border-top: 20px solid #000;
-	background-color: #10172A;
-
-	a {
-		text-decoration: none;
-		color: #000;
-	}
+	background: #fff url("../../assets/images/footer-bg.jpg") no-repeat bottom center;
+	background-size: cover;
+	padding: 280px 0 60px;
 }
 
-.footerImage {
-	width: 100%;
-	display: block;
+.footerContainer {
+	width: 90% !important;
+	margin: 0 auto;
+	// background-color: rgba(6, 0, 16, 0.8);
+	// border-radius: 8px;
+	padding: 20px;
+	position: relative;
 }
 
-.footerSection {
-	background-color: #10172A;
-	padding: 120px 0 40px 0;
+.positionRelative {
+	position: relative;
+	z-index: 4;
+}
+
+.logo {
+	width: 150px;
 }
 
 .logoSection {
@@ -24,21 +28,14 @@
 	padding: 60px 0;
 }
 
-.logoContainer {
-	text-align: center;
-}
-
-.logo {
-	width: 150px;
-	margin: 0 auto;
-}
-
 .navBar {
   display: flex;
   justify-content: center;
 	text-transform: uppercase;
 	font-weight: 500;
-	margin: 40px 0;
+	flex-flow: column;
+	border-right: 1px solid #5A565E;
+	margin-right: 20px;
   
   a {
 		font-size: clamp(18px, 100%, 36px);
@@ -46,8 +43,21 @@
     color: #fff;
     text-decoration: none;
 		line-height: 1.3;
+		display: inline-block;
 		margin-bottom: 8px;
   }
+}
+
+.socialLinks {
+	margin-right: 16px;
+
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+.socialIcon {
+	height: 28px;
 }
 
 .footerLink {
@@ -101,86 +111,12 @@
 }
 
 .copyrightContainer {
-	background: #fff;
-	padding: 20px;
-	font-size: 16px;
-	font-weight: 500;
-	color: #000;
-	text-align: center;
-	border-top: 1px solid #433636;
-}
-
-.slogan {
-	font-size: 18px;
+	font-size: 14px;
 	color: #000;
 	text-align: left;
-
-	.globalColor {
-		color: #1bbee3;
-	}
-
-	.commaColor {
-		color: #347188;
-	}
-
-	.workColor {
-		color: #fd025d;
-	}
-}
-
-.copywrightText {
-	text-align: center;
-	font-size: 14px;
-}
-
-.socialIcons {
-	padding-right: 8px;
-	margin-right: 8px;
-	display: inline-block;
-
-	svg {
-		height: 32px;
-		width: 32px;
-	}
-
-	&:last-child {
-		margin-right: 0;
-		padding-right: 0;
-	}
-}
-
-.twitter svg {
-	fill: #fff;
-	height: 28px;
-
-	&:hover {
-		fill: #fff;
-	}
-}
-
-.linkedin svg {
-	fill: #1C80E4;
-
-	&:hover {
-		fill: #fff;
-	}
-}
-
-.facebook svg {
-	fill: #2B5297;
-
-	&:hover {
-		fill: #fff;
-	}
-}
-
-.socialMedia {
-	margin: 0;
-}
-
-.contactInfo {
-	font-size: 14px;
-	text-align: right;
+	border-bottom: 1px solid #5A565E;
+	padding-bottom: 40px;
+	margin-bottom: 40px;
 }
 
 .phone {
@@ -199,6 +135,7 @@
 		border-bottom: 1px solid transparent;
 		transition: all 0.3s ease;
 		font-size: 14px;
+		color: #fff;
 
 		&:hover {
 			color: #fd025d;
@@ -207,112 +144,17 @@
 	}
 }
 
-.simplifySection {
-	color: #fff;
+.copyrightText,
+.creditText {
+	font-size: 16px;
+	color: #f2f0ea;
 }
 
-.simplifyHeading {
-	font-weight: 400;
+.creditText {
+	color: #b7b4ab;
 }
 
-.secondaryHeading {
-	color: #fff;
-	font-weight: 300;
+.socialMediaContainer {
+	text-align: right;
 }
 
-.text {
-	color: #bbb;
-	margin-top: 20px;
-	border-bottom: 1px solid #282F40;
-	padding-bottom: 40px;
-	margin-bottom: 40px;
-	font-size: 20px;
-}
-
-.scheduleMeet {
-	font-size: 22px;
-}
-
-.videoOptionImage {
-	margin-right: 20px;
-
-	&:last-child {
-		margin-right: 0;
-	}
-
-	img {
-		height: 40px;
-	}
-}
-
-@media screen and (max-width: 899px) {
-	.footerImage{
-		margin-bottom: -1px;
-	}
-	.simplifySection{
-		padding: 0 20px;
-		text-align: center;
-		margin-bottom: -1px;
-		.secondaryHeading{
-			font-size: clamp(1.5rem, 3vw, 3rem);
-		}
-	}
-	:is(.slogan, .copywrightText, .contactInfo){
-		text-align: center;
-		margin-bottom: 16px;
-	}
-	.contactInfo :is(.phone, .email) {
-		justify-content: center;
-	}
-	.simplifyHeading{
-		font-size: 50px;
-	}
-	.contactInfo{
-		border-top: 2px solid #e5e5e5;
-		border-bottom: 2px solid #e5e5e5;
-		padding: 32px 0;
-		margin: 12px 0 24px;
-		flex-direction: column;
-    gap: 16px;
-	}
-	.text{
-		font-size: 16px;
-	}
-	.navBar{
-		font-size: 22px;
-	}
-	
-}
-
-@media screen and (max-width: 1199px) {
-	.footer {
-		padding: 0;
-	}
-
-	.footerSection {
-		padding: 30px 16px;
-	}
-	.logoContainer{
-		border-top: 1px solid #282F40;
-    	padding-top: 30px;
-	}
-	.logo {
-		width: 180px;
-	}
-
-	.navBar{
-		flex-direction: column;
-		font-size: 22px;
-		line-height: 48px;
-		align-items: center;
-		color: #fff;
-		gap: 10px;
-	}
-
-	.copyrightContainer {
-		padding: 16px;
-		text-align: center;
-		font-size: 16px;
-		margin-top: 0;
-	}
-}

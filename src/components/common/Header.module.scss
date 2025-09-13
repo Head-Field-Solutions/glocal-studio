@@ -1,13 +1,7 @@
 .topSection {
 	padding: 16px 20px;
-	background-color: hsla(0, 0%, 100%, .7);
+	background-color: rgba(6, 0, 16, 0.7);
 	backdrop-filter: blur(9.5px);
-}
-
-.bottomSection {
-	padding: 12px 20px;
-	background-color: hsla(0, 0%, 100%, .5);
-	backdrop-filter: blur(3.5px);
 }
 
 .navBar {
@@ -19,7 +13,7 @@
   a {
 		font-size: clamp(16px, 100%, 36px);
     margin: 0 16px;
-    color: #000;
+    color: #fff;
     text-decoration: none;
 
 		&:last-child {
@@ -33,8 +27,7 @@
 }
 
 .logo {
-	width: 200px;
-	height: auto;
+	height: 50px;
 	cursor: pointer;
 }
 
@@ -142,53 +135,7 @@
 	.topSection {
 		padding: 8px 20px;	
 	}
-	.bottomSection {
-		padding: 8px 20px;
-	}
 	.logo {
 		width: 100%;
-	}
-}
-
-.slogan {
-	font-size: 16px;
-	color: #000;
-	text-align: left;
-
-	.globalColor {
-		color: #1bbee3;
-	}
-
-	.commaColor {
-		color: #347188;
-	}
-
-	.workColor {
-		color: #fd025d;
-	}
-}
-
-.contactInfo {
-	font-size: 14px;
-	text-align: right;
-
-	a {
-		display: inline-block;
-		margin-left: 8px;
-		text-decoration: none;
-		border-bottom: 1px solid transparent;
-		transition: all 0.3s ease;
-		color: #000;
-		font-size: 14px;
-
-		&:hover {
-			color: #fd025d;
-			border-bottom-color: #fd025d;
-		}
-	}
-
-	svg {
-		vertical-align: middle;
-		margin-left: 20px;
 	}
 }
