@@ -2,8 +2,6 @@ import React from "react";
 import { Link } from 'react-router-dom';
 import { Grid2 as Grid } from "@mui/material";
 
-import { GlassContainer } from '@/components/common';
-
 import {
 	EmailIcon,
 	PhoneIcon,
@@ -15,6 +13,8 @@ import logo from "@/assets/images/footer-logo.png";
 import fbIcon from "@/assets/images/fb-icon.png";
 import instagramIcon from "@/assets/images/instagram-icon.png";
 import linkedinIcon from "@/assets/images/linkedin-icon.png";
+
+import GlassContainer from './GlassContainer';
 
 import * as styles from "./Footer.module.scss";
 

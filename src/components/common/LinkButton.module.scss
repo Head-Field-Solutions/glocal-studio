@@ -1,5 +1,5 @@
 .buttonWrapper {
-	background-image: var(--button-gradient, linear-gradient(to left, #000, #000));
+	background-image: var(--button-gradient, linear-gradient(to left, #00d4f3, #ff005b));
 	border-radius: 50px;
 	display: inline-block;
 	padding: 2px;
@@ -50,7 +50,7 @@
 }
 
 .button {
-	padding: 16px 48px;
+	padding: 16px 24px;
 	text-align: center;
 	font-weight: 600;
 	text-transform: uppercase;
@@ -63,6 +63,7 @@
 	width: 100%;
 	position: relative;
 	z-index: 1;
+	font-size: 12px;
 
 	&:hover {
 		color: var(--button-text-color, #000);

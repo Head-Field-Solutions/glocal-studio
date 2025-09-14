@@ -13,3 +13,4 @@ export { default as InputField } from "./InputField";
 export { default as ColorfulText } from "./ColorfulText";
 export { default as Modal } from "./Modal";
 export { default as ContactForm } from "./ContactForm";
+export { default as TextType } from "./TextType";

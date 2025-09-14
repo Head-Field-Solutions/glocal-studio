@@ -2,7 +2,8 @@ import React from "react";
 
 import * as styles from "./GlassContainer.module.scss";
 
-export default function GlassContainer() {
+export default function GlassContainer(props) {
+	const { glassBackground } = props;
 	return (
 		<>
 			<svg className={styles.svg}>
@@ -60,9 +61,9 @@ export default function GlassContainer() {
 					/>
 				</filter>
 			</svg>
-			<div className={styles.glassEffect} />
-			<div className={styles.glassTint} />
-			<div className={styles.glassShine} />
+			<div className={styles.glassEffect} style={{ "--glassBackground": glassBackground }} />
+			<div className={styles.glassTint} style={{ "--glassBackground": glassBackground }} />
+			<div className={styles.glassShine} style={{ "--glassBackground": glassBackground }} />
 		</>
 	);
 }
