@@ -5,24 +5,14 @@
 .submitButton {
 	justify-content: space-between !important;
 	align-items: center !important;
-
-	&:hover {
-		.submitText {
-			background: linear-gradient(to left, #00d4f3, #ff005b);
-		}
-	}
 }
 
 .submitText {
-	background: linear-gradient(to left, #000, #000);
-	background-size: 100% 100% !important;
-	background-position: 0 0 !important;
-	-webkit-background-clip: text !important;
-	background-clip: text !important;
-	-webkit-text-fill-color: transparent !important;
-	color: #000;
-	font-size: 22px;
-	font-weight: 600;
+	background: #211d21;
+	color: #fff;
+	font-size: 16px;
+	border-radius: 4px;
+	padding: 20px 28px;
 }
 
 .formSubmitButton {
@@ -34,17 +24,6 @@
 	animation-iteration-count: infinite;
 	fill: #000;
 	width: 80px;
-}
-
-.headingBigText {
-	font-size: 26px;
-	line-height: 1.3;
-}
-
-.letsBuildHeading {
-	font-weight: 600;
-	margin: 20px 0;
-	font-size: 24px;
 }
 
 @keyframes loaderAnimation {

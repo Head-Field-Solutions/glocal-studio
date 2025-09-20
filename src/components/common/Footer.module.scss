@@ -1,5 +1,9 @@
 
 .footer {
+	background: #fff;
+}
+
+.footerInfoContainer {
 	background: #fff url("../../assets/images/footer-bg.jpg") no-repeat bottom center;
 	background-size: cover;
 	padding: 280px 0 60px;
@@ -8,8 +12,6 @@
 .footerContainer {
 	width: 90% !important;
 	margin: 0 auto;
-	// background-color: rgba(6, 0, 16, 0.8);
-	// border-radius: 8px;
 	padding: 20px;
 	position: relative;
 }
@@ -158,3 +160,80 @@
 	text-align: right;
 }
 
+.footerCard {
+	border: 1px solid #d6d3c9;
+	border-radius: 8px;
+	padding: 16px;
+}
+
+.footerCardHeading {
+	font-size: 20px;
+	font-weight: 500;
+	color: #211d21;
+}
+
+.footerCardIcon {
+	width: 100%;
+}
+
+.formContainer {
+	position: relative;
+	z-index: 2;
+}
+
+.formContent {
+	position: relative;
+	margin-bottom: -320px;
+  margin-top: 20px;
+}
+
+.contactFormWrapper {
+	position: relative;
+	z-index: 4;
+	padding: 32px;
+	margin-top: 20px;
+	background: rgba(245, 244, 241, 0.5);
+	backdrop-filter: blur(10px);
+	border-radius: 15px;
+}
+
+.uspSection {
+	margin-top: 100px;
+}
+
+.footerInfoPanel {
+	background: #f2f0ea;
+	padding-top: 160px;
+}
+
+.greatDesignHeading {
+	margin: 16px 0 28px;
+	font-weight: 600;
+}
+
+.footerImagePanel {
+	background: #cfc500;
+}
+
+.footerImage {
+	height: 200px;
+	position: relative;
+}
+
+.decorImage {
+	width: 100%;
+	position: absolute;
+	bottom: -60px;
+}
+
+.scrollableContainer {
+	overflow: hidden;
+	width: 100%;
+}
+
+.scrollabelText {
+	font-size: 200px;
+	color: #cfc500;
+	font-weight: 100;
+	line-height: 1;
+}

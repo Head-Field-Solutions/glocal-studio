@@ -9,7 +9,7 @@ import {
 import { useLocation } from "react-router-dom";
 import { Controller, useForm } from "react-hook-form";
 
-import { CircleArrow, CircleLoader } from "@/components/Icons";
+import { CircleLoader } from "@/components/Icons";
 
 import { ContactFormContext } from '@/context/ContactFormContext';
 
@@ -77,15 +77,6 @@ function ContactForm(props) {
 
 	return (
 		<Grid container size={12}>
-			<Grid size={12} className={styles.headingBigText}>
-				Drop us a message and our team will get back to you shortly with a personalized response.
-			</Grid>
-			<Grid
-				size={12}
-				className={styles.letsBuildHeading}
-			>
-				Let&apos;s build something great together.
-			</Grid>
 			<Grid size={12}>
 				<form onSubmit={handleSubmit(onSubmit)}>
 					<Controller
@@ -99,10 +90,7 @@ function ContactForm(props) {
 						)}
 					/>
 					<Grid container size={12} spacing={3}>
-						<Grid size={12}>
-							All the fields marked with * are required
-						</Grid>
-						<Grid size={12}>
+						<Grid size={4}>
 							<InputField
 								slotProps={{
 									inputLabel: {
@@ -120,7 +108,7 @@ function ContactForm(props) {
 								}}
 							/>
 						</Grid>
-						<Grid size={12}>
+						<Grid size={4}>
 							<InputField
 								slotProps={{
 									inputLabel: {
@@ -142,7 +130,7 @@ function ContactForm(props) {
 								}}
 							/>
 						</Grid>
-						<Grid size={12}>
+						<Grid size={4}>
 							<InputField
 								slotProps={{
 									inputLabel: {
@@ -202,13 +190,7 @@ function ContactForm(props) {
 									isSubmitting ? (
 										<CircleLoader className={styles.loader} width={40} height={40} />
 									) : (
-										<>
-											<span className={styles.submitText}>Submit</span>
-											<CircleArrow
-												fill="#000"
-												className={styles.formSubmitButton}
-											/>
-										</>
+										<span className={styles.submitText}>SEND MESSAGE</span>
 									)
 								}
 							</Button>

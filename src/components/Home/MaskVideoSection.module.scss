@@ -1,6 +1,6 @@
 // SVG Mask Demo SCSS Module
 .container {
-  height: 250vh;
+  height: 350vh;
   position: relative;
   z-index: 1;
 	background-color: #060010;
@@ -15,7 +15,7 @@
 .mask {
   height: 100%;
   overflow: hidden;
-  mask-image: url(https://blog.olivierlarose.com/medias/images/svg-mask-scroll/shape.svg);
+  mask-image: url("../../assets/images/masked-star.svg");
   mask-repeat: no-repeat;
   mask-position: center center;
   z-index: 4;
@@ -50,10 +50,10 @@
   position: absolute;
 
   svg {
-    height: 30vh;
+    height: 40vh;
 
     @media (min-width: 800px) {
-      height: 66vh;
+      height: 90vh;
     }
   }
 }

@@ -76,7 +76,7 @@ const theme = createTheme({
 			styleOverrides: {
 				root: {
 					"&::after": {
-						borderColor: "rgba(0, 0, 0, 1)",
+						borderColor: "rgba(0, 0, 0, 0.1)",
 					}
 				}
 			}
@@ -92,7 +92,7 @@ const theme = createTheme({
 						borderColor: "#fff8f2",
 					},
 					":before": {
-						borderBottom: "1px solid rgba(0, 0, 0, 0.5) !important",
+						borderBottom: "1px solid rgba(0, 0, 0, 0.1) !important",
 					}
 				}
 			}			

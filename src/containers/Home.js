@@ -1,19 +1,77 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Container, Grid2 as Grid } from '@mui/material';
+import { useScroll } from 'framer-motion';
 
 import MasterHeadVideo from "@/components/Home/MasterHeadVideo";
 import MaskVideoSection from "@/components/Home/MaskVideoSection";
 import ZoomParallax from "@/components/Home/ZoomParallax";
+import UspSectionCards from "@/components/Home/UspSectionCards";
+import LetUsRenderPrespectiveScroll from "@/components/Home/LetUsRenderPrespectiveScroll";
+import ServiceCard from "@/components/Home/ServiceCard";
 
-import { Heading, LinkButton, GlassContainer } from "@/components/common";
+import { Heading, LinkButton } from "@/components/common";
 
 import masterHeadVideo from "@/assets/videos/home-masterhead-video.mp4";
-import fullSupportImage from "@/assets/images/fullsuite-image.png";
+import fullSupportImage from "@/assets/images/fullsuite-image.webp";
 
 import * as styles from "./Home.module.scss";
 
 function Home() {
+	const servicesList = [
+		{
+			heading: <>Architectural <br />Visualization</>,
+			subHeading: "From blueprint to breathtaking visuals.",
+			description: "Bring architectural ideas to life with stunning, photoreal renders—exteriors, interiors, isometrics, floor plans, and walkthroughs that inspire confidence and sell.",
+			usp: "IDEAL FOR Architects, real estate, developers, interior studios",
+			image: require("../assets/images/architectural-visualization.png"),
+			translateY: 100,
+		}, {
+			heading: <>3D <br/>Modeling</>,
+			subHeading: "Every Detail, Perfectly Shaped in 3D",
+			description: "We craft accurate 3D models for architecture, interiors, furniture, and products—detailed, scalable, and ready for rendering or prototyping.",
+			usp: "IDEAL FOR ADesigners, product brands, architects, engineers",
+			image: require("../assets/images/3d-modeling.png"),
+			translateY: 100,
+		}, {
+			heading: <>Technical<br/> Drawings</>,
+			subHeading: "Designs That Build Without Guesswork",
+			description: "Precise working drawings, joinery details, and documentation that bridge design intent and execution—streamlining site work and vendor coordination.",
+			usp: "IDEAL FOR A Contractors, furniture makers, architects, developers",
+			image: require("../assets/images/technical-drawings.png"),
+			translateY: 100,
+		}, {
+			heading: <>Product <br />Visualization</>,
+			subHeading: "Your Product, Photoreal and Market-Ready",
+			description: "From furniture renders to prototypes, we showcase your products with lifelike detail—perfect for marketing, e-commerce, and investor presentations.",
+			usp: "IDEAL FOR A Product designers, startups, furniture brands, FMCG",
+			image: require("../assets/images/product-visualization.png"),
+			imageClassName: styles.speakerImage,
+			translateY: 100,
+		}, {
+			heading: <>3D Animation & Experiences</>,
+			subHeading: "Bring Design Stories to Motion",
+			description: "Transform static visuals into immersive experiences with architectural flythroughs, interior presentations, and interactive storytelling.",
+			usp: "IDEAL FOR A Developers, architects, marketing agencies, real estate",
+			image: require("../assets/images/3d-animation.png"),
+			translateY: 100,
+		}, {
+			heading: <>360° & Virtual <br />Tours</>,
+			subHeading: "Immersive tours that close deals faster.",
+			description: "Give clients the power to explore spaces virtually through 360° panoramas and interactive tours—ideal for real estate and hospitality marketing.",
+			usp: "IDEAL FOR A Realtors hotels, property portals, global buyers",
+			image: require("../assets/images/360-virtual-tour.png"),
+			translateY: 100,
+		}
+	];
+
+	const serviceListContainer = useRef(null);
+
+	const { scrollYProgress } = useScroll({
+		target: serviceListContainer,
+		offset: ['start end', 'end start']
+	})
+
   return (
 		<>
 			<Helmet>
@@ -40,177 +98,29 @@ function Home() {
 			<section className={styles.fullSuiteSolutionSection}>
 				<Container maxWidth="xl">
 					<Grid size={12}>
-						<Heading variant="secondary" className={styles.fullSuiteMainHeading}>
+						<Heading className={styles.fullSuiteMainHeading}>
 							Full-Suite<br />3D Rendering Solutions
 						</Heading>
 					</Grid>
 					<Grid size={12}>
 						<img src={fullSupportImage} alt="" className={styles.fullSupportImage} />
 					</Grid>
-					<Grid size={12} spacing={4} container className={styles.fullSupportItemsList}>
-						<Grid size={4} className={styles.fullSupportItemGrid}>
-							<GlassContainer glassBackground="rgba(245, 244, 241, 0.5)" />
-							<Grid size={12} container className={styles.itemContent}>
-								<Grid size={12} className={styles.itemHeading}>Architectural <br />Visualization</Grid>
-								<Grid size={12} className={styles.itemSubHeading}>From blueprint to breathtaking visuals.</Grid>
-								<Grid size={12} className={styles.itemText}>
-									Bring architectural ideas to life with stunning, photoreal renders—exteriors, interiors, isometrics, floor plans, and walkthroughs that inspire confidence and sell.
-								</Grid>
-								<Grid size={12} spacing={3} container>
-									<Grid size={6}>
-										<LinkButton style={{ "--button-bg": "#f2f0ea" }}>GET A FREE QUOTE</LinkButton>
-									</Grid>
-									<Grid size={5} className={styles.itemSmallText}>
-										IDEAL FOR Architects, real estate, developers, interior studios
-									</Grid>
-									<Grid size={1}>
-										<img src={require("../assets/images/check-icon.png")} alt="" className={styles.checkIcon} />
-									</Grid>
-								</Grid>
-								<Grid  size={12} className={styles.imageContainer}>
-									<img
-										src={require("../assets/images/architectural-visualization.png")}
-										alt=""
-									/>
-								</Grid>
-							</Grid>
-						</Grid>
-						<Grid size={4} className={styles.fullSupportItemGrid}>
-							<GlassContainer glassBackground="rgba(245, 244, 241, 0.5)" />
-							<Grid size={12} container className={styles.itemContent}>
-								<Grid size={12} className={styles.itemHeading}>3D <br/>Modeling</Grid>
-								<Grid size={12} className={styles.itemSubHeading}>Every Detail, Perfectly Shaped in 3D</Grid>
-								<Grid size={12} className={styles.itemText}>
-									We craft accurate 3D models for architecture, interiors, furniture, and products—detailed, scalable, and ready for rendering or prototyping.
-								</Grid>
-								<Grid size={12} spacing={3} container>
-									<Grid size={6}>
-										<LinkButton style={{ "--button-bg": "#f2f0ea" }}>GET A FREE QUOTE</LinkButton>
-									</Grid>
-									<Grid size={5} className={styles.itemSmallText}>
-										IDEAL FOR ADesigners, product brands, architects, engineers
-									</Grid>
-									<Grid size={1}>
-										<img src={require("../assets/images/check-icon.png")} alt="" className={styles.checkIcon} />
-									</Grid>
-								</Grid>
-								<Grid  size={12} className={styles.imageContainer}>
-									<img
-										src={require("../assets/images/3d-modeling.png")}
-										alt=""
-									/>
-								</Grid>
-							</Grid>
-						</Grid>
-						<Grid size={4} className={styles.fullSupportItemGrid}>
-							<GlassContainer glassBackground="rgba(245, 244, 241, 0.5)" />
-							<Grid size={12} container className={styles.itemContent}>
-								<Grid size={12} className={styles.itemHeading}>Technical<br/> Drawings</Grid>
-								<Grid size={12} className={styles.itemSubHeading}>Designs That Build Without Guesswork</Grid>
-								<Grid size={12} className={styles.itemText}>
-									Precise working drawings, joinery details, and documentation that bridge design intent and execution—streamlining site work and vendor coordination.
-								</Grid>
-								<Grid size={12} spacing={3} container>
-									<Grid size={6}>
-										<LinkButton style={{ "--button-bg": "#f2f0ea" }}>GET A FREE QUOTE</LinkButton>
-									</Grid>
-									<Grid size={5} className={styles.itemSmallText}>
-										IDEAL FOR A Contractors, furniture makers, architects, developers
-									</Grid>
-									<Grid size={1}>
-										<img src={require("../assets/images/check-icon.png")} alt="" className={styles.checkIcon} />
-									</Grid>
-								</Grid>
-								<Grid  size={12} className={styles.imageContainer}>
-									<img
-										src={require("../assets/images/technical-drawings.png")}
-										alt=""
-									/>
-								</Grid>
-							</Grid>
-						</Grid>
-						<Grid size={4} className={styles.fullSupportItemGrid}>
-							<GlassContainer glassBackground="rgba(245, 244, 241, 0.5)" />
-							<Grid size={12} container className={styles.itemContent}>
-								<Grid size={12} className={styles.itemHeading}>Product <br />Visualization</Grid>
-								<Grid size={12} className={styles.itemSubHeading}>Your Product, Photoreal and Market-Ready</Grid>
-								<Grid size={12} className={styles.itemText}>
-									From furniture renders to prototypes, we showcase your products with lifelike detail—perfect for marketing, e-commerce, and investor presentations.
-								</Grid>
-								<Grid size={12} spacing={3} container>
-									<Grid size={6}>
-										<LinkButton style={{ "--button-bg": "#f2f0ea" }}>GET A FREE QUOTE</LinkButton>
-									</Grid>
-									<Grid size={5} className={styles.itemSmallText}>
-										IDEAL FOR A Product designers, startups, furniture brands, FMCG
-									</Grid>
-									<Grid size={1}>
-										<img src={require("../assets/images/check-icon.png")} alt="" className={styles.checkIcon} />
-									</Grid>
-								</Grid>
-								<Grid  size={12} className={styles.imageContainer}>
-									<img
-										src={require("../assets/images/product-visualization.png")}
-										alt=""
-										className={styles.speakerImage}
-									/>
-								</Grid>
-							</Grid>
-						</Grid>
-						<Grid size={4} className={styles.fullSupportItemGrid}>
-							<GlassContainer glassBackground="rgba(245, 244, 241, 0.5)" />
-							<Grid size={12} container className={styles.itemContent}>
-								<Grid size={12} className={styles.itemHeading}>3D Animation & Experiences</Grid>
-								<Grid size={12} className={styles.itemSubHeading}>Bring Design Stories to Motion</Grid>
-								<Grid size={12} className={styles.itemText}>
-									Transform static visuals into immersive experiences with architectural flythroughs, interior presentations, and interactive storytelling.
-								</Grid>
-								<Grid size={12} spacing={3} container>
-									<Grid size={6}>
-										<LinkButton style={{ "--button-bg": "#f2f0ea" }}>GET A FREE QUOTE</LinkButton>
-									</Grid>
-									<Grid size={5} className={styles.itemSmallText}>
-										IDEAL FOR A Developers, architects, marketing agencies, real estate
-									</Grid>
-									<Grid size={1}>
-										<img src={require("../assets/images/check-icon.png")} alt="" className={styles.checkIcon} />
-									</Grid>
-								</Grid>
-								<Grid  size={12} className={styles.imageContainer}>
-									<img
-										src={require("../assets/images/3d-animation.png")}
-										alt=""
-									/>
-								</Grid>
-							</Grid>
-						</Grid>
-						<Grid size={4} className={styles.fullSupportItemGrid}>
-							<GlassContainer glassBackground="rgba(245, 244, 241, 0.5)" />
-							<Grid size={12} container className={styles.itemContent}>
-								<Grid size={12} className={styles.itemHeading}>360° & Virtual <br />Tours</Grid>
-								<Grid size={12} className={styles.itemSubHeading}>Immersive tours that close deals faster.</Grid>
-								<Grid size={12} className={styles.itemText}>
-									Give clients the power to explore spaces virtually through 360° panoramas and interactive tours—ideal for real estate and hospitality marketing.
-								</Grid>
-								<Grid size={12} spacing={3} container>
-									<Grid size={6}>
-										<LinkButton style={{ "--button-bg": "#f2f0ea" }}>GET A FREE QUOTE</LinkButton>
-									</Grid>
-									<Grid size={5} className={styles.itemSmallText}>
-										IDEAL FOR A Realtors hotels, property portals, global buyers
-									</Grid>
-									<Grid size={1}>
-										<img src={require("../assets/images/check-icon.png")} alt="" className={styles.checkIcon} />
-									</Grid>
-								</Grid>
-								<Grid  size={12} className={styles.imageContainer}>
-									<img
-										src={require("../assets/images/360-virtual-tour.png")}
-										alt=""
-									/>
-								</Grid>
-							</Grid>
-						</Grid>
+					<Grid size={12} spacing={4} container className={styles.fullSupportItemsList} ref={serviceListContainer}>
+						{
+							servicesList.map((service, index) => (
+								<ServiceCard
+									key={index}
+									heading={service.heading}
+									subHeading={service.subHeading}
+									description={service.description}
+									usp={service.usp}
+									image={service.image}
+									imageClassName={service.imageClassName}
+									progress={scrollYProgress}
+									translateY={service.translateY}
+								/>
+							))
+						}
 					</Grid>
 					<Grid size={12}>
 						<Heading variant="secondary" className={styles.fullSuiteBottomHeading}>
@@ -227,11 +137,13 @@ function Home() {
 			<section className={styles.portfolioSection}>
 				<Container maxWidth="xl">
 					<Grid size={12}>
-						<Heading variant="secondary" className={styles.portfolioHeading}>
+						<Heading className={styles.portfolioHeading}>
 							See the Stunning. 
 						</Heading>
 					</Grid>
-					<Grid size={12} className={styles.portfolioSecondaryHeading}>Believe the Budget.</Grid>
+					<Grid size={12}>
+						<Heading variant="secondary" className={styles.portfolioSecondaryHeading}>Believe the Budget.</Heading>
+					</Grid>
 					<Grid size={12} container className={styles.textCenter}>
 						<Grid size={6} offset={3}>
 							Explore some of our favorite works—from photorealistic home interiors to cinematic exterior walkthroughs. You’ll be amazed what we deliver for the price.
@@ -242,6 +154,32 @@ function Home() {
 					</Grid>
 				</Container>
 				<ZoomParallax />
+			</section>
+			<section className={styles.whyBrandLoveSection}>
+				<Container maxWidth="xl">
+					<Grid size={12}>
+						<Heading variant="secondary" className={styles.whyBrandHeading}>Why Brands Love Us?</Heading>
+					</Grid>
+					<Grid size={12}>
+						<Heading className={styles.whyBrandHeading}>
+							Elite Rendering.<br/>
+							Fair Pricing.
+						</Heading>
+						<Heading className={styles.textCenter}>No Compromise.</Heading>
+					</Grid>
+					<Grid size={12} container>
+						<Grid size={6} offset={3} className={styles.whyBrandSmallText}>
+							At Glocal Studio, we deliver premium-quality 3D visuals and design solutions that rival the world’s best—but at prices that make sense. From stunning realism to lightning-fast turnaround, we combine creativity, precision, and affordability like no one else.
+						</Grid>
+						<Grid size={6} offset={3} className={styles.whyBrandSmallAnotherText}>
+							When others say either quality or price—we say, why not both?
+						</Grid>
+					</Grid>
+				</Container>
+				<UspSectionCards />
+			</section>
+			<section> {/** Let us render section */}
+				<LetUsRenderPrespectiveScroll />
 			</section>
 		</>
   );
