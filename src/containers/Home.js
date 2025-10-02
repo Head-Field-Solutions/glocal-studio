@@ -1,7 +1,7 @@
-import React, { useRef } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Container, Grid2 as Grid } from '@mui/material';
-import { useScroll } from 'framer-motion';
+import React, { useRef } from "react";
+import { Helmet } from "react-helmet-async";
+import { Container, Grid2 as Grid } from "@mui/material";
+import { useScroll } from "framer-motion";
 
 import MasterHeadVideo from "@/components/Home/MasterHeadVideo";
 import MaskVideoSection from "@/components/Home/MaskVideoSection";

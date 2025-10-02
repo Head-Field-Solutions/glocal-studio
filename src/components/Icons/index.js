@@ -24,3 +24,4 @@ export { default as ChevronArrow } from "./ChevronArrow";
 export { default as LinkedInNew } from "./LinkedinNew";
 export { default as PlusIcon } from "./Plus";
 export { default as MinusIcon } from "./Minus";
+export { default as StarGradiantIcon } from "./StarGradiantIcon";

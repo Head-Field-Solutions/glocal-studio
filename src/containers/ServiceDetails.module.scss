@@ -1,0 +1,104 @@
+.masterHead {
+	background: url("../assets/images/service-details/service-details-masterhead.jpg") no-repeat top center;
+	background-size: cover;
+	padding: 90vh 0 100px;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.extraLightText {
+	font-weight: 200;
+}
+
+.fontNormal {
+	font-weight: 400;
+}
+
+.mediumBold {
+	font-weight: 500;
+}
+
+.lightText {
+	font-weight: 300;
+}
+
+.textCenter {
+	text-align: center;
+}
+
+.textRight {
+	text-align: right;
+}
+
+.textWhite {
+	color: #f3f2ee;
+}
+
+.masterHeadInfoSection {
+	background: linear-gradient(360deg,rgba(23, 33, 61, 1) 0%, rgba(23, 33, 61, 0.10) 100%);
+	border-radius: 30px;
+	padding: 60px 0;
+}
+
+.acturalVisualizationHeading {
+	font-size: 24px;
+	text-transform: uppercase;
+	color: #f3f2ee;
+	margin-bottom: 32px;
+	position: relative;
+
+	&::after {
+		content: "";
+		height: 4px;
+		background-image: linear-gradient(to left, #006aff, #ff005b);
+		width: 20%;
+		position: absolute;
+    bottom: -32px;
+		left: 50%;
+    transform: translateX(-50%);
+	}
+}
+
+.masterHeadingHeading {
+	text-transform: uppercase;
+	color: #f3f2ee;
+}
+
+.masterHeadText {
+	font-size: 24px;
+}
+
+.whatWeDoSection {
+	padding: 40px 0 0;
+}
+
+.whatWeDoBoxContainer {
+	padding: 60px 0 140px;
+}
+
+.threeDRenderImage {
+	width: 100%;
+}
+
+.weDesignSecondaryHeading {
+	text-align: center;
+	color: #f3f2ee;
+	font-weight: 200;
+	margin: 40px 0 60px;
+}
+
+.projectInfoImage {
+	height: 150px;
+}
+
+.partnerWithProfessionalSection {
+	background: url("../assets/images/service-details/professional-services-section-bg.jpg") no-repeat top center;
+	background-size: cover;
+	padding-bottom: 120px;
+}
+
+.partnerWithProfessionalContainer {
+	margin-top: -30%;
+}
