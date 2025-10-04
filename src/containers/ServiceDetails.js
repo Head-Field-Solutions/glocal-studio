@@ -1,6 +1,7 @@
 import React from "react";
 import { Helmet } from 'react-helmet-async';
 import { Container, Grid2 as Grid } from "@mui/material";
+import { useParams } from "react-router-dom";
 import cx from "classnames";
 
 import { StarGradiantIcon } from "@/components/Icons";
@@ -17,36 +18,20 @@ import ProfessionalServiceBox from "@/components/ServiceDetails/ProfessionalServ
 import FAQContainer from "@/components/ServiceDetails/FAQContainer";
 import WhyChooseUsBox from "@/components/ServiceDetails/WhyChooseUsBox";
 
+import NotFound from "@/containers/NotFound";
+
+import { servicesInfo } from "@/utils/serviceInfo";
+
 import * as styles from "./ServiceDetails.module.scss";
 
 function ServiceDetails() {
-	const whatWeDoItems = [
-		{
-			id: "01",
-			title: "Perfect for developers pitching projects and realtors marketing properties.",
-			heading: "Exterior Rendering",
-			content: "Showcase your building’s architecture in full context with lifelike detail, light, and landscapintg.",
-			image: require("../assets/images/service-details/what-we-do-item-1.png"),
-		}, {
-			id: "02",
-			title: "Perfect for interior designers and homeowners visualizing upgrades.",
-			heading: "Interior Rendering",
-			content: "Bring interior concepts to life with photoreal textures, lighting, and decor styling—helping clients see, feel, and believe in the design before it’s built.",
-			image: require("../assets/images/service-details/what-we-do-item-2.png"),
-		}, {
-			id: "03",
-			title: "Perfect for presentations that need clarity in layouts and space logic.",
-			heading: "Isometric Views",
-			content: "Simplify complexity with angled 3D views that highlight layouts, layers, and spatial relationships",
-			image: require("../assets/images/service-details/what-we-do-item-3.png"),
-		}, {
-			id: "04",
-			title: "Perfect for brochures, property listings, and client-friendly sales material.",
-			heading: "Floor Plan Rendering",
-			content: "Transform technical blueprints into fully furnished, easy-to-understand 3D layouts that instantly communicate flow, size, and function to clients and buyers.",
-			image: require("../assets/images/service-details/what-we-do-item-4.png"),
-		}
-	];
+	const params = useParams();
+
+	const serviceDetails = servicesInfo[params.id] || null;
+
+	if (!serviceDetails) {
+		return <NotFound />;
+	}
 
 	const professionalServiceContent = [
 		{
@@ -55,16 +40,16 @@ function ServiceDetails() {
 			content: "We empower architects to showcase their designs in photoreal detail—exteriors, interiors, floor plans, and walkthroughs that make concepts instantly understandable.",
 			keyServices: [
 				{
-					image: require("../assets/images/service-details/professional-service-icon-1.png"),
+					image: require("../assets/images/service-details/icons/photoreal-renders.png"),
 					content: "Photoreal Renders",
 				}, {
-					image: require("../assets/images/service-details/professional-service-icon-1.png"),
+					image: require("../assets/images/service-details/icons/technical-accuracy.png"),
 					content: "Technical Accuracy",
 				}, {
-					image: require("../assets/images/service-details/professional-service-icon-1.png"),
+					image: require("../assets/images/service-details/icons/fast-delivery.png"),
 					content: "Fast Delivery",
 				}, {
-					image: require("../assets/images/service-details/professional-service-icon-1.png"),
+					image: require("../assets/images/service-details/icons/partnered-collabration.png"),
 					content: "Partnered Collaboration",
 				}, 
 			],
@@ -75,16 +60,16 @@ function ServiceDetails() {
 			content: "From mood boards to final styling, we create interior visuals that help designers present their ideas convincingly, align clients on finishes, and win trust before execution.",
 			keyServices: [
 				{
-					image: require("../assets/images/service-details/professional-service-icon-1.png"),
+					image: require("../assets/images/service-details/icons/realistic-stylling.png"),
 					content: "Realistic Styling",
 				}, {
-					image: require("../assets/images/service-details/professional-service-icon-1.png"),
+					image: require("../assets/images/service-details/icons/material-accuracy.png"),
 					content: "Material Accuracy",
 				}, {
-					image: require("../assets/images/service-details/professional-service-icon-1.png"),
+					image: require("../assets/images/service-details/icons/flexible-options.png"),
 					content: "Flexible Options",
 				}, {
-					image: require("../assets/images/service-details/professional-service-icon-1.png"),
+					image: require("../assets/images/service-details/icons/engaging-visuals.png"),
 					content: "Engaging Visuals",
 				}, 
 			],
@@ -95,16 +80,16 @@ function ServiceDetails() {
 			content: "We give developers the tools to market and sell projects before construction even begins. Our visuals, walkthroughs, and VR tours build excitement and boost pre-sales.",
 			keyServices: [
 				{
-					image: require("../assets/images/service-details/professional-service-icon-1.png"),
+					image: require("../assets/images/service-details/icons/sales-ready-visuals.png"),
 					content: "Sales-Ready Visuals",
 				}, {
-					image: require("../assets/images/service-details/professional-service-icon-1.png"),
+					image: require("../assets/images/service-details/icons/immersive-walkthroughs.png"),
 					content: "Immersive Walkthroughs",
 				}, {
-					image: require("../assets/images/service-details/professional-service-icon-1.png"),
+					image: require("../assets/images/service-details/icons/cost-efficiency.png"),
 					content: "Cost Efficiency",
 				}, {
-					image: require("../assets/images/service-details/professional-service-icon-1.png"),
+					image: require("../assets/images/service-details/icons/ready-to-use.png"),
 					content: "Ready to use Renders",
 				}, 
 			],
@@ -115,16 +100,16 @@ function ServiceDetails() {
 			content: "We support contractors with clear drafting, execution-ready drawings, and precise visuals that reduce site errors and speed up work coordination.",
 			keyServices: [
 				{
-					image: require("../assets/images/service-details/professional-service-icon-1.png"),
+					image: require("../assets/images/service-details/icons/accurate-draftinng.png"),
 					content: "Accurate Drafting",
 				}, {
-					image: require("../assets/images/service-details/professional-service-icon-1.png"),
+					image: require("../assets/images/service-details/icons/build-clarity.png"),
 					content: "Build Clarity",
 				}, {
-					image: require("../assets/images/service-details/professional-service-icon-1.png"),
+					image: require("../assets/images/service-details/icons/easy-coordination.png"),
 					content: "Easy Coordination",
 				}, {
-					image: require("../assets/images/service-details/professional-service-icon-1.png"),
+					image: require("../assets/images/service-details/icons/time-saving-documentation.png"),
 					content: "Time-Saving Documentation",
 				}, 
 			],
@@ -204,10 +189,14 @@ function ServiceDetails() {
 	return (
 		<>
 			<Helmet>
-				<title>The Worlds Leading Studio You Can Trust | Glocal Studio</title>
-				<meta name="description" content="Streamline your business with professional virtual assistant services. Get remote administrative support, scheduling, customer care, and more. Enhance productivity today!" />
+				<title>{serviceDetails?.seoContent?.title || `${serviceDetails.title} | Glocal Studio`}</title>
 			</Helmet>
-			<section className={styles.masterHead}>
+			<section
+				className={styles.masterHead}
+				style={{
+					background: `url("${serviceDetails.background}") no-repeat ${serviceDetails.backgroundPosition}`,
+				}}
+			>
 				<Container maxWidth="xl">
 					<Grid
 						size={12}
@@ -219,14 +208,18 @@ function ServiceDetails() {
 							<StarGradiantIcon width="58px" height="65px" />
 						</Grid>
 						<Grid size={12} className={styles.acturalVisualizationHeading}>
-							Architectural Visualization
+							{serviceDetails.title}
 						</Grid>
 						<Grid size={12}>
-							<Heading className={cx(styles.masterHeadingHeading, styles.extraLightText)}>Turning Blueprints Into</Heading>
-							<Heading className={styles.masterHeadingHeading}>Photoreal Experiences</Heading>
+							<Heading className={cx(styles.masterHeadingHeading, styles.extraLightText)}>
+								{serviceDetails.desktopMainHeading}
+							</Heading>
+							<Heading className={styles.masterHeadingHeading}>
+								{serviceDetails.secondaryHeading}
+							</Heading>
 						</Grid>
 						<Grid size={8} offset={2} className={cx(styles.masterHeadText, styles.textWhite)}>
-							Pixel-perfect renders, quick turnarounds, and a partner you can trust.
+							{serviceDetails.description}
 						</Grid>
 						<Grid size={12}>
 							<LinkButton>Let’s Discuss Your Project</LinkButton>
@@ -242,13 +235,20 @@ function ServiceDetails() {
 						</Grid>
 						<Grid size={12}>
 							<Heading variant="secondary" className={cx(styles.extraLightText, styles.textCenter, styles.textWhite)}>
-								We transform CAD and sketches into photorealistic 3D visuals that help architects, developers, and designers win approvals, attract buyers, and amplify presentations.
+								{serviceDetails.whatWeDo.content}
 							</Heading>
 						</Grid>
 					</Grid>
-					<Grid size={12} container spacing={4} className={styles.whatWeDoBoxContainer}>
+					<Grid
+						size={12}
+						container
+						spacing={4}
+						className={styles.whatWeDoBoxContainer}
+						justifyContent="center"
+						alignItems="flex-start"
+					>
 						{
-							whatWeDoItems.map((item) => (
+							serviceDetails.whatWeDo.items.map((item) => (
 								<WhatWeDoBox
 									key={item.id}
 									id={item.id}
@@ -256,6 +256,7 @@ function ServiceDetails() {
 									heading={item.heading}
 									content={item.content}
 									image={item.image}
+									type={item.type}
 								/>
 							))
 						}
