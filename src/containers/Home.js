@@ -12,6 +12,8 @@ import ServiceCard from "@/components/Home/ServiceCard";
 
 import { Heading, LinkButton } from "@/components/common";
 
+import { routes } from "@/utils/routesPath";
+
 import masterHeadVideo from "@/assets/videos/home-masterhead-video.mp4";
 import fullSupportImage from "@/assets/images/fullsuite-image.webp";
 
@@ -25,6 +27,7 @@ function Home() {
 			description: "Bring architectural ideas to life with stunning, photoreal renders—exteriors, interiors, isometrics, floor plans, and walkthroughs that inspire confidence and sell.",
 			usp: "IDEAL FOR Architects, real estate, developers, interior studios",
 			image: require("../assets/images/architectural-visualization.png"),
+			link: routes["architectural-visualization"].href,
 			translateY: 100,
 		}, {
 			heading: <>3D <br/>Modeling</>,
@@ -32,6 +35,7 @@ function Home() {
 			description: "We craft accurate 3D models for architecture, interiors, furniture, and products—detailed, scalable, and ready for rendering or prototyping.",
 			usp: "IDEAL FOR ADesigners, product brands, architects, engineers",
 			image: require("../assets/images/3d-modeling.png"),
+			link: routes["3d-modeling"].href,
 			translateY: 100,
 		}, {
 			heading: <>Technical<br/> Drawings</>,
@@ -39,6 +43,7 @@ function Home() {
 			description: "Precise working drawings, joinery details, and documentation that bridge design intent and execution—streamlining site work and vendor coordination.",
 			usp: "IDEAL FOR A Contractors, furniture makers, architects, developers",
 			image: require("../assets/images/technical-drawings.png"),
+			link: routes["technical-drawings"].href,
 			translateY: 100,
 		}, {
 			heading: <>Product <br />Visualization</>,
@@ -47,6 +52,7 @@ function Home() {
 			usp: "IDEAL FOR A Product designers, startups, furniture brands, FMCG",
 			image: require("../assets/images/product-visualization.png"),
 			imageClassName: styles.speakerImage,
+			link: routes["product-visualization"].href,
 			translateY: 100,
 		}, {
 			heading: <>3D Animation & Experiences</>,
@@ -54,6 +60,7 @@ function Home() {
 			description: "Transform static visuals into immersive experiences with architectural flythroughs, interior presentations, and interactive storytelling.",
 			usp: "IDEAL FOR A Developers, architects, marketing agencies, real estate",
 			image: require("../assets/images/3d-animation.png"),
+			link: routes["3d-animation-and-experiences"].href,
 			translateY: 100,
 		}, {
 			heading: <>360° & Virtual <br />Tours</>,
@@ -61,6 +68,7 @@ function Home() {
 			description: "Give clients the power to explore spaces virtually through 360° panoramas and interactive tours—ideal for real estate and hospitality marketing.",
 			usp: "IDEAL FOR A Realtors hotels, property portals, global buyers",
 			image: require("../assets/images/360-virtual-tour.png"),
+			link: routes["360-degree-and-virtual-tours"].href,
 			translateY: 100,
 		}
 	];
@@ -118,6 +126,7 @@ function Home() {
 									imageClassName={service.imageClassName}
 									progress={scrollYProgress}
 									translateY={service.translateY}
+									link={service.link}
 								/>
 							))
 						}

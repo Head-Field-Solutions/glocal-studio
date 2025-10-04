@@ -19,6 +19,7 @@ import GlassContainer from './GlassContainer';
 import Heading from "./Heading";
 import ContactForm from "./ContactForm";
 import ScrollableMotionText from "./ScrollableMotionText";
+import ColorfulText from "./ColorfulText";
 
 import * as styles from "./Footer.module.scss";
 
@@ -36,7 +37,7 @@ function Footer() {
 				<Container maxWidth="xl" className={styles.formContainer}>
 					<Grid size={12} container>
 						<Grid size={6} offset={6}>
-							<Grid size={12}>GET IN TOUCH WITH US</Grid>
+							<Grid size={12}><ColorfulText>GET IN TOUCH WITH US</ColorfulText></Grid>
 							<Grid size={12}>
 								<Heading variant="secondary" className={styles.greatDesignHeading}>
 									Great Designs Start with 

@@ -12,8 +12,6 @@ export { default as AdministrativeTask } from "./AdministrativeTask";
 export { default as CreativeDesign } from "./CreativeDesign";
 export { default as CustomerSupport } from "./CustomerSupport";
 export { default as DigitalMarketing } from "./DigitalMarketing";
-export { default as EngineeringServices } from "./EngineeringServices";
-export { default as FinanceAndAccounting } from "./FinanceAndAccounting";
 export { default as SoftwareAppDevelopment } from "./SoftwareAppDevelopment";
 export { default as WebDevelopment } from "./WebDevelopment";
 export { default as CategoryIcon } from "./CategoryIcon";

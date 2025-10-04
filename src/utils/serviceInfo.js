@@ -3,7 +3,7 @@ import React from "react";
 import { routes } from "./routesPath";
 
 export const servicesInfo = {
-	"administrative-tasks": {
+	"architectural-visualization": {
 		"seoContent": {
 			"title": "Admin Support | Glocal Studio"
 		},
@@ -71,7 +71,7 @@ export const servicesInfo = {
 			}
 		]
   },
-	"digital-marketing-services": {
+	"3d-modeling": {
 		"seoContent": {
 			"title": "Digital Marketing Services | Glocal Studio"
 		},
@@ -130,7 +130,7 @@ export const servicesInfo = {
 			}
 		]
 	},
-	"customer-support-and-experience": {
+	"technical-drawings": {
 		"seoContent": {
 			"title": "Customer Support & Experience | Glocal Studio"
 		},
@@ -198,7 +198,7 @@ export const servicesInfo = {
 			}
 		]
 	},
-	"website-revamp-and-optimization": {
+	"product-visualization": {
 		"seoContent": {
 			"title": "Website Revamp & Optimization | Glocal Studio"
 		},
@@ -257,7 +257,7 @@ export const servicesInfo = {
 			}
 		]
 	},
-	"creative-services": {
+	"3d-animation-and-experiences": {
 		"seoContent": {
 			"title": "Creative Services | Glocal Studio"
 		},
@@ -325,7 +325,7 @@ export const servicesInfo = {
 			}
 		]
 	},
-	"software-and-app-development": {
+	"360-degree-and-virtual-tours": {
 		"seoContent": {
 			"title": "Software & App Development | Glocal Studio"
 		},
@@ -390,216 +390,44 @@ export const servicesInfo = {
 			}
 		]
 	},
-	"finance-and-accounting": {
-		"seoContent": {
-			"title": "Finance & Accounting | Glocal Studio"
-		},
-		"title":"Finance & Accounting",
-		"background": "",
-		"backgroundPosition": "top center",
-		"mobileMainHeading": <>Profit-Friendly <br/>Financials</>,
-		"desktopMainHeading": "Profit-Friendly Financials",
-		"secondaryHeading": "Our Finance & Accounting services help you stay financially sharp and business-ready.",
-		"description":{
-        "mainDescription": "Gain clarity into your cash flow, streamline operations, and make smarter financial decisions. Whether you’re preparing for tax season or scaling your revenue, we keep your numbers accurate—and your future secure. Consider us your outsourced CFO team.",
-        "smallDesription": "We handle everything from day-to-day bookkeeping and invoicing to budgeting, compliance, and reporting. "
-     },
-		 "organizationSection": {
-			"heading": "Smart accounting. Stronger business.",
-			"subHeading": "Precision-driven finance support for smarter business decisions.",
-			"description": "We handle the numbers so you can focus on growth. From daily bookkeeping and payroll to forecasting and compliance, our financial experts bring clarity, accuracy, and structure to your operations—helping you stay compliant, profitable, and prepared."
-		},
-		"faqs": [
-			{
-				"title": "What finance and accounting tasks can your Virtual Assistants handle?",
-				"description": "Our VAs can assist with bookkeeping, invoice management, financial reporting, payroll, budgeting, tax prep, forecasting, and more, all tailored to your business needs.",
-			}, {
-				"title": "Are your VAs trained in accounting software like QuickBooks, Xero, or NetSuite?",
-				"description": "Yes, our VAs are proficient in QuickBooks, Xero, Sage, NetSuite, Zoho Books, and other leading platforms and can quickly adapt to your preferred system.",
-			}, {
-				"title": "Can your VA help with day-to-day bookkeeping?",
-				"description": "Absolutely. We manage daily transaction logging, categorization, account reconciliation, and ensure your records are always up to date and audit-ready.",
-			}, {
-				"title": "Do you offer invoice management and follow-up support?",
-				"description": "Yes, we can generate, send, track invoices, and follow up on outstanding payments to keep your cash flow steady and organized.",
-			}, {
-				"title": "How do your VAs assist with payroll processing?",
-				"description": "We handle timesheet tracking, payment calculations, payroll software entry, tax deductions, and ensure accurate and timely payroll runs.",
-			}, {
-				"title": "Can you provide profit & loss statements or financial reports?",
-				"description": "Yes, we prepare accurate P&L statements, balance sheets, and custom financial reports to help you make informed business decisions.",
-			}, {
-				"title": "What about bank reconciliation?",
-				"description": "Our VAs reconcile your bank, credit card, and payment gateway transactions, identifying discrepancies and keeping records clean and compliant.",
-			}, {
-				"title": "Do you assist with tax filing and preparation?",
-				"description": "Yes. While we don't file taxes directly, we assist in gathering documents, organizing data, and working alongside your accountant or tax professional.",
-			}, {
-				"title": "Can your VAs support financial forecasting and budgeting?",
-				"description": "Definitely. We help build financial models, monthly budgets, and cash flow forecasts, offering insights to plan your growth strategically.",
-			}, {
-				"title": "How do you manage accounts payable (AP) and receivable (AR)?",
-				"description": "We track incoming payments, manage vendor bills, send payment reminders, and ensure accurate and timely recording of AR and AP activities.",
-			}, {
-				"title": "Can your VA handle audit preparation and compliance documentation?",
-				"description": "Yes. We organize financial records, reports, receipts, and prepare supporting documents required for audits or compliance reviews.",
-			}, {
-				"title": "How do you ensure data accuracy and confidentiality?",
-				"description": "We follow strict data protection protocols, work on secure systems, and sign NDAs to maintain full confidentiality and accuracy.",
-			}, {
-				"title": "Do you manage expense tracking and reporting?",
-				"description": "Absolutely. We log expenses, track business spending, categorize costs, and prepare monthly or custom expense reports for management or tax use.",
-			}, {
-				"title": "Can your VAs help with credit and debt management?",
-				"description": "Yes, we assist in tracking outstanding balances, organizing payments, managing credit lines, and providing regular debt overview reports.",
-			}, {
-				"title": "How do your VAs help with financial document organization?",
-				"description": "We manage contracts, receipts, reports, invoices, and digital filing systems, ensuring everything is easy to access, well-organized, and securely stored.",
-			}
-		]
-	},
-	"engineering-services": {
-		"seoContent": {
-			"title": "Engineering Services | Glocal Studio"
-		},
-		"title":"Engineering Services",
-		"background": "",
-		"backgroundPosition": "top center",
-		"mobileMainHeading": <>Engineered <br/>for <br/>Impact</>,
-		"desktopMainHeading": "Engineered for Impact",
-		"secondaryHeading": "precision, innovation, and performance—engineered to scale.",
-		"description":{
-        "mainDescription": "From CAD modeling and product design to civil, electrical, and mechanical solutions—we bring expertise, precision, and innovation to every phase. Our engineers work across industries to help you reduce costs, optimize performance, and accelerate development. Whether it’s a prototype or a large-scale implementation, we deliver with reliability and impact.",
-        "smallDesription": "We offer innovative engineering services that solve real-world problems and power complex projects."
-     },
-		 "organizationSection": {
-			"heading": "Solving the complex, simply.",
-			"subHeading": "Precision, innovation, and performance—engineered to scale.",
-			"description": "Our engineering services combine deep technical expertise with modern tools to streamline complex operations. From CAD and 3D modeling to AI integration, analytics, and project support—we help businesses innovate, optimize, and deliver with confidence."
-		},
-		"faqs": [
-			{
-				"title": "What engineering services can your Virtual Assistants provide?",
-				"description": "Our VAs support a wide range of tasks including CAD drafting, 3D modeling, BIM services, project management, AI integration, data analytics, and technical documentation.",
-			}, {
-				"title": "Are your VAs experienced with CAD software?",
-				"description": "Yes, our team is trained in industry-standard tools like AutoCAD, Revit, SolidWorks, Fusion 360, SketchUp, and can assist with drafting, revisions, and conversions.",
-			}, {
-				"title": "Can your VA help with 3D modeling and rendering?",
-				"description": "Absolutely. We assist with 3D visualization, creating product prototypes, architectural renderings, and presentation-ready visuals.",
-			}, {
-				"title": "What is BIM and do your VAs support it?",
-				"description": "Yes, we support Building Information Modeling (BIM) using tools like Revit helping with model coordination, clash detection, and documentation.",
-			}, {
-				"title": "Can your VAs assist in architectural and structural design projects?",
-				"description": "Yes, we work alongside engineers and architects to produce drawings, layouts, site plans, and supporting documents as per required specifications.",
-			}, {
-				"title": "How do your VAs contribute to engineering project management?",
-				"description": "We handle timeline tracking, task delegation, reporting, vendor coordination, and resource scheduling to keep your projects on track.",
-			}, {
-				"title": "Do your VAs help with technical writing and documentation?",
-				"description": "Definitely. We create technical manuals, design documentation, installation guides, reports, and SOPs, ensuring precision and clarity.",
-			}, {
-				"title": "Can your VA manage engineering data and analytics?",
-				"description": "Yes. We assist in collecting, organizing, and analyzing data using tools like Excel, MATLAB, or Power BI to support decision-making and reporting.",
-			}, {
-				"title": "What role does your VA play in AI & automation in engineering?",
-				"description": "Our VAs support AI tool integration, help automate repetitive workflows, and assist in researching and testing AI-driven solutions for engineering processes.",
-			}, {
-				"title": "Do you help with file conversion and format management?",
-				"description": "Yes, we manage file conversions (DWG, DWF, STL, PDF, etc.), ensure compatibility across tools, and maintain version control.",
-			}, {
-				"title": "Can your VA assist with vendor and contract management?",
-				"description": "Absolutely. We track vendor deliverables, handle communications, review contracts, and ensure compliance with project scopes and timelines.",
-			}, {
-				"title": "Do you provide inventory tracking for engineering or construction tools/materials?",
-				"description": "Yes. We manage inventory records, update stock levels, track usage, and even set up automated reorder alerts if needed.",
-			}, {
-				"title": "How do you ensure quality control and process compliance?",
-				"description": "Our VAs support QA workflows, document inspection protocols, assist in compliance checklists, and update control logs based on your standards.",
-			}, {
-				"title": "Can your VA handle engineering portfolio and website updates?",
-				"description": "Yes, we design and update engineering portfolios, websites, and social media channels, ensuring your digital presence reflects your latest work.",
-			}, {
-				"title": "Do you offer time tracking and billing support for engineering teams?",
-				"description": "We handle time logs, resource allocation, and generate invoicing reports based on tracked hours — ideal for consultants, agencies, and freelancers.",
-			}
-		]
-	},
 };
 
 export const servicesArray = [
 	{
 		id: "01",
-		title: routes["administrative-tasks"].label,
-		description: "Free up your time with efficient scheduling, email management, and workflow automation. Stay organized and focused on what truly matters.",
-		contentBoxTitle: "turning Chaos into Order",
-		link: routes["administrative-tasks"].href,
-		image: "",
-		icon: routes["administrative-tasks"].icon,
-		menuContent: "Admin Support Efficiently manage schedules, emails, and tasks—stay organized and focused."
+		title: routes["architectural-visualization"].label,
+		link: routes["architectural-visualization"].href,
+		icon: routes["architectural-visualization"].icon,
+		menuContent: "Bring architectural ideas to life with stunning, photoreal renders—exteriors, interiors, isometrics, floor plans, and walkthroughs that inspire confidence and sell."
 	},  {
 		id: "02",
-		title: routes["digital-marketing-services"].label,
-		description: "From SEO to social media, we craft targeted marketing strategies that increase traffic, generate leads, and enhance brand consistency.",
-		contentBoxTitle: "converting Clicks Into Clients",
-		link: routes["digital-marketing-services"].href,
-		image: "",
-		icon: routes["digital-marketing-services"].icon,
-		menuContent: "Digital Marketing Drive growth with SEO, ads, and social media content strategies."
+		title: routes["3d-modeling"].label,
+		link: routes["3d-modeling"].href,
+		icon: routes["3d-modeling"].icon,
+		menuContent: "We craft accurate 3D models for architecture, interiors, furniture, and products—detailed, scalable, and ready for rendering or prototyping."
 	}, {
 		id: "03",
-		title: routes["customer-support-and-experience"].label,
-		description: "Deliver 24/7 customer service, personalize interactions, and improve client relationships with seamless CRM integration and proactive engagement.",
-		contentBoxTitle: "24/7 Customer Care That Builds Loyalty",
-		link: routes["customer-support-and-experience"].href,
-		image: "",
-		icon: routes["customer-support-and-experience"].icon,
-		menuContent: "Customer Support 24/7 service with CRM integration to boost client satisfaction."
+		title: routes["technical-drawings"].label,
+		link: routes["technical-drawings"].href,
+		icon: routes["technical-drawings"].icon,
+		menuContent: "Precise working drawings, joinery details, and documentation that bridge design intent and execution—streamlining site work and vendor coordination."
 	}, {
 		id: "04",
-		title: routes["website-revamp-and-optimization"].label,
-		description: "Enhance your website with a sleek design, SEO improvements, and robust security, ensuring a seamless experience across all devices.",
-		contentBoxTitle: "Refreshing Your Online Presence",
-		link: routes["website-revamp-and-optimization"].href,
-		image: "",
-		icon: routes["website-revamp-and-optimization"].icon,
-		menuContent: "Web Development Modernize your website with better design, speed, and security."
+		title: routes["product-visualization"].label,
+		link: routes["product-visualization"].href,
+		icon: routes["product-visualization"].icon,
+		menuContent: "From furniture renders to prototypes, we showcase your products with lifelike detail—perfect for marketing, e-commerce, and investor presentations."
 	}, {
 		id: "05",
-		title: routes["creative-services"].label,
-		description: "Bring your brand to life with impactful visuals that connect and convert. From logos to marketing assets, our designers craft with purpose and precision.",
-		contentBoxTitle: "turning Chaos into Order",
-		link: routes["creative-services"].href,
-		image: "",
-		icon: routes["creative-services"].icon,
-		menuContent: "Creative Design Stand out with purposeful visuals, branding, and custom graphics."
+		title: routes["3d-animation-and-experiences"].label,
+		link: routes["3d-animation-and-experiences"].href,
+		icon: routes["3d-animation-and-experiences"].icon,
+		menuContent: "Transform static visuals into immersive experiences with architectural flythroughs, interior presentations, and interactive storytelling."
 	},  {
 		id: "06",
-		title: routes["software-and-app-development"].label,
-		description: "Build smarter digital solutions tailored to your business goals. From concept to launch, our developers deliver functionality with finesse.",
-		contentBoxTitle: "converting Clicks Into Clients",
-		link: routes["software-and-app-development"].href,
-		image: "",
-		icon: routes["software-and-app-development"].icon,
-		menuContent: "Software & App Dev Custom digital solutions from concept to launch, built for scalability."
-	}, {
-		id: "07",
-		title: routes["finance-and-accounting"].label,
-		description: "Stay on top of your numbers with expert financial support. We manage bookkeeping, invoicing, and reporting so you can focus on grow.",
-		contentBoxTitle: "24/7 Customer Care That Builds Loyalty",
-		link: routes["finance-and-accounting"].href,
-		image: "",
-		icon: routes["finance-and-accounting"].icon,
-		menuContent: "Finance & Accounting Simplify finances with expert bookkeeping, reports, and invoicing services."
-	}, {
-		id: "08",
-		title: routes["engineering-services"].label,
-		description: "Access skilled engineering talent without the overhead. From CAD drafting to product design, we deliver reliable, remote-ready expertise.",
-		contentBoxTitle: "Refreshing Your Online Presence",
-		link: routes["engineering-services"].href,
-		image: "",
-		icon: routes["engineering-services"].icon,
-		menuContent: "Engineering Solutions Remote-ready CAD, modeling, and drafting support for technical projects."
+		title: routes["360-degree-and-virtual-tours"].label,
+		link: routes["360-degree-and-virtual-tours"].href,
+		icon: routes["360-degree-and-virtual-tours"].icon,
+		menuContent: "Give clients the power to explore spaces virtually through 360° panoramas and interactive tours—ideal for real estate and hospitality marketing."
 	}
 ];

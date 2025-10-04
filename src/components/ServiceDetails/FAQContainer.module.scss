@@ -1,0 +1,26 @@
+.count {
+	font-size: 24px;
+	font-weight: 500;
+	margin-bottom: 20px;
+}
+
+.heading {
+	font-size: 24px;
+	font-weight: 500;
+	cursor: pointer;
+
+	&.active {
+		&::after {
+			background: linear-gradient(to left, #347bed, #de0d89);
+		}
+	}
+
+	&::after {
+		display: block;
+		content: "";
+		height: 4px;
+		background: #d6d3c9;
+		width: 100%;
+		margin: 20px 0;
+	}
+}

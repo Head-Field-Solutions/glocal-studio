@@ -15,7 +15,8 @@ export default function ServiceCard(props) {
 		image,
 		imageClassName = "",
 		progress,
-		translateY
+		translateY,
+		link
 	} = props;
 
 	const parallax = useTransform(progress, [0, 1], [0, translateY]);
@@ -39,7 +40,7 @@ export default function ServiceCard(props) {
 				</Grid>
 				<Grid size={12} spacing={3} container>
 					<Grid size={6}>
-						<LinkButton style={{ "--button-bg": "#f2f0ea" }}>GET A FREE QUOTE</LinkButton>
+						<LinkButton to={link} style={{ "--button-bg": "#f2f0ea" }}>GET A FREE QUOTE</LinkButton>
 					</Grid>
 					<Grid size={5} className={styles.itemSmallText}>
 						{usp}

@@ -17,7 +17,7 @@ function MegaMenu({ onClose }) {
 					servicesArray.map((service) => (
 						<Grid
 							container
-							size={3}
+							size={4}
 							key={service.id}
 							alignItems="flex-start"
 							className={styles.menuItem}

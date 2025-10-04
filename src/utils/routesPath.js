@@ -5,8 +5,6 @@ import {
 	CreativeDesign,
 	CustomerSupport,
 	DigitalMarketing,
-	EngineeringServices,
-	FinanceAndAccounting,
 	SoftwareAppDevelopment,
 	WebDevelopment,
 } from "@/components/Icons";
@@ -36,45 +34,35 @@ export const routes = {
 		label: "FAQs",
 		href: "/faq"
 	},
-	"administrative-tasks": {
-		label: 'Administrative Tasks',
-		href: '/services/administrative-tasks',
+	"architectural-visualization": {
+		label: 'Architectural Visualization',
+		href: '/services/architectural-visualization',
 		icon: <AdministrativeTask />,
 	},
-	"digital-marketing-services": {
-		label: 'Digital Marketing Services',
-		href: '/services/digital-marketing-services',
+	"3d-modeling": {
+		label: '3D Modeling',
+		href: '/services/3d-modeling',
 		icon: <DigitalMarketing />,
 	},
-	"customer-support-and-experience": {
-		label: 'Customer Support & Experience',
-		href: '/services/customer-support-and-experience',
+	"technical-drawings": {
+		label: 'Technical Drawings',
+		href: '/services/technical-drawings',
 		icon: <CustomerSupport />,
 	},
-	"website-revamp-and-optimization": {
-		label: 'Website Revamp & Optimization',
-		href: '/services/website-revamp-and-optimization',
+	"product-visualization": {
+		label: 'Product Visualization',
+		href: '/services/product-visualization',
 		icon: <WebDevelopment />,
 	},
-	"creative-services": {
-		label: 'Creative Services',
-		href: '/services/creative-services',
+	"3d-animation-and-experiences": {
+		label: '3D Animation & Experiences',
+		href: '/services/3d-animation-and-experiences',
 		icon: <CreativeDesign />,
 	},
-	"software-and-app-development": {
-		label: 'Software & App Development',
-		href: '/services/software-and-app-development',
+	"360-degree-and-virtual-tours": {
+		label: '360° & Virtual Tours',
+		href: '/services/360-degree-and-virtual-tours',
 		icon: <SoftwareAppDevelopment />,
-	},
-	"finance-and-accounting": {
-		label: 'Finance & Accounting',
-		href: '/services/finance-and-accounting',
-		icon: <FinanceAndAccounting />,
-	},
-	"engineering-services": {
-		label: 'Engineering Services',
-		href: '/services/engineering-services',
-		icon: <EngineeringServices />,
 	},
 	"terms-of-service": {
 		label: 'Terms of Service',

@@ -102,3 +102,79 @@
 .partnerWithProfessionalContainer {
 	margin-top: -30%;
 }
+
+.whyChooseUsSection {
+	background: #f9f7f4 url("../assets/images/service-details/why-choose-us-bg.jpg") no-repeat top center;
+	background-size: contain;
+	padding: 640px 0 0;
+}
+
+.whyChooseUsSecondaryHeadingContainer, 
+.whyChooseUsHeadingContainer {
+	margin: 12px 0;
+}
+
+.workDirectlyText {
+	font-size: 24px;
+	font-weight: 300;
+}
+
+.faqContainer {
+	background: #f9f7f4 url("../assets/images/service-details/faq-section-bg.jpg") no-repeat top center;
+	background-size: contain;
+	padding: 160px 0 80px;
+}
+
+.qualityMetricsContainer {
+	margin-bottom: 140px;
+}
+
+.glassContainer {
+	position: relative;
+}
+
+.glassContainerWrapper {
+	position: relative;
+	z-index: 4;
+	padding: 40px 28px;
+}
+
+.trustedHeading {
+	font-weight: 400;
+	text-transform: uppercase;
+}
+
+.trustedContent {
+	font-weight: 300;
+	font-size: 24px;
+}
+
+.yearsOfExperienceHeading {
+	font-size: clamp(2.5rem, 12.2vw, 12.2rem);
+}
+
+.faqIcon {
+	width: 40px;
+	margin-bottom: 4px;
+	display: flex;
+	justify-self: flex-end;
+}
+
+.faqHeading {
+	font-weight: 500;
+	font-size: 24px;
+	position: relative;
+	text-transform: uppercase;
+	display: flex;
+	align-items: center;
+	margin-bottom: 40px;
+
+	&::after {
+		position: relative;
+		content: "";
+		height: 4px;
+		background-image: linear-gradient(to left, #347bed, #de0d89);
+		margin-left: 20px;
+		width: 74%;
+	}
+}
