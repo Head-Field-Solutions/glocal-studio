@@ -1,0 +1,209 @@
+.masterHead {
+	background: url("../assets/images/about-us/masterhead.jpg") no-repeat top center;
+	background-size: cover;
+	padding: 90vh 0 100px;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.extraLightText {
+	font-weight: 200;
+}
+
+.fontNormal {
+	font-weight: 400;
+}
+
+.mediumBold {
+	font-weight: 500;
+}
+
+.lightText {
+	font-weight: 300;
+}
+
+.textCenter {
+	text-align: center;
+}
+
+.textRight {
+	text-align: right;
+}
+
+.textWhite {
+	color: #f3f2ee;
+}
+
+.masterHeadInfoSection {
+	background: linear-gradient(360deg,rgba(23, 33, 61, 1) 0%, rgba(23, 33, 61, 0.10) 100%);
+	border-radius: 30px;
+	padding: 60px 0;
+}
+
+.acturalVisualizationHeading {
+	font-size: 24px;
+	text-transform: uppercase;
+	color: #f3f2ee;
+	margin-bottom: 32px;
+	position: relative;
+
+	&::after {
+		content: "";
+		height: 4px;
+		background-image: linear-gradient(to left, #006aff, #ff005b);
+		width: 20%;
+		position: absolute;
+    bottom: -32px;
+		left: 50%;
+    transform: translateX(-50%);
+	}
+}
+
+.masterHeadingHeading {
+	text-transform: uppercase;
+	color: #f3f2ee;
+}
+
+.masterHeadText {
+	font-size: 24px;
+}
+
+.beyondSection {
+	background: url("../assets/images/about-us/beyond-section-bg.jpg") no-repeat top center;
+	background-size: contain;
+	padding: 75vh 0 300px;
+}
+
+.beyondInfoContent {
+	padding-top: 200px;
+}
+
+.visionMissionSection {
+	background: #f9f7f4;
+	padding-bottom: 240px;
+}
+
+.visionMissionCenterContent {
+	margin: 20px 0 60px;
+}
+
+.visionMisionIcon {
+	height: 150px;
+}
+
+.visionMissionBoxHeading {
+	font-size: 24px;
+	font-weight: 500;
+}
+
+.missionVisionContainer {
+	padding: 40px;
+	border-radius: 20px;
+	background: #f9f7f4;
+}
+
+.starContentContainer {
+	display: flex;
+	margin-top: 20px;
+	align-items: flex-start;
+}
+
+.visionMissionStatement {
+	font-size: 12px;
+	margin-left: 20px;
+	margin-top: 28px;
+}
+
+.visionMissionContentSection {
+	position: relative;
+  top: -150px;
+}
+
+.glocalAdvantageSection {
+	background: url("../assets/images/about-us/advantage-section-bg.jpg") no-repeat bottom center;
+	background-size: contain;
+	position: relative;
+	padding: 300px 0 200px;
+}
+
+.advantageStarIcon {
+	position: absolute;
+	top: -128px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 224px;
+	height: 256px;
+}
+
+.advantageText {
+	font-size: 24px;
+	font-weight: 300;
+}
+
+.glassContainer {
+	position: relative;
+}
+
+.glassContainerWrapper {
+	position: relative;
+	z-index: 4;
+	padding: 40px 28px;
+}
+
+.qualityMetricsContainer {
+	margin: 100px 0;
+}
+
+.advantageIcon {
+	width: 100%;
+}
+
+.explorerSection {
+	background: #f9f7f4;
+	padding: 200px 0 100px;
+}
+
+.teamMainImage {
+	width: 100%;
+	border-radius: 40px;
+	border: solid 2px rgba(13, 12, 32, 0.09);
+}
+
+.teamSection {
+	margin: 80px 0 40px;
+}
+
+.teamContent {
+	margin: 40px 0;
+}
+
+.imageContainer {
+	width: 100%;
+	border-radius: 40px;
+	border: solid 2px rgba(13, 12, 32, 0.09);
+	height: 300px;
+	position: relative;
+}
+
+.linkedInSmallIcon {
+	width: 32px;
+	position: absolute;
+	bottom: 40px;
+	right: 40px;
+	z-index: 1;
+}
+
+.teamMemberName {
+	font-size: 24px;
+	font-weight: 500;
+}
+
+.teamMemberPosition {
+	font-size: 18px;
+}
+
+.linkedInIcon {
+	width: 40px;
+}

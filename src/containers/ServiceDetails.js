@@ -225,7 +225,7 @@ function ServiceDetails() {
 							<Heading className={cx(styles.masterHeadingHeading, styles.extraLightText)}>Turning Blueprints Into</Heading>
 							<Heading className={styles.masterHeadingHeading}>Photoreal Experiences</Heading>
 						</Grid>
-						<Grid size={12} className={cx(styles.masterHeadText, styles.textWhite)}>
+						<Grid size={8} offset={2} className={cx(styles.masterHeadText, styles.textWhite)}>
 							Pixel-perfect renders, quick turnarounds, and a partner you can trust.
 						</Grid>
 						<Grid size={12}>

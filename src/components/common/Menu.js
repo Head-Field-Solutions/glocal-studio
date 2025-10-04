@@ -15,14 +15,12 @@ const menuItems = [
   {
     label: 'Services',
     children: [
-      { ...routes["administrative-tasks"] },
-			{ ...routes["digital-marketing-services"] },
-			{ ...routes["customer-support-and-experience"] },
-			{ ...routes["website-revamp-and-optimization"] },
-			{ ...routes["creative-services"] },
-			{ ...routes["software-and-app-development"] },
-			{ ...routes["finance-and-accounting"] },
-			{ ...routes["engineering-services"] }
+      { ...routes["architectural-visualization"] },
+			{ ...routes["3d-modeling"] },
+			{ ...routes["technical-drawings"] },
+			{ ...routes["product-visualization"] },
+			{ ...routes["3d-animation-and-experiences"] },
+			{ ...routes["360-degree-and-virtual-tours"] },
     ],
   },
 	{ ...routes.caseStudy },

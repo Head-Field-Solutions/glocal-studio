@@ -16,7 +16,7 @@ export const routes = {
 	},
 	about: {
 		label: 'About Us',
-		href: "/about"
+		href: "/about-us"
 	},
 	services: {
 		label: 'Services',
