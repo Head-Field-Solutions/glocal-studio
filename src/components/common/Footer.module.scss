@@ -237,3 +237,65 @@
 	font-weight: 200;
 	line-height: 1;
 }
+
+@media (max-width: 899px) {
+	.footerContainer{
+		padding: 40px 30px;
+        background: rgba(6, 0, 16, 0.9);
+        border-radius: 20px;
+	}
+	.footerInfoContainer{
+		text-align: center;
+	}
+	.footerInfoPanel{
+		background: #fff;
+	}
+	.formContent {
+		margin-top: -100px;
+		margin-bottom: 0;
+	}
+	.contactFormWrapper{
+		background: rgba(255, 255, 255, 0.9);
+		backdrop-filter: inherit;
+		border: 1px solid #f2f2f2;
+	}
+	.footerImagePanel{
+		background: #fff;
+		img {
+			width: 100%;
+		}
+	}
+	.formContainer{
+		background: #fff;
+	}
+	.uspSection{
+		margin-top: 50px;
+	}
+
+	.navBar{
+		border: 0;
+		margin-right: 0;
+	}
+	.phone a, .email a{
+		font-size: 16px;
+	}
+	.copyrightContainer {
+		border-top: 1px solid #352f3c;
+		border-bottom: 1px solid #352f3c;
+		padding: 15px 0;
+		margin: 15px 0;
+		text-align: center;
+		span {
+			display: block;
+		}
+	}
+	.socialMediaContainer{
+		text-align: center;
+		border-bottom: 1px solid #352f3c;
+		padding-bottom: 15px;
+		margin-bottom: 15px;
+	}
+	.copyrightText, .creditText{
+		font-size: 12px;
+	}
+}

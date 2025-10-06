@@ -10,6 +10,8 @@ import UspSectionCards from "@/components/Home/UspSectionCards";
 import LetUsRenderPrespectiveScroll from "@/components/Home/LetUsRenderPrespectiveScroll";
 import ServiceCard from "@/components/Home/ServiceCard";
 
+import { useDevice } from '@/context/DeviceContext';
+
 import { Heading, LinkButton } from "@/components/common";
 
 import { routes } from "@/utils/routesPath";
@@ -18,9 +20,11 @@ import masterHeadVideo from "@/assets/videos/home-masterhead-video.mp4";
 import fullSupportImage from "@/assets/images/fullsuite-image.webp";
 
 import * as styles from "./Home.module.scss";
-import { isMobile } from "react-device-detect";
+
 
 function Home() {
+	const { isMobile } = useDevice();
+	
 	const servicesList = [
 		{
 			heading: <>Architectural <br />Visualization</>,
@@ -165,8 +169,8 @@ function Home() {
 					<Grid size={12}>
 						<Heading variant="secondary" className={styles.portfolioSecondaryHeading}>Believe the Budget.</Heading>
 					</Grid>
-					<Grid size={12} container className={styles.textCenter}>
-						<Grid size={6} offset={3}>
+					<Grid size={12} container justifyContent={"center"} className={styles.textCenter}>
+						<Grid size={{xs: 12, md: 6}}>
 							Explore some of our favorite works—from photorealistic home interiors to cinematic exterior walkthroughs. You’ll be amazed what we deliver for the price.
 						</Grid>
 					</Grid>
@@ -181,18 +185,21 @@ function Home() {
 					<Grid size={12}>
 						<Heading variant="secondary" className={styles.whyBrandHeading}>Why Brands Love Us?</Heading>
 					</Grid>
-					<Grid size={12}>
+					<Grid size={12} sx={{
+							mt: { xs: 3, md: 0 },
+						}}>
 						<Heading className={styles.whyBrandHeading}>
 							Elite Rendering.<br/>
 							Fair Pricing.
 						</Heading>
 						<Heading className={styles.textCenter}>No Compromise.</Heading>
 					</Grid>
-					<Grid size={12} container>
-						<Grid size={6} offset={3} className={styles.whyBrandSmallText}>
+					<Grid size={12} container justifyContent={"center"}>
+						<Grid size={{xs: 12, md: 6}} className={styles.whyBrandSmallText}>
 							At Glocal Studio, we deliver premium-quality 3D visuals and design solutions that rival the world’s best—but at prices that make sense. From stunning realism to lightning-fast turnaround, we combine creativity, precision, and affordability like no one else.
 						</Grid>
-						<Grid size={6} offset={3} className={styles.whyBrandSmallAnotherText}>
+						<Grid size={12}/>
+						<Grid size={{xs: 12, md: 6}} className={styles.whyBrandSmallAnotherText}>
 							When others say either quality or price—we say, why not both?
 						</Grid>
 					</Grid>

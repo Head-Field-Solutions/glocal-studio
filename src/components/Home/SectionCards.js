@@ -25,7 +25,12 @@ export default function SectionCards(props) {
 				className={styles.container}
 				data-count={card.id}
 			>
-				<Grid size={{xs: 12, md: 5}} container alignContent="space-between">
+				<Grid size={{xs: 12, md: 5}} container 
+					// sx={{alignContent:"space-between"}}
+					sx={{
+						alignContent: { xs: "start", md: "space-between" },
+					}}
+				>
 					<Grid size={12}>
 						<div className={styles.stepCount}>
 							WHY CHOOSE US?
