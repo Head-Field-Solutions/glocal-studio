@@ -12,7 +12,9 @@ import ServiceCard from "@/components/Home/ServiceCard";
 import ScrollCarousel from "@/components/Home/ScrollCarousel";
 import CylinderText from "@/components/Home/CylinderText";
 
-import { Heading, LinkButton, Animate } from "@/components/common";
+import { useDevice } from '@/context/DeviceContext';
+
+import { Heading, LinkButton } from "@/components/common";
 
 import { routes } from "@/utils/routesPath";
 
@@ -20,9 +22,11 @@ import masterHeadVideo from "@/assets/videos/home-masterhead-video.mp4";
 import fullSupportImage from "@/assets/images/fullsuite-image.webp";
 
 import * as styles from "./Home.module.scss";
-import { isMobile } from "react-device-detect";
+
 
 function Home() {
+	const { isMobile } = useDevice();
+	
 	const servicesList = [
 		{
 			heading: <>Architectural <br />Visualization</>,
@@ -145,19 +149,11 @@ function Home() {
 					<Grid size={12}>
 						<Heading variant="secondary" className={styles.portfolioSecondaryHeading}>Believe the Budget.</Heading>
 					</Grid>
-					<Animate.FadeUp
-						element={Grid}
-						elementProps={{
-							size: 12,
-							container: true,
-						}}
-						className={styles.textCenter}
-						direction="up"
-					>
-						<Grid size={6} offset={3}>
-							Explore some of our favorite works-from photorealistic home interiors to cinematic exterior walkthroughs. You'll be amazed what we deliver for the price.
+					<Grid size={12} container justifyContent={"center"} className={styles.textCenter}>
+						<Grid size={{xs: 12, md: 6}}>
+							Explore some of our favorite works—from photorealistic home interiors to cinematic exterior walkthroughs. You’ll be amazed what we deliver for the price.
 						</Grid>
-					</Animate.FadeUp>
+					</Grid>
 					<Grid size={12} justifySelf="center" className={styles.portfolioButtons}>
 						<LinkButton style={{ "--button-bg": "#060010", "--button-text-color": "#ece9e2" }}>BROWSE PORTFOLIO</LinkButton>
 					</Grid>
@@ -169,29 +165,24 @@ function Home() {
 					<Grid size={12}>
 						<Heading variant="secondary" className={styles.whyBrandHeading} direction="down">Why Brands Love Us?</Heading>
 					</Grid>
-					<Grid size={12}>
+					<Grid size={12} sx={{
+							mt: { xs: 3, md: 0 },
+						}}>
 						<Heading className={styles.whyBrandHeading}>
 							Expert Reviewed.<br/>
 							Technically Perfect.
 						</Heading>
 						<Heading className={cx(styles.textCenter, styles.fontBold)}>Every Time.</Heading>
 					</Grid>
-					<Animate.FadeUp
-						element={Grid}
-						direction="up"
-						elementProps={{
-							size: 12,
-							container: true,
-						}}
-					>
-						<Grid size={8} offset={2} className={styles.whyBrandSmallText}>
-							At Glocal Studio, every render passes through a meticulous in-house review by architects, designers, and product specialists, ensuring accuracy, proportion, and realism at every stage. From light balance to material fidelity, nothing leaves our studio without expert validation. The result? Consistent, production-ready visuals that meet the highest global standards, <strong>every single time.</strong>
+					<Grid size={12} container justifyContent={"center"}>
+						<Grid size={{xs: 12, md: 6}} className={styles.whyBrandSmallText}>
+							At Glocal Studio, we deliver premium-quality 3D visuals and design solutions that rival the world’s best—but at prices that make sense. From stunning realism to lightning-fast turnaround, we combine creativity, precision, and affordability like no one else.
 						</Grid>
-						<Grid size={8} offset={2} className={styles.whyBrandSmallAnotherText}>
-							Because great visuals aren't guessed, they're created.<br/>
-							Every pixel checked. Every detail verified. Every time.
+						<Grid size={12}/>
+						<Grid size={{xs: 12, md: 6}} className={styles.whyBrandSmallAnotherText}>
+							When others say either quality or price—we say, why not both?
 						</Grid>
-					</Animate.FadeUp>
+					</Grid>
 				</Container>
 				<UspSectionCards />
 			</section>

@@ -22,9 +22,13 @@ import ScrollableMotionText from "./ScrollableMotionText";
 import ColorfulText from "./ColorfulText";
 import Animate from "./Animate";
 
+import { LinkButton } from "@/components/common";
+
 import * as styles from "./Footer.module.scss";
+import { useDevice } from '@/context/DeviceContext';
 
 function Footer() {
+	const { isMobile } = useDevice();
 	const scrollabelContainerRef = useRef();
 
 	const { scrollYProgress } = useScroll({
@@ -35,57 +39,104 @@ function Footer() {
 	return (
 		<section className={styles.footer}>
 			<div className={styles.footerInfoPanel}>
-				<Container maxWidth="xl" className={styles.formContainer}>
-					<Grid size={12} container>
-						<Grid size={6} offset={6}>
-							<Grid size={12} className={styles.sectionHeadings}>
-								<ColorfulText>GET IN TOUCH WITH US</ColorfulText>
+				{isMobile ?
+					<>
+						<Container maxWidth="xl" className={styles.formContainer}>
+							<Grid size={12} container>
+								<Grid size={{xs: 12, md: 6}} offset={{xs: 0, md: 6}}>
+									<Grid size={12}><ColorfulText>GET IN TOUCH WITH US</ColorfulText></Grid>
+									<Grid size={12}>
+										<Heading variant="secondary" className={styles.greatDesignHeading}>
+											Great Designs Start with 
+											Great Conversations.
+										</Heading>
+									</Grid>
+									<Grid size={12}>
+										Whether you’re looking for jaw-dropping renders or exceptional design solutions, we’re just a message away.
+									</Grid>
+								</Grid>
 							</Grid>
-							<Grid size={12}>
-								<Heading variant="secondary" className={styles.greatDesignHeading}>
-									Whether you're looking for jaw-dropping renders or exceptional design solutions, we're just a message away.
-								</Heading>
+						</Container>
+						<div className={styles.scrollableContainer} ref={scrollabelContainerRef}>
+							<ScrollableMotionText
+								direction="right"
+								left="-19%"
+								progress={scrollYProgress}
+							>
+								<div className={styles.scrollabelText}>Spaces that feel Alive / Designs that inspire</div>
+							</ScrollableMotionText>
+						</div>
+
+						<div className={styles.footerImagePanel}>
+							<img src={require("../../assets/images/footer-img.jpg")} alt="" />
+						</div>
+
+						<Container maxWidth="xl" className={styles.formContainer}>
+							<Grid size={12} container>
+								<Grid size={{xs: 12, md: 6}} offset={{xs: 0, md: 6}} className={styles.formContent}>
+									<Grid size={12} container className={styles.contactFormWrapper}>
+										<ContactForm />
+									</Grid>
+								</Grid>
 							</Grid>
-						</Grid>
-						<Grid size={6} offset={6} className={styles.formContent}>
-							<Grid size={12} container className={styles.contactFormWrapper}>
-								<ContactForm />
-							</Grid>
-						</Grid>
-					</Grid>
-				</Container>
-				<div className={styles.scrollableContainer} ref={scrollabelContainerRef}>
-					<ScrollableMotionText
-						direction="right"
-						left="-19%"
-						progress={scrollYProgress}
-					>
-						<div className={styles.scrollabelText}>Spaces that feel Alive / Designs that inspire</div>
-					</ScrollableMotionText>
-				</div>
-				<div className={styles.footerImagePanel}>
-					<Container maxWidth="xl">
+						</Container>
+					</>
+					:
+					<Container maxWidth="xl" className={styles.formContainer}>
 						<Grid size={12} container>
-							<Grid size={8} className={styles.footerImage}>
-								<img src={require("../../assets/images/footer-decor-image.png")} alt="" className={styles.decorImage} />
+							<Grid size={{xs: 12, md: 6}} offset={{xs: 0, md: 6}}>
+								<Grid size={12}><ColorfulText>GET IN TOUCH WITH US</ColorfulText></Grid>
+								<Grid size={12}>
+									<Heading variant="secondary" className={styles.greatDesignHeading}>
+										Great Designs Start with 
+										Great Conversations.
+									</Heading>
+								</Grid>
+								<Grid size={12}>
+									Whether you’re looking for jaw-dropping renders or exceptional design solutions, we’re just a message away.
+								</Grid>
+							</Grid>
+							
+							<Grid size={{xs: 12, md: 6}} offset={{xs: 0, md: 6}} className={styles.formContent}>
+								<Grid size={12} container className={styles.contactFormWrapper}>
+									<ContactForm />
+								</Grid>
 							</Grid>
 						</Grid>
 					</Container>
-				</div>
+				}
+				
+
+				{!isMobile ? 
+					<>
+						<div className={styles.scrollableContainer} ref={scrollabelContainerRef}>
+							<ScrollableMotionText
+								direction="right"
+								left="-19%"
+								progress={scrollYProgress}
+							>
+								<div className={styles.scrollabelText}>Spaces that feel Alive / Designs that inspire</div>
+							</ScrollableMotionText>
+						</div>
+
+						<div className={styles.footerImagePanel}>
+							<Container maxWidth="xl">
+								<Grid size={12} container>
+									<Grid size={8} className={styles.footerImage}>
+										<img src={require("../../assets/images/footer-decor-image.png")} alt="" className={styles.decorImage} />
+									</Grid>
+								</Grid>
+							</Container>
+						</div>
+					</>
+					:
+					null
+				}
 			</div>
+
 			<Container maxWidth="xl" className={styles.uspSection}>
 				<Grid size={12} spacing={4} container>
-					<Animate.FadeUp
-						element={Grid}
-						elementProps={{
-							size: 3,
-							container: true,
-							spacing: 3,
-						}}
-						className={styles.footerCard}
-						direction="up"
-						delay="0"
-					>
+					<Grid size={{xs: 12, sm: 6, md: 3}} container spacing={3} className={styles.footerCard}>
 						<Grid size={12} spacing={3} container>
 							<Grid size={10} className={styles.footerCardHeading}>
 								Start with a Free Consultation
@@ -101,18 +152,8 @@ function Footer() {
 						<Grid size={12}>
 							Got a vision? Let's sketch it together-no obligations.
 						</Grid>
-					</Animate.FadeUp>
-					<Animate.FadeUp
-						element={Grid}
-						elementProps={{
-							size: 3,
-							container: true,
-							spacing: 3,
-						}}
-						className={styles.footerCard}
-						direction="up"
-						delay="50ms"						
-					>
+					</Grid>
+					<Grid size={{xs: 12, sm: 6, md: 3}} container spacing={3} className={styles.footerCard}>
 						<Grid size={12} spacing={3} container>
 							<Grid size={10} className={styles.footerCardHeading}>
 								Transparent Process, Clear Pricing
@@ -128,18 +169,8 @@ function Footer() {
 						<Grid size={12}>
 							No guesswork. No surprises. Just clarity.
 						</Grid>
-					</Animate.FadeUp>
-					<Animate.FadeUp
-						element={Grid}
-						elementProps={{
-							size: 3,
-							container: true,
-							spacing: 3,
-						}}
-						className={styles.footerCard}
-						direction="up"
-						delay="100ms"
-					>
+					</Grid>
+					<Grid size={{xs: 12, sm: 6, md: 3}} container spacing={3} className={styles.footerCard}>
 						<Grid size={12} spacing={3} container>
 							<Grid size={10} className={styles.footerCardHeading}>
 								Share Your Idea. We'll Visualize It.
@@ -155,18 +186,8 @@ function Footer() {
 						<Grid size={12}>
 							A napkin sketch or a full plan-send it our way.
 						</Grid>
-					</Animate.FadeUp>
-					<Animate.FadeUp
-						element={Grid}
-						elementProps={{
-							size: 3,
-							container: true,
-							spacing: 3,
-						}}
-						className={styles.footerCard}
-						direction="up"
-						delay="150ms"
-					>
+					</Grid>
+					<Grid size={{xs: 12, sm: 6, md: 3}} container spacing={3} className={styles.footerCard}>
 						<Grid size={12} spacing={3} container>
 							<Grid size={10} className={styles.footerCardHeading}>
 								Fast Replies. Real People.
@@ -182,7 +203,7 @@ function Footer() {
 						<Grid size={12}>
 							Your time matters-and so does your project.
 						</Grid>
-					</Animate.FadeUp>
+					</Grid>
 				</Grid>
 			</Container>
 			<div className={styles.footerInfoContainer}>
@@ -191,12 +212,24 @@ function Footer() {
 					container
 					className={styles.footerContainer}
 				>
-					<GlassContainer />
+					{!isMobile ?
+						<GlassContainer />	
+					:
+						null
+					}
 					<Grid size={12} container className={styles.positionRelative} alignItems="center">
-						<Grid size={2}>
-							<img src={logo} alt="" className={styles.logo} />
+						<Grid size={{xs: 12, md: 2}}>
+							{isMobile ? 
+								<LinkButton style={{ "--button-bg": "#060010", "--button-text-color": "#fff" }}>GET A FREE QUOTE</LinkButton>
+							 :
+								<img src={logo} alt="" className={styles.logo} />
+							}
 						</Grid>
-						<Grid size={2}>
+						<Grid size={{xs: 12, md: 2}} 
+							sx={{
+								mt: { xs: 3, md: 0 }
+							}}
+						>
 							<div className={styles.navBar}>
 								<Link
 									to={routes.home.href}
@@ -228,7 +261,7 @@ function Footer() {
 								</Link>
 							</div>
 						</Grid>
-						<Grid container alignContent="space-between" size={5}>
+						<Grid container alignContent="space-between" size={{xs: 12, md: 5}}>
 							<Grid
 								size={12}
 								className={styles.copyrightContainer}
@@ -242,12 +275,16 @@ function Footer() {
 									<a href="mailto:info@glocalstudio.in">info@glocalstudio.in</a>
 								</span>
 							</Grid>
-							<Grid size={12}>
-								<div className={styles.copyrightText}>Copyright &copy; 2025 - All rights Reserved By Glocal Studio.</div>
-								<div className={styles.creditText}>Made with &hearts; by Radical Reflex</div>
-							</Grid>
+							{!isMobile ? 
+								<Grid size={12}>
+									<div className={styles.copyrightText}>Copyright &copy; 2025 - All rights Reserved By Glocal Studio.</div>
+									<div className={styles.creditText}>Made with &hearts; by Radical Reflex</div>
+								</Grid>
+								:
+								null
+							}
 						</Grid>
-						<Grid size={3} className={styles.socialMediaContainer}>
+						<Grid size={{xs: 12, md: 3}} className={styles.socialMediaContainer}>
 							<a href="https://www.facebook.com" label="Facebook" className={styles.socialLinks}>
 								<img src={fbIcon} className={styles.socialIcon} alt="" />
 							</a>
@@ -258,6 +295,14 @@ function Footer() {
 								<img src={linkedinIcon} className={styles.socialIcon} alt="" />
 							</a>
 						</Grid>
+						{isMobile ? 
+							<Grid size={12}>
+								<div className={styles.copyrightText}>Copyright &copy; 2025 - All rights Reserved By Glocal Studio.</div>
+								<div className={styles.creditText}>Made with &hearts; by Radical Reflex</div>
+							</Grid>
+							:
+							null
+						}
 					</Grid>
 				</Grid>
 			</div>
