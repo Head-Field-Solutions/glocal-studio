@@ -256,6 +256,16 @@
 	}
 	.footerInfoContainer{
 		text-align: center;
+		padding-top: 150px;
+	}
+	.footerLogo{
+		margin: 100px 0 -30px;
+		padding: 0 30px;
+        text-align: center;
+		img {
+			width: 100%;
+			max-width: 300px;
+		}
 	}
 	.footerInfoPanel{
 		background: #fff;
@@ -306,6 +316,7 @@
 		margin-bottom: 15px;
 	}
 	.copyrightText, .creditText{
-		font-size: 12px;
+		font-size: 10px;
+        line-height: 20px;
 	}
 }
