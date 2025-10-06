@@ -25,7 +25,7 @@ export default function ServiceCard(props) {
 
 	return (
 		<MotionGrid
-			size={4}
+			size={{xs: 12, md: 6, lg: 4}}
 			className={styles.fullSupportItemGrid}
 			style={{
 				y: parallax,
@@ -39,13 +39,13 @@ export default function ServiceCard(props) {
 					{description}
 				</Grid>
 				<Grid size={12} spacing={3} container>
-					<Grid size={6}>
+					<Grid size={{xs: 12, sm: 6}} sx={{ order: { xs: 3, md: 0 } }}>
 						<LinkButton to={link} style={{ "--button-bg": "#f2f0ea" }}>GET A FREE QUOTE</LinkButton>
 					</Grid>
-					<Grid size={5} className={styles.itemSmallText}>
+					<Grid size={{xs: 10, sm: 5}} className={styles.itemSmallText}>
 						{usp}
 					</Grid>
-					<Grid size={1}>
+					<Grid size={{xs:2, sm: 1}}>
 						<img src={require("../../assets/images/check-icon.png")} alt="" className={styles.checkIcon} />
 					</Grid>
 				</Grid>

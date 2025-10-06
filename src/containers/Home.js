@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { Helmet } from "react-helmet-async";
-import { Container, Grid2 as Grid } from "@mui/material";
+import { Container, Grid2 as Grid, Typography } from "@mui/material";
 import { useScroll } from "framer-motion";
 
 import MasterHeadVideo from "@/components/Home/MasterHeadVideo";
@@ -18,6 +18,7 @@ import masterHeadVideo from "@/assets/videos/home-masterhead-video.mp4";
 import fullSupportImage from "@/assets/images/fullsuite-image.webp";
 
 import * as styles from "./Home.module.scss";
+import { isMobile } from "react-device-detect";
 
 function Home() {
 	const servicesList = [
@@ -95,10 +96,21 @@ function Home() {
 			<section className={styles.videoSectionContent}>
 				<Container maxWidth="xl">
 					<Grid container justifyContent="center">
-						<Grid size={10} className={styles.videoSectionText}>
-							Experience high-end 3D rendering without the high-end cost.<br />
-							We deliver mind-blowing visualizations for interiors, exteriors, products, and more—at a price point you won't believe.
-						</Grid>
+						{isMobile ? 
+							<Grid size={11}>
+								<h3 className={styles.videoSectionText}>Experience high-end 3D rendering without the high-end cost.</h3>
+								 <Typography 
+									variant="h6" 
+									align="center"
+									sx={{ color: "#f2f2f2", fontWeight: 300, marginTop: '20px' }}
+									>We deliver mind-blowing visualizations for interiors, exteriors, products, and more—at a price point you won't believe.</Typography>
+							</Grid>
+						 : 
+							<Grid size={10} className={styles.videoSectionText}>
+								Experience high-end 3D rendering without the high-end cost.<br />
+								We deliver mind-blowing visualizations for interiors, exteriors, products, and more—at a price point you won't believe.
+							</Grid>
+						}
 					</Grid>
 				</Container>
 			</section>
@@ -137,7 +149,7 @@ function Home() {
 							without paying the premium.
 						</Heading>
 					</Grid>
-					<Grid size={12} justifySelf="center">
+					<Grid size={12} justifySelf="center" sx={{ textAlign: { xs: "center", md: "left" } }}>
 						<LinkButton style={{ "--button-bg": "#f2f0ea" }}>GET A FREE QUOTE</LinkButton>
 						<LinkButton style={{ "--button-bg": "#f2f0ea" }}>BROWSE PORTFOLIO</LinkButton>
 					</Grid>
