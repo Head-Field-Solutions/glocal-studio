@@ -205,6 +205,14 @@ function Footer() {
 					</Grid>
 				</Grid>
 			</Container>
+
+			<div className={styles.footerLogo}>
+				<img
+					src={require("../../assets/images/logo-black.png")}
+					alt="Logo"
+				/>
+			</div>
+			
 			<div className={styles.footerInfoContainer}>
 				<Grid
 					size={12}
