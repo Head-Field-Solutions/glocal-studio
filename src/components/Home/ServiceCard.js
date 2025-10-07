@@ -39,15 +39,16 @@ export default function ServiceCard(props) {
 					{description}
 				</Grid>
 				<Grid size={12} spacing={3} container>
-					<Grid size={{xs: 12, sm: 6}} sx={{ order: { xs: 3, md: 0 } }}>
+					<Grid size={{xs: 12, sm: 6}} sx={{ order: { xs: 3, sm: 0 } }}>
 						<LinkButton to={link} style={{ "--button-bg": "#f2f0ea" }}>GET A FREE QUOTE</LinkButton>
 					</Grid>
-					<Grid size={{xs: 10, sm: 5}} className={styles.itemSmallText}>
-						{usp}
-					</Grid>
-					<Grid size={{xs:2, sm: 1}}>
+					<Grid flexDirection={"row"} size={{xs: 10, sm: 6}} sx={{ order: { xs: 2, sm: 0 } }} className={styles.itemSmallText}>
+						<span>{usp}</span>
 						<img src={require("../../assets/images/check-icon.png")} alt="" className={styles.checkIcon} />
 					</Grid>
+					{/* <Grid size={{xs: 2, sm: 1}} >
+						<img src={require("../../assets/images/check-icon.png")} alt="" className={styles.checkIcon} />
+					</Grid> */}
 				</Grid>
 				<Grid size={12} className={styles.imageContainer}>
 					<img

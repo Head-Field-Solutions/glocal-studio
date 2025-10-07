@@ -122,9 +122,15 @@ function Home() {
 			<section className={styles.fullSuiteSolutionSection}>
 				<Container maxWidth="xl">
 					<Grid size={12}>
-						<Heading className={styles.fullSuiteMainHeading}>
-							Full-Suite<br />3D Rendering Solutions
-						</Heading>
+						{isMobile ?
+							<Heading className={styles.fullSuiteMainHeading}>
+								Full-Suite <span>3D Rendering</span> Solutions
+							</Heading>
+						:
+							<Heading className={styles.fullSuiteMainHeading}>
+								Full-Suite<br />3D Rendering Solutions
+							</Heading>
+						}
 					</Grid>
 					<Grid size={12}>
 						<img src={fullSupportImage} alt="" className={styles.fullSupportImage} />
