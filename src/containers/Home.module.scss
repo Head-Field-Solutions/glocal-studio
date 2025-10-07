@@ -145,10 +145,28 @@
 	padding: 52px 0 200px;
 }
 @media screen and (max-width: 768px) {
-	.whyBrandLoveSection{
-		padding-top: 100px;
-	}
 	.whyBrandSmallAnotherText{
 		margin-bottom: 100px;
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.videoSectionContent {
+		margin-top: 70px;
+	}
+	.fullSuiteSolutionSection{
+		padding: 100px 0;
+	}
+	.fullSuiteMainHeading {
+		font-weight: 300;
+		span{
+			display: block;
+			font-weight: 600;
+		}
+	}
+	.portfolioSection,
+	.whyBrandLoveSection,
+	.footerInfoPanel{
+		padding-top: 100px;
 	}
 }

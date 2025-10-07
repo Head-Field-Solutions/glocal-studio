@@ -207,12 +207,14 @@ function Footer() {
 				</Grid>
 			</Container>
 
-			<div className={styles.footerLogo}>
-				<img
-					src={require("../../assets/images/logo-black.png")}
-					alt="Logo"
-				/>
-			</div>
+			{isMobile ? 
+				<div className={styles.footerLogo}>
+					<img
+						src={require("../../assets/images/logo-black.png")}
+						alt="Logo"
+					/>
+				</div>
+			:null}
 			
 			<div className={styles.footerInfoContainer}>
 				<Grid

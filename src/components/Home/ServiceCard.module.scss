@@ -42,13 +42,17 @@
 }
 
 .itemSmallText {
-	font-size: 10px;
+	display: flex;
+	gap: 10px;	
+	font-size: 12px;
 	text-align: right;
 	text-transform: uppercase;
 }
 
 .checkIcon {
 	width: 100%;
+	max-width: 24px;
+	max-height: 24px;
 }
 
 .imageContainer {
@@ -72,8 +76,21 @@
 	}
 }
 
-@media (max-width: 480px) {
+@media (max-width: 991px) {
+	
+}
 
+@media (max-width: 599px) {
+	.itemSmallText {
+		flex-direction: row-reverse !important;
+		text-align: left;
+	}
+}
+
+@media (max-width: 480px) {
+	.itemSmallText{
+		text-align: left;
+	}
 	.fullSupportItemGrid{
 		padding: 40px 20px;
 	}
