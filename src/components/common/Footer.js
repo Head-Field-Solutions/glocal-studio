@@ -262,13 +262,6 @@ function Footer() {
 									<span>{routes.services.label}</span>
 								</Link>
 								<Link
-									to={routes.caseStudy.href}
-									data-replace={routes.caseStudy.label}
-									className={styles.footerLink}
-								>
-									<span>{routes.caseStudy.label}</span>
-								</Link>
-								<Link
 									to={routes["contact-us"].href}
 									data-replace={routes["contact-us"].label}
 									className={styles.footerLink}

@@ -23,7 +23,6 @@ const menuItems = [
 			{ ...routes["360-degree-and-virtual-tours"] },
     ],
   },
-	{ ...routes.caseStudy },
   { ...routes["contact-us"] },
   // { ...routes.faq },
 ];
@@ -86,7 +85,7 @@ function Menu() {
 
 	return (
 		<>
-			<Hamburger color="#fff" toggled={showMenu} toggle={setShowMenu} />
+			<Hamburger color="#f3f2ee" toggled={showMenu} toggle={setShowMenu} />
 
 			<MenuPortal>
 				<AnimatePresence mode="wait">
@@ -99,7 +98,7 @@ function Menu() {
 							variants={containerVariants}
 						>
 							<div className={styles.burgerMenu}>
-								<Hamburger color="#000" toggled={showMenu} toggle={hideMenu} />
+								<Hamburger color="#060010" toggled={showMenu} toggle={hideMenu} />
 							</div>
 							<div className={styles.menuItemsContainer}>
 								{menuItems.map((item) => {
