@@ -9,7 +9,6 @@ import {
 	Heading,
 	LinkButton,
 	GlassContainer,
-	ColorfulText,
 } from "@/components/common";
 
 import * as styles from "./About.module.scss";

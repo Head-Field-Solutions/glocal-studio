@@ -1,0 +1,35 @@
+.qualityMetricsContainer {
+	margin-bottom: 140px;
+}
+
+.fontNormal {
+	font-weight: 400;
+}
+
+.textWhite {
+	color: #f3f2ee;
+}
+
+.glassContainer {
+	position: relative;
+}
+
+.glassContainerWrapper {
+	position: relative;
+	z-index: 4;
+	padding: 40px 28px;
+}
+
+.trustedHeading {
+	font-weight: 400;
+	text-transform: uppercase;
+}
+
+.trustedContent {
+	font-weight: 300;
+	font-size: 24px;
+}
+
+.yearsOfExperienceHeading {
+	font-size: clamp(2.5rem, 12.2vw, 12.2rem);
+}
