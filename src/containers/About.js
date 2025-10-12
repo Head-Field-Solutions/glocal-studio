@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Helmet } from 'react-helmet-async';
 import { Container, Grid2 as Grid } from "@mui/material";
+import { useScroll, useTransform, motion } from "framer-motion";
 import cx from "classnames";
 
 import { StarGradiantIcon } from "@/components/Icons";
@@ -14,6 +15,15 @@ import {
 import * as styles from "./About.module.scss";
 
 function About() {
+	const astronautImage = useRef(null);
+
+	const { scrollYProgress } = useScroll({
+		target: astronautImage,
+		offset: ['start end', 'end start']
+	});
+
+	const parallax = useTransform(scrollYProgress, [0, 1], [0, 90]);
+
 	return (
 		<>
 			<Helmet>
@@ -57,6 +67,16 @@ function About() {
 								<Heading className={cx(styles.textWhite, styles.extraLightText)}>Imagination.</Heading>
 							</Grid>
 							<Grid size={6} container spacing={3} className={styles.beyondInfoContent}>
+								<Grid size={12} ref={astronautImage}>
+									<motion.img
+										src={require("../assets/images/about-us/astronaut.png")}
+										alt=""
+										className={styles.astronautImage}
+										style={{
+											y: parallax,
+										}}
+									/>
+								</Grid>
 								<Grid size={12}>
 									<Heading variant="secondary" className={cx(styles.textWhite, styles.lightText)}>
 										We don’t just render— we venture into the unknown and deliver the extraordinary.
