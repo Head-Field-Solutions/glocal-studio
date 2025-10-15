@@ -291,7 +291,7 @@ function ServiceDetails() {
 						</Heading>
 					</Grid>
 					<Grid size={12} container spacing={4} alignItems="flex-start">
-						<Grid size={3} container spacing={4}>
+						<Grid size={{xs: 12, sm: 6, md: 3}} container spacing={4}>
 							<Grid size={12} className={styles.textCenter}>
 								<img
 									src={require("../assets/images/service-details/project-info-icon-1.png")}
@@ -303,7 +303,7 @@ function ServiceDetails() {
 								Dynamic camera movements & smooth transitions
 							</Grid>
 						</Grid>
-						<Grid size={3} container spacing={4}>
+						<Grid size={{xs: 12, sm: 6, md: 3}} container spacing={4}>
 							<Grid size={12} className={styles.textCenter}>
 								<img
 									src={require("../assets/images/service-details/project-info-icon-2.png")}
@@ -315,7 +315,7 @@ function ServiceDetails() {
 								Realistic lighting, textures, and materials
 							</Grid>
 						</Grid>
-						<Grid size={3} container spacing={4}>
+						<Grid size={{xs: 12, sm: 6, md: 3}} container spacing={4}>
 							<Grid size={12} className={styles.textCenter}>
 								<img
 									src={require("../assets/images/service-details/project-info-icon-3.png")}
@@ -327,7 +327,7 @@ function ServiceDetails() {
 								Exterior flythroughs + interior walkthroughs
 							</Grid>
 						</Grid>
-						<Grid size={3} container spacing={4}>
+						<Grid size={{xs: 12, sm: 6, md: 3}} container spacing={4}>
 							<Grid size={12} className={styles.textCenter}>
 								<img
 									src={require("../assets/images/service-details/project-info-icon-4.png")}

@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { Container, Grid2 as Grid } from "@mui/material";
 import { useScroll, useTransform, motion } from "framer-motion";
 import cx from "classnames";
-
+import { useDevice } from '@/context/DeviceContext';
 import { StarGradiantIcon } from "@/components/Icons";
 
 import {
@@ -15,6 +15,7 @@ import {
 import * as styles from "./About.module.scss";
 
 function About() {
+	const { isMobile } = useDevice();
 	const astronautImage = useRef(null);
 
 	const { scrollYProgress } = useScroll({
@@ -60,13 +61,8 @@ function About() {
 			<section className={styles.beyondSection}>
 				<Container maxWidth="xl">
 					<Grid size={12} container>
-						<Grid size={10} offset={1} container spacing={6}>
-							<Grid size={6}>
-								<Heading className={styles.textWhite}>Design.</Heading>
-								<Heading className={cx(styles.textWhite, styles.extraLightText)}>Beyond</Heading>
-								<Heading className={cx(styles.textWhite, styles.extraLightText)}>Imagination.</Heading>
-							</Grid>
-							<Grid size={6} container spacing={3} className={styles.beyondInfoContent}>
+						<Grid size={{xs: 12, lg: 10}} offset={{xs: 0, lg: 1}} container spacing={6}>
+							{isMobile && 
 								<Grid size={12} ref={astronautImage}>
 									<motion.img
 										src={require("../assets/images/about-us/astronaut.png")}
@@ -77,6 +73,26 @@ function About() {
 										}}
 									/>
 								</Grid>
+							}
+							<Grid size={{xs: 12, md: 6}}>
+								<Heading className={styles.textWhite}>Design.</Heading>
+								<Heading className={cx(styles.textWhite, styles.extraLightText)}>Beyond</Heading>
+								<Heading className={cx(styles.textWhite, styles.extraLightText)}>Imagination.</Heading>
+							</Grid>
+							<Grid size={{xs: 12, md: 6}} container spacing={3} className={styles.beyondInfoContent}>
+								{!isMobile && 
+									<Grid size={12} ref={astronautImage}>
+										<motion.img
+											src={require("../assets/images/about-us/astronaut.png")}
+											alt=""
+											className={styles.astronautImage}
+											style={{
+												y: parallax,
+											}}
+										/>
+									</Grid>
+								}
+								
 								<Grid size={12}>
 									<Heading variant="secondary" className={cx(styles.textWhite, styles.lightText)}>
 										We don’t just render— we venture into the unknown and deliver the extraordinary.
@@ -96,14 +112,14 @@ function About() {
 			<section className={styles.visionMissionSection}>
 				<Container maxWidth="xl">
 					<Grid size={12} container spacing={6} className={styles.visionMissionContentSection}>
-						<Grid size={6} container>
+						<Grid size={{xs: 12, md: 6}} container>
 							<Grid size={12} className={styles.missionVisionContainer}>
 								<Grid size={12} container spacing={2} alignItems="center">
-									<Grid size={6}>
+									<Grid size={{xs : 12, sm: 6}}>
 										<Heading className={styles.lightText}>Our</Heading>
 										<Heading className={styles.lightText}>Mission</Heading>
 									</Grid>
-									<Grid size={6}>
+									<Grid size={{xs : 12, sm: 6}}>
 										To help businesses, architects, and product creators present their ideas with absolute clarity through exceptional 3D visualization and design solutions.
 									</Grid>
 								</Grid>
@@ -117,14 +133,14 @@ function About() {
 								</Grid>
 							</Grid>
 						</Grid>
-						<Grid size={6} container>
+						<Grid size={{xs: 12, md: 6}} container>
 							<Grid size={12} className={styles.missionVisionContainer}>
 								<Grid size={12} container spacing={2} alignItems="center">
-									<Grid size={6}>
+									<Grid size={{xs : 12, sm: 6}}>
 										<Heading className={styles.lightText}>Our</Heading>
 										<Heading className={styles.lightText}>Vision</Heading>
 									</Grid>
-									<Grid size={6}>
+									<Grid size={{xs : 12, sm: 6}}>
 										To redefine how the world experiences design and products—through visualization that is both inspiring and practical.
 									</Grid>
 								</Grid>
@@ -149,7 +165,7 @@ function About() {
 						</Grid>
 					</Grid>
 					<Grid size={12} container className={styles.textCenter} spacing={4} alignItems="flex-start">
-						<Grid size={3} container spacing={3}>
+						<Grid size={{xs: 12, md: 6, lg: 3}} container spacing={3}>
 							<Grid size={12}>
 								<img
 									src={require("../assets/images/about-us/client-centric-icon.png")}
@@ -162,7 +178,7 @@ function About() {
 								We don’t just take briefs—we listen, question, and understand your goals to deliver solutions tailored exactly to your vision.
 							</Grid>
 						</Grid>
-						<Grid size={3} container spacing={3}>
+						<Grid size={{xs: 12, md: 6, lg: 3}} container spacing={3}>
 							<Grid size={12}>
 								<img
 									src={require("../assets/images/about-us/end-to-end-clarity-icon.png")}
@@ -175,7 +191,7 @@ function About() {
 								From early sketches and mockups to photorealistic renders and execution-ready drawings, we ensure seamless clarity throughout.
 							</Grid>
 						</Grid>
-						<Grid size={3} container spacing={3}>
+						<Grid size={{xs: 12, md: 6, lg: 3}} container spacing={3}>
 							<Grid size={12}>
 								<img
 									src={require("../assets/images/about-us/technical-depth-icon.png")}
@@ -188,7 +204,7 @@ function About() {
 								Backed by architectural expertise, we deliver precise proportions, accurate lighting, and true-to-life materials for unmatched realism.
 							</Grid>
 						</Grid>
-						<Grid size={3} container spacing={3}>
+						<Grid size={{xs: 12, md: 6, lg: 3}} container spacing={3}>
 							<Grid size={12}>
 								<img
 									src={require("../assets/images/about-us/collaborative-icon.png")}
@@ -217,16 +233,16 @@ function About() {
 						</Grid>
 					</Grid>
 					<Grid size={12} container spacing={4} alignItems="flex-start" className={styles.qualityMetricsContainer}>
-						<Grid size={6} container>
+						<Grid size={{xs: 12, md: 6}} container>
 							<Grid size={12} className={styles.glassContainer}>
 								<GlassContainer glassBackground="rgba(23, 32, 60, 0.7)" />
 								<Grid size={12} container className={styles.glassContainerWrapper} spacing={4}>
-									<Grid size={6}>
+									<Grid size={{xs: 12, sm: 6}}>
 										<Heading variant="secondary" className={cx(styles.fontNormal, styles.textWhite)}>
 											Scalable & Reliable
 										</Heading>
 									</Grid>
-									<Grid size={6} className={styles.textWhite}>
+									<Grid size={{xs: 12, sm: 6}} className={styles.textWhite}>
 										From boutique projects to large-scale developments, our structured team and proven processes ensure dependable delivery at any scale.
 									</Grid>
 								</Grid>
@@ -254,7 +270,7 @@ function About() {
 								</Grid>
 							</Grid>
 						</Grid>
-						<Grid size={6} container>
+						<Grid size={{xs: 12, md: 6}} container>
 							<Grid size={12} className={styles.glassContainer}>
 								<GlassContainer glassBackground="rgba(242, 240, 234, 0.7)" />
 								<Grid size={12} container className={styles.glassContainerWrapper} spacing={5} alignItems="flex-end">
@@ -280,12 +296,12 @@ function About() {
 							<Grid size={12} className={styles.glassContainer}>
 								<GlassContainer glassBackground="rgba(23, 32, 60, 0.7)" />
 								<Grid size={12} container className={styles.glassContainerWrapper} spacing={4}>
-									<Grid size={6}>
+									<Grid size={{xs: 12, sm: 6}}>
 										<Heading variant="secondary" className={cx(styles.fontNormal, styles.textWhite)}>
 											Partnership-Oriented
 										</Heading>
 									</Grid>
-									<Grid size={6} className={styles.textWhite}>
+									<Grid size={{xs: 12, sm: 6}} className={styles.textWhite}>
 										We focus on building long-term collaborations—becoming an extension of your team rather than a one-time service provider.
 									</Grid>
 								</Grid>
@@ -306,14 +322,14 @@ function About() {
 						</Grid>
 					</Grid>
 					<Grid size={12} container spacing={6} alignItems="flex-start" className={styles.teamSection}>
-						<Grid size={6}>
+						<Grid size={{xs: 12, md: 6}}>
 							<img
 								src={require("../assets/images/about-us/vasu-dev-chawla.jpg")}
 								alt=""
 								className={styles.teamMainImage}
 							/>
 						</Grid>
-						<Grid size={6} container spacing={0}>
+						<Grid size={{xs: 12, md: 6}} container spacing={0}>
 							<Grid size={12}>
 								<Heading variant="secondary">Vasu Dev Chawla</Heading>
 							</Grid>
@@ -335,7 +351,7 @@ function About() {
 						</Grid>
 					</Grid>
 					<Grid size={12} container spacing={4} alignItems="flex-start">
-						<Grid size={6} container spacing={3}>
+						<Grid size={{xs: 12, md: 6}} container spacing={3}>
 							<Grid size={12}>
 								<div className={styles.imageContainer}>
 									<img
@@ -346,16 +362,16 @@ function About() {
 								</div>
 							</Grid>
 							<Grid size={12} container>
-								<Grid size={5}>
+								<Grid size={{xs: 12, sm: 5}}>
 									<div className={styles.teamMemberName}>Kunal Jaggi</div>
 									<div className={styles.teamMemberPosition}>Founder & Managing Director</div>
 								</Grid>
-								<Grid size={7}>
+								<Grid size={{xs: 12, sm: 7}}>
 									Kunal drives Glocal Studio’s creative vision with over two decades of design expertise. He combines strategy, technology, and artistry to deliver visuals that inspire and impress globally.
 								</Grid>
 							</Grid>
 						</Grid>
-						<Grid size={6} container spacing={3}>
+						<Grid size={{xs: 12, md: 6}} container spacing={3}>
 							<Grid size={12}>
 								<div className={styles.imageContainer}>
 									<img
@@ -366,11 +382,11 @@ function About() {
 								</div>
 							</Grid>
 							<Grid size={12} container>
-								<Grid size={5}>
+								<Grid size={{xs: 12, sm: 5}}>
 									<div className={styles.teamMemberName}>Srishti Khatri</div>
 									<div className={styles.teamMemberPosition}>Business Head</div>
 								</Grid>
-								<Grid size={7}>
+								<Grid size={{xs: 12, sm: 7}}>
 									Kunal drives Glocal Studio’s creative vision with over two decades of design expertise. He combines strategy, technology, and artistry to deliver visuals that inspire and impress globally.
 								</Grid>
 							</Grid>

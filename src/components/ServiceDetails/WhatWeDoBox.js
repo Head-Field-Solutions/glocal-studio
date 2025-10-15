@@ -13,7 +13,7 @@ function WhatWeDoBox(props) {
 
 	return (
 		<Grid
-			size={6}
+			size={{xs: 12, md: 6}}
 			container
 			spacing={2}
 			className={cx(
@@ -46,10 +46,10 @@ function WhatWeDoBox(props) {
 					</Grid>
 				</Grid>
 				<Grid size={12} container spacing={2} className={styles.whatWeDoBoxHeadingSection}>
-					<Grid size={6}>
+					<Grid size={{xs: 12, sm: 6}}>
 						<Heading variant="secondary" className={styles.lightText}>{heading}</Heading>
 					</Grid>
-					<Grid size={6} className={styles.mediumBold}>
+					<Grid size={{xs: 12, sm: 6}} className={styles.mediumBold}>
 						{content}
 					</Grid>
 				</Grid>

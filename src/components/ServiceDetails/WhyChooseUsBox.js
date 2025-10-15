@@ -7,10 +7,10 @@ function WhyChooseUsBox(props) {
 	const { whyChooseUsContent } = props;
 
 	return (
-		<div className={styles.whyChooseUsBoxContainer}>
+		<Grid size={12} spacing={3} container className={styles.whyChooseUsBoxContainer}>
 			{
 				whyChooseUsContent.map((box, index) => (
-					<div className={styles.whyChooseUsBox} key={index}>
+					<Grid size={{xs: 12, sm: 6, lg: 2.4 }} className={styles.whyChooseUsBox} key={index}>
 						<Grid size={12} container spacing={3}>
 							<Grid size={12}>
 								<img
@@ -44,10 +44,10 @@ function WhyChooseUsBox(props) {
 								}
 							</Grid>
 						</Grid>
-					</div>
+					</Grid>
 				))
 			}
-		</div>
+		</Grid>
 	)
 }
 

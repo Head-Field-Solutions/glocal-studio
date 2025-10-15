@@ -213,3 +213,15 @@
 .linkedInIcon {
 	width: 40px;
 }
+
+@media screen and (max-width: 899px) {
+	.beyondSection {
+		padding-top: 20vh;
+	}
+	.astronautImage {
+		margin-left: 0;
+	}
+	.beyondInfoContent {
+		margin-top: 0;
+	}
+}

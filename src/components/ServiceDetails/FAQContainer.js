@@ -15,7 +15,7 @@ function FAQContainer(props) {
 		<Grid size={12} container spacing={5} alignItems="flex-start">
 			{
 				faqContent.map((item, index) => (
-					<Grid size={3} container spacing={0} key={item.id}>
+					<Grid size={{xs: 12, sm: 6, md: 3}} container spacing={0} key={item.id}>
 						<Grid size={12} className={styles.count}>
 							{
 								index === activeIndex ? (

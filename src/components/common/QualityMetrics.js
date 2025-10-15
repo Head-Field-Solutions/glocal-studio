@@ -13,7 +13,7 @@ import * as styles from "./QualityMetrics.module.scss";
 function QualityMetrics() {
 	return (
 		<Grid size={12} container spacing={4} alignItems="flex-start" className={styles.qualityMetricsContainer}>
-			<Grid size={6} container>
+			<Grid size={{xs: 12, md: 6}} container>
 				<Grid size={12} className={styles.glassContainer}>
 					<GlassContainer glassBackground="rgba(193, 227, 252, 0.4)" />
 					<Grid size={12} container className={styles.glassContainerWrapper} spacing={4}>
@@ -51,17 +51,17 @@ function QualityMetrics() {
 					</Grid>
 				</Grid>
 			</Grid>
-			<Grid size={6} container>
+			<Grid size={{xs: 12, md: 6}} container>
 				<Grid size={12} className={styles.glassContainer}>
 					<GlassContainer glassBackground="rgba(242, 240, 234, 0.4)" />
 					<Grid size={12} container className={styles.glassContainerWrapper} spacing={0} alignItems="flex-start">
-						<Grid size={8}>
+						<Grid size={{xs: 12, sm: 8}}>
 							<Heading className={styles.yearsOfExperienceHeading}><ColorfulText>25+</ColorfulText></Heading>
 							<Heading variant="secondary" className={styles.fontNormal}>
 								Years of Experience
 							</Heading>
 						</Grid>
-						<Grid size={4}>
+						<Grid size={{xs: 12, sm: 4}}>
 							Serving clients across the US, Europe, and Asia with consistent quality and reliability.
 						</Grid>
 					</Grid>

@@ -11,7 +11,7 @@ function ProfessionalServiceBox(props) {
 	const { image, heading, content, keyServices, footer } = props;
 
 	return (
-		<Grid size={3} container spacing={4}>
+		<Grid size={{xs: 12, md: 6}} container spacing={4}>
 			<Grid size={12} container className={styles.container} alignItems="flex-start">
 				<Grid size={12}>
 					<img
