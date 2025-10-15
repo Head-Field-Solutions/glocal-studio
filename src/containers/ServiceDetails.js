@@ -216,6 +216,7 @@ function ServiceDetails() {
 				</Container>
 			</section>
 			<section>
+<<<<<<< HEAD
 				{
 					serviceDetails?.show3dRenderSection ? (
 						<>
@@ -338,6 +339,85 @@ function ServiceDetails() {
 						</>
 					) : null
 				}
+=======
+				<img
+					src={require("../assets/images/service-details/3d-walkthroughs-bg.jpg")}
+					alt=""
+					className={styles.threeDRenderImage}
+				/>
+				<Container maxWidth="xl">
+					<Grid size={12}>
+						<Heading
+							className={cx(styles.textCenter, styles.textWhite, styles.extraLightText, styles.uppercase)}
+						>
+							Step Inside Your Project—
+						</Heading>
+						<Heading
+							className={cx(styles.textCenter, styles.textWhite, styles.uppercase)}
+						>
+							Before It’s Built
+						</Heading>
+					</Grid>
+					<Grid size={12}>
+						<Heading
+							variant="seconndary"
+							className={styles.weDesignSecondaryHeading}
+						>
+							We design walkthroughs that help you present, persuade, and close with confidence.
+						</Heading>
+					</Grid>
+					<Grid size={12} container spacing={4} alignItems="flex-start">
+						<Grid size={{xs: 12, sm: 6, md: 3}} container spacing={4}>
+							<Grid size={12} className={styles.textCenter}>
+								<img
+									src={require("../assets/images/service-details/project-info-icon-1.png")}
+									alt=""
+									className={styles.projectInfoImage}
+								/>
+							</Grid>
+							<Grid size={12} className={cx(styles.textCenter, styles.textWhite)}>
+								Dynamic camera movements & smooth transitions
+							</Grid>
+						</Grid>
+						<Grid size={{xs: 12, sm: 6, md: 3}} container spacing={4}>
+							<Grid size={12} className={styles.textCenter}>
+								<img
+									src={require("../assets/images/service-details/project-info-icon-2.png")}
+									alt=""
+									className={styles.projectInfoImage}
+								/>
+							</Grid>
+							<Grid size={12} className={cx(styles.textCenter, styles.textWhite)}>
+								Realistic lighting, textures, and materials
+							</Grid>
+						</Grid>
+						<Grid size={{xs: 12, sm: 6, md: 3}} container spacing={4}>
+							<Grid size={12} className={styles.textCenter}>
+								<img
+									src={require("../assets/images/service-details/project-info-icon-3.png")}
+									alt=""
+									className={styles.projectInfoImage}
+								/>
+							</Grid>
+							<Grid size={12} className={cx(styles.textCenter, styles.textWhite)}>
+								Exterior flythroughs + interior walkthroughs
+							</Grid>
+						</Grid>
+						<Grid size={{xs: 12, sm: 6, md: 3}} container spacing={4}>
+							<Grid size={12} className={styles.textCenter}>
+								<img
+									src={require("../assets/images/service-details/project-info-icon-4.png")}
+									alt=""
+									className={styles.projectInfoImage}
+								/>
+							</Grid>
+							<Grid size={12} className={cx(styles.textCenter, styles.textWhite)}>
+								Music, narration & branding integration
+							</Grid>
+						</Grid>
+					</Grid>
+				</Container>
+>>>>>>> ca5f2a0 (service ansd about us page responsive)
 				<img
 					src={require("../assets/images/service-details/step-into-section-bg.jpg")}
 					alt=""

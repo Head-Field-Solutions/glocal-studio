@@ -89,7 +89,7 @@ function QualityMetrics(props) {
 					}}
 				>
 					<Grid size={12} container className={styles.glassContainerWrapper} spacing={0} alignItems="flex-start">
-						<Grid size={8}>
+						<Grid size={{xs: 12, sm: 8}}>
 							<Heading className={styles.yearsOfExperienceHeading}><ColorfulText>25+</ColorfulText></Heading>
 							<Heading variant="secondary" className={styles.fontNormal}>
 								Years of Experience
