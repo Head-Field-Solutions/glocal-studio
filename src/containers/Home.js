@@ -78,7 +78,7 @@ function Home() {
 	const { scrollYProgress } = useScroll({
 		target: serviceListContainer,
 		offset: ['start end', 'end start']
-	})
+	});
 
   return (
 		<>
@@ -187,7 +187,7 @@ function Home() {
 				</Container>
 				<UspSectionCards />
 			</section>
-			<section> {/** Let us render section */}
+			<section className={styles.letUsRenderSection}> {/** Let us render section */}
 				<LetUsRenderPrespectiveScroll />
 			</section>
 		</>
