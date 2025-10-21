@@ -62,17 +62,17 @@ export default function LetUsRenderPrespectiveScroll() {
     <div className={styles.body} ref={letUsRenderContainer}>
       <div className={styles.carouselContainer}>
 				<div className={styles.textContainer}>
-					<motion.p
+					<motion.div
 						style={{ opacity: secondOpacity, transform: secondTransform }}
 					>
 						<Heading variant="secondary" className={styles.secondaryHeading}>Let’s Render Something</Heading>
-					</motion.p>
+					</motion.div>
 				</div>
 
 				<div className={styles.textContainer}>
-					<motion.p style={{ opacity: thirdOpacity, transform: thirdTransform }}>
+					<motion.div style={{ opacity: thirdOpacity, transform: thirdTransform }}>
 						<Heading className={styles.primaryHeading}>Incredible!</Heading>
-					</motion.p>
+					</motion.div>
 				</div>
 
         <motion.div
