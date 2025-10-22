@@ -110,13 +110,15 @@
 	margin-bottom: 200px;
 }
 
-@media screen and (max-width: 768px) {
-	.whyBrandSmallAnotherText{
-		margin-bottom: 100px;
-	}
+.letUsRenderSection {
+  width: 100%;
+  background-color: #060010;
 }
 
 @media screen and (max-width: 899px) {
+	.whyBrandSmallAnotherText{
+		margin-bottom: 100px;
+	}
 	.videoSectionContent {
 		margin-top: 70px;
 	}
