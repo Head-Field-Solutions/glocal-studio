@@ -29,6 +29,7 @@ export default function ServiceCard(props) {
 			className={styles.fullSupportItemGrid}
 			style={{
 				y: parallax,
+				willChange: "transform",
 			}}
 		>
 			<GlassContainer glassBackground="rgba(245, 244, 241, 0.5)" />

@@ -25,7 +25,8 @@ function WhatWeDoBox(props) {
 			alignItems="flex-start"
 			style={
 				type !== "floting" ? {
-					background: `#a0bcd1 url(${image}) no-repeat bottom center`
+					background: `#a0bcd1 url(${image}) no-repeat bottom center`,
+					backgroundSize: 'cover',
 				} : {}
 			}
 		>

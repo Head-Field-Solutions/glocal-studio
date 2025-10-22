@@ -199,7 +199,7 @@ function ContactForm(props) {
 					{TurnstileComponent && (
 						<TurnstileComponent
 							ref={captchaRef}
-							siteKey='0x4AAAAAABntleHsVEY0Ky_B'
+							siteKey='0x4AAAAAAB8A-8cleGROSkc1'
 						/>
 					)}
 				</form>
