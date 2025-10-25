@@ -217,14 +217,14 @@ export const servicesInfo = {
 					title: "Perfect for Architects, interior designers, and marketers showcasing spaces online.",
 					heading: "360° Panoramas",
 					content: "High-resolution panoramic visuals that capture entire spaces in a single immersive frame.",
-					image: require("../assets/images/service-details/architectural-visualization/what-we-do-item-1.png"),
+					image: require("../assets/images/service-details/360-degree-and-virtual-tours/what-we-do-item-1.jpg"),
 					type: "non-floting",
 				}, {
 					id: "02",
 					title: "Perfect for Real estate developers, brokers, and property portals.",
 					heading: "Real Estate Virtual Tours",
 					content: "Fully interactive tours that let buyers explore properties virtually, driving faster decisions and stronger sales.",
-					image: require("../assets/images/service-details/architectural-visualization/what-we-do-item-2.png"),
+					image: require("../assets/images/service-details/360-degree-and-virtual-tours/what-we-do-item-2.jpg"),
 					type: "non-floting",
 				}
 			],
