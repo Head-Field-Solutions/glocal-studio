@@ -16,11 +16,12 @@ function LinkButton(props) {
 		style = {},
 		children,
 		onClick = () => {},
+		direction = "up"
 	} = props;
 
 	return (
 		<Animate.FadeUp
-			direction="up"
+			direction={direction}
 			delay={delay}
 			className={cx(styles.buttonWrapper, wrapperClassName)}
 			style={wrapperStyle}

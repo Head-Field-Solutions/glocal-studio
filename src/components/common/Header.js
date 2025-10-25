@@ -189,6 +189,7 @@ function Header() {
 									className={styles.getInTouchButton}
 									wrapperStyle={{ marginRight: 0 }}
 									onClick={() => toggleContactForm()}
+									style={{ "--button-bg": "#060010", "--button-text-color":  "#f3f2ee" }}
 								>
 									get a free quote
 								</LinkButton>

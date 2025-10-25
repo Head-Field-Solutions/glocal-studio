@@ -1,7 +1,7 @@
 import React from "react";
 import cx from "classnames";
 
-import { Heading, ColorfulText, LinkButton, TextType } from "@/components/common";
+import { Heading, ColorfulText, LinkButton, TextType, Animate } from "@/components/common";
 
 import * as styles from "./MasterHeadVideo.module.scss";
 
@@ -40,14 +40,27 @@ function MasterHeadVideo() {
 						cursorCharacter="|"
 					/>
 				</Heading>
-				<div className={cx(styles.text, styles.textSmallBox)}>
+				<Animate.FadeUp
+					direction="down"
+					className={cx(styles.text, styles.textSmallBox)}
+				>
 					From detailed 3D modeling to stunning <br />
 					photorealistic rendering, we transform ideas into visuals <br />
 					that inspire and deliver worldwide.
-				</div>
+				</Animate.FadeUp>
 				<div className={styles.buttons}>
-					<LinkButton>SEE OUR SERVICES</LinkButton>
-					<LinkButton>BROWSE PORTFOLIO</LinkButton>
+					<LinkButton
+						direction="right"
+						style={{ "--button-bg": "#060010", "--button-text-color":  "#f3f2ee" }}
+					>
+						SEE OUR SERVICES
+					</LinkButton>
+					<LinkButton
+						direction="left"
+						style={{ "--button-bg": "#060010", "--button-text-color":  "#f3f2ee" }}
+					>
+						BROWSE PORTFOLIO
+					</LinkButton>
 				</div>
 			</div>
 		</div>
