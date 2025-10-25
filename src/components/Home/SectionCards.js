@@ -3,7 +3,7 @@ import { Grid2 as Grid } from "@mui/material";
 import { useTransform, motion } from 'framer-motion';
 
 import { useDevice } from '@/context/DeviceContext';
-import { Heading } from "@/components/common";
+import { Heading, Animate } from "@/components/common";
 
 import * as styles from "./SectionCards.module.scss";
 
@@ -35,8 +35,12 @@ export default function SectionCards(props) {
 						</Heading>
 					</Grid>
 					<Grid size={12}>
-						<p className={styles.text}>{isMobile ? card.textMobile : card.text}
-						</p>
+						<Animate.FadeUp
+							element="p"
+							className={styles.text}
+						>
+							{isMobile ? card.textMobile : card.text}
+						</Animate.FadeUp>
 					</Grid>
 				</Grid>
 			</Grid>

@@ -78,6 +78,10 @@
 	text-align: center;
 }
 
+.fontBold {
+	font-weight: 600;
+}
+
 .portfolioHeading {
 	color: #ece9e2;
 	text-align: center;
@@ -104,10 +108,11 @@
 .whyBrandHeading {
 	text-align: center;
 	font-weight: 300;
+	margin-bottom: 20px;
 }
 
 .whyBrandSmallText {
-	margin: 28px 0;
+	margin: 48px 0 28px 0;
 	text-align: center;
 }
 

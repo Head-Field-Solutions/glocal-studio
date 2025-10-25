@@ -15,7 +15,7 @@ export default function LetUsRenderPrespectiveScroll() {
 
 	const { scrollYProgress } = useScroll({
 		target: letUsRenderContainer,
-		offset: ['start start', 'end start']
+		offset: ['start 50%', 'end start']
 	})
 
 	const IMAGES = [

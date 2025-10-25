@@ -20,6 +20,7 @@ import Heading from "./Heading";
 import ContactForm from "./ContactForm";
 import ScrollableMotionText from "./ScrollableMotionText";
 import ColorfulText from "./ColorfulText";
+import Animate from "./Animate";
 
 import * as styles from "./Footer.module.scss";
 
@@ -76,7 +77,17 @@ function Footer() {
 			</div>
 			<Container maxWidth="xl" className={styles.uspSection}>
 				<Grid size={12} spacing={4} container>
-					<Grid size={3} container spacing={3} className={styles.footerCard}>
+					<Animate.FadeUp
+						element={Grid}
+						elementProps={{
+							size: 3,
+							container: true,
+							spacin: 3,
+						}}
+						className={styles.footerCard}
+						direction="up"
+						delay="0"
+					>
 						<Grid size={12} spacing={3} container>
 							<Grid size={10} className={styles.footerCardHeading}>
 								Start with a Free Consultation
@@ -92,8 +103,18 @@ function Footer() {
 						<Grid size={12}>
 							Got a vision? Let’s sketch it together—no obligations.
 						</Grid>
-					</Grid>
-					<Grid size={3} container spacing={3} className={styles.footerCard}>
+					</Animate.FadeUp>
+					<Animate.FadeUp
+						element={Grid}
+						elementProps={{
+							size: 3,
+							container: true,
+							spacin: 3,
+						}}
+						className={styles.footerCard}
+						direction="up"
+						delay="50ms"						
+					>
 						<Grid size={12} spacing={3} container>
 							<Grid size={10} className={styles.footerCardHeading}>
 								Transparent Process, Clear Pricing
@@ -109,8 +130,18 @@ function Footer() {
 						<Grid size={12}>
 							No guesswork. No surprises. Just clarity.
 						</Grid>
-					</Grid>
-					<Grid size={3} container spacing={3} className={styles.footerCard}>
+					</Animate.FadeUp>
+					<Animate.FadeUp
+						element={Grid}
+						elementProps={{
+							size: 3,
+							container: true,
+							spacin: 3,
+						}}
+						className={styles.footerCard}
+						direction="up"
+						delay="100ms"
+					>
 						<Grid size={12} spacing={3} container>
 							<Grid size={10} className={styles.footerCardHeading}>
 								Share Your Idea. We’ll Visualize It.
@@ -126,8 +157,18 @@ function Footer() {
 						<Grid size={12}>
 							A napkin sketch or a full plan—send it our way.
 						</Grid>
-					</Grid>
-					<Grid size={3} container spacing={3} className={styles.footerCard}>
+					</Animate.FadeUp>
+					<Animate.FadeUp
+						element={Grid}
+						elementProps={{
+							size: 3,
+							container: true,
+							spacin: 3,
+						}}
+						className={styles.footerCard}
+						direction="up"
+						delay="150ms"
+					>
 						<Grid size={12} spacing={3} container>
 							<Grid size={10} className={styles.footerCardHeading}>
 								Fast Replies. Real People.
@@ -143,7 +184,7 @@ function Footer() {
 						<Grid size={12}>
 							Your time matters—and so does your project.
 						</Grid>
-					</Grid>
+					</Animate.FadeUp>
 				</Grid>
 			</Container>
 			<div className={styles.footerInfoContainer}>

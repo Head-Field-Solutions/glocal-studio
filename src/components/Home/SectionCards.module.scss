@@ -3,26 +3,32 @@
   top: 0px;
 	display: flex;
   flex-direction: column;
-  height: 80vh;
+  height: 65vh;
   width: 90vw;
   aspect-ratio: 0.8;
   margin: auto;
   border-radius: 50px;
-  margin-bottom: 5vh;
+  margin-bottom: 10vh;
 	justify-content: flex-end;
 	align-items: center;
 	background: #060010;
 	color: #b5b1b5;
 
+	&:nth-child(1) {
+		.img {
+			// width: 56%;
+		}
+	}
+	
 	&:nth-child(3n) {
 		.img {
-			width: 56%;
+			width: 48%;
 		}
 	}
 
 	&:nth-child(4n) {
 		.img {
-			width: 38%;
+			width: 33%;
 			right: 120px;
 		}
 	}
@@ -65,12 +71,12 @@
 	position: absolute;
 	right: 30px;
 	bottom: 0;
-	width: 59%;
+	width: 52%;
 	z-index: 1;
 }
 
 .stepCount {
-	font-size: 20px;
+	font-size: 14px;
 	font-weight: 300;
 	color: #b5b1b5;
 	margin-bottom: 8px;
@@ -88,7 +94,7 @@
   grid-area: content-text;
   padding: 0;
   backface-visibility: hidden;
-	font-size: 24px;
+	font-size: 20px;
 	color: #b7b4ab;
 }
 

@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { Helmet } from "react-helmet-async";
 import { Container, Grid2 as Grid } from "@mui/material";
 import { useScroll } from "framer-motion";
+import cx from "classnames";
 
 import MasterHeadVideo from "@/components/Home/MasterHeadVideo";
 import MaskVideoSection from "@/components/Home/MaskVideoSection";
@@ -138,26 +139,34 @@ function Home() {
 						</Heading>
 					</Grid>
 					<Grid size={12} justifySelf="center">
-						<LinkButton style={{ "--button-bg": "#f2f0ea" }}>GET A FREE QUOTE</LinkButton>
-						<LinkButton style={{ "--button-bg": "#f2f0ea" }}>BROWSE PORTFOLIO</LinkButton>
+						<LinkButton style={{ "--button-bg": "#f2f0ea" }} direction="right">GET A FREE QUOTE</LinkButton>
+						<LinkButton style={{ "--button-bg": "#f2f0ea" }} direction="left">BROWSE PORTFOLIO</LinkButton>
 					</Grid>
 				</Container>
 			</section>
 			<section className={styles.portfolioSection}>
 				<Container maxWidth="xl">
 					<Grid size={12}>
-						<Heading className={styles.portfolioHeading}>
+						<Heading className={styles.portfolioHeading} direction="down">
 							See the Stunning. 
 						</Heading>
 					</Grid>
 					<Grid size={12}>
 						<Heading variant="secondary" className={styles.portfolioSecondaryHeading}>Believe the Budget.</Heading>
 					</Grid>
-					<Grid size={12} container className={styles.textCenter}>
+					<Animate.FadeUp
+						element={Grid}
+						elementProps={{
+							size: 12,
+							container: true,
+						}}
+						className={styles.textCenter}
+						direction="up"
+					>
 						<Grid size={6} offset={3}>
 							Explore some of our favorite works—from photorealistic home interiors to cinematic exterior walkthroughs. You’ll be amazed what we deliver for the price.
 						</Grid>
-					</Grid>
+					</Animate.FadeUp>
 					<Grid size={12} justifySelf="center" className={styles.portfolioButtons}>
 						<LinkButton style={{ "--button-bg": "#060010", "--button-text-color": "#fff" }}>BROWSE PORTFOLIO</LinkButton>
 					</Grid>
@@ -167,23 +176,30 @@ function Home() {
 			<section className={styles.whyBrandLoveSection}>
 				<Container maxWidth="xl">
 					<Grid size={12}>
-						<Heading variant="secondary" className={styles.whyBrandHeading}>Why Brands Love Us?</Heading>
+						<Heading variant="secondary" className={styles.whyBrandHeading} direction="down">Why Brands Love Us?</Heading>
 					</Grid>
 					<Grid size={12}>
 						<Heading className={styles.whyBrandHeading}>
 							Elite Rendering.<br/>
 							Fair Pricing.
 						</Heading>
-						<Heading className={styles.textCenter}>No Compromise.</Heading>
+						<Heading className={cx(styles.textCenter, styles.fontBold)}>No Compromise.</Heading>
 					</Grid>
-					<Grid size={12} container>
+					<Animate.FadeUp
+						element={Grid}
+						direction="up"
+						elementProps={{
+							size: 12,
+							container: true,
+						}}
+					>
 						<Grid size={6} offset={3} className={styles.whyBrandSmallText}>
 							At Glocal Studio, we deliver premium-quality 3D visuals and design solutions that rival the world’s best—but at prices that make sense. From stunning realism to lightning-fast turnaround, we combine creativity, precision, and affordability like no one else.
 						</Grid>
 						<Grid size={6} offset={3} className={styles.whyBrandSmallAnotherText}>
 							When others say either quality or price—we say, why not both?
 						</Grid>
-					</Grid>
+					</Animate.FadeUp>
 				</Container>
 				<UspSectionCards />
 			</section>
