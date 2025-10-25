@@ -155,11 +155,22 @@ function Home() {
 					<Grid size={12}>
 						<Heading variant="secondary" className={styles.portfolioSecondaryHeading}>Believe the Budget.</Heading>
 					</Grid>
-					<Grid size={12} container justifyContent={"center"} className={`${styles.textCenter} ${styles.seeStunningText}`}>
-						<Grid size={{xs: 12, md: 6}}>
+					{/* <Grid size={12} container justifyContent={"center"} className={`${styles.textCenter} ${styles.seeStunningText}`}>
+						<Grid size={{xs: 12, md: 6}}> */}
+					<Animate.FadeUp
+						element={Grid}
+						elementProps={{
+							size: 12,
+							container: true,
+							justifyContent:"center"
+						}}
+						className={`${styles.textCenter} ${styles.seeStunningText}`}
+						direction="up"
+					>
+						<Grid size={6} offset={3}>
 							Explore some of our favorite works—from photorealistic home interiors to cinematic exterior walkthroughs. You’ll be amazed what we deliver for the price.
 						</Grid>
-					</Grid>
+					</Animate.FadeUp>
 					<Grid size={12} justifySelf="center" className={styles.portfolioButtons}>
 						<LinkButton style={{ "--button-bg": "#060010", "--button-text-color": "#ece9e2" }}>BROWSE PORTFOLIO</LinkButton>
 					</Grid>
@@ -178,17 +189,24 @@ function Home() {
 							Expert Reviewed.<br/>
 							Technically Perfect.
 						</Heading>
-						<Heading className={cx(styles.textCenter, styles.fontBold)}>Every Time.</Heading>
+						<Heading className={cx(styles.textCenter, styles.fontBold)}>No Compromise.</Heading>
 					</Grid>
-					<Grid size={12} container justifyContent={"center"}>
-						<Grid size={{xs: 12, md: 6}} className={styles.whyBrandSmallText}>
+					<Animate.FadeUp
+						element={Grid}
+						direction="up"
+						elementProps={{
+							size: 12,
+							container: true,
+						}}
+					>
+						<Grid size={6} offset={3} className={styles.whyBrandSmallText}>
 							At Glocal Studio, we deliver premium-quality 3D visuals and design solutions that rival the world’s best—but at prices that make sense. From stunning realism to lightning-fast turnaround, we combine creativity, precision, and affordability like no one else.
 						</Grid>
 						<Grid size={12}/>
 						<Grid size={{xs: 12, md: 6}} className={styles.whyBrandSmallAnotherText}>
 							When others say either quality or price—we say, why not both?
 						</Grid>
-					</Grid>
+					</Animate.FadeUp>
 				</Container>
 				<UspSectionCards />
 			</section>
