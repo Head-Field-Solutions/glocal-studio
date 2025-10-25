@@ -11,7 +11,7 @@
 }
 
 .whatWeDoBox {
-	border-radius: 15px;
+	border-radius: 30px;
 	background: #a0bcd1;
 	background-size: contain;
 	position: relative;
@@ -41,6 +41,8 @@
 			left: 0;
 			width: 100%;
 			height: 100%;
+			overflow: hidden;
+			border-radius: 30px;
 		}
 
 		&::before {
@@ -51,6 +53,8 @@
 			left: 0;
 			width: 100%;
 			height: 100%;
+			overflow: hidden;
+			border-radius: 30px;
 		}
 	}
 }

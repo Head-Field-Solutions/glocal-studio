@@ -90,17 +90,18 @@ function FadeUp({
 	style = {},
 	element,
 	elementProps,
+	distance,
 }) {
 	const getFromTranslateValue = () => {
 		if (direction === "up") {
-			return "0 2.5rem";
+			return distance || "0 2.5rem";
 		} else if (direction === "down") {
-			return "0 -2.5rem";
+			return distance || "0 -2.5rem";
 		} else if (direction === "left") {
-			return "2.5rem 0";
+			return distance || "2.5rem 0";
 		}
 
-		return "-2.5rem 0";
+		return distance || "-2.5rem 0";
 	};
 
 	return (

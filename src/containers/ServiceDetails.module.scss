@@ -1,6 +1,6 @@
 .masterHead {
-	background-size: cover;
-	padding: 90vh 0 100px;
+	background-size: contain !important;
+	padding: 700px 0 100px;
 }
 
 .uppercase {
@@ -35,10 +35,14 @@
 	color: #f3f2ee;
 }
 
+.fontLarge {
+	font-size: 18px;
+}
+
 .masterHeadInfoSection {
-	background: linear-gradient(360deg,rgba(23, 33, 61, 1) 0%, rgba(23, 33, 61, 0.10) 100%);
-	border-radius: 30px;
-	padding: 60px 0;
+	background: linear-gradient(360deg,rgba(23, 33, 61, 1) 0%, rgba(23, 33, 61, 0) 100%);
+	border-radius: 60px;
+	padding: 60px 0 100px;
 }
 
 .acturalVisualizationHeading {
@@ -77,19 +81,32 @@
 	padding: 60px 0 140px;
 }
 
+.whatWeDoContent {
+	margin-bottom: 32px;
+}
+
 .threeDRenderImage {
 	width: 100%;
+}
+
+.stepIntoSectionContainer {
+	margin-top: -300px;
 }
 
 .weDesignSecondaryHeading {
 	text-align: center;
 	color: #f3f2ee;
 	font-weight: 200;
-	margin: 40px 0 60px;
+	margin: 40px 0 92px;
+	font-size: clamp(1rem, 2vw, 2rem)
+}
+
+.projectInfoBoxes {
+	margin-bottom: 40px;
 }
 
 .projectInfoImage {
-	height: 150px;
+	height: 110px;
 }
 
 .partnerWithProfessionalSection {

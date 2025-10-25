@@ -1,6 +1,8 @@
 import React from "react";
 import { Grid2 as Grid } from "@mui/material";
 
+import { Animate } from "@/components/common";
+
 import * as styles from "./WhyChooseUsBox.module.scss";
 
 function WhyChooseUsBox(props) {
@@ -10,7 +12,11 @@ function WhyChooseUsBox(props) {
 		<div className={styles.whyChooseUsBoxContainer}>
 			{
 				whyChooseUsContent.map((box, index) => (
-					<div className={styles.whyChooseUsBox} key={index}>
+					<Animate.FadeUp
+						className={styles.whyChooseUsBox}
+						key={index}
+						delay={`${index * 150}ms`}
+					>
 						<Grid size={12} container spacing={3}>
 							<Grid size={12}>
 								<img
@@ -44,7 +50,7 @@ function WhyChooseUsBox(props) {
 								}
 							</Grid>
 						</Grid>
-					</div>
+					</Animate.FadeUp>
 				))
 			}
 		</div>

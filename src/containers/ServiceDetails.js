@@ -11,6 +11,7 @@ import {
 	Heading,
 	LinkButton,
 	QualityMetrics,
+	Animate
 } from "@/components/common";
 
 import WhatWeDoBox from "@/components/ServiceDetails/WhatWeDoBox";
@@ -204,12 +205,25 @@ function ServiceDetails() {
 						className={cx(styles.masterHeadInfoSection, styles.textCenter)}
 						spacing={4}
 					>
-						<Grid size={12} justifyContent="center">
-							<StarGradiantIcon width="58px" height="65px" />
-						</Grid>
-						<Grid size={12} className={styles.acturalVisualizationHeading}>
+						<Animate.ScaleIn
+							element={Grid}
+							elementProps={{
+								size: 12, 
+								justifyContent: "center",
+							}}
+						>
+							<StarGradiantIcon width="40px" height="47px" />
+						</Animate.ScaleIn>
+						<Animate.FadeUp
+							element={Grid}
+							elementProps={{
+								size: 12,
+							}}
+							className={styles.acturalVisualizationHeading}
+							direction="down"
+						>
 							{serviceDetails.title}
-						</Grid>
+						</Animate.FadeUp>
 						<Grid size={12}>
 							<Heading className={cx(styles.masterHeadingHeading, styles.extraLightText)}>
 								{serviceDetails.desktopMainHeading}
@@ -218,11 +232,22 @@ function ServiceDetails() {
 								{serviceDetails.secondaryHeading}
 							</Heading>
 						</Grid>
-						<Grid size={8} offset={2} className={cx(styles.masterHeadText, styles.textWhite)}>
+						<Animate.FadeUp
+							element={Grid}
+							elementProps={{
+								size: 8,
+								offset: 2,
+							}}
+							className={cx(styles.masterHeadText, styles.textWhite)}
+						>
 							{serviceDetails.description}
-						</Grid>
+						</Animate.FadeUp>
 						<Grid size={12}>
-							<LinkButton>Let’s Discuss Your Project</LinkButton>
+							<LinkButton
+								style={{ "--button-bg": "#060010", "--button-text-color":  "#f3f2ee" }}
+							>
+								Let’s Discuss Your Project
+							</LinkButton>
 						</Grid>
 					</Grid>
 				</Container>
@@ -230,11 +255,21 @@ function ServiceDetails() {
 			<section className={styles.whatWeDoSection}>
 				<Container maxWidth="xl">
 					<Grid size={12} spacing={4} container>
-						<Grid size={12} className={styles.textCenter}>
+						<Animate.FadeUp
+							element={Grid}
+							elementProps={{
+								size: 12,
+							}}
+							className={styles.textCenter}
+							direction="down"
+						>
 							<ColorfulText className={styles.uppercase}>What We Do</ColorfulText>
-						</Grid>
+						</Animate.FadeUp>
 						<Grid size={12}>
-							<Heading variant="secondary" className={cx(styles.extraLightText, styles.textCenter, styles.textWhite)}>
+							<Heading
+								variant="secondary"
+								className={cx(styles.extraLightText, styles.textCenter, styles.textWhite, styles.whatWeDoContent)}
+							>
 								{serviceDetails.whatWeDo.content}
 							</Heading>
 						</Grid>
@@ -248,7 +283,7 @@ function ServiceDetails() {
 						alignItems="flex-start"
 					>
 						{
-							serviceDetails.whatWeDo.items.map((item) => (
+							serviceDetails.whatWeDo.items.map((item, index) => (
 								<WhatWeDoBox
 									key={item.id}
 									id={item.id}
@@ -257,6 +292,7 @@ function ServiceDetails() {
 									content={item.content}
 									image={item.image}
 									type={item.type}
+									delay={`${index * 100}ms`}
 								/>
 							))
 						}
@@ -269,7 +305,7 @@ function ServiceDetails() {
 					alt=""
 					className={styles.threeDRenderImage}
 				/>
-				<Container maxWidth="xl">
+				<Container maxWidth="xl" className={styles.stepIntoSectionContainer}>
 					<Grid size={12}>
 						<Heading
 							className={cx(styles.textCenter, styles.textWhite, styles.extraLightText, styles.uppercase)}
@@ -282,16 +318,31 @@ function ServiceDetails() {
 							Before It’s Built
 						</Heading>
 					</Grid>
-					<Grid size={12}>
-						<Heading
-							variant="seconndary"
-							className={styles.weDesignSecondaryHeading}
+					<Animate.FadeUp
+						element={Grid}
+						elementProp={{
+							size: 12,
+						}}
+						className={styles.weDesignSecondaryHeading}
+					>
+						We design walkthroughs that help you present, persuade, <br />and close with confidence.
+					</Animate.FadeUp>
+					<Grid
+						size={12}
+						container
+						spacing={4}
+						alignItems="flex-start"
+						className={styles.projectInfoBoxes}
+					>
+						<Animate.FadeUp
+							element={Grid}
+							elementProps={{
+								size: 3,
+								container: true,
+								spacing: 4,
+							}}
+							delay="0"
 						>
-							We design walkthroughs that help you present, persuade, and close with confidence.
-						</Heading>
-					</Grid>
-					<Grid size={12} container spacing={4} alignItems="flex-start">
-						<Grid size={3} container spacing={4}>
 							<Grid size={12} className={styles.textCenter}>
 								<img
 									src={require("../assets/images/service-details/project-info-icon-1.png")}
@@ -299,11 +350,19 @@ function ServiceDetails() {
 									className={styles.projectInfoImage}
 								/>
 							</Grid>
-							<Grid size={12} className={cx(styles.textCenter, styles.textWhite)}>
+							<Grid size={12} className={cx(styles.textCenter, styles.textWhite, styles.fontLarge)}>
 								Dynamic camera movements & smooth transitions
 							</Grid>
-						</Grid>
-						<Grid size={3} container spacing={4}>
+						</Animate.FadeUp>
+						<Animate.FadeUp
+							element={Grid}
+							elementProps={{
+								size: 3,
+								container: true,
+								spacing: 4,
+							}}
+							delay="50ms"
+						>
 							<Grid size={12} className={styles.textCenter}>
 								<img
 									src={require("../assets/images/service-details/project-info-icon-2.png")}
@@ -311,11 +370,19 @@ function ServiceDetails() {
 									className={styles.projectInfoImage}
 								/>
 							</Grid>
-							<Grid size={12} className={cx(styles.textCenter, styles.textWhite)}>
+							<Grid size={12} className={cx(styles.textCenter, styles.textWhite, styles.fontLarge)}>
 								Realistic lighting, textures, and materials
 							</Grid>
-						</Grid>
-						<Grid size={3} container spacing={4}>
+						</Animate.FadeUp>
+						<Animate.FadeUp
+							element={Grid}
+							elementProps={{
+								size: 3,
+								container: true,
+								spacing: 4,
+							}}
+							delay="100ms"
+						>
 							<Grid size={12} className={styles.textCenter}>
 								<img
 									src={require("../assets/images/service-details/project-info-icon-3.png")}
@@ -323,11 +390,19 @@ function ServiceDetails() {
 									className={styles.projectInfoImage}
 								/>
 							</Grid>
-							<Grid size={12} className={cx(styles.textCenter, styles.textWhite)}>
+							<Grid size={12} className={cx(styles.textCenter, styles.textWhite, styles.fontLarge)}>
 								Exterior flythroughs + interior walkthroughs
 							</Grid>
-						</Grid>
-						<Grid size={3} container spacing={4}>
+						</Animate.FadeUp>
+						<Animate.FadeUp
+							element={Grid}
+							elementProps={{
+								size: 3,
+								container: true,
+								spacing: 4,
+							}}
+							delay="150ms"
+						>
 							<Grid size={12} className={styles.textCenter}>
 								<img
 									src={require("../assets/images/service-details/project-info-icon-4.png")}
@@ -335,10 +410,10 @@ function ServiceDetails() {
 									className={styles.projectInfoImage}
 								/>
 							</Grid>
-							<Grid size={12} className={cx(styles.textCenter, styles.textWhite)}>
+							<Grid size={12} className={cx(styles.textCenter, styles.textWhite, styles.fontLarge)}>
 								Music, narration & branding integration
 							</Grid>
-						</Grid>
+						</Animate.FadeUp>
 					</Grid>
 				</Container>
 				<img
@@ -350,9 +425,16 @@ function ServiceDetails() {
 			<section className={styles.partnerWithProfessionalSection}>
 				<Container maxWidth="xl" className={styles.partnerWithProfessionalContainer}>
 					<Grid size={12} spacing={6} container>
-						<Grid size={12} className={styles.textCenter}>
+						<Animate.FadeUp
+							element={Grid}
+							elementProps={{
+								size: 12,
+							}}
+							className={styles.textCenter}
+							direction="down"
+						>
 							<ColorfulText>INDUSTRIES WE SERVE</ColorfulText>
-						</Grid>
+						</Animate.FadeUp>
 						<Grid size={12}>
 							<Heading
 								className={cx(styles.textCenter, styles.textWhite, styles.uppercase, styles.fontNormal)}
@@ -375,6 +457,7 @@ function ServiceDetails() {
 										content={service.content}
 										keyServices={service.keyServices}
 										footer={service.footer}
+										delay={`${index * 50}ms`}
 									/>
 								))
 							}
@@ -388,31 +471,49 @@ function ServiceDetails() {
 			<section className={styles.whyChooseUsSection}>
 				<Container maxWidth="xl">
 					<Grid size={12} container className={styles.textCenter}>
-						<Grid size={12}>
+						<Animate.FadeUp
+							element={Grid}
+							elementProps={{
+								size: 12,
+							}}
+							direction="down"
+						>
 							<ColorfulText>WHY CHOOSE US</ColorfulText>
-						</Grid>
+						</Animate.FadeUp>
 						<Grid size={12} className={styles.whyChooseUsSecondaryHeadingContainer}>
 							<Heading variant="seconndary" className={styles.uppercase}>
 								Collaboration, <br/>
 								Supervision & Speed
 							</Heading>
 						</Grid>
-						<Grid size={12}>
+						<Animate.ScaleIn
+							element={Grid}
+							elementProps={{
+								size: 12,
+							}}
+						>
 							<StarGradiantIcon width="65px" height="78px" />
-						</Grid>
+						</Animate.ScaleIn>
 						<Grid size={12} className={styles.whyChooseUsHeadingContainer}>
 							<Heading className={styles.uppercase}>All in One Studio.</Heading>
 						</Grid>
-						<Grid size={6} offset={3} className={styles.workDirectlyText}>
+						<Animate.FadeUp
+							element={Grid}
+							elementProps={{
+								size: 6,
+								offset: 3,
+							}}
+							className={styles.workDirectlyText}
+						>
 							Work directly with the creators, guided by senior designers, with quality and confidentiality at every step.
-						</Grid>
+						</Animate.FadeUp>
 					</Grid>
 					<Grid size={12}>
 						<WhyChooseUsBox whyChooseUsContent={whyChooseUsContent} />
 					</Grid>
 					<Grid size={12} className={styles.textCenter}>
-						<LinkButton>Let’s Discuss Your Project</LinkButton>
-						<LinkButton>GET FREE CONSULTATION</LinkButton>
+						<LinkButton direction="right">Let’s Discuss Your Project</LinkButton>
+						<LinkButton direction="left">GET FREE CONSULTATION</LinkButton>
 					</Grid>
 				</Container>
 			</section>

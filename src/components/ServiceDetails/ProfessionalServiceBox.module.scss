@@ -16,6 +16,7 @@
 
 .iconImage {
 	width: 100%;
+	display: block;
 }
 
 .smallFontSize {
@@ -24,6 +25,8 @@
 
 .extraSmallfontsize {
 	font-size: 12px;
+	line-height: 16px;
+	min-height: 54px;;
 }
 
 .mediumBold {

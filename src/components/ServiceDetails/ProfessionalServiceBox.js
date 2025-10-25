@@ -1,14 +1,14 @@
 import React from "react";
 import { Grid2 as Grid } from "@mui/material";
 
-import { Heading } from "@/components/common";
+import { Heading, Animate } from "@/components/common";
 
 import { StarGradiantIcon } from "@/components/Icons";
 
 import * as styles from "./ProfessionalServiceBox.module.scss";
 
 function ProfessionalServiceBox(props) {
-	const { image, heading, content, keyServices, footer } = props;
+	const { image, heading, content, keyServices, footer, delay } = props;
 
 	return (
 		<Grid size={3} container spacing={4}>
@@ -24,21 +24,38 @@ function ProfessionalServiceBox(props) {
 					<Grid size={12}>
 						<Heading variant="secondary">{heading}</Heading>
 					</Grid>
-					<Grid size={12} className={styles.smallFontSize}>
+					<Animate.FadeUp
+						element={Grid}
+						elementProps={{
+							size: 12,
+						}}
+						className={styles.smallFontSize}
+					>
 						{content}
-					</Grid>
+					</Animate.FadeUp>
 					<Grid size={12} container spacing={3}>
-						<Grid size={12} className={styles.mediumBold}>
+						<Animate.FadeUp
+							element={Grid}
+							elementProps={{
+								size: 12,
+							}}
+							className={styles.mediumBold}
+						>
 							Key Qualities We Offer:
-						</Grid>
+						</Animate.FadeUp>
 						{
 							keyServices.map((service, index) => (
-								<Grid
-									size={6}
-									container
-									spacing={2}
-									alignItems="center"
+								<Animate.FadeUp
+									element={Grid}
+									elementProps={{
+										size: 6,
+										container: true,
+										spacing: 2,
+										alignItems: "flex-start"
+									}}
+									className={styles.mediumBold}
 									key={index}
+									delay={`${index * 50}ms`}
 								>
 									<Grid size={4}>
 										<img
@@ -48,7 +65,7 @@ function ProfessionalServiceBox(props) {
 										/>
 									</Grid>
 									<Grid size={8} className={styles.extraSmallfontsize}>{service.content}</Grid>
-								</Grid>
+								</Animate.FadeUp>
 							))
 						}
 					</Grid>
@@ -61,12 +78,21 @@ function ProfessionalServiceBox(props) {
 					</Grid>
 				</Grid>
 			</Grid>
-			<Grid size={12} container spacing={2} alignItems="center">
+			<Animate.FadeUp
+				element={Grid}
+				elementProps={{
+					size: 12,
+					container: true,
+					spacing: 2,
+					alignItems: "flex-start"
+				}}
+				delay={delay}
+			>
 				<Grid size={2} offset={1}>
 					<StarGradiantIcon width="35px" height="39px" />
 				</Grid>
 				<Grid size={8} className={styles.smallFontSize}>{footer}</Grid>
-			</Grid>
+			</Animate.FadeUp>
 		</Grid>
 	)
 }

@@ -4,30 +4,38 @@ import cx from "classnames";
 
 import { StarGradiantIcon } from "@/components/Icons";
 
-import { Heading } from "@/components/common";
+import { Heading, Animate } from "@/components/common";
 
 import * as styles from "./WhatWeDoBox.module.scss";
 
 function WhatWeDoBox(props) {
-	const {id, title, heading, content, image, type } = props;
+	const {id, title, heading, content, image, type, delay } = props;
 
 	return (
-		<Grid
-			size={6}
-			container
-			spacing={2}
+		<Animate.FadeUp
+			element={Grid}
+			elementProps={{
+				size: 6,
+				container: true,
+				spacing: 2,
+				alignItems: "flex-start"
+			}}
 			className={cx(
 				styles.whatWeDoBox,
 				{
 					[styles.floting]: type === "floting"
 				}
 			)}
-			alignItems="flex-start"
+			delay={delay}
+			distance="0 5rem"
 			style={
 				type !== "floting" ? {
 					background: `#a0bcd1 url(${image}) no-repeat bottom center`,
 					backgroundSize: 'cover',
-				} : {}
+					transition: "700ms ease-in-out",
+				} : {
+					transition: "700ms ease-in-out",
+				}
 			}
 		>
 			<Grid
@@ -50,22 +58,34 @@ function WhatWeDoBox(props) {
 					<Grid size={6}>
 						<Heading variant="secondary" className={styles.lightText}>{heading}</Heading>
 					</Grid>
-					<Grid size={6} className={styles.mediumBold}>
+					<Animate.FadeUp
+						element={Grid}
+						elementProps={{
+							size: 6
+						}}
+						className={styles.mediumBold}
+					>
 						{content}
-					</Grid>
+					</Animate.FadeUp>
 				</Grid>
 				{
 					type === "floting" ? (
-						<Grid size={12} className={styles.whatWeDoItemImage}>
+						<Animate.FadeUp
+							element={Grid}
+							elementProps={{
+								size: 12
+							}}
+							className={styles.whatWeDoItemImage}
+						>
 							<img
 								src={image}
 								alt={heading}
 							/>
-						</Grid>
+						</Animate.FadeUp>
 					) : null
 				}
 			</Grid>
-		</Grid>
+		</Animate.FadeUp>
 	);
 }
 
