@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Grid2 as Grid } from "@mui/material";
 import cx from "classnames";
 
-import { ColorfulText } from "@/components/common";
+import { ColorfulText, Animate } from "@/components/common";
 
 import * as styles from "./FAQContainer.module.scss";
 
@@ -15,7 +15,16 @@ function FAQContainer(props) {
 		<Grid size={12} container spacing={5} alignItems="flex-start">
 			{
 				faqContent.map((item, index) => (
-					<Grid size={3} container spacing={0} key={item.id}>
+					<Animate.FadeUp
+						element={Grid}
+						elementProps={{
+							size: 3,
+							container: true,
+							spacing: 0,
+						}}
+						key={item.id}
+						delay={`${index * 100}ms`}
+					>
 						<Grid size={12} className={styles.count}>
 							{
 								index === activeIndex ? (
@@ -44,7 +53,7 @@ function FAQContainer(props) {
 								</Grid>
 							) : null
 						}
-					</Grid>
+					</Animate.FadeUp>
 				))
 			}
 		</Grid>

@@ -34,11 +34,11 @@ function QualityMetrics() {
 				</Grid>
 				<Grid size={12} className={styles.glassContainer}>
 					<GlassContainer glassBackground="rgba(242, 240, 234, 0.2)" />
-					<Grid size={12} container className={styles.glassContainerWrapper} spacing={0}>
+					<Grid size={12} container className={styles.glassContainerWrapper} spacing={8}>
 						<Grid size={3}>
-							<Heading className={styles.fontNormal}><ColorfulText>50+</ColorfulText></Heading>
+							<Heading className={cx(styles.fontNormal, styles.letterSpacing)}><ColorfulText>50+</ColorfulText></Heading>
 						</Grid>
-						<Grid size={9} container spacing={1}>
+						<Grid size={9} container spacing={0}>
 							<Grid size={12}>
 								<Heading variant="secondary" className={styles.fontNormal}>
 									Global Clients
@@ -61,16 +61,16 @@ function QualityMetrics() {
 								Years of Experience
 							</Heading>
 						</Grid>
-						<Grid size={4}>
+						<Grid size={4} className={styles.servingClientText}>
 							Serving clients across the US, Europe, and Asia with consistent quality and reliability.
 						</Grid>
 					</Grid>
 				</Grid>
 				<Grid size={12} className={styles.glassContainer}>
 					<GlassContainer glassBackground="rgba(23, 32, 60, 0.8)" />
-					<Grid size={12} container className={styles.glassContainerWrapper} spacing={0}>
+					<Grid size={12} container className={styles.glassContainerWrapper} spacing={12}>
 						<Grid size={3}>
-							<Heading className={cx(styles.fontNormal, styles.textWhite)}>90%</Heading>
+							<Heading className={cx(styles.fontNormal, styles.textWhite, styles.letterSpacing)}>90%</Heading>
 						</Grid>
 						<Grid size={9} container spacing={1}>
 							<Grid size={12}>
@@ -86,18 +86,18 @@ function QualityMetrics() {
 				</Grid>
 				<Grid size={12} className={styles.glassContainer}>
 					<GlassContainer glassBackground="rgba(242, 240, 234, 0.2)" />
-					<Grid size={12} container className={styles.glassContainerWrapper} spacing={0}>
+					<Grid size={12} container className={styles.glassContainerWrapper} spacing={6}>
 						<Grid size={5}>
-							<Heading className={styles.fontNormal}>4,000+</Heading>
+							<Heading className={cx(styles.fontNormal, styles.letterSpacing)}>4,000+</Heading>
 						</Grid>
 						<Grid size={7} container spacing={1}>
 							<Grid size={12}>
 								<Heading variant="secondary" className={styles.fontNormal}>
-									Projects Delivered
+									Projects
 								</Heading>
 							</Grid>
 							<Grid size={12}>
-								Executed projects of every scale.
+								Executed and delevered worldwide.
 							</Grid>
 						</Grid>
 					</Grid>

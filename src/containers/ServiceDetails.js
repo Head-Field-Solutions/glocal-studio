@@ -320,7 +320,7 @@ function ServiceDetails() {
 					</Grid>
 					<Animate.FadeUp
 						element={Grid}
-						elementProp={{
+						elementProps={{
 							size: 12,
 						}}
 						className={styles.weDesignSecondaryHeading}
@@ -526,7 +526,9 @@ function ServiceDetails() {
 						</Grid>
 						<Grid size={12}>
 							<div className={styles.faqHeading}>
-								<span>frequently asked questions</span>
+								<Animate.FadeUp element="span" direction="right">
+									frequently asked questions
+								</Animate.FadeUp>
 							</div>
 						</Grid>
 					</Grid>
