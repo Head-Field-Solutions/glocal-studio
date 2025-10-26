@@ -7,15 +7,30 @@ import { StarGradiantIcon } from "@/components/Icons";
 import GlassContainer from "./GlassContainer";
 import ColorfulText from "./ColorfulText";
 import Heading from "./Heading";
+import Animate from "./Animate";
 
 import * as styles from "./QualityMetrics.module.scss";
 
-function QualityMetrics() {
+function QualityMetrics(props) {
+	const {
+		trustedBg = "rgba(193, 227, 252, 0.4)",
+		globalClientBg = "rgba(242, 240, 234, 0.2)",
+		yearsOfExperienceBg = "rgba(242, 240, 234, 0.4)",
+		repeatedClientBg = "rgba(23, 32, 60, 0.8)",
+		projectsBg = "rgba(242, 240, 234, 0.2)",
+	} = props; 
 	return (
 		<Grid size={12} container spacing={4} alignItems="flex-start" className={styles.qualityMetricsContainer}>
 			<Grid size={6} container>
-				<Grid size={12} className={styles.glassContainer}>
-					<GlassContainer glassBackground="rgba(193, 227, 252, 0.4)" />
+				<Animate.FadeUp
+					element={Grid}
+					elementProps={{
+						size: 12
+					}}
+					className={styles.glassContainer}
+					direction="right"
+				>
+					<GlassContainer glassBackground={trustedBg} />
 					<Grid size={12} container className={styles.glassContainerWrapper} spacing={4}>
 						<Grid size={12}>
 							<StarGradiantIcon width="56px" height="62px" />
@@ -31,9 +46,16 @@ function QualityMetrics() {
 							More than projects delivered—we’ve built relationships that last decades.
 						</Grid>
 					</Grid>
-				</Grid>
-				<Grid size={12} className={styles.glassContainer}>
-					<GlassContainer glassBackground="rgba(242, 240, 234, 0.2)" />
+				</Animate.FadeUp>
+				<Animate.FadeUp
+					element={Grid}
+					elementProps={{
+						size: 12
+					}}
+					className={styles.glassContainer}
+					direction="right"
+				>
+					<GlassContainer glassBackground={globalClientBg} />
 					<Grid size={12} container className={styles.glassContainerWrapper} spacing={8}>
 						<Grid size={3}>
 							<Heading className={cx(styles.fontNormal, styles.letterSpacing)}><ColorfulText>50+</ColorfulText></Heading>
@@ -49,11 +71,18 @@ function QualityMetrics() {
 							</Grid>
 						</Grid>
 					</Grid>
-				</Grid>
+				</Animate.FadeUp>
 			</Grid>
 			<Grid size={6} container>
-				<Grid size={12} className={styles.glassContainer}>
-					<GlassContainer glassBackground="rgba(242, 240, 234, 0.4)" />
+				<Animate.FadeUp
+					element={Grid}
+					elementProps={{
+						size: 12
+					}}
+					className={styles.glassContainer}
+					direction="left"
+				>
+					<GlassContainer glassBackground={yearsOfExperienceBg} />
 					<Grid size={12} container className={styles.glassContainerWrapper} spacing={0} alignItems="flex-start">
 						<Grid size={8}>
 							<Heading className={styles.yearsOfExperienceHeading}><ColorfulText>25+</ColorfulText></Heading>
@@ -65,9 +94,16 @@ function QualityMetrics() {
 							Serving clients across the US, Europe, and Asia with consistent quality and reliability.
 						</Grid>
 					</Grid>
-				</Grid>
-				<Grid size={12} className={styles.glassContainer}>
-					<GlassContainer glassBackground="rgba(23, 32, 60, 0.8)" />
+				</Animate.FadeUp>
+				<Animate.FadeUp
+					element={Grid}
+					elementProps={{
+						size: 12
+					}}
+					className={styles.glassContainer}
+					direction="left"
+				>
+					<GlassContainer glassBackground={repeatedClientBg} />
 					<Grid size={12} container className={styles.glassContainerWrapper} spacing={12}>
 						<Grid size={3}>
 							<Heading className={cx(styles.fontNormal, styles.textWhite, styles.letterSpacing)}>90%</Heading>
@@ -83,9 +119,16 @@ function QualityMetrics() {
 							</Grid>
 						</Grid>
 					</Grid>
-				</Grid>
-				<Grid size={12} className={styles.glassContainer}>
-					<GlassContainer glassBackground="rgba(242, 240, 234, 0.2)" />
+				</Animate.FadeUp>
+				<Animate.FadeUp
+					element={Grid}
+					elementProps={{
+						size: 12
+					}}
+					className={styles.glassContainer}
+					direction="left"
+				>
+					<GlassContainer glassBackground={projectsBg} />
 					<Grid size={12} container className={styles.glassContainerWrapper} spacing={6}>
 						<Grid size={5}>
 							<Heading className={cx(styles.fontNormal, styles.letterSpacing)}>4,000+</Heading>
@@ -101,7 +144,7 @@ function QualityMetrics() {
 							</Grid>
 						</Grid>
 					</Grid>
-				</Grid>
+				</Animate.FadeUp>
 			</Grid>
 		</Grid>
 	);

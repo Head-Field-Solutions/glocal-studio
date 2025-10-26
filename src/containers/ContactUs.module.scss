@@ -1,7 +1,7 @@
 .masterHead {
 	background: url("../assets/images/contact-us/masterhead.jpg") no-repeat top center;
-	background-size: cover;
-	padding: 90vh 0 100px;
+	background-size: contain;
+	padding: 700px 0 100px;
 }
 
 .uppercase {
@@ -37,9 +37,9 @@
 }
 
 .masterHeadInfoSection {
-	background: linear-gradient(360deg,rgba(23, 33, 61, 1) 0%, rgba(23, 33, 61, 0.10) 100%);
-	border-radius: 30px;
-	padding: 60px 0;
+	background: linear-gradient(360deg,rgba(23, 33, 61, 1) 0%, rgba(23, 33, 61, 0) 100%);
+	border-radius: 60px;
+	padding: 60px 0 100px;
 }
 
 .acturalVisualizationHeading {

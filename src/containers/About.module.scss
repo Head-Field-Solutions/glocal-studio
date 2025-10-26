@@ -1,7 +1,7 @@
 .masterHead {
 	background: url("../assets/images/about-us/masterhead.jpg") no-repeat top center;
-	background-size: cover;
-	padding: 90vh 0 100px;
+	background-size: contain;
+	padding: 700px 0 100px;
 }
 
 .uppercase {
@@ -37,9 +37,9 @@
 }
 
 .masterHeadInfoSection {
-	background: linear-gradient(360deg,rgba(23, 33, 61, 1) 0%, rgba(23, 33, 61, 0.10) 100%);
-	border-radius: 30px;
-	padding: 60px 0;
+	background: linear-gradient(360deg,rgba(23, 33, 61, 1) 0%, rgba(23, 33, 61, 0) 100%);
+	border-radius: 60px;
+	padding: 60px 0 100px;
 }
 
 .acturalVisualizationHeading {
@@ -82,7 +82,7 @@
 
 .astronautImage {
 	width: 70%;
-	margin-bottom: 80px;
+	margin-bottom: 140px;
 	margin-left: -60px;
 }
 
@@ -96,7 +96,7 @@
 }
 
 .visionMisionIcon {
-	height: 150px;
+	height: 120px;
 }
 
 .visionMissionBoxHeading {
@@ -105,8 +105,8 @@
 }
 
 .missionVisionContainer {
-	padding: 40px;
-	border-radius: 20px;
+	padding: 52px;
+	border-radius: 40px;
 	background: #f9f7f4;
 }
 
@@ -119,7 +119,7 @@
 .visionMissionStatement {
 	font-size: 12px;
 	margin-left: 20px;
-	margin-top: 28px;
+	margin-top: 0;
 }
 
 .visionMissionContentSection {
@@ -131,16 +131,16 @@
 	background: url("../assets/images/about-us/advantage-section-bg.jpg") no-repeat bottom center;
 	background-size: contain;
 	position: relative;
-	padding: 300px 0 200px;
+	padding: 260px 0 200px;
 }
 
 .advantageStarIcon {
 	position: absolute;
-	top: -128px;
+	top: -84px;
 	left: 50%;
 	transform: translateX(-50%);
-	width: 224px;
-	height: 256px;
+	width: 150px;
+	height: 182px;
 }
 
 .advantageText {
@@ -148,14 +148,20 @@
 	font-weight: 300;
 }
 
+.glocalPrespectiveText {
+	margin-bottom: 80px;
+}
+
 .glassContainer {
 	position: relative;
+	overflow: hidden;
+  border-radius: 40px;
 }
 
 .glassContainerWrapper {
 	position: relative;
 	z-index: 4;
-	padding: 40px 28px;
+	padding: 52px;
 }
 
 .qualityMetricsContainer {
@@ -168,7 +174,7 @@
 
 .explorerSection {
 	background: #f9f7f4;
-	padding: 200px 0 100px;
+	padding: 200px 0 60px;
 }
 
 .teamMainImage {
