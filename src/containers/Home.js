@@ -25,37 +25,38 @@ function Home() {
 		{
 			heading: <>Architectural <br />Visualization</>,
 			subHeading: "From blueprint to breathtaking visuals.",
-			description: "Bring architectural ideas to life with stunning, photoreal renders—exteriors, interiors, isometrics, floor plans, and walkthroughs that inspire confidence and sell.",
+			description: "Bring architectural ideas to life with stunning, photoreal renders-exteriors, interiors, isometrics, floor plans, and walkthroughs that inspire confidence and sell.",
 			usp: "IDEAL FOR Architects, real estate, developers, interior studios",
 			image: require("../assets/images/architectural-visualization.png"),
 			link: routes["architectural-visualization"].href,
 		}, {
 			heading: <>3D <br/>Modeling</>,
 			subHeading: "Every Detail, Perfectly Shaped in 3D",
-			description: "We craft accurate 3D models for architecture, interiors, furniture, and products that are detailed, scalable, and ready for rendering or prototyping purposes.",
+			description: "We create precise, review-ready 3D models for spaces, products, and digital environments, scalable and optimized for rendering, animation, or prototyping.",
 			usp: "IDEAL FOR ADesigners, product brands, architects, engineers",
 			image: require("../assets/images/3d-modeling.png"),
 			link: routes["3d-modeling"].href,
 		}, {
 			heading: <>Technical<br/> Drawings</>,
 			subHeading: "Designs That Build Without Guesswork",
-			description: "Precise working drawings, joinery details, and documentation that bridge design intent and execution—streamlining site work and vendor coordination.",
+			description: "Precise working drawings, joinery details, and documentation that bridge design intent and execution-streamlining site work and vendor coordination.",
 			usp: "IDEAL FOR A Contractors, furniture makers, architects, developers",
 			image: require("../assets/images/technical-drawings.png"),
 			link: routes["technical-drawings"].href,
 		}, {
 			heading: <>Product <br />Visualization</>,
 			subHeading: "Your Product, Photoreal and Market-Ready",
-			description: "From furniture renders to prototypes, we showcase your products with lifelike detail—perfect for marketing, e-commerce, and investor presentations.",
+			description: "From furniture renders to prototypes, we showcase your products with lifelike detail-perfect for marketing, e-commerce, and investor presentations.",
 			usp: "IDEAL FOR A Product designers, startups, furniture brands, FMCG",
 			image: require("../assets/images/product-visualization.png"),
 			link: routes["product-visualization"].href,
 		}, {
 			heading: <>3D Animation & Experiences</>,
-			subHeading: "Convert Decisions with Motion and Emotion",
-			description: "Transform static visuals into immersive experiences with architectural flythroughs, interior presentations, and interactive storytelling.",
+			subHeading: "Where Vision Moves with Purpose",
+			description: "Bring ideas to life with expert-reviewed animations that create immersive experiences, from architectural walkthroughs to product demos and brand films.",
 			usp: "IDEAL FOR A Developers, architects, marketing agencies, real estate",
 			image: require("../assets/images/3d-animation.png"),
+			imageType: "image",
 			link: routes["3d-animation-and-experiences"].href,
 		}, {
 			heading: <>360° & Virtual <br />Tours</>,
@@ -86,23 +87,6 @@ function Home() {
 					<source src={masterHeadVideo} />
 				</video>
 			</section>
-			<section className={styles.videoSectionContent}>
-				<Container maxWidth="xl">
-					<Grid container justifyContent="center">
-						<Animate.FadeUp
-							direction="down"
-							className={styles.videoSectionText}
-							element={Grid}
-							elementProps={{
-								size: 10
-							}}
-						>
-							Experience high-end 3D rendering without the high-end cost.<br />
-							We deliver mind-blowing visualizations for interiors, exteriors, products, and more—at a price point you won't believe.
-						</Animate.FadeUp>
-					</Grid>
-				</Container>
-			</section>
 			<MaskVideoSection />
 			<section className={styles.fullSuiteSolutionSection}>
 				<Container maxWidth="xl">
@@ -128,19 +112,19 @@ function Home() {
 									progress={scrollYProgress}
 									translateY={service.translateY}
 									link={service.link}
+									imageType={service.imageType}
 								/>
 							))
 						}
 					</Grid>
 					<Grid size={12}>
 						<Heading variant="secondary" className={styles.fullSuiteBottomHeading}>
-							<div className={styles.normalText}>Get premium-quality output for every need—</div>
+							<div className={styles.normalText}>Get premium-quality output for every need-</div>
 							without paying the premium.
 						</Heading>
 					</Grid>
 					<Grid size={12} justifySelf="center">
 						<LinkButton style={{ "--button-bg": "#f2f0ea" }} direction="right">GET A FREE QUOTE</LinkButton>
-						<LinkButton style={{ "--button-bg": "#f2f0ea" }} direction="left">BROWSE PORTFOLIO</LinkButton>
 					</Grid>
 				</Container>
 			</section>
@@ -164,7 +148,7 @@ function Home() {
 						direction="up"
 					>
 						<Grid size={6} offset={3}>
-							Explore some of our favorite works—from photorealistic home interiors to cinematic exterior walkthroughs. You’ll be amazed what we deliver for the price.
+							Explore some of our favorite works-from photorealistic home interiors to cinematic exterior walkthroughs. You'll be amazed what we deliver for the price.
 						</Grid>
 					</Animate.FadeUp>
 					<Grid size={12} justifySelf="center" className={styles.portfolioButtons}>
@@ -180,10 +164,10 @@ function Home() {
 					</Grid>
 					<Grid size={12}>
 						<Heading className={styles.whyBrandHeading}>
-							Elite Rendering.<br/>
-							Fair Pricing.
+							Expert Reviewed.<br/>
+							Technically Perfect.
 						</Heading>
-						<Heading className={cx(styles.textCenter, styles.fontBold)}>No Compromise.</Heading>
+						<Heading className={cx(styles.textCenter, styles.fontBold)}>Every Time.</Heading>
 					</Grid>
 					<Animate.FadeUp
 						element={Grid}
@@ -193,11 +177,12 @@ function Home() {
 							container: true,
 						}}
 					>
-						<Grid size={6} offset={3} className={styles.whyBrandSmallText}>
-							At Glocal Studio, we deliver premium-quality 3D visuals and design solutions that rival the world’s best—but at prices that make sense. From stunning realism to lightning-fast turnaround, we combine creativity, precision, and affordability like no one else.
+						<Grid size={8} offset={2} className={styles.whyBrandSmallText}>
+							At Glocal Studio, every render passes through a meticulous in-house review by architects, designers, and product specialists, ensuring accuracy, proportion, and realism at every stage. From light balance to material fidelity, nothing leaves our studio without expert validation. The result? Consistent, production-ready visuals that meet the highest global standards, <strong>every single time.</strong>
 						</Grid>
-						<Grid size={6} offset={3} className={styles.whyBrandSmallAnotherText}>
-							When others say either quality or price—we say, why not both?
+						<Grid size={8} offset={2} className={styles.whyBrandSmallAnotherText}>
+							Because great visuals aren't guessed, they're created.<br/>
+							Every pixel checked. Every detail verified. Every time.
 						</Grid>
 					</Animate.FadeUp>
 				</Container>

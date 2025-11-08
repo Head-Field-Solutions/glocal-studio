@@ -44,7 +44,7 @@ function Header() {
 		const hideAnim = gsap.fromTo(
 			nav,
 			{ yPercent: 0 },
-			{ yPercent: -100, duration: 0.40, paused: true }
+			{ yPercent: -120, duration: 0.40, paused: true }
 		);
 
 		// Create ScrollTrigger to toggle animation based on scroll direction

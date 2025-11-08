@@ -281,8 +281,8 @@ const getClientEmailContent = () => `<!DOCTYPE html>
                                 <tr>
                                   <td class="pad" style="padding-bottom:10px;padding-left:5px;padding-right:10px;padding-top:10px">
                                     <div style="color:#393d47;direction:ltr;font-family:Cabin,Arial,Helvetica Neue,Helvetica,sans-serif;font-size:15px;font-weight:400;letter-spacing:0;line-height:1.5;text-align:left;mso-line-height-alt:23px">
-                                      <p style="margin:0;margin-bottom:16px">We have received your query, and one of our team members is reviewing it as we speak. You can expect a personalized response within the next 24 business hours—often sooner.</p>
-                                      <p style="margin:0">Whether you’re exploring services, need support, or just have a few questions, we're here to help.</p>
+                                      <p style="margin:0;margin-bottom:16px">We have received your query, and one of our team members is reviewing it as we speak. You can expect a personalized response within the next 24 business hours-often sooner.</p>
+                                      <p style="margin:0">Whether you're exploring services, need support, or just have a few questions, we're here to help.</p>
                                     </div>
                                   </td>
                                 </tr>
@@ -412,7 +412,7 @@ const getClientEmailContent = () => `<!DOCTYPE html>
                             <table border="0" cellpadding="20" cellspacing="0" class="heading_block block-2" role="presentation" style="mso-table-lspace:0;mso-table-rspace:0" width="100%">
                               <tr>
                                 <td class="pad">
-                                  <h1 style="margin:0;color:#000;direction:ltr;font-family:Cabin,Arial,'Helvetica Neue',Helvetica,sans-serif;font-size:16px;font-weight:700;letter-spacing:1px;line-height:1.2;text-align:center;margin-top:0;margin-bottom:0;mso-line-height-alt:19px">We’ll contact you with more info or next steps</h1>
+                                  <h1 style="margin:0;color:#000;direction:ltr;font-family:Cabin,Arial,'Helvetica Neue',Helvetica,sans-serif;font-size:16px;font-weight:700;letter-spacing:1px;line-height:1.2;text-align:center;margin-top:0;margin-bottom:0;mso-line-height-alt:19px">We'll contact you with more info or next steps</h1>
                                 </td>
                               </tr>
                             </table>
@@ -432,7 +432,7 @@ const getClientEmailContent = () => `<!DOCTYPE html>
                             <table border="0" cellpadding="20" cellspacing="0" class="heading_block block-2" role="presentation" style="mso-table-lspace:0;mso-table-rspace:0" width="100%">
                               <tr>
                                 <td class="pad">
-                                  <h1 style="margin:0;color:#000;direction:ltr;font-family:Cabin,Arial,'Helvetica Neue',Helvetica,sans-serif;font-size:16px;font-weight:700;letter-spacing:1px;line-height:1.2;text-align:center;margin-top:0;margin-bottom:0;mso-line-height-alt:19px">You’ll hear from us within 24 hours</h1>
+                                  <h1 style="margin:0;color:#000;direction:ltr;font-family:Cabin,Arial,'Helvetica Neue',Helvetica,sans-serif;font-size:16px;font-weight:700;letter-spacing:1px;line-height:1.2;text-align:center;margin-top:0;margin-bottom:0;mso-line-height-alt:19px">You'll hear from us within 24 hours</h1>
                                 </td>
                               </tr>
                             </table>

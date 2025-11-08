@@ -11,7 +11,7 @@ function MasterHeadVideo() {
 			<div className={styles.headings}>
 				<Heading className={styles.mainHeading}>
 					<TextType 
-						text={["The World's Leading"]}
+						text={["THE WORLD's LEADING"]}
 						typingSpeed={100}
 						pauseDuration={1500}
 						showCursor
@@ -21,7 +21,7 @@ function MasterHeadVideo() {
 				<Heading className={styles.uppercase}>
 					<ColorfulText>
 						<TextType 
-							text={["3D Visualization"]}
+							text={["3D VISUALIZATION STUDIO"]}
 							typingSpeed={100}
 							pauseDuration={1500}
 							initialDelay={2000}
@@ -30,23 +30,18 @@ function MasterHeadVideo() {
 						/>
 					</ColorfulText>
 				</Heading>
-				<Heading className={styles.mainHeading}>
-					<TextType 
-						text={["Studio You Can Trust"]}
-						typingSpeed={100}
-						pauseDuration={1500}
-						initialDelay={3700}
-						showCursor
-						cursorCharacter="|"
-					/>
-				</Heading>
 				<Animate.FadeUp
 					direction="down"
 					className={cx(styles.text, styles.textSmallBox)}
 				>
-					From detailed 3D modeling to stunning <br />
-					photorealistic rendering, we transform ideas into visuals <br />
-					that inspire and deliver worldwide.
+					<TextType 
+						text={["Bringing imagination to life with unmatched realism."]}
+						typingSpeed={100}
+						pauseDuration={1500}
+						initialDelay={4000}
+						showCursor
+						cursorCharacter="|"
+					/>
 				</Animate.FadeUp>
 				<div className={styles.buttons}>
 					<LinkButton

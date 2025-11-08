@@ -16,7 +16,8 @@ export default function ServiceCard(props) {
 		imageClassName = "",
 		progress,
 		translateY = 400,
-		link
+		link,
+		imageType = "image"
 	} = props;
 
 	const serviceCardContainer = useRef(null);
@@ -55,11 +56,19 @@ export default function ServiceCard(props) {
 					</Grid>
 				</Grid>
 				<Grid size={12} className={styles.imageContainer}>
-					<img
-						src={image}
-						alt=""
-						className={imageClassName}
-					/>
+					{
+						imageType === "image" ? (
+							<img
+								src={image}
+								alt=""
+								className={imageClassName}
+							/>
+						) : (
+							<video muted autoPlay controls={false} loop playsInline>
+								<source src={image} />
+							</video>
+						)
+					}
 				</Grid>
 			</Grid>
 		</MotionGrid>

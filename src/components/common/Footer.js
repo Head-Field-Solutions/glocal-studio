@@ -41,12 +41,8 @@ function Footer() {
 							<Grid size={12}><ColorfulText>GET IN TOUCH WITH US</ColorfulText></Grid>
 							<Grid size={12}>
 								<Heading variant="secondary" className={styles.greatDesignHeading}>
-									Great Designs Start with 
-									Great Conversations.
+									Whether you're looking for jaw-dropping renders or exceptional design solutions, we're just a message away.
 								</Heading>
-							</Grid>
-							<Grid size={12}>
-								Whether you’re looking for jaw-dropping renders or exceptional design solutions, we’re just a message away.
 							</Grid>
 						</Grid>
 						<Grid size={6} offset={6} className={styles.formContent}>
@@ -101,7 +97,7 @@ function Footer() {
 							</Grid>
 						</Grid>
 						<Grid size={12}>
-							Got a vision? Let’s sketch it together—no obligations.
+							Got a vision? Let's sketch it together-no obligations.
 						</Grid>
 					</Animate.FadeUp>
 					<Animate.FadeUp
@@ -144,7 +140,7 @@ function Footer() {
 					>
 						<Grid size={12} spacing={3} container>
 							<Grid size={10} className={styles.footerCardHeading}>
-								Share Your Idea. We’ll Visualize It.
+								Share Your Idea. We'll Visualize It.
 							</Grid>
 							<Grid size={2}>
 								<img
@@ -155,7 +151,7 @@ function Footer() {
 							</Grid>
 						</Grid>
 						<Grid size={12}>
-							A napkin sketch or a full plan—send it our way.
+							A napkin sketch or a full plan-send it our way.
 						</Grid>
 					</Animate.FadeUp>
 					<Animate.FadeUp
@@ -182,7 +178,7 @@ function Footer() {
 							</Grid>
 						</Grid>
 						<Grid size={12}>
-							Your time matters—and so does your project.
+							Your time matters-and so does your project.
 						</Grid>
 					</Animate.FadeUp>
 				</Grid>

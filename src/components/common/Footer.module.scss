@@ -209,11 +209,14 @@
 
 .greatDesignHeading {
 	margin: 16px 0 28px;
-	font-weight: 600;
+	font-weight: 500;
+	font-size: 30px;
+	line-height: 1.3;
+	letter-spacing: 0;
 }
 
 .footerImagePanel {
-	background: #cfc500;
+	background: #ccc;
 }
 
 .footerImage {
@@ -234,7 +237,7 @@
 
 .scrollabelText {
 	font-size: 200px;
-	color: #cfc500;
+	color: #aaa;
 	font-weight: 200;
 	line-height: 1;
 }

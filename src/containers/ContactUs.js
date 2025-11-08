@@ -60,7 +60,7 @@ function ContactUs() {
 							}}
 							className={cx(styles.masterHeadText, styles.textWhite)}
 						>
-							Whether you’re an architect, developer, or designer, we’d love to hear about your project. let’s start building something extraordinary together.
+							Whether you're an architect, developer, or designer, we'd love to hear about your project. let's start building something extraordinary together.
 						</Animate.FadeUp>
 						<Grid size={12}>
 							<LinkButton

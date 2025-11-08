@@ -70,7 +70,7 @@ function About() {
 							}}
 							className={cx(styles.masterHeadText, styles.textWhite)}
 						>
-							We are curious explorers of design, delivering world-class 3D renderings, product visuals, and immersive experiences—without limits.
+							We are curious explorers of design, delivering world-class 3D renderings, product visuals, and immersive experiences-without limits.
 						</Animate.FadeUp>
 						<Grid size={12}>
 							<LinkButton
@@ -104,7 +104,7 @@ function About() {
 								</Grid>
 								<Grid size={12}>
 									<Heading variant="secondary" className={cx(styles.textWhite, styles.lightText)}>
-										We don’t just render— we venture into the unknown and deliver the extraordinary.
+										We don't just render- we venture into the unknown and deliver the extraordinary.
 									</Heading>
 								</Grid>
 								<Animate.FadeUp
@@ -114,7 +114,7 @@ function About() {
 									}}
 									className={styles.textWhite}
 								>
-									At Glocal Studio, we bring ideas to life through photorealistic 3D visualization—whether it’s architectural spaces, product mockups, or virtual retail experiences. 
+									At Glocal Studio, we bring imagination to life through photorealistic 3D visualization, crafting spaces, products, and experiences that blend the conceptual with the tangible.
 								</Animate.FadeUp>
 								<Animate.FadeUp
 									element={Grid}
@@ -123,7 +123,7 @@ function About() {
 									}}
 									className={styles.textWhite}
 								>
-									Our expertise covers everything from detailed material finishes and lighting accuracy to scalable visualization solutions for platforms like Amazon and Walmart. With a global perspective and a strong technical foundation, we ensure that every render not only looks exceptional but also communicates real-world clarity and value.
+									Our expertise spans architecture, interiors, product design, and immersive environments, focusing on materiality, light, and atmosphere. We believe true visualization evokes emotion while ensuring technical precision. With a global perspective, we create visuals that convey intent, function, and value, transforming vision into reality with clarity and impact.
 								</Animate.FadeUp>
 							</Grid>
 						</Grid>
@@ -146,7 +146,7 @@ function About() {
 											size: 6
 										}}
 									>
-										To help businesses, architects, and product creators present their ideas with absolute clarity through exceptional 3D visualization and design solutions.
+										Our mission is to make visualization a universal language - helping companies and creators translate complex ideas into visual clarity and emotional resonance.
 									</Animate.FadeUp>
 								</Grid>
 								<Grid size={12} container>
@@ -155,7 +155,7 @@ function About() {
 											<StarGradiantIcon width="30px" height="33px" />
 										</Animate.ScaleIn>
 										<Animate.FadeUp className={styles.visionMissionStatement}>
-											We are committed to delivering visuals that not only impress but also inform—bridging creativity with technical accuracy so clients can sell, communicate, and build with confidence.
+											From architecture and design to entertainment and innovation, we deliver 3D solutions that empower people to see, feel, and believe in what’s possible before it’s built.
 										</Animate.FadeUp>
 									</Grid>
 								</Grid>
@@ -174,7 +174,7 @@ function About() {
 											size: 6
 										}}
 									>
-										To redefine how the world experiences design and products—through visualization that is both inspiring and practical.
+										Our vision is to redefine how the world experiences visualization—by transforming imagination into structured, intelligent, and emotionally resonant visual storytelling.
 									</Animate.FadeUp>
 								</Grid>
 								<Grid size={12} container>
@@ -183,7 +183,7 @@ function About() {
 											<StarGradiantIcon width="30px" height="33px" />
 										</Animate.ScaleIn>
 										<Animate.FadeUp className={styles.visionMissionStatement}>
-											We bridge the gap between creative imagination and real-world execution, helping businesses, architects, and product companies present their ideas with unmatched clarity and impact.
+											In a space often driven by fragmented, freelance practices, we stand for organization, reliability, and creative excellence on a global scale. Through refined processes and advanced technology, we strive to set new standards, where every render reflects information and clarity as envisioned by designers.
 										</Animate.FadeUp>
 									</Grid>
 								</Grid>
@@ -203,7 +203,7 @@ function About() {
 							}}
 							className={styles.visionMissionCenterContent}
 						>
-							At Glocal Studio, our approach is simple yet powerful—we listen, understand, and deliver solutions tailored to your vision.
+							At Glocal Studio, our approach is simple yet powerful-we listen, understand, and deliver solutions tailored to your vision.
 						</Animate.FadeUp>
 					</Grid>
 					<Grid size={12} container className={styles.textCenter} spacing={4} alignItems="flex-start">
@@ -225,7 +225,7 @@ function About() {
 							</Grid>
 							<Grid size={12} className={styles.visionMissionBoxHeading}>Client-Centric</Grid>
 							<Grid size={12}>
-								We don’t just take briefs—we listen, question, and understand your goals to deliver solutions tailored exactly to your vision.
+								We don't just take briefs-we listen, question, and understand your goals to deliver solutions tailored exactly to your vision.
 							</Grid>
 						</Animate.FadeUp>
 						<Animate.FadeUp
@@ -267,7 +267,7 @@ function About() {
 							</Grid>
 							<Grid size={12} className={styles.visionMissionBoxHeading}>Technical Depth</Grid>
 							<Grid size={12}>
-								Backed by architectural expertise, we deliver precise proportions, accurate lighting, and true-to-life materials for unmatched realism.
+								Each render undergoes expert review by architects, interior designers, and product specialists-guaranteeing precision, design integrity, and refined visual quality.
 							</Grid>
 						</Animate.FadeUp>
 						<Animate.FadeUp
@@ -314,7 +314,7 @@ function About() {
 							}}
 							className={cx(styles.advantageText, styles.textWhite, styles.glocalPrespectiveText)}
 						>
-							With a global perspective and local precision, our work adapts seamlessly to diverse cultural and market needs.
+							Our difference lies in discipline. Every project moves through a structured review by specialists - ensuring that each image is accurate, purposeful, and market-ready. With global insight and local sensitivity, we deliver clarity you can trust.
 						</Animate.FadeUp>
 					</Grid>
 					<Grid size={12} container spacing={4} alignItems="flex-start" className={styles.qualityMetricsContainer}>
@@ -359,7 +359,7 @@ function About() {
 									<Grid size={9} container spacing={3}>
 										<Grid size={12}>
 											<Heading variant="secondary" className={styles.fontNormal}>
-												Architecture Meets Visualization
+												Idea Meets Visualization
 											</Heading>
 										</Grid>
 										<Animate.FadeUp
@@ -410,7 +410,7 @@ function About() {
 												size: 12,
 											}}
 										>
-											We adapt designs for different cultures and markets—delivering visuals that resonate globally while respecting local context.
+											We adapt designs for different cultures and markets-delivering visuals that resonate globally while respecting local context.
 										</Animate.FadeUp>
 									</Grid>
 									<Animate.ScaleIn
@@ -449,7 +449,7 @@ function About() {
 										}}
 										className={styles.textWhite}
 									>
-										We focus on building long-term collaborations—becoming an extension of your team rather than a one-time service provider.
+										We focus on building long-term collaborations-becoming an extension of your team rather than a one-time service provider.
 									</Animate.FadeUp>
 								</Grid>
 							</Animate.FadeUp>
@@ -472,7 +472,7 @@ function About() {
 							}}
 							className={styles.advantageText}
 						>
-							Every project we create is powered by a passionate team of designers, architects, and visualization experts who believe in pushing boundaries.
+							Every project we deliver is shaped by a multidisciplinary team of artists, designers and visualization experts-driven by precision, collaboration, and a shared pursuit of excellence.
 						</Animate.FadeUp>
 					</Grid>
 					<Grid size={12} container spacing={6} alignItems="flex-start" className={styles.teamSection}>
@@ -557,7 +557,7 @@ function About() {
 										size: 7
 									}}
 								>
-									Kunal drives Glocal Studio’s creative vision with over two decades of design expertise. He combines strategy, technology, and artistry to deliver visuals that inspire and impress globally.
+									Kunal drives Glocal Studio's creative vision with over two decades of design expertise. He combines strategy, technology, and artistry to deliver visuals that inspire and impress globally.
 								</Animate.FadeUp>
 							</Grid>
 						</Grid>
@@ -595,7 +595,7 @@ function About() {
 										size: 7
 									}}
 								>
-									Kunal drives Glocal Studio’s creative vision with over two decades of design expertise. He combines strategy, technology, and artistry to deliver visuals that inspire and impress globally.
+									Kunal drives Glocal Studio's creative vision with over two decades of design expertise. He combines strategy, technology, and artistry to deliver visuals that inspire and impress globally.
 								</Animate.FadeUp>
 							</Grid>
 						</Grid>

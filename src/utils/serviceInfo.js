@@ -21,14 +21,14 @@ export const servicesInfo = {
 					id: "01",
 					title: "Perfect for developers pitching projects and realtors marketing properties.",
 					heading: "Exterior Rendering",
-					content: "Showcase your building’s architecture in full context with lifelike detail, light, and landscapintg.",
+					content: "Showcase your building's architecture in full context with lifelike detail, light, and landscapintg.",
 					image: require("../assets/images/service-details/architectural-visualization/what-we-do-item-1.png"),
 					type: "floting",
 				}, {
 					id: "02",
 					title: "Perfect for interior designers and homeowners visualizing upgrades.",
 					heading: "Interior Rendering",
-					content: "Bring interior concepts to life with photoreal textures, lighting, and decor styling—helping clients see, feel, and believe in the design before it’s built.",
+					content: "Bring interior concepts to life with photoreal textures, lighting, and decor styling-helping clients see, feel, and believe in the design before it's built.",
 					image: require("../assets/images/service-details/architectural-visualization/what-we-do-item-2.png"),
 					type: "floting",
 				}, {
@@ -61,7 +61,7 @@ export const servicesInfo = {
 		"secondaryHeading": "TANGIBLE 3D MODELS",
 		"description": "hIgh-quality 3D models that form the foundation of stunning renders, prototypes, and architectural visualizations.",
 		"whatWeDo": {
-			"content": "From buildings to interiors, furniture to products—our 3D modeling captures form, scale, and detail with flawless accuracy.",
+			"content": "From buildings to interiors, furniture to products-our 3D modeling captures form, scale, and detail with flawless accuracy.",
 			items: [
 				{
 					id: "01",
@@ -88,7 +88,7 @@ export const servicesInfo = {
 					id: "04",
 					title: "Perfect for Product designers and brands launching new items.",
 					heading: "Product Modelling",
-					content: "We model products with realistic proportions, textures, and finishes—ideal for testing, marketing, or e-commerce.",
+					content: "We model products with realistic proportions, textures, and finishes-ideal for testing, marketing, or e-commerce.",
 					image: require("../assets/images/service-details/3d-modelling/what-we-do-item-4.png"),
 					type: "floting",
 				}
@@ -105,7 +105,7 @@ export const servicesInfo = {
 		"mobileMainHeading": <>Simplify <br/>Your <br/>Workflow</>,
 		"desktopMainHeading": "Drawings That Leave",
 		"secondaryHeading": "No Room for Guesswork",
-		"description": "Every great project needs precision—we make sure your ideas are translated into build-ready documentation.",
+		"description": "Every great project needs precision-we make sure your ideas are translated into build-ready documentation.",
 		"whatWeDo": {
 			"content": "We deliver detailed technical drawings and documentation that bridge design intent and execution, ensuring accuracy at every stage.",
 			items: [
@@ -127,7 +127,7 @@ export const servicesInfo = {
 					id: "03",
 					title: "Perfect for Furniture makers, manufacturers, and fit-out contractors.",
 					heading: "Furniture & Joinery Drawings",
-					content: "We prepare detailed furniture and joinery drawings with dimensions, finishes, and material specs—ready for vendor execution.",
+					content: "We prepare detailed furniture and joinery drawings with dimensions, finishes, and material specs-ready for vendor execution.",
 					image: require("../assets/images/service-details/technical-drawings/what-we-do-item-3.jpg"),
 					type: "non-floting",
 				},
@@ -144,7 +144,7 @@ export const servicesInfo = {
 		"mobileMainHeading": <>Simplify <br/>Your <br/>Workflow</>,
 		"desktopMainHeading": "From Concept to",
 		"secondaryHeading": "Photoreal Reality",
-		"description": "Our product visualization services make your ideas tangible—perfect for presentations, e-commerce, and marketing.",
+		"description": "Our product visualization services make your ideas tangible-perfect for presentations, e-commerce, and marketing.",
 		"whatWeDo": {
 			"content": "From early-stage prototypes to polished furniture renders, we deliver visuals that look as good as the finished product.",
 			items: [
@@ -152,7 +152,7 @@ export const servicesInfo = {
 					id: "01",
 					title: "Perfect for Furniture brands & designers presenting collections or catalogs.",
 					heading: "Furniture Rendering",
-					content: "We design and render furniture in stunning detail—showcasing finishes, fabrics, and forms with unmatched realism.",
+					content: "We design and render furniture in stunning detail-showcasing finishes, fabrics, and forms with unmatched realism.",
 					image: require("../assets/images/service-details/product-visualization/what-we-do-item-1.png"),
 					type: "floting",
 				}, {
@@ -210,7 +210,7 @@ export const servicesInfo = {
 		"secondaryHeading": "That Sell Faster.",
 		"description": "Our VR-enabled tours and interactive panoramas bring projects to life, helping clients experience properties as if they were there in person.",
 		"whatWeDo": {
-			"content": "We create immersive 360° panoramas and virtual tours that allow clients to explore spaces in vivid detail—remotely and realistically.",
+			"content": "We create immersive 360° panoramas and virtual tours that allow clients to explore spaces in vivid detail-remotely and realistically.",
 			items: [
 				{
 					id: "01",
@@ -238,25 +238,25 @@ export const servicesArray = [
 		title: routes["architectural-visualization"].label,
 		link: routes["architectural-visualization"].href,
 		icon: routes["architectural-visualization"].icon,
-		menuContent: "Bring architectural ideas to life with stunning, photoreal renders—exteriors, interiors, isometrics, floor plans, and walkthroughs that inspire confidence and sell."
+		menuContent: "Bring architectural ideas to life with stunning, photoreal renders-exteriors, interiors, isometrics, floor plans, and walkthroughs that inspire confidence and sell."
 	},  {
 		id: "02",
 		title: routes["3d-modeling"].label,
 		link: routes["3d-modeling"].href,
 		icon: routes["3d-modeling"].icon,
-		menuContent: "We craft accurate 3D models for architecture, interiors, furniture, and products—detailed, scalable, and ready for rendering or prototyping."
+		menuContent: "We craft accurate 3D models for architecture, interiors, furniture, and products-detailed, scalable, and ready for rendering or prototyping."
 	}, {
 		id: "03",
 		title: routes["technical-drawings"].label,
 		link: routes["technical-drawings"].href,
 		icon: routes["technical-drawings"].icon,
-		menuContent: "Precise working drawings, joinery details, and documentation that bridge design intent and execution—streamlining site work and vendor coordination."
+		menuContent: "Precise working drawings, joinery details, and documentation that bridge design intent and execution-streamlining site work and vendor coordination."
 	}, {
 		id: "04",
 		title: routes["product-visualization"].label,
 		link: routes["product-visualization"].href,
 		icon: routes["product-visualization"].icon,
-		menuContent: "From furniture renders to prototypes, we showcase your products with lifelike detail—perfect for marketing, e-commerce, and investor presentations."
+		menuContent: "From furniture renders to prototypes, we showcase your products with lifelike detail-perfect for marketing, e-commerce, and investor presentations."
 	}, {
 		id: "05",
 		title: routes["3d-animation-and-experiences"].label,
@@ -268,6 +268,6 @@ export const servicesArray = [
 		title: routes["360-degree-and-virtual-tours"].label,
 		link: routes["360-degree-and-virtual-tours"].href,
 		icon: routes["360-degree-and-virtual-tours"].icon,
-		menuContent: "Give clients the power to explore spaces virtually through 360° panoramas and interactive tours—ideal for real estate and hospitality marketing."
+		menuContent: "Give clients the power to explore spaces virtually through 360° panoramas and interactive tours-ideal for real estate and hospitality marketing."
 	}
 ];

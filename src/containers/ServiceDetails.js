@@ -38,7 +38,7 @@ function ServiceDetails() {
 		{
 			image: require("../assets/images/service-details/professional-service-image-1.jpg"),
 			heading: "Architectural Firms",
-			content: "We empower architects to showcase their designs in photoreal detail—exteriors, interiors, floor plans, and walkthroughs that make concepts instantly understandable.",
+			content: "We empower architects to showcase their designs in photoreal detail-exteriors, interiors, floor plans, and walkthroughs that make concepts instantly understandable.",
 			keyServices: [
 				{
 					image: require("../assets/images/service-details/icons/photoreal-renders.png"),
@@ -126,11 +126,11 @@ function ServiceDetails() {
 		}, {
 			id: 2,
 			title: "How many rounds of revisions are included in the service?",
-			content: "We include two complimentary revision rounds to fine-tune details. Additional revisions can be requested at a minimal cost, ensuring you’re fully satisfied with the outcome.",
+			content: "We include two complimentary revision rounds to fine-tune details. Additional revisions can be requested at a minimal cost, ensuring you're fully satisfied with the outcome.",
 		}, {
 			id: 3,
 			title: "In what file formats will I receive my final renders?",
-			content: "Final outputs are usually delivered in high-resolution JPEG/PNG for images and MP4 for animations. If you need alternative formats (TIFF, PSD, CAD overlays, etc.), just let us know—we’ll provide them.",
+			content: "Final outputs are usually delivered in high-resolution JPEG/PNG for images and MP4 for animations. If you need alternative formats (TIFF, PSD, CAD overlays, etc.), just let us know-we'll provide them.",
 		}, {
 			id: 4,
 			title: "What do I need to share with you to begin my project?",
@@ -169,7 +169,7 @@ function ServiceDetails() {
 		}, {
 			image: require("../assets/images/service-details/collebration-section-icon-4.png"),
 			title: "Quick Turnarounds",
-			content: "We deliver across time zones with speed and reliability—without ever compromising on detail or quality.",
+			content: "We deliver across time zones with speed and reliability-without ever compromising on detail or quality.",
 			usps: [
 				"Work continues seamlessly while you rest.",
 				"Optimized processes for faster delivery.",
@@ -246,7 +246,7 @@ function ServiceDetails() {
 							<LinkButton
 								style={{ "--button-bg": "#060010", "--button-text-color":  "#f3f2ee" }}
 							>
-								Let’s Discuss Your Project
+								Let's Discuss Your Project
 							</LinkButton>
 						</Grid>
 					</Grid>
@@ -310,12 +310,12 @@ function ServiceDetails() {
 						<Heading
 							className={cx(styles.textCenter, styles.textWhite, styles.extraLightText, styles.uppercase)}
 						>
-							Step Inside Your Project—
+							Step Inside Your Project-
 						</Heading>
 						<Heading
 							className={cx(styles.textCenter, styles.textWhite, styles.uppercase)}
 						>
-							Before It’s Built
+							Before It's Built
 						</Heading>
 					</Grid>
 					<Animate.FadeUp
@@ -512,7 +512,7 @@ function ServiceDetails() {
 						<WhyChooseUsBox whyChooseUsContent={whyChooseUsContent} />
 					</Grid>
 					<Grid size={12} className={styles.textCenter}>
-						<LinkButton direction="right">Let’s Discuss Your Project</LinkButton>
+						<LinkButton direction="right">Let's Discuss Your Project</LinkButton>
 						<LinkButton direction="left">GET FREE CONSULTATION</LinkButton>
 					</Grid>
 				</Container>

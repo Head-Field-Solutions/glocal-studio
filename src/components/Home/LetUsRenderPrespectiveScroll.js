@@ -65,7 +65,7 @@ export default function LetUsRenderPrespectiveScroll() {
 					<motion.div
 						style={{ opacity: secondOpacity, transform: secondTransform }}
 					>
-						<Heading variant="secondary" className={styles.secondaryHeading}>Let’s Render Something</Heading>
+						<Heading variant="secondary" className={styles.secondaryHeading}>Let's Render Something</Heading>
 					</motion.div>
 				</div>
 

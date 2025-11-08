@@ -43,7 +43,7 @@ function QualityMetrics(props) {
 							</Heading>
 						</Grid>
 						<Grid size={12} className={styles.trustedContent}>
-							More than projects delivered—we’ve built relationships that last decades.
+							More than projects delivered-we've built relationships that last decades.
 						</Grid>
 					</Grid>
 				</Animate.FadeUp>
