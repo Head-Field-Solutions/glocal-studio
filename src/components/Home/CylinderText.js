@@ -1,10 +1,12 @@
-import React, { useEffect, useRef } from "react";
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import React, { useEffect, useLayoutEffect, useRef } from "react";
+import { gsap } from "gsap";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
 import { ColorfulText } from "@/components/common";
 
 import "./CylinderText.scss";
+
+gsap.registerPlugin(ScrollTrigger);
 
 function CylinderText() {
 	const textWrapper = useRef(null);
@@ -29,18 +31,25 @@ function CylinderText() {
 	}
 
 	const createScrollTrigger = () => {
-		ScrollTrigger.create({
-			trigger: wrapper.current,
-			start: 'top top',
-			pin: wrapper.current,
-			scrub: 2,
-			animation: gsap.fromTo(textWrapper.current, { rotateX: -80 }, { rotateX: 270, ease: 'none' }),
-		});
+		
 	}
 
 	useEffect(() => {
 		calculatePositions();
     createScrollTrigger();
+	}, []);
+
+	useLayoutEffect(() => {
+		let ctx = gsap.context(() => {
+			ScrollTrigger.create({
+				trigger: wrapper.current,
+				start: 'top top',
+				pin: wrapper.current,
+				scrub: 2,
+				animation: gsap.fromTo(textWrapper.current, { rotateX: -80 }, { rotateX: 270, ease: 'none' }),
+			});
+		});
+		return () => ctx.revert(); // <- cleanup!
 	}, []);
 
 	return (
