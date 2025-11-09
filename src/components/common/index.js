@@ -5,7 +5,6 @@ export { default as LinkButton } from "./LinkButton";
 export { default as Carousel } from "./Carousel";
 export { default as Animate } from "./Animate";
 export { default as ServiceCardsList } from "./ServiceCardsList";
-export { default as GridScrollSection } from "./GridScrollSection";
 export { default as CaseStudyList } from "./CaseStudyList";
 export { default as CaseStudyCard } from "./CaseStudyCard";
 export { default as GlassContainer } from "./GlassContainer";

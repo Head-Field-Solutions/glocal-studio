@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { Helmet } from 'react-helmet-async';
 import { Container, Grid2 as Grid } from "@mui/material";
 import { useScroll, useTransform, motion } from "framer-motion";
+import Lottie from "lottie-react";
 import cx from "classnames";
 
 import { StarGradiantIcon } from "@/components/Icons";
@@ -217,9 +218,9 @@ function About() {
 							delay="0ms"
 						>
 							<Grid size={12}>
-								<img
-									src={require("../assets/images/about-us/client-centric-icon.png")}
-									alt=""
+								<Lottie
+									animationData={require("../assets/animations/client-centric.json")}
+									loop
 									className={styles.visionMisionIcon}
 								/>
 							</Grid>
@@ -238,9 +239,9 @@ function About() {
 							delay="100ms"
 						>
 							<Grid size={12}>
-								<img
-									src={require("../assets/images/about-us/end-to-end-clarity-icon.png")}
-									alt=""
+								<Lottie
+									animationData={require("../assets/animations/end-to-end-clarity.json")}
+									loop
 									className={styles.visionMisionIcon}
 								/>
 							</Grid>
@@ -259,9 +260,9 @@ function About() {
 							delay="200ms"
 						>
 							<Grid size={12}>
-								<img
-									src={require("../assets/images/about-us/technical-depth-icon.png")}
-									alt=""
+								<Lottie
+									animationData={require("../assets/animations/technical-depth.json")}
+									loop
 									className={styles.visionMisionIcon}
 								/>
 							</Grid>
@@ -280,9 +281,9 @@ function About() {
 							delay="300ms"
 						>
 							<Grid size={12}>
-								<img
-									src={require("../assets/images/about-us/collaborative-icon.png")}
-									alt=""
+								<Lottie
+									animationData={require("../assets/animations/collaborative.json")}
+									loop
 									className={styles.visionMisionIcon}
 								/>
 							</Grid>
@@ -377,9 +378,9 @@ function About() {
 											size: 3,
 										}}
 									>
-										<img
-											src={require("../assets/images/about-us/architecture-meets-icon.png")}
-											alt=""
+										<Lottie
+											animationData={require("../assets/animations/idea-meets-visualization.json")}
+											loop
 											className={styles.advantageIcon}
 										/>
 									</Animate.ScaleIn>
@@ -419,9 +420,9 @@ function About() {
 											size: 3,
 										}}
 									>
-										<img
-											src={require("../assets/images/about-us/global-prespective-icon.png")}
-											alt=""
+										<Lottie
+											animationData={require("../assets/animations/global-perspective.json")}
+											loop
 											className={styles.advantageIcon}
 										/>
 									</Animate.ScaleIn>
@@ -533,10 +534,22 @@ function About() {
 							>
 								<div className={styles.imageContainer}>
 									<img
-										src={require("../assets/images/about-us/linkedin-icon.png")}
+										src={require("../assets/images/about-us/kunal.jpg")}
 										alt=""
-										className={styles.linkedInSmallIcon}
+										className={styles.teamImage}
 									/>
+									<a
+										href="https://www.linkedin.com/in/kunal-jaggi-0b5a182/"
+										target="_blank"
+										rel="nofollow noreferrer"
+										label="Srishti Khatri"
+										className={styles.linkedInSmallIcon}
+									>
+										<img
+											src={require("../assets/images/about-us/linkedin-icon.png")}
+											alt=""
+										/>
+									</a>
 								</div>
 							</Animate.FadeUp>
 							<Grid size={12} container>
@@ -571,10 +584,22 @@ function About() {
 							>
 								<div className={styles.imageContainer}>
 									<img
-										src={require("../assets/images/about-us/linkedin-icon.png")}
+										src={require("../assets/images/about-us/srishti.jpg")}
 										alt=""
-										className={styles.linkedInSmallIcon}
+										className={styles.teamImage}
 									/>
+									<a
+										href="https://www.linkedin.com/in/srishtikhatri/"
+										target="_blank"
+										rel="nofollow noreferrer"
+										label="Srishti Khatri"
+										className={styles.linkedInSmallIcon}
+									>
+										<img
+											src={require("../assets/images/about-us/linkedin-icon.png")}
+											alt=""
+										/>
+									</a>
 								</div>
 							</Animate.FadeUp>
 							<Grid size={12} container>

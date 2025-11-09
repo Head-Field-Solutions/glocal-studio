@@ -177,6 +177,11 @@
 	padding: 200px 0 60px;
 }
 
+.teamImage {
+	width: 100%;
+	display: block;
+}
+
 .teamMainImage {
 	width: 100%;
 	border-radius: 40px;
@@ -195,16 +200,19 @@
 	width: 100%;
 	border-radius: 40px;
 	border: solid 2px rgba(13, 12, 32, 0.09);
-	height: 300px;
 	position: relative;
+	overflow: hidden;
 }
 
 .linkedInSmallIcon {
-	width: 32px;
 	position: absolute;
 	bottom: 40px;
 	right: 40px;
 	z-index: 1;
+
+	img {
+		width: 32px;
+	}
 }
 
 .teamMemberName {

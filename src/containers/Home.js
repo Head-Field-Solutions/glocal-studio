@@ -8,8 +8,9 @@ import MasterHeadVideo from "@/components/Home/MasterHeadVideo";
 import MaskVideoSection from "@/components/Home/MaskVideoSection";
 import ZoomParallax from "@/components/Home/ZoomParallax";
 import UspSectionCards from "@/components/Home/UspSectionCards";
-import LetUsRenderPrespectiveScroll from "@/components/Home/LetUsRenderPrespectiveScroll";
 import ServiceCard from "@/components/Home/ServiceCard";
+import ScrollCarousel from "@/components/Home/ScrollCarousel";
+import CylinderText from "@/components/Home/CylinderText";
 
 import { Heading, LinkButton, Animate } from "@/components/common";
 
@@ -87,6 +88,7 @@ function Home() {
 					<source src={masterHeadVideo} />
 				</video>
 			</section>
+			<CylinderText />
 			<MaskVideoSection />
 			<section className={styles.fullSuiteSolutionSection}>
 				<Container maxWidth="xl">
@@ -152,7 +154,7 @@ function Home() {
 						</Grid>
 					</Animate.FadeUp>
 					<Grid size={12} justifySelf="center" className={styles.portfolioButtons}>
-						<LinkButton style={{ "--button-bg": "#060010", "--button-text-color": "#fff" }}>BROWSE PORTFOLIO</LinkButton>
+						<LinkButton style={{ "--button-bg": "#060010", "--button-text-color": "#ece9e2" }}>BROWSE PORTFOLIO</LinkButton>
 					</Grid>
 				</Container>
 				<ZoomParallax />
@@ -189,7 +191,70 @@ function Home() {
 				<UspSectionCards />
 			</section>
 			<section className={styles.letUsRenderSection}> {/** Let us render section */}
-				<LetUsRenderPrespectiveScroll />
+				<ScrollCarousel
+					images={[
+						require("../assets/images/home/set1a.jpg"),
+						require("../assets/images/home/set1b.jpg"),
+						require("../assets/images/home/set1c.jpg"),
+						require("../assets/images/home/set1d.jpg"),
+					]}
+					serviceName="Architectural Visualization"
+				/>
+			</section>
+			<section className={styles.letUsRenderSection}> {/** Let us render section */}
+				<ScrollCarousel
+					images={[
+						require("../assets/images/home/set2a.jpg"),
+						require("../assets/images/home/set2b.jpg"),
+						require("../assets/images/home/set2c.jpg"),
+						require("../assets/images/home/set2d.jpg"),
+					]}
+					serviceName="3D Modeling"
+				/>
+			</section>
+			<section className={styles.letUsRenderSection}> {/** Let us render section */}
+				<ScrollCarousel
+					images={[
+						require("../assets/images/home/set3a.jpg"),
+						require("../assets/images/home/set3b.jpg"),
+						require("../assets/images/home/set3c.jpg"),
+						require("../assets/images/home/set3d.jpg"),
+					]}
+					serviceName="Technical Drawings"
+				/>
+			</section>
+			<section className={styles.letUsRenderSection}> {/** Let us render section */}
+				<ScrollCarousel
+					images={[
+						require("../assets/images/home/set4a.jpg"),
+						require("../assets/images/home/set4b.jpg"),
+						require("../assets/images/home/set4c.jpg"),
+						require("../assets/images/home/set4d.jpg"),
+					]}
+					serviceName="Product Visualization"
+				/>
+			</section>
+			<section className={styles.letUsRenderSection}> {/** Let us render section */}
+				<ScrollCarousel
+					images={[
+						require("../assets/images/home/set5a.jpg"),
+						require("../assets/images/home/set5b.jpg"),
+						require("../assets/images/home/set5c.jpg"),
+						require("../assets/images/home/set5d.jpg"),
+					]}
+					serviceName="3D Animation & Experiences"
+				/>
+			</section>
+			<section className={styles.letUsRenderSection}> {/** Let us render section */}
+				<ScrollCarousel
+					images={[
+						require("../assets/images/home/set6a.jpg"),
+						require("../assets/images/home/set6b.jpg"),
+						require("../assets/images/home/set6c.jpg"),
+						require("../assets/images/home/set6d.jpg"),
+					]}
+					serviceName="360° & Virtual Tours"
+				/>
 			</section>
 		</>
   );
