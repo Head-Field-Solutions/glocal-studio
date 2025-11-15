@@ -14,6 +14,11 @@ import {
 	Animate,
 } from "@/components/common";
 
+import CurvedLoop from "@/components/About/CurvedLoop";
+import CircularText from "@/components/About/CircularText";
+
+import masterHeadVideo from "@/assets/videos/about-us-masterhead.mp4";
+
 import * as styles from "./About.module.scss";
 
 function About() {
@@ -33,7 +38,12 @@ function About() {
 				<meta name="description" content="Streamline your business with professional virtual assistant services. Get remote administrative support, scheduling, customer care, and more. Enhance productivity today!" />
 			</Helmet>
 			<section className={styles.masterHead}>
-				<Container maxWidth="xl">
+				<div className={styles.videoWrapper}>
+					<video muted autoPlay controls={false} loop={false} playsInline className={styles.masterHeadVideo}>
+						<source src={masterHeadVideo} type="video/mp4" />
+					</video>
+				</div>
+				<Container maxWidth="xl" className={styles.mainContainer}>
 					<Grid
 						size={12}
 						container
@@ -297,9 +307,8 @@ function About() {
 			</section>
 			<section className={styles.glocalAdvantageSection}>
 				<div className={styles.advantageStarIcon}>
-					<Animate.ScaleIn>
-						<StarGradiantIcon />
-					</Animate.ScaleIn>
+					<CircularText text="Review. Refine. Perfect. Deliver." />
+					<StarGradiantIcon className={styles.starIcon} />
 				</div>
 				<Container maxWidth="xl">
 					<Grid size={12} container spacing={3} className={styles.textCenter}>
@@ -457,6 +466,9 @@ function About() {
 						</Grid>
 					</Grid>
 				</Container>
+			</section>
+			<section className={styles.curvedLoopSection}>
+				<CurvedLoop marqueeText="Not just a team-an expedition of thinkers, makers, and visionaries." />
 			</section>
 			<section className={styles.explorerSection}>
 				<Container maxWidth="xl">

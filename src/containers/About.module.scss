@@ -1,7 +1,36 @@
 .masterHead {
-	background: url("../assets/images/about-us/masterhead.jpg") no-repeat top center;
-	background-size: contain;
 	padding: 700px 0 100px;
+}
+
+.videoWrapper {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+
+	&::after {
+		position: absolute;
+		content: '';
+		bottom: 0;
+		left: 0;
+		height: 300px;
+    width: 100%;
+    background: linear-gradient(to top, rgba(6, 0, 16, 1) 0%, rgba(6, 0, 16, 0) 100%);
+    z-index: 1;
+	}
+}
+
+.masterHeadVideo {
+	position: relative;
+	width: 100%;
+	// height: 100%;
+	object-fit: cover;
+	background: #060010;
+}
+
+.mainContainer {
+	position: relative;
+	z-index: 2;
 }
 
 .uppercase {
@@ -136,11 +165,20 @@
 
 .advantageStarIcon {
 	position: absolute;
-	top: -84px;
+	top: -100px;
 	left: 50%;
 	transform: translateX(-50%);
-	width: 150px;
-	height: 182px;
+	width: 200px;
+	height: 200px;
+}
+
+.starIcon {
+	position: absolute;
+	width: 100px;
+	height: 132px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
 }
 
 .advantageText {
@@ -170,6 +208,10 @@
 
 .advantageIcon {
 	width: 100%;
+}
+
+.curvedLoopSection {
+	background: #f9f7f4;	
 }
 
 .explorerSection {

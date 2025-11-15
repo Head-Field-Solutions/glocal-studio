@@ -8,8 +8,7 @@ export const servicesInfo = {
 			"title": "Architectural Visualization | Glocal Studio"
 		},
 		"title":"Architectural Visualization",
-		"background": require("../assets/images/service-details/architectural-visualization/masterhead.jpg"),
-		"backgroundPosition": "top center",
+		"background": require("../assets/videos/architectural-visualization.mp4"),
 		"mobileMainHeading": <>Simplify <br/>Your <br/>Workflow</>,
 		"desktopMainHeading": "Turning Blueprints Into",
 		"secondaryHeading": "Photoreal Experiences",
@@ -48,14 +47,96 @@ export const servicesInfo = {
 				}
 			],
 		},
+		"professionalServiceContent": [
+			{
+				"image": require("../assets/images/service-details/architectural-visualization/architectural-firms.jpg"),
+				"heading": "Architectural Firms",
+				"content": "We produce photoreal exterior and interior visuals that communicate design intent with clarity and precision. Perfect for concept presentations, competitions, and client alignment.",
+				"keyServices": [
+					{
+						"image": require("../assets/images/service-details/icons/photoreal-renders.png"),
+						"content": "Design Accuracy",
+					}, {
+						"image": require("../assets/images/service-details/icons/technical-accuracy.png"),
+						"content": "Realistic Lighting",
+					}, {
+						"image": require("../assets/images/service-details/icons/fast-delivery.png"),
+						"content": "Material Fidelity",
+					}, {
+						"image": require("../assets/images/service-details/icons/partnered-collabration.png"),
+						"content": "Fast Iterations",
+					}, 
+				],
+				"footer": "Faster client approvals, reduced revisions, persuasive presentations.",
+			}, {
+				"image": require("../assets/images/service-details/architectural-visualization/interior-studios.jpg"),
+				"heading": "Interior Design",
+				"content": "We turn interior concepts into atmospheric, material-accurate renders that help clients fully visualize the space before execution. Ideal for mood boards, pitches, and styling validation.",
+				"keyServices": [
+					{
+						"image": require("../assets/images/service-details/icons/realistic-stylling.png"),
+						"content": "Photoreal Styling",
+					}, {
+						"image": require("../assets/images/service-details/icons/material-accuracy.png"),
+						"content": "Texture Precision",
+					}, {
+						"image": require("../assets/images/service-details/icons/flexible-options.png"),
+						"content": "Mood Lighting",
+					}, {
+						"image": require("../assets/images/service-details/icons/engaging-visuals.png"),
+						"content": "Spatial Clarity",
+					}, 
+				],
+				"footer": "Clarity in design decisions, time saved in approvals, wow-factor presentations.",
+			}, {
+				"image": require("../assets/images/service-details/architectural-visualization/real-estate-developers.jpg"),
+				"heading": "Real Estate Developers",
+				"content": "We create high-impact marketing visuals that bring unbuilt properties to life—perfect for brochures, websites, digital campaigns, and pre-launch sales.",
+				"keyServices": [
+					{
+						"image": require("../assets/images/service-details/icons/sales-ready-visuals.png"),
+						"content": "Sales Focus",
+					}, {
+						"image": require("../assets/images/service-details/icons/immersive-walkthroughs.png"),
+						"content": "Hero Angles",
+					}, {
+						"image": require("../assets/images/service-details/icons/cost-efficiency.png"),
+						"content": "Marketing Polish",
+					}, {
+						"image": require("../assets/images/service-details/icons/ready-to-use.png"),
+						"content": "Quick Delivery",
+					}, 
+				],
+				"footer": "Sell faster, attract investors, and reduce marketing costs.",
+			}, {
+				"image": require("../assets/images/service-details/architectural-visualization/construction-contractors.jpg"),
+				"heading": "Construction Contractors",
+				"content": "Our visuals simplify design interpretation, helping contractors understand materials, finishes, and spatial layouts clearly for smoother on-site execution.",
+				"keyServices": [
+					{
+						"image": require("../assets/images/service-details/icons/accurate-draftinng.png"),
+						"content": "Build Clarity",
+					}, {
+						"image": require("../assets/images/service-details/icons/build-clarity.png"),
+						"content": "Detail Accuracy",
+					}, {
+						"image": require("../assets/images/service-details/icons/easy-coordination.png"),
+						"content": "Easy Visuals",
+					}, {
+						"image": require("../assets/images/service-details/icons/time-saving-documentation.png"),
+						"content": "Coordination Ready",
+					}, 
+				],
+				"footer": "Less confusion on-site, smoother communication with teams, reduced rework.",
+			},
+		]
   },
 	"3d-modeling": {
 		"seoContent": {
 			"title": "3D MODELLING | Glocal Studio"
 		},
 		"title":"3D MODELLING",
-		"background": require("../assets/images/service-details/3d-modelling/masterhead.jpg"),
-		"backgroundPosition": "top center",
+		"background": require("../assets/videos/3d-modelling.mp4"),
 		"mobileMainHeading": <>Simplify <br/>Your <br/>Workflow</>,
 		"desktopMainHeading": "Turning Ideas Into",
 		"secondaryHeading": "TANGIBLE 3D MODELS",
@@ -94,14 +175,96 @@ export const servicesInfo = {
 				}
 			],
 		},
+		"professionalServiceContent": [
+			{
+				"image": require("../assets/images/service-details/3d-modelling/Architects-&-Interior-Designers.jpg"),
+				"heading": "Architects & Interior Designers",
+				"content": "We build precise 3D models that capture scale, structure, and design intent with accuracy—ideal for concept studies, client presentations, and design iterations.",
+				"keyServices": [
+					{
+						"image": require("../assets/images/service-details/icons/photoreal-renders.png"),
+						"content": "Accurate Proportions",
+					}, {
+						"image": require("../assets/images/service-details/icons/technical-accuracy.png"),
+						"content": "Clean Topology",
+					}, {
+						"image": require("../assets/images/service-details/icons/fast-delivery.png"),
+						"content": "Detail Focused",
+					}, {
+						"image": require("../assets/images/service-details/icons/partnered-collabration.png"),
+						"content": "Render Ready",
+					}, 
+				],
+				"footer": "Better design communication, faster approvals, fewer misconceptions.",
+			}, {
+				"image": require("../assets/images/service-details/3d-modelling/Furniture-&-Product-Manufacturers.jpg"),
+				"heading": "Furniture & Product Manufacturers",
+				"content": "We model furniture, fixtures, and products with manufacturing-grade precision—ideal for sampling, catalogs, and prototyping.",
+				"keyServices": [
+					{
+						"image": require("../assets/images/service-details/icons/realistic-stylling.png"),
+						"content": "Prototype Ready",
+					}, {
+						"image": require("../assets/images/service-details/icons/material-accuracy.png"),
+						"content": "Measurement Accurate",
+					}, {
+						"image": require("../assets/images/service-details/icons/flexible-options.png"),
+						"content": "Material Friendly",
+					}, {
+						"image": require("../assets/images/service-details/icons/engaging-visuals.png"),
+						"content": "Vendor Aligned",
+					}, 
+				],
+				"footer": "Better prototypes, faster sampling, and flawless production alignment.",
+			}, {
+				"image": require("../assets/images/service-details/3d-modelling/Gaming-&-Entertainment-Studios.jpg"),
+				"heading": "Gaming & Entertainment Studios",
+				"content": "We create optimized 3D assets—characters, props, and environments—designed for seamless integration into game engines and cinematic sequences.",
+				"keyServices": [
+					{
+						"image": require("../assets/images/service-details/icons/sales-ready-visuals.png"),
+						"content": "Game Optimized",
+					}, {
+						"image": require("../assets/images/service-details/icons/immersive-walkthroughs.png"),
+						"content": "Low-Poly Ready",
+					}, {
+						"image": require("../assets/images/service-details/icons/cost-efficiency.png"),
+						"content": "Texture Friendly",
+					}, {
+						"image": require("../assets/images/service-details/icons/ready-to-use.png"),
+						"content": "Engine Compatible",
+					}, 
+				],
+				"footer": "Efficient asset creation, smoother pipelines, and immersive world-building.",
+			}, {
+				"image": require("../assets/images/service-details/3d-modelling/Advertising-&-Marketing-Agencies.jpg"),
+				"heading": "Advertising & Marketing Agencies",
+				"content": "We craft campaign-ready 3D assets that elevate brand storytelling and give marketers high-quality visuals across print, digital, and video.",
+				"keyServices": [
+					{
+						"image": require("../assets/images/service-details/icons/accurate-draftinng.png"),
+						"content": "High Impact",
+					}, {
+						"image": require("../assets/images/service-details/icons/build-clarity.png"),
+						"content": "Brand Focused",
+					}, {
+						"image": require("../assets/images/service-details/icons/easy-coordination.png"),
+						"content": "Stylized Options",
+					}, {
+						"image": require("../assets/images/service-details/icons/time-saving-documentation.png"),
+						"content": "Fast Scaling",
+					}, 
+				],
+				"footer": "More impactful ads, quicker creative execution, and standout visuals.",
+			},
+		]
 	},
 	"technical-drawings": {
 		"seoContent": {
 			"title": "Technical Drawings & Documentation | Glocal Studio"
 		},
 		"title":"Technical Drawings & Documentation",
-		"background": require("../assets/images/service-details/technical-drawings/masterhead.jpg"),
-		"backgroundPosition": "top center",
+		"background": require("../assets/videos/technical-drawings.mp4"),
 		"mobileMainHeading": <>Simplify <br/>Your <br/>Workflow</>,
 		"desktopMainHeading": "Drawings That Leave",
 		"secondaryHeading": "No Room for Guesswork",
@@ -133,14 +296,96 @@ export const servicesInfo = {
 				},
 			],
 		},
+		"professionalServiceContent": [
+			{
+				"image": require("../assets/images/service-details/technical-drawings/Architecture-Firms.jpg"),
+				"heading": "Architecture Firms",
+				"content": "We prepare construction drawings and detailing that ensure design intent is executed accurately on-site.",
+				"keyServices": [
+					{
+						"image": require("../assets/images/service-details/icons/photoreal-renders.png"),
+						"content": "Dimension Accuracy",
+					}, {
+						"image": require("../assets/images/service-details/icons/technical-accuracy.png"),
+						"content": "Clean Drafting",
+					}, {
+						"image": require("../assets/images/service-details/icons/fast-delivery.png"),
+						"content": "Build Ready",
+					}, {
+						"image": require("../assets/images/service-details/icons/partnered-collabration.png"),
+						"content": "Code Friendly",
+					}, 
+				],
+				"footer": "Clearer construction, fewer site questions, and smoother execution.",
+			}, {
+				"image": require("../assets/images/service-details/technical-drawings/Interior-Designers.jpg"),
+				"heading": "Interior Designers",
+				"content": "We draft furniture layouts, joinery details, and interior documentation that support flawless execution.",
+				"keyServices": [
+					{
+						"image": require("../assets/images/service-details/icons/realistic-stylling.png"),
+						"content": "Detail Depth",
+					}, {
+						"image": require("../assets/images/service-details/icons/material-accuracy.png"),
+						"content": "Finish Precision",
+					}, {
+						"image": require("../assets/images/service-details/icons/flexible-options.png"),
+						"content": "Designer Sync",
+					}, {
+						"image": require("../assets/images/service-details/icons/engaging-visuals.png"),
+						"content": "Vendor Friendly",
+					}, 
+				],
+				"footer": "Reduced revisions, smoother vendor coordination, and consistent outcomes.",
+			}, {
+				"image": require("../assets/images/service-details/technical-drawings/Contractors-&-Builders.jpg"),
+				"heading": "Contractors & Builders",
+				"content": "We provide working drawings that simplify on-site execution and ensure teams stay aligned.",
+				"keyServices": [
+					{
+						"image": require("../assets/images/service-details/icons/sales-ready-visuals.png"),
+						"content": "Execution Clarity",
+					}, {
+						"image": require("../assets/images/service-details/icons/immersive-walkthroughs.png"),
+						"content": "Easy Readability",
+					}, {
+						"image": require("../assets/images/service-details/icons/cost-efficiency.png"),
+						"content": "Site Friendly",
+					}, {
+						"image": require("../assets/images/service-details/icons/ready-to-use.png"),
+						"content": "Organized Layers",
+					}, 
+				],
+				"footer": "Reduced confusion, fewer delays, and streamlined site operations.",
+			}, {
+				"image": require("../assets/images/service-details/technical-drawings/Engineering-Consultants.jpg"),
+				"heading": "Engineering Consultants",
+				"content": "We deliver coordination drawings that align architectural, structural, and MEP systems seamlessly.",
+				"keyServices": [
+					{
+						"image": require("../assets/images/service-details/icons/accurate-draftinng.png"),
+						"content": "System Alignment",
+					}, {
+						"image": require("../assets/images/service-details/icons/build-clarity.png"),
+						"content": "Technical Precision",
+					}, {
+						"image": require("../assets/images/service-details/icons/easy-coordination.png"),
+						"content": "Clear Markups",
+					}, {
+						"image": require("../assets/images/service-details/icons/time-saving-documentation.png"),
+						"content": "Coordination Ready",
+					}, 
+				],
+				"footer": "Better interdisciplinary coordination, fewer conflicts, and smoother approvals.",
+			},
+		]
 	},
 	"product-visualization": {
 		"seoContent": {
 			"title": "Product Visualization | Glocal Studio"
 		},
 		"title":"Product Visualization",
-		"background": require("../assets/images/service-details/product-visualization/masterhead.jpg"),
-		"backgroundPosition": "top center",
+		"background": require("../assets/videos/product-visualization3.mp4"),
 		"mobileMainHeading": <>Simplify <br/>Your <br/>Workflow</>,
 		"desktopMainHeading": "From Concept to",
 		"secondaryHeading": "Photoreal Reality",
@@ -165,14 +410,96 @@ export const servicesInfo = {
 				}
 			],
 		},
+		"professionalServiceContent": [
+			{
+				"image": require("../assets/images/service-details/product-visualization/Furniture-Brands.jpg"),
+				"heading": "Furniture Brands",
+				"content": "We produce high-quality product renders that elevate catalogues, websites, and marketing campaigns with lifelike detail.",
+				"keyServices": [
+					{
+						"image": require("../assets/images/service-details/icons/photoreal-renders.png"),
+						"content": "Material Realism",
+					}, {
+						"image": require("../assets/images/service-details/icons/technical-accuracy.png"),
+						"content": "Fabric Detail",
+					}, {
+						"image": require("../assets/images/service-details/icons/fast-delivery.png"),
+						"content": "Hero Lighting",
+					}, {
+						"image": require("../assets/images/service-details/icons/partnered-collabration.png"),
+						"content": "Catalog Ready",
+					}, 
+				],
+				"footer": "Better marketing visuals, improved conversions, and stronger brand presence.",
+			}, {
+				"image": require("../assets/images/service-details/product-visualization/Lifestyle-&-Fashion.jpg"),
+				"heading": "Lifestyle & Fashion",
+				"content": "We visualize shoes, bags, apparel, and accessories with precision—highlighting textures, finishes, and craftsmanship.",
+				"keyServices": [
+					{
+						"image": require("../assets/images/service-details/icons/realistic-stylling.png"),
+						"content": "Texture Rich",
+					}, {
+						"image": require("../assets/images/service-details/icons/material-accuracy.png"),
+						"content": "Style Accurate",
+					}, {
+						"image": require("../assets/images/service-details/icons/flexible-options.png"),
+						"content": "Color Perfect",
+					}, {
+						"image": require("../assets/images/service-details/icons/engaging-visuals.png"),
+						"content": "Trend Aware",
+					}, 
+				],
+				"footer": "More appealing visuals, higher customer engagement, and elevated brand style.",
+			}, {
+				"image": require("../assets/images/service-details/product-visualization/Jewelry-&-Luxury-Goods.jpg"),
+				"heading": "Jewelry & Luxury Goods",
+				"content": "We create cinematic product renders that showcase shine, cuts, and craftsmanship for premium branding.",
+				"keyServices": [
+					{
+						"image": require("../assets/images/service-details/icons/sales-ready-visuals.png"),
+						"content": "Macro Detailing",
+					}, {
+						"image": require("../assets/images/service-details/icons/immersive-walkthroughs.png"),
+						"content": "Gem Precision",
+					}, {
+						"image": require("../assets/images/service-details/icons/cost-efficiency.png"),
+						"content": "Premium Polish",
+					}, {
+						"image": require("../assets/images/service-details/icons/ready-to-use.png"),
+						"content": "Luxury Focus",
+					}, 
+				],
+				"footer": "Increased desire, premium perception, and high luxury appeal.",
+			}, {
+				"image": require("../assets/images/service-details/product-visualization/Consumer-Electronics.jpg"),
+				"heading": "Consumer Electronics",
+				"content": "We deliver high-impact visuals for gadgets, devices, and tech launches with immaculate detailing and lighting.",
+				"keyServices": [
+					{
+						"image": require("../assets/images/service-details/icons/accurate-draftinng.png"),
+						"content": "Tech Precision",
+					}, {
+						"image": require("../assets/images/service-details/icons/build-clarity.png"),
+						"content": "Sleek Lighting",
+					}, {
+						"image": require("../assets/images/service-details/icons/easy-coordination.png"),
+						"content": "Launch Ready",
+					}, {
+						"image": require("../assets/images/service-details/icons/time-saving-documentation.png"),
+						"content": "E-Com Optimized",
+					}, 
+				],
+				"footer": "Better product launches, stronger storytelling, and standout e-commerce imagery.",
+			},
+		]
 	},
 	"3d-animation-and-experiences": {
 		"seoContent": {
 			"title": "3D Animation & Interactive Experiences | Glocal Studio"
 		},
 		"title":"3D Animation & Interactive Experiences",
-		"background": require("../assets/images/service-details/3d-animation-and-experiences/masterhead.jpg"),
-		"backgroundPosition": "top center",
+		"background": require("../assets/videos/3d-animation-and-experiences.mp4"),
 		"mobileMainHeading": <>Simplify <br/>Your <br/>Workflow</>,
 		"desktopMainHeading": "Interact. Explore.",
 		"secondaryHeading": "Experience.",
@@ -197,14 +524,96 @@ export const servicesInfo = {
 				}
 			],
 		},
+		"professionalServiceContent": [
+			{
+				"image": require("../assets/images/service-details/3d-animation-and-experiences/Architecture-&-Real-Estate.jpg"),
+				"heading": "Architecture & Real Estate",
+				"content": "We produce cinematic walkthroughs and flythroughs that bring unbuilt spaces to life—boosting client understanding and pre-sales momentum.",
+				"keyServices": [
+					{
+						"image": require("../assets/images/service-details/icons/photoreal-renders.png"),
+						"content": "Cinematic Motion",
+					}, {
+						"image": require("../assets/images/service-details/icons/technical-accuracy.png"),
+						"content": "Realistic Atmosphere",
+					}, {
+						"image": require("../assets/images/service-details/icons/fast-delivery.png"),
+						"content": "Story-Driven",
+					}, {
+						"image": require("../assets/images/service-details/icons/partnered-collabration.png"),
+						"content": "Sales Focused",
+					}, 
+				],
+				"footer": "More persuasive presentations, stronger emotional impact, faster project buy-in.",
+			}, {
+				"image": require("../assets/images/service-details/3d-animation-and-experiences/Hospitality-&-Retail.jpg"),
+				"heading": "Hospitality & Retail",
+				"content": "We create immersive animation and interactive previews that showcase experience-driven spaces like hotels, resorts, and retail environments.",
+				"keyServices": [
+					{
+						"image": require("../assets/images/service-details/icons/realistic-stylling.png"),
+						"content": "Experience First",
+					}, {
+						"image": require("../assets/images/service-details/icons/material-accuracy.png"),
+						"content": "Mood Precision",
+					}, {
+						"image": require("../assets/images/service-details/icons/flexible-options.png"),
+						"content": "Customer-Centric",
+					}, {
+						"image": require("../assets/images/service-details/icons/engaging-visuals.png"),
+						"content": "High Realism",
+					}, 
+				],
+				"footer": "Better guest engagement, stronger marketing, and richer brand storytelling.",
+			}, {
+				"image": require("../assets/images/service-details/3d-animation-and-experiences/Product-Companies.jpg"),
+				"heading": "Product Companies",
+				"content": "We build product animations and configurators that showcase features, mechanisms, and design details in the most engaging way.",
+				"keyServices": [
+					{
+						"image": require("../assets/images/service-details/icons/sales-ready-visuals.png"),
+						"content": "Feature Focused",
+					}, {
+						"image": require("../assets/images/service-details/icons/immersive-walkthroughs.png"),
+						"content": "High Detailing",
+					}, {
+						"image": require("../assets/images/service-details/icons/cost-efficiency.png"),
+						"content": "Interactive Options",
+					}, {
+						"image": require("../assets/images/service-details/icons/ready-to-use.png"),
+						"content": "Launch Ready",
+					}, 
+				],
+				"footer": "Clearer product communication, increased conversions, elevated brand perception.",
+			}, {
+				"image": require("../assets/images/service-details/3d-animation-and-experiences/Automotive-&-Industrial.jpg"),
+				"heading": "Automotive & Industrial",
+				"content": "We create technical animations and demos for vehicles, machinery, and industrial systems—highlighting function, movement, and engineering clarity.",
+				"keyServices": [
+					{
+						"image": require("../assets/images/service-details/icons/accurate-draftinng.png"),
+						"content": "Technical Accuracy",
+					}, {
+						"image": require("../assets/images/service-details/icons/build-clarity.png"),
+						"content": "Mechanism Clarity",
+					}, {
+						"image": require("../assets/images/service-details/icons/easy-coordination.png"),
+						"content": "Smooth Motion",
+					}, {
+						"image": require("../assets/images/service-details/icons/time-saving-documentation.png"),
+						"content": "Industrial Precision",
+					}, 
+				],
+				"footer": "Improved training, better demos, and enhanced investor/partner understanding.",
+			},
+		]
 	},
 	"360-degree-and-virtual-tours": {
 		"seoContent": {
 			"title": "360° & Virtual Tours | Glocal Studio"
 		},
 		"title":"360° & Virtual Tours",
-		"background": require("../assets/images/service-details/360-degree-and-virtual-tours/masterhead.jpg"),
-		"backgroundPosition": "top center",
+		"background": require("../assets/videos/360-degree-and-virtual-tours.mp4"),
 		"mobileMainHeading": <>Simplify <br/>Your <br/>Workflow</>,
 		"desktopMainHeading": "Immersive Tours",
 		"secondaryHeading": "That Sell Faster.",
@@ -229,6 +638,89 @@ export const servicesInfo = {
 				}
 			],
 		},
+		"professionalServiceContent": [
+			{
+				"image": require("../assets/images/service-details/360-degree-and-virtual-tours/Real-Estate.jpg"),
+				"heading": "Real Estate",
+				"content": "We create immersive 360° tours that allow buyers to explore homes, apartments, and communities remotely with full clarity.",
+				"keyServices": [
+					{
+						"image": require("../assets/images/service-details/icons/photoreal-renders.png"),
+						"content": "High Resolution",
+					}, {
+						"image": require("../assets/images/service-details/icons/technical-accuracy.png"),
+						"content": "Smooth Navigation",
+					}, {
+						"image": require("../assets/images/service-details/icons/fast-delivery.png"),
+						"content": "VR Compatible",
+					}, {
+						"image": require("../assets/images/service-details/icons/partnered-collabration.png"),
+						"content": "Sales Ready",
+					}, 
+				],
+				"footer": "Higher inquiries, faster decisions, and stronger pre-sales performance.",
+			}, {
+				"image": require("../assets/images/service-details/360-degree-and-virtual-tours/Hospitality.jpg"),
+				"heading": "Hospitality",
+				"content": "We produce virtual experiences for hotels, resorts, and restaurants that help guests understand ambience before booking.",
+				"keyServices": [
+					{
+						"image": require("../assets/images/service-details/icons/realistic-stylling.png"),
+						"content": "Mood Realism",
+					}, {
+						"image": require("../assets/images/service-details/icons/material-accuracy.png"),
+						"content": "Interactive Flow",
+					}, {
+						"image": require("../assets/images/service-details/icons/flexible-options.png"),
+						"content": "Brand Aligned",
+					}, {
+						"image": require("../assets/images/service-details/icons/engaging-visuals.png"),
+						"content": "Booking Focused",
+					}, 
+				],
+				"footer": "Better guest engagement, increased trust, and improved booking rates.",
+			}, {
+				"image": require("../assets/images/service-details/360-degree-and-virtual-tours/Corporate-Workspaces.jpg"),
+				"heading": "Corporate Workspaces",
+				"content": "We build interactive office tours that help clients visualize workspace planning, design intent, and layout flow.",
+				"keyServices": [
+					{
+						"image": require("../assets/images/service-details/icons/sales-ready-visuals.png"),
+						"content": "Layout Clarity",
+					}, {
+						"image": require("../assets/images/service-details/icons/immersive-walkthroughs.png"),
+						"content": "Navigation Ease",
+					}, {
+						"image": require("../assets/images/service-details/icons/cost-efficiency.png"),
+						"content": "Design Sync",
+					}, {
+						"image": require("../assets/images/service-details/icons/ready-to-use.png"),
+						"content": "Team Friendly",
+					}, 
+				],
+				"footer": "Clearer communication, quicker decisions, and streamlined design approvals.",
+			}, {
+				"image": require("../assets/images/service-details/360-degree-and-virtual-tours/Retail.jpg"),
+				"heading": "Retail",
+				"content": "We create virtual store walkthroughs that help brands showcase retail concepts, merchandising, and customer journeys.",
+				"keyServices": [
+					{
+						"image": require("../assets/images/service-details/icons/accurate-draftinng.png"),
+						"content": "Brand Precision",
+					}, {
+						"image": require("../assets/images/service-details/icons/build-clarity.png"),
+						"content": "Store Mapping",
+					}, {
+						"image": require("../assets/images/service-details/icons/easy-coordination.png"),
+						"content": "Product Highlighting",
+					}, {
+						"image": require("../assets/images/service-details/icons/time-saving-documentation.png"),
+						"content": "E-Com Friendly",
+					}, 
+				],
+				"footer": "Better brand pitches, stronger concept validation, and richer customer engagement.",
+			},
+		]
 	},
 };
 

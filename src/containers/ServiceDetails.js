@@ -34,90 +34,6 @@ function ServiceDetails() {
 		return <NotFound />;
 	}
 
-	const professionalServiceContent = [
-		{
-			image: require("../assets/images/service-details/professional-service-image-1.jpg"),
-			heading: "Architectural Firms",
-			content: "We empower architects to showcase their designs in photoreal detail-exteriors, interiors, floor plans, and walkthroughs that make concepts instantly understandable.",
-			keyServices: [
-				{
-					image: require("../assets/images/service-details/icons/photoreal-renders.png"),
-					content: "Photoreal Renders",
-				}, {
-					image: require("../assets/images/service-details/icons/technical-accuracy.png"),
-					content: "Technical Accuracy",
-				}, {
-					image: require("../assets/images/service-details/icons/fast-delivery.png"),
-					content: "Fast Delivery",
-				}, {
-					image: require("../assets/images/service-details/icons/partnered-collabration.png"),
-					content: "Partnered Collaboration",
-				}, 
-			],
-			footer: "Faster client approvals, reduced revisions, persuasive presentations.",
-		}, {
-			image: require("../assets/images/service-details/professional-service-image-2.jpg"),
-			heading: "Interior Design",
-			content: "From mood boards to final styling, we create interior visuals that help designers present their ideas convincingly, align clients on finishes, and win trust before execution.",
-			keyServices: [
-				{
-					image: require("../assets/images/service-details/icons/realistic-stylling.png"),
-					content: "Realistic Styling",
-				}, {
-					image: require("../assets/images/service-details/icons/material-accuracy.png"),
-					content: "Material Accuracy",
-				}, {
-					image: require("../assets/images/service-details/icons/flexible-options.png"),
-					content: "Flexible Options",
-				}, {
-					image: require("../assets/images/service-details/icons/engaging-visuals.png"),
-					content: "Engaging Visuals",
-				}, 
-			],
-			footer: "Clarity in design decisions, time saved in approvals, wow-factor presentations.",
-		}, {
-			image: require("../assets/images/service-details/professional-service-image-3.jpg"),
-			heading: "Real Estate Developers",
-			content: "We give developers the tools to market and sell projects before construction even begins. Our visuals, walkthroughs, and VR tours build excitement and boost pre-sales.",
-			keyServices: [
-				{
-					image: require("../assets/images/service-details/icons/sales-ready-visuals.png"),
-					content: "Sales-Ready Visuals",
-				}, {
-					image: require("../assets/images/service-details/icons/immersive-walkthroughs.png"),
-					content: "Immersive Walkthroughs",
-				}, {
-					image: require("../assets/images/service-details/icons/cost-efficiency.png"),
-					content: "Cost Efficiency",
-				}, {
-					image: require("../assets/images/service-details/icons/ready-to-use.png"),
-					content: "Ready to use Renders",
-				}, 
-			],
-			footer: "Sell faster, attract investors, and reduce marketing costs.",
-		}, {
-			image: require("../assets/images/service-details/professional-service-image-4.jpg"),
-			heading: "Construction Contractors",
-			content: "We support contractors with clear drafting, execution-ready drawings, and precise visuals that reduce site errors and speed up work coordination.",
-			keyServices: [
-				{
-					image: require("../assets/images/service-details/icons/accurate-draftinng.png"),
-					content: "Accurate Drafting",
-				}, {
-					image: require("../assets/images/service-details/icons/build-clarity.png"),
-					content: "Build Clarity",
-				}, {
-					image: require("../assets/images/service-details/icons/easy-coordination.png"),
-					content: "Easy Coordination",
-				}, {
-					image: require("../assets/images/service-details/icons/time-saving-documentation.png"),
-					content: "Time-Saving Documentation",
-				}, 
-			],
-			footer: "Less confusion on-site, smoother communication with teams, reduced rework.",
-		},
-	];
-
 	const faqContent = [
 		{
 			id: 1,
@@ -192,13 +108,13 @@ function ServiceDetails() {
 			<Helmet>
 				<title>{serviceDetails?.seoContent?.title || `${serviceDetails.title} | Glocal Studio`}</title>
 			</Helmet>
-			<section
-				className={styles.masterHead}
-				style={{
-					background: `url("${serviceDetails.background}") no-repeat ${serviceDetails.backgroundPosition}`,
-				}}
-			>
-				<Container maxWidth="xl">
+			<section className={styles.masterHead}>
+				<div className={styles.videoWrapper}>
+					<video muted autoPlay controls={false} loop={false} playsInline className={styles.masterHeadVideo} key={params.id}>
+						<source src={serviceDetails.background} type="video/mp4" />
+					</video>
+				</div>
+				<Container maxWidth="xl" className={styles.mainContainer}>
 					<Grid
 						size={12}
 						container
@@ -300,11 +216,11 @@ function ServiceDetails() {
 				</Container>
 			</section>
 			<section>
-				<img
-					src={require("../assets/images/service-details/3d-walkthroughs-bg.jpg")}
-					alt=""
-					className={styles.threeDRenderImage}
-				/>
+				<div className={styles.threeDRenderVideoSection}>
+					<video muted autoPlay controls={false} loop playsInline className={styles.threeDRenderVideo}>
+						<source src={require("../assets/videos/3d-walkthough-section.mp4")} />
+					</video>
+				</div>
 				<Container maxWidth="xl" className={styles.stepIntoSectionContainer}>
 					<Grid size={12}>
 						<Heading
@@ -449,7 +365,7 @@ function ServiceDetails() {
 						</Grid>
 						<Grid size={12} container spacing={3} alignItems="flex-start">
 							{
-								professionalServiceContent.map((service, index) => (
+								serviceDetails.professionalServiceContent.map((service, index) => (
 									<ProfessionalServiceBox
 										key={index}
 										image={service.image}
