@@ -88,7 +88,7 @@ function App({ initialData = {} }) {
   }, []);
 
 	useEffect(() => {
-    // scrollToTop();
+    scrollToTop();
   }, [pathname]);
 
   return (  

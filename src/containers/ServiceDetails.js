@@ -10,7 +10,7 @@ import {
 	ColorfulText,
 	Heading,
 	LinkButton,
-	QualityMetrics,
+	// QualityMetrics,
 	Animate
 } from "@/components/common";
 
@@ -176,7 +176,7 @@ function ServiceDetails() {
 							elementProps={{
 								size: 12,
 							}}
-							className={styles.textCenter}
+							className={cx(styles.textCenter, styles.sectionHeadings)}
 							direction="down"
 						>
 							<ColorfulText className={styles.uppercase}>What We Do</ColorfulText>
@@ -216,122 +216,128 @@ function ServiceDetails() {
 				</Container>
 			</section>
 			<section>
-				<div className={styles.threeDRenderVideoSection}>
-					<video muted autoPlay controls={false} loop playsInline className={styles.threeDRenderVideo}>
-						<source src={require("../assets/videos/3d-walkthough-section.mp4")} />
-					</video>
-				</div>
-				<Container maxWidth="xl" className={styles.stepIntoSectionContainer}>
-					<Grid size={12}>
-						<Heading
-							className={cx(styles.textCenter, styles.textWhite, styles.extraLightText, styles.uppercase)}
-						>
-							Step Inside Your Project-
-						</Heading>
-						<Heading
-							className={cx(styles.textCenter, styles.textWhite, styles.uppercase)}
-						>
-							Before It's Built
-						</Heading>
-					</Grid>
-					<Animate.FadeUp
-						element={Grid}
-						elementProps={{
-							size: 12,
-						}}
-						className={styles.weDesignSecondaryHeading}
-					>
-						We design walkthroughs that help you present, persuade, <br />and close with confidence.
-					</Animate.FadeUp>
-					<Grid
-						size={12}
-						container
-						spacing={4}
-						alignItems="flex-start"
-						className={styles.projectInfoBoxes}
-					>
-						<Animate.FadeUp
-							element={Grid}
-							elementProps={{
-								size: 3,
-								container: true,
-								spacing: 4,
-							}}
-							delay="0"
-						>
-							<Grid size={12} className={styles.textCenter}>
-								<img
-									src={require("../assets/images/service-details/project-info-icon-1.png")}
-									alt=""
-									className={styles.projectInfoImage}
-								/>
-							</Grid>
-							<Grid size={12} className={cx(styles.textCenter, styles.textWhite, styles.fontLarge)}>
-								Dynamic camera movements & smooth transitions
-							</Grid>
-						</Animate.FadeUp>
-						<Animate.FadeUp
-							element={Grid}
-							elementProps={{
-								size: 3,
-								container: true,
-								spacing: 4,
-							}}
-							delay="50ms"
-						>
-							<Grid size={12} className={styles.textCenter}>
-								<img
-									src={require("../assets/images/service-details/project-info-icon-2.png")}
-									alt=""
-									className={styles.projectInfoImage}
-								/>
-							</Grid>
-							<Grid size={12} className={cx(styles.textCenter, styles.textWhite, styles.fontLarge)}>
-								Realistic lighting, textures, and materials
-							</Grid>
-						</Animate.FadeUp>
-						<Animate.FadeUp
-							element={Grid}
-							elementProps={{
-								size: 3,
-								container: true,
-								spacing: 4,
-							}}
-							delay="100ms"
-						>
-							<Grid size={12} className={styles.textCenter}>
-								<img
-									src={require("../assets/images/service-details/project-info-icon-3.png")}
-									alt=""
-									className={styles.projectInfoImage}
-								/>
-							</Grid>
-							<Grid size={12} className={cx(styles.textCenter, styles.textWhite, styles.fontLarge)}>
-								Exterior flythroughs + interior walkthroughs
-							</Grid>
-						</Animate.FadeUp>
-						<Animate.FadeUp
-							element={Grid}
-							elementProps={{
-								size: 3,
-								container: true,
-								spacing: 4,
-							}}
-							delay="150ms"
-						>
-							<Grid size={12} className={styles.textCenter}>
-								<img
-									src={require("../assets/images/service-details/project-info-icon-4.png")}
-									alt=""
-									className={styles.projectInfoImage}
-								/>
-							</Grid>
-							<Grid size={12} className={cx(styles.textCenter, styles.textWhite, styles.fontLarge)}>
-								Music, narration & branding integration
-							</Grid>
-						</Animate.FadeUp>
-					</Grid>
-				</Container>
+				{
+					serviceDetails?.show3dRenderSection ? (
+						<>
+							<div className={styles.threeDRenderVideoSection}>
+								<video muted autoPlay controls={false} loop playsInline className={styles.threeDRenderVideo}>
+									<source src={require("../assets/videos/3d-walkthough-section.mp4")} />
+								</video>
+							</div>
+							<Container maxWidth="xl" className={styles.stepIntoSectionContainer}>
+								<Grid size={12}>
+									<Heading
+										className={cx(styles.textCenter, styles.textWhite, styles.extraLightText, styles.uppercase)}
+									>
+										Step Inside Your Project-
+									</Heading>
+									<Heading
+										className={cx(styles.textCenter, styles.textWhite, styles.uppercase)}
+									>
+										Before It's Built
+									</Heading>
+								</Grid>
+								<Animate.FadeUp
+									element={Grid}
+									elementProps={{
+										size: 12,
+									}}
+									className={styles.weDesignSecondaryHeading}
+								>
+									We design walkthroughs that help you present, persuade, <br />and close with confidence.
+								</Animate.FadeUp>
+								<Grid
+									size={12}
+									container
+									spacing={4}
+									alignItems="flex-start"
+									className={styles.projectInfoBoxes}
+								>
+									<Animate.FadeUp
+										element={Grid}
+										elementProps={{
+											size: 3,
+											container: true,
+											spacing: 4,
+										}}
+										delay="0"
+									>
+										<Grid size={12} className={styles.textCenter}>
+											<img
+												src={require("../assets/images/service-details/project-info-icon-1.png")}
+												alt=""
+												className={styles.projectInfoImage}
+											/>
+										</Grid>
+										<Grid size={12} className={cx(styles.textCenter, styles.textWhite, styles.fontLarge)}>
+											Dynamic camera movements & smooth transitions
+										</Grid>
+									</Animate.FadeUp>
+									<Animate.FadeUp
+										element={Grid}
+										elementProps={{
+											size: 3,
+											container: true,
+											spacing: 4,
+										}}
+										delay="50ms"
+									>
+										<Grid size={12} className={styles.textCenter}>
+											<img
+												src={require("../assets/images/service-details/project-info-icon-2.png")}
+												alt=""
+												className={styles.projectInfoImage}
+											/>
+										</Grid>
+										<Grid size={12} className={cx(styles.textCenter, styles.textWhite, styles.fontLarge)}>
+											Realistic lighting, textures, and materials
+										</Grid>
+									</Animate.FadeUp>
+									<Animate.FadeUp
+										element={Grid}
+										elementProps={{
+											size: 3,
+											container: true,
+											spacing: 4,
+										}}
+										delay="100ms"
+									>
+										<Grid size={12} className={styles.textCenter}>
+											<img
+												src={require("../assets/images/service-details/project-info-icon-3.png")}
+												alt=""
+												className={styles.projectInfoImage}
+											/>
+										</Grid>
+										<Grid size={12} className={cx(styles.textCenter, styles.textWhite, styles.fontLarge)}>
+											Exterior flythroughs + interior walkthroughs
+										</Grid>
+									</Animate.FadeUp>
+									<Animate.FadeUp
+										element={Grid}
+										elementProps={{
+											size: 3,
+											container: true,
+											spacing: 4,
+										}}
+										delay="150ms"
+									>
+										<Grid size={12} className={styles.textCenter}>
+											<img
+												src={require("../assets/images/service-details/project-info-icon-4.png")}
+												alt=""
+												className={styles.projectInfoImage}
+											/>
+										</Grid>
+										<Grid size={12} className={cx(styles.textCenter, styles.textWhite, styles.fontLarge)}>
+											Music, narration & branding integration
+										</Grid>
+									</Animate.FadeUp>
+								</Grid>
+							</Container>
+						</>
+					) : null
+				}
 				<img
 					src={require("../assets/images/service-details/step-into-section-bg.jpg")}
 					alt=""
@@ -346,7 +352,7 @@ function ServiceDetails() {
 							elementProps={{
 								size: 12,
 							}}
-							className={styles.textCenter}
+							className={cx(styles.textCenter, styles.sectionHeadings)}
 							direction="down"
 						>
 							<ColorfulText>INDUSTRIES WE SERVE</ColorfulText>
@@ -393,6 +399,7 @@ function ServiceDetails() {
 								size: 12,
 							}}
 							direction="down"
+							className={cx(styles.textCenter, styles.sectionHeadings)}
 						>
 							<ColorfulText>WHY CHOOSE US</ColorfulText>
 						</Animate.FadeUp>
@@ -435,7 +442,7 @@ function ServiceDetails() {
 			</section>
 			<section className={styles.faqContainer}>
 				<Container maxWidth="xl">
-					<QualityMetrics />
+					{/* <QualityMetrics /> */}
 					<Grid size={12} container>
 						<Grid size={12}>
 							<img src={require("../assets/images/service-details/faq-icon.png")} alt="" className={styles.faqIcon} />

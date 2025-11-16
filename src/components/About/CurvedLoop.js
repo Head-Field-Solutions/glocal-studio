@@ -6,7 +6,7 @@ function CurvedLoop({
   marqueeText = '',
   speed = 2,
   className,
-  curveAmount = 400,
+  curveAmount = 300,
   direction = 'left',
   interactive = true
 }) {
@@ -122,7 +122,7 @@ function CurvedLoop({
           <path ref={pathRef} id={pathId} d={pathD} fill="none" stroke="transparent" />
         </defs>
         {ready && (
-          <text fontWeight="bold" xmlSpace="preserve" className={className}>
+          <text xmlSpace="preserve" className={className}>
             <textPath ref={textPathRef} href={`#${pathId}`} startOffset={`${offset  }px`} xmlSpace="preserve">
               {totalText}
             </textPath>

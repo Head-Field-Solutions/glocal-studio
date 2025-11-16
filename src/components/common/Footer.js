@@ -38,7 +38,9 @@ function Footer() {
 				<Container maxWidth="xl" className={styles.formContainer}>
 					<Grid size={12} container>
 						<Grid size={6} offset={6}>
-							<Grid size={12}><ColorfulText>GET IN TOUCH WITH US</ColorfulText></Grid>
+							<Grid size={12} className={styles.sectionHeadings}>
+								<ColorfulText>GET IN TOUCH WITH US</ColorfulText>
+							</Grid>
 							<Grid size={12}>
 								<Heading variant="secondary" className={styles.greatDesignHeading}>
 									Whether you're looking for jaw-dropping renders or exceptional design solutions, we're just a message away.

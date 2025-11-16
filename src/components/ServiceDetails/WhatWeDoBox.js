@@ -28,10 +28,10 @@ function WhatWeDoBox(props) {
 			)}
 			delay={delay}
 			distance="0 5rem"
+			key={id}
 			style={
 				type !== "floting" ? {
 					background: `#a0bcd1 url(${image}) no-repeat bottom center`,
-					backgroundSize: 'cover',
 					transition: "700ms ease-in-out",
 				} : {
 					transition: "700ms ease-in-out",

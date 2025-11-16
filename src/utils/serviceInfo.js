@@ -13,6 +13,7 @@ export const servicesInfo = {
 		"desktopMainHeading": "Turning Blueprints Into",
 		"secondaryHeading": "Photoreal Experiences",
 		"description": "Pixel-perfect renders, quick turnarounds, and a partner you can trust.",
+		"show3dRenderSection": true,
 		"whatWeDo": {
 			"content": "We transform CAD and sketches into photorealistic 3D visuals that help architects, developers, and designers win approvals, attract buyers, and amplify presentations.",
 			items: [
@@ -141,6 +142,7 @@ export const servicesInfo = {
 		"desktopMainHeading": "Turning Ideas Into",
 		"secondaryHeading": "TANGIBLE 3D MODELS",
 		"description": "hIgh-quality 3D models that form the foundation of stunning renders, prototypes, and architectural visualizations.",
+		"show3dRenderSection": false,
 		"whatWeDo": {
 			"content": "From buildings to interiors, furniture to products-our 3D modeling captures form, scale, and detail with flawless accuracy.",
 			items: [
@@ -161,7 +163,7 @@ export const servicesInfo = {
 				}, {
 					id: "03",
 					title: "Perfect for Furniture designers and manufacturers",
-					heading: "Furniture Design Modelling",
+					heading: "Furniture Design",
 					content: "From bespoke furniture pieces to modular systems, we model every detail for presentation, prototyping, or catalogs.",
 					image: require("../assets/images/service-details/3d-modelling/what-we-do-item-3.png"),
 					type: "floting",
@@ -269,6 +271,7 @@ export const servicesInfo = {
 		"desktopMainHeading": "Drawings That Leave",
 		"secondaryHeading": "No Room for Guesswork",
 		"description": "Every great project needs precision-we make sure your ideas are translated into build-ready documentation.",
+		"show3dRenderSection": false,
 		"whatWeDo": {
 			"content": "We deliver detailed technical drawings and documentation that bridge design intent and execution, ensuring accuracy at every stage.",
 			items: [
@@ -390,6 +393,7 @@ export const servicesInfo = {
 		"desktopMainHeading": "From Concept to",
 		"secondaryHeading": "Photoreal Reality",
 		"description": "Our product visualization services make your ideas tangible-perfect for presentations, e-commerce, and marketing.",
+		"show3dRenderSection": false,
 		"whatWeDo": {
 			"content": "From early-stage prototypes to polished furniture renders, we deliver visuals that look as good as the finished product.",
 			items: [
@@ -504,6 +508,7 @@ export const servicesInfo = {
 		"desktopMainHeading": "Interact. Explore.",
 		"secondaryHeading": "Experience.",
 		"description": "Our 3D animations and interactive tools help clients visualize, explore, and connect with spaces like never before.",
+		"show3dRenderSection": false,
 		"whatWeDo": {
 			"content": "We transform static designs into dynamic, cinematic experiences through animations and interactive presentations.",
 			items: [
@@ -618,6 +623,7 @@ export const servicesInfo = {
 		"desktopMainHeading": "Immersive Tours",
 		"secondaryHeading": "That Sell Faster.",
 		"description": "Our VR-enabled tours and interactive panoramas bring projects to life, helping clients experience properties as if they were there in person.",
+		"show3dRenderSection": false,
 		"whatWeDo": {
 			"content": "We create immersive 360° panoramas and virtual tours that allow clients to explore spaces in vivid detail-remotely and realistically.",
 			items: [

@@ -192,8 +192,8 @@ function Home() {
 			</section>
 			<section className={styles.letUsRenderHeading}>
 				<Container maxWidth="xl">
-					<Grid size={12} container>
-						<Grid size={8} offset={2} className={styles.letUsRenderText}>
+					<Grid size={12} container justifyContent="center">
+						<Grid size={8} className={styles.letUsRenderText}>
 							Our services cover everything from architectural visualization and 3D modeling to product renders, animations, virtual tours, and technical documentation—giving you a complete creative and technical partner under one roof.
 						</Grid>
 					</Grid>
@@ -267,8 +267,8 @@ function Home() {
 			</section>
 			<section className={cx(styles.letUsRenderHeading, styles.letUsRenderHeadingLast)}>
 				<Container maxWidth="xl">
-					<Grid size={12} container>
-						<Grid size={8} offset={2} className={styles.letUsRenderText}>
+					<Grid size={12} container justifyContent="center">
+						<Grid size={8} className={styles.letUsRenderText}>
 							and more...
 						</Grid>
 					</Grid>

@@ -109,13 +109,18 @@ function Header() {
 					className={styles.logoContainer}
 				>
 					<div>
-						<img
-							src={logo}
-							className={styles.logo}
-							alt="Glocal Studio"
-							onClick={handleLogoClick}
-							role="none"
-						/>
+						<Link
+							to={routes.home.href}
+							data-replace={routes.home.label}
+						>
+							<img
+								src={logo}
+								className={styles.logo}
+								alt="Glocal Studio"
+								onClick={handleLogoClick}
+								role="none"
+							/>
+						</Link>
 					</div>
 				</Grid>
 				{

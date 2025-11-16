@@ -526,11 +526,18 @@ function About() {
 								<Animate.ScaleIn style={{
 									display: "inline-block"
 								}}>
-									<img
-										src={require("../assets/images/about-us/linkedin-icon.png")}
-										alt=""
-										className={styles.linkedInIcon}
-									/>
+									<a
+										href="https://www.linkedin.com/in/vasu-dev-chawla-b655b368/"
+										target="_blank"
+										rel="nofollow noreferrer"
+										label="Srishti Khatri"
+									>
+										<img
+											src={require("../assets/images/about-us/linkedin-icon.png")}
+											alt=""
+											className={styles.linkedInIcon}
+										/>
+									</a>
 								</Animate.ScaleIn>
 							</Grid>
 						</Grid>

@@ -13,10 +13,10 @@
 .whatWeDoBox {
 	border-radius: 30px;
 	background: #a0bcd1;
-	background-size: contain;
+	background-size: cover !important;
 	position: relative;
 	padding: 40px;
-	height: 500px;
+	height: 600px;
 
 	&.floting {
 		margin-bottom: 132px;

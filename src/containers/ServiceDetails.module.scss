@@ -20,6 +20,10 @@
 	}
 }
 
+.sectionHeadings {
+	font-size: 20px;
+}
+
 .masterHeadVideo {
 	position: relative;
 	width: 100%;
@@ -137,7 +141,7 @@
 }
 
 .stepIntoSectionContainer {
-	margin-top: -300px;
+	margin-top: -140px;
 	position: relative;
 	z-index: 2;
 }
@@ -185,7 +189,7 @@
 }
 
 .faqContainer {
-	background: #f9f7f4 url("../assets/images/service-details/faq-section-bg.jpg") no-repeat top center;
+	background: #f9f7f4; // url("../assets/images/service-details/faq-section-bg.jpg") no-repeat top center
 	background-size: contain;
 	padding: 160px 0 40px;
 }
