@@ -5,7 +5,7 @@
 	overflow: hidden;
 
 	&::before {
-		background: linear-gradient(to bottom,rgba(6, 0, 16, 0.1) 0%, rgba(6, 0, 16, 1) 100%);;
+		background: linear-gradient(to bottom,rgba(6, 0, 16, 0.2) 0%, rgba(6, 0, 16, 1) 100%);;
 		content: '';
 		width: 100%;
 		height: 100%;
@@ -124,7 +124,23 @@
 	margin-bottom: 200px;
 }
 
+.letUsRenderHeading {
+	padding: 200px 0;
+}
+
+.letUsRenderText {
+  margin: 0;
+  padding: 0;
+	text-align: center;
+	font-size: 30px;
+	color: #b7b4ab;
+}
+
 .letUsRenderSection {
   width: 100%;
   background-color: #060010;
+}
+
+.letUsRenderHeadingLast {
+	padding: 52px 0 200px;
 }

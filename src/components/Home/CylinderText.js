@@ -4,7 +4,7 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
 import { ColorfulText } from "@/components/common";
 
-import "./CylinderText.scss";
+import * as styles from "./CylinderText.module.scss";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -15,7 +15,7 @@ function CylinderText() {
 	const calculatePositions = () => {
 		const offset = 0.4;
 		const radius = Math.min(window.innerWidth, window.innerHeight) * offset;
-		const textItems = textWrapper.current.querySelectorAll('.cylinder__text__item');
+		const textItems = textWrapper.current.querySelectorAll(`.${styles.cylinderTextItem}`);
 		const spacing = 180 / textItems.length;
 
 		textItems.forEach((item, index) => {
@@ -53,20 +53,20 @@ function CylinderText() {
 	}, []);
 
 	return (
-		<section className="cylinder__wrapper" ref={wrapper}>
-			<ul className="cylinder__text__wrapper" ref={textWrapper}>
-				<li className="cylinder__text__item"><ColorfulText>We</ColorfulText></li>
-				<li className="cylinder__text__item"><ColorfulText>explore,</ColorfulText></li>
-				<li className="cylinder__text__item"><ColorfulText>we</ColorfulText></li>
-				<li className="cylinder__text__item"><ColorfulText>design,</ColorfulText></li>
-				<li className="cylinder__text__item"><ColorfulText>we</ColorfulText></li>
-				<li className="cylinder__text__item"><ColorfulText>create,</ColorfulText></li>
-				<li className="cylinder__text__item"><ColorfulText>we</ColorfulText></li>
-				<li className="cylinder__text__item"><ColorfulText>refine,</ColorfulText></li>
-				<li className="cylinder__text__item"><ColorfulText>we</ColorfulText></li>
-				<li className="cylinder__text__item"><ColorfulText>reveal</ColorfulText></li>
-				<li className="cylinder__text__item"><ColorfulText>the</ColorfulText></li>
-				<li className="cylinder__text__item"><ColorfulText>extraordinary</ColorfulText></li>
+		<section className={styles.cylinderWrapper} ref={wrapper}>
+			<ul className={styles.cylinderTextWrapper} ref={textWrapper}>
+				<li className={styles.cylinderTextItem}>We</li>
+				<li className={styles.cylinderTextItem}>explore,</li>
+				<li className={styles.cylinderTextItem}>we</li>
+				<li className={styles.cylinderTextItem}>design,</li>
+				<li className={styles.cylinderTextItem}>we</li>
+				<li className={styles.cylinderTextItem}>create,</li>
+				<li className={styles.cylinderTextItem}>we</li>
+				<li className={styles.cylinderTextItem}>refine,</li>
+				<li className={styles.cylinderTextItem}>we</li>
+				<li className={styles.cylinderTextItem}>reveal</li>
+				<li className={styles.cylinderTextItem}>the</li>
+				<li className={styles.cylinderTextItem}><ColorfulText>extraordinary</ColorfulText></li>
 			</ul>
 		</section>
 	)

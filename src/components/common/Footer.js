@@ -78,7 +78,7 @@ function Footer() {
 						elementProps={{
 							size: 3,
 							container: true,
-							spacin: 3,
+							spacing: 3,
 						}}
 						className={styles.footerCard}
 						direction="up"
@@ -105,7 +105,7 @@ function Footer() {
 						elementProps={{
 							size: 3,
 							container: true,
-							spacin: 3,
+							spacing: 3,
 						}}
 						className={styles.footerCard}
 						direction="up"
@@ -132,7 +132,7 @@ function Footer() {
 						elementProps={{
 							size: 3,
 							container: true,
-							spacin: 3,
+							spacing: 3,
 						}}
 						className={styles.footerCard}
 						direction="up"
@@ -159,7 +159,7 @@ function Footer() {
 						elementProps={{
 							size: 3,
 							container: true,
-							spacin: 3,
+							spacing: 3,
 						}}
 						className={styles.footerCard}
 						direction="up"

@@ -289,7 +289,7 @@ export const servicesInfo = {
 				}, {
 					id: "03",
 					title: "Perfect for Furniture makers, manufacturers, and fit-out contractors.",
-					heading: "Furniture & Joinery Drawings",
+					heading: "Furniture & Drawings",
 					content: "We prepare detailed furniture and joinery drawings with dimensions, finishes, and material specs-ready for vendor execution.",
 					image: require("../assets/images/service-details/technical-drawings/what-we-do-item-3.jpg"),
 					type: "non-floting",

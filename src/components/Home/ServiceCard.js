@@ -1,8 +1,8 @@
 import React, { useRef } from "react";
 import { Grid2 as Grid } from '@mui/material';
-import { useTransform, motion, useScroll } from "framer-motion";
+import { useTransform, motion } from "framer-motion";
 
-import { LinkButton } from "@/components/common";
+import { LinkButton, Animate } from "@/components/common";
 
 import * as styles from "./ServiceCard.module.scss";
 
@@ -37,23 +37,56 @@ export default function ServiceCard(props) {
 			ref={serviceCardContainer}
 		>
 			<Grid size={12} container className={styles.itemContent}>
-				<Grid size={12} className={styles.itemHeading}>{heading}</Grid>
-				<Grid size={12} className={styles.itemSubHeading}>{subHeading}</Grid>
-				<Grid size={12} className={styles.itemText}>
+				<Animate.FadeUp
+					element={Grid}
+					elementProps={{
+						size: 12,
+					}}
+					className={styles.itemHeading}
+					direction="left"
+				>
+					{heading}
+				</Animate.FadeUp>
+				<Animate.FadeUp
+					element={Grid}
+					elementProps={{
+						size: 12,
+					}}
+					className={styles.itemSubHeading}
+					direction="left"
+				>
+					{subHeading}
+				</Animate.FadeUp>
+				<Animate.FadeUp
+					element={Grid}
+					elementProps={{
+						size: 12,
+					}}
+					className={styles.itemText}
+					direction="left"
+				>
 					{description}
-				</Grid>
+				</Animate.FadeUp>
 				<Grid size={12} spacing={2} container alignItems="center">
 					<Grid size={6}>
 						<LinkButton to={link} style={{ "--button-bg": "#f2f0ea" }}>GET A FREE QUOTE</LinkButton>
 					</Grid>
-					<Grid size={6} container alignItems="flex-start">
+					<Animate.FadeUp
+						element={Grid}
+						elementProps={{
+							size: 6,
+							container: true,
+							alignItems: "flex-start",
+							spacing: 2
+						}}
+					>
 						<Grid size={10} className={styles.itemSmallText}>
 							{usp}
 						</Grid>
 						<Grid size={2}>
 							<img src={require("../../assets/images/check-icon.png")} alt="" className={styles.checkIcon} />
 						</Grid>
-					</Grid>
+					</Animate.FadeUp>
 				</Grid>
 				<Grid size={12} className={styles.imageContainer}>
 					{

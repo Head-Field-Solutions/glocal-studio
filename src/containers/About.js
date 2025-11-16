@@ -307,7 +307,7 @@ function About() {
 			</section>
 			<section className={styles.glocalAdvantageSection}>
 				<div className={styles.advantageStarIcon}>
-					<CircularText text="Review. Refine. Perfect. Deliver." />
+					<CircularText text="REVIEW. REFINE. PERFECT. DELIVER." />
 					<StarGradiantIcon className={styles.starIcon} />
 				</div>
 				<Container maxWidth="xl">

@@ -190,6 +190,15 @@ function Home() {
 				</Container>
 				<UspSectionCards />
 			</section>
+			<section className={styles.letUsRenderHeading}>
+				<Container maxWidth="xl">
+					<Grid size={12} container>
+						<Grid size={8} offset={2} className={styles.letUsRenderText}>
+							Our services cover everything from architectural visualization and 3D modeling to product renders, animations, virtual tours, and technical documentation—giving you a complete creative and technical partner under one roof.
+						</Grid>
+					</Grid>
+				</Container>
+			</section>
 			<section className={styles.letUsRenderSection}> {/** Let us render section */}
 				<ScrollCarousel
 					images={[
@@ -210,17 +219,6 @@ function Home() {
 						require("../assets/images/home/set2d.jpg"),
 					]}
 					serviceName="3D Modeling"
-				/>
-			</section>
-			<section className={styles.letUsRenderSection}> {/** Let us render section */}
-				<ScrollCarousel
-					images={[
-						require("../assets/images/home/set3a.jpg"),
-						require("../assets/images/home/set3b.jpg"),
-						require("../assets/images/home/set3c.jpg"),
-						require("../assets/images/home/set3d.jpg"),
-					]}
-					serviceName="Technical Drawings"
 				/>
 			</section>
 			<section className={styles.letUsRenderSection}> {/** Let us render section */}
@@ -255,6 +253,26 @@ function Home() {
 					]}
 					serviceName="360° & Virtual Tours"
 				/>
+			</section>
+			<section className={styles.letUsRenderSection}> {/** Let us render section */}
+				<ScrollCarousel
+					images={[
+						require("../assets/images/home/set3a.jpg"),
+						require("../assets/images/home/set3b.jpg"),
+						require("../assets/images/home/set3c.jpg"),
+						require("../assets/images/home/set3d.jpg"),
+					]}
+					serviceName="Technical Drawings"
+				/>
+			</section>
+			<section className={cx(styles.letUsRenderHeading, styles.letUsRenderHeadingLast)}>
+				<Container maxWidth="xl">
+					<Grid size={12} container>
+						<Grid size={8} offset={2} className={styles.letUsRenderText}>
+							and more...
+						</Grid>
+					</Grid>
+				</Container>
 			</section>
 		</>
   );
