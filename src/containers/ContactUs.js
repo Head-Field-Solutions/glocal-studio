@@ -12,6 +12,8 @@ import {
 	Animate,
 } from "@/components/common";
 
+import masterHeadVideo from "@/assets/videos/contact-us-masterhead.mp4";
+
 import * as styles from "./ContactUs.module.scss";
 
 function ContactUs() {
@@ -22,7 +24,12 @@ function ContactUs() {
 				<meta name="description" content="Streamline your business with professional virtual assistant services. Get remote administrative support, scheduling, customer care, and more. Enhance productivity today!" />
 			</Helmet>
 			<section className={styles.masterHead}>
-				<Container maxWidth="xl">
+				<div className={styles.videoWrapper}>
+					<video muted autoPlay controls={false} loop={false} playsInline className={styles.masterHeadVideo}>
+						<source src={masterHeadVideo} type="video/mp4" />
+					</video>
+				</div>
+				<Container maxWidth="xl" className={styles.mainContainer}>
 					<Grid
 						size={12}
 						container
@@ -84,21 +91,6 @@ function ContactUs() {
 				</Container>
 			</section>
 			<section className={styles.dividerSection} />
-			<section className={styles.mapContainer}>
-				<div className={styles.starIcon}>
-					<Animate.ScaleIn>
-						<StarGradiantIcon />
-					</Animate.ScaleIn>
-				</div>
-				<iframe
-					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112088.89475280508!2d77.21062309726561!3d28.606437200000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce56eee10001b%3A0xe692f713efb39502!2sHead%20Field%20Solutions%20Private%20Limited!5e0!3m2!1sen!2sin!4v1760264799193!5m2!1sen!2sin"
-					className={styles.mapFrame}
-					allowFullScreen=""
-					loading="lazy"
-					referrerPolicy="no-referrer-when-downgrade"
-					title="Glocal Studio"
-				/>
-			</section>
 		</>
 	);
 };

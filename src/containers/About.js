@@ -10,7 +10,6 @@ import { StarGradiantIcon } from "@/components/Icons";
 import {
 	Heading,
 	LinkButton,
-	GlassContainer,
 	Animate,
 } from "@/components/common";
 
@@ -336,8 +335,10 @@ function About() {
 								}}
 								className={styles.glassContainer}
 								direction="right"
+								style={{
+									background: "rgba(23, 32, 60, 0.7)"
+								}}
 							>
-								<GlassContainer glassBackground="rgba(23, 32, 60, 0.7)" />
 								<Grid size={12} container className={styles.glassContainerWrapper} spacing={4}>
 									<Grid size={6}>
 										<Heading variant="secondary" className={cx(styles.fontNormal, styles.textWhite)}>
@@ -363,8 +364,10 @@ function About() {
 								className={styles.glassContainer}
 								direction="right"
 								delay="100ms"
+								style={{
+									background: "rgba(242, 240, 234, 0.7)"
+								}}
 							>
-								<GlassContainer glassBackground="rgba(242, 240, 234, 0.7)" />
 								<Grid size={12} container className={styles.glassContainerWrapper} spacing={5} alignItems="flex-end">
 									<Grid size={9} container spacing={3}>
 										<Grid size={12}>
@@ -405,8 +408,10 @@ function About() {
 								className={styles.glassContainer}
 								direction="left"
 								delay="100ms"
+								style={{
+									background: "rgba(242, 240, 234, 0.7)"
+								}}
 							>
-								<GlassContainer glassBackground="rgba(242, 240, 234, 0.7)" />
 								<Grid size={12} container className={styles.glassContainerWrapper} spacing={5} alignItems="flex-end">
 									<Grid size={9} container spacing={3}>
 										<Grid size={12}>
@@ -444,8 +449,10 @@ function About() {
 								}}
 								className={styles.glassContainer}
 								direction="left"
+								style={{
+									background: "rgba(23, 32, 60, 0.7)"
+								}}
 							>
-								<GlassContainer glassBackground="rgba(23, 32, 60, 0.7)" />
 								<Grid size={12} container className={styles.glassContainerWrapper} spacing={4}>
 									<Grid size={6}>
 										<Heading variant="secondary" className={cx(styles.fontNormal, styles.textWhite)}>
@@ -565,7 +572,7 @@ function About() {
 										className={styles.linkedInSmallIcon}
 									>
 										<img
-											src={require("../assets/images/about-us/linkedin-icon.png")}
+											src={require("../assets/images/about-us/linkedin-icon-white.png")}
 											alt=""
 										/>
 									</a>
@@ -615,7 +622,7 @@ function About() {
 										className={styles.linkedInSmallIcon}
 									>
 										<img
-											src={require("../assets/images/about-us/linkedin-icon.png")}
+											src={require("../assets/images/about-us/linkedin-icon-white.png")}
 											alt=""
 										/>
 									</a>

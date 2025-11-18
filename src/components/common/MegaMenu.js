@@ -5,6 +5,8 @@ import {
 } from '@mui/material';
 import { Link } from "react-router-dom";
 
+import { StarGradiantIcon } from "@/components/Icons";
+
 import { servicesArray } from "@/utils/serviceInfo";
 
 import * as styles from "./MegaMenu.module.scss";
@@ -24,7 +26,7 @@ function MegaMenu({ onClose }) {
 						>
 							<Link to={service.link} className={styles.link}>					
 								<div className={styles.starIcon}>
-									{service.icon}
+									<StarGradiantIcon />
 								</div>
 								<div className={styles.menuInfo}>
 									<div className={styles.menuTitle}>{service.title}</div>

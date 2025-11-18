@@ -369,7 +369,7 @@ function ServiceDetails() {
 								Who Shape Spaces
 							</Heading>
 						</Grid>
-						<Grid size={12} container spacing={3} alignItems="flex-start">
+						<Grid size={12} container spacing={3} alignItems="stretch">
 							{
 								serviceDetails.professionalServiceContent.map((service, index) => (
 									<ProfessionalServiceBox
@@ -384,6 +384,28 @@ function ServiceDetails() {
 								))
 							}
 						</Grid>
+						<Grid size={12} container spacing={3} className={styles.serviceUsp}>
+							{
+								serviceDetails.professionalServiceContent.map((service, index) => (
+									<Grid size={3} container spacing={4} key={index}>
+										<Animate.FadeUp
+											element={Grid}
+											elementProps={{
+												size: 12,
+												container: true,
+												spacing: 2,
+												alignItems: "flex-start"
+											}}
+										>
+											<Grid size={2} offset={1}>
+												<StarGradiantIcon width="35px" height="39px" />
+											</Grid>
+											<Grid size={8} className={styles.smallFontSize}>{service.footer}</Grid>
+										</Animate.FadeUp>
+									</Grid>
+								))
+							}
+						</Grid>
 						<Grid size={12} className={styles.textCenter}>
 							<LinkButton>GET FREE CONSULTATION</LinkButton>
 						</Grid>
@@ -391,45 +413,51 @@ function ServiceDetails() {
 				</Container>
 			</section>
 			<section className={styles.whyChooseUsSection}>
-				<Container maxWidth="xl">
-					<Grid size={12} container className={styles.textCenter}>
-						<Animate.FadeUp
-							element={Grid}
-							elementProps={{
-								size: 12,
-							}}
-							direction="down"
-							className={cx(styles.textCenter, styles.sectionHeadings)}
-						>
-							<ColorfulText>WHY CHOOSE US</ColorfulText>
-						</Animate.FadeUp>
-						<Grid size={12} className={styles.whyChooseUsSecondaryHeadingContainer}>
-							<Heading variant="seconndary" className={styles.uppercase}>
-								Collaboration, <br/>
-								Supervision & Speed
-							</Heading>
+				<div className={cx(styles.videoWrapper, styles.whyChooseUsVideo)}>
+					<video muted autoPlay controls={false} loop={false} playsInline className={styles.masterHeadVideo} key={params.id}>
+						<source src={require("../assets/videos/why-choose-us-video.mp4")} type="video/mp4" />
+					</video>
+				</div>
+				<Container maxWidth="xl" className={styles.mainContainer}>
+					<Grid size={12} container className={styles.textCenter} justifyContent="center">
+						<Grid size={8} container className={styles.whyChooseUsContentContainer}>
+							<Animate.FadeUp
+								element={Grid}
+								elementProps={{
+									size: 12,
+								}}
+								direction="down"
+								className={cx(styles.textCenter, styles.sectionHeadings)}
+							>
+								<ColorfulText>WHY CHOOSE US</ColorfulText>
+							</Animate.FadeUp>
+							<Grid size={12} className={styles.whyChooseUsSecondaryHeadingContainer}>
+								<Heading variant="seconndary" className={styles.uppercase}>
+									Collaboration, <br/>
+									Supervision & Speed
+								</Heading>
+							</Grid>
+							<Animate.ScaleIn
+								element={Grid}
+								elementProps={{
+									size: 12,
+								}}
+							>
+								<StarGradiantIcon width="65px" height="78px" />
+							</Animate.ScaleIn>
+							<Grid size={12} className={styles.whyChooseUsHeadingContainer}>
+								<Heading className={styles.uppercase}>All in One Studio.</Heading>
+							</Grid>
+							<Animate.FadeUp
+								element={Grid}
+								elementProps={{
+									size: 12,
+								}}
+								className={styles.workDirectlyText}
+							>
+								Work directly with the creators, guided by senior designers, with quality and confidentiality at every step.
+							</Animate.FadeUp>
 						</Grid>
-						<Animate.ScaleIn
-							element={Grid}
-							elementProps={{
-								size: 12,
-							}}
-						>
-							<StarGradiantIcon width="65px" height="78px" />
-						</Animate.ScaleIn>
-						<Grid size={12} className={styles.whyChooseUsHeadingContainer}>
-							<Heading className={styles.uppercase}>All in One Studio.</Heading>
-						</Grid>
-						<Animate.FadeUp
-							element={Grid}
-							elementProps={{
-								size: 6,
-								offset: 3,
-							}}
-							className={styles.workDirectlyText}
-						>
-							Work directly with the creators, guided by senior designers, with quality and confidentiality at every step.
-						</Animate.FadeUp>
 					</Grid>
 					<Grid size={12}>
 						<WhyChooseUsBox whyChooseUsContent={whyChooseUsContent} />

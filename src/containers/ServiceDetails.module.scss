@@ -172,10 +172,31 @@
 	margin-top: -30%;
 }
 
+.smallFontSize {
+	font-size: 14px;
+}
+
+.serviceUsp {
+	margin-top: -20px;
+}
+
 .whyChooseUsSection {
-	background: #f9f7f4 url("../assets/images/service-details/why-choose-us-bg.jpg") no-repeat top center;
-	background-size: contain;
+	background: #f9f7f4;
 	padding: 640px 0 0;
+	position: relative;
+}
+
+.whyChooseUsContentContainer {
+	background: rgba(249, 247, 244, 0.5);
+	border-top-left-radius: 30px;
+	border-top-right-radius: 30px;
+	padding: 80px;
+}
+
+.whyChooseUsVideo {
+	&::after {
+		background: linear-gradient(to top, rgba(249, 247, 244, 1) 0%, rgba(249, 247, 244, 0) 100%);
+	}
 }
 
 .whyChooseUsSecondaryHeadingContainer, 

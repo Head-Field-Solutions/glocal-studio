@@ -4,7 +4,6 @@ import cx from "classnames";
 
 import { StarGradiantIcon } from "@/components/Icons";
 
-import GlassContainer from "./GlassContainer";
 import ColorfulText from "./ColorfulText";
 import Heading from "./Heading";
 import Animate from "./Animate";
@@ -29,8 +28,10 @@ function QualityMetrics(props) {
 					}}
 					className={styles.glassContainer}
 					direction="right"
+					style={{
+						background: trustedBg
+					}}
 				>
-					<GlassContainer glassBackground={trustedBg} />
 					<Grid size={12} container className={styles.glassContainerWrapper} spacing={4}>
 						<Grid size={12}>
 							<StarGradiantIcon width="56px" height="62px" />
@@ -54,8 +55,10 @@ function QualityMetrics(props) {
 					}}
 					className={styles.glassContainer}
 					direction="right"
+					style={{
+						background: globalClientBg
+					}}
 				>
-					<GlassContainer glassBackground={globalClientBg} />
 					<Grid size={12} container className={styles.glassContainerWrapper} spacing={8}>
 						<Grid size={3}>
 							<Heading className={cx(styles.fontNormal, styles.letterSpacing)}><ColorfulText>50+</ColorfulText></Heading>
@@ -81,8 +84,10 @@ function QualityMetrics(props) {
 					}}
 					className={styles.glassContainer}
 					direction="left"
+					style={{
+						background: yearsOfExperienceBg
+					}}
 				>
-					<GlassContainer glassBackground={yearsOfExperienceBg} />
 					<Grid size={12} container className={styles.glassContainerWrapper} spacing={0} alignItems="flex-start">
 						<Grid size={8}>
 							<Heading className={styles.yearsOfExperienceHeading}><ColorfulText>25+</ColorfulText></Heading>
@@ -102,8 +107,10 @@ function QualityMetrics(props) {
 					}}
 					className={styles.glassContainer}
 					direction="left"
+					style={{
+						background: repeatedClientBg
+					}}
 				>
-					<GlassContainer glassBackground={repeatedClientBg} />
 					<Grid size={12} container className={styles.glassContainerWrapper} spacing={12}>
 						<Grid size={3}>
 							<Heading className={cx(styles.fontNormal, styles.textWhite, styles.letterSpacing)}>90%</Heading>
@@ -127,8 +134,10 @@ function QualityMetrics(props) {
 					}}
 					className={styles.glassContainer}
 					direction="left"
+					style={{
+						background: projectsBg
+					}}
 				>
-					<GlassContainer glassBackground={projectsBg} />
 					<Grid size={12} container className={styles.glassContainerWrapper} spacing={6}>
 						<Grid size={5}>
 							<Heading className={cx(styles.fontNormal, styles.letterSpacing)}>4,000+</Heading>
