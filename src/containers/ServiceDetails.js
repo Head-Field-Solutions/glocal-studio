@@ -10,7 +10,7 @@ import {
 	ColorfulText,
 	Heading,
 	LinkButton,
-	// QualityMetrics,
+	Carousel,
 	Animate
 } from "@/components/common";
 
@@ -468,9 +468,44 @@ function ServiceDetails() {
 					</Grid>
 				</Container>
 			</section>
+			<section className={styles.logoContainer}>
+				<Container maxWidth="xl">
+					<Grid size={12} container spacing={3}>
+						<Animate.FadeUp
+							element={Grid}
+							elementProps={{
+								size: 12,
+							}}
+							className={cx(styles.textCenter, styles.sectionHeadings)}
+							direction="down"
+						>
+							<ColorfulText>ONLY THE BEST TECH FOR OPTIMUM RESULTS</ColorfulText>
+						</Animate.FadeUp>
+						<Grid size={12} container justifyContent="center">
+							<Heading className={styles.softwareHeading}>SOFTWARES & TOOLS</Heading>
+						</Grid>
+						<Grid size={12}>
+							<Carousel animationTime="70s">
+								{
+									Array.from({ length: 15 }, (_, i) => {
+										const imageSrc = require(`../assets/images/service-details/logos/software-logo-${i + 1}.png`);
+										return (
+											<li key={i}>
+												<img
+													src={imageSrc}
+													alt=""
+												/>
+											</li>
+										)
+									})
+								}
+							</Carousel>
+						</Grid>
+					</Grid>
+				</Container>
+			</section>
 			<section className={styles.faqContainer}>
 				<Container maxWidth="xl">
-					{/* <QualityMetrics /> */}
 					<Grid size={12} container>
 						<Grid size={12}>
 							<img src={require("../assets/images/service-details/faq-icon.png")} alt="" className={styles.faqIcon} />

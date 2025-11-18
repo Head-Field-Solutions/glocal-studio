@@ -182,7 +182,7 @@
 
 .whyChooseUsSection {
 	background: #f9f7f4;
-	padding: 640px 0 0;
+	padding: 640px 0 120px;
 	position: relative;
 }
 
@@ -210,9 +210,9 @@
 }
 
 .faqContainer {
-	background: #f9f7f4; // url("../assets/images/service-details/faq-section-bg.jpg") no-repeat top center
+	background: #f9f7f4;
 	background-size: contain;
-	padding: 160px 0 40px;
+	padding: 120px 0 40px;
 }
 
 .faqIcon {
@@ -239,4 +239,16 @@
 		margin-left: 20px;
 		width: 74%;
 	}
+}
+
+.logoContainer {
+	background: #060010 url("../assets/images/service-details/software-logo-section-bg.jpg") no-repeat top center;
+	background-size: cover;
+	padding: 160px 0;
+}
+
+.softwareHeading {
+	text-align: center;
+	color: #f3f2ee;
+	margin: 0 0 60px;
 }
