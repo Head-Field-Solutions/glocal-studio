@@ -1,26 +1,34 @@
 .whyChooseUsBoxContainer {
 	display: flex;
-	align-items: flex-start;
+	align-items: stretch;
 	margin: 80px 0;
 }
 
 .whyChooseUsBox {
 	width: 20%;
-	margin-right: 2%;
+	margin-right: 4%;
+	position: relative;
+
+    padding-bottom: 80px;
+
+	&:last-child {
+		margin-right: 0;
+	}
 
 	&::after {
-		position: relative;
+		position: absolute;
 		content: "";
 		height: 4px;
 		background-image: linear-gradient(to left, #347bed, #de0d89);
 		margin-top: 60px;
 		width: 100%;
 		display: block;
+		bottom: 0;
 	}
 }
 
 .title {
-	font-size: 34px;
+	font-size: 28px;
 	font-weight: 500;
 	line-height: 1.2;
 }

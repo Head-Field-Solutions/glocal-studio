@@ -38,7 +38,7 @@ function About() {
 			</Helmet>
 			<section className={styles.masterHead}>
 				<div className={styles.videoWrapper}>
-					<video muted autoPlay controls={false} loop={false} playsInline className={styles.masterHeadVideo}>
+					<video muted autoPlay controls={false} loop playsInline className={styles.masterHeadVideo}>
 						<source src={masterHeadVideo} type="video/mp4" />
 					</video>
 				</div>

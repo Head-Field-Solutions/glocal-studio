@@ -110,7 +110,7 @@ function ServiceDetails() {
 			</Helmet>
 			<section className={styles.masterHead}>
 				<div className={styles.videoWrapper}>
-					<video muted autoPlay controls={false} loop={false} playsInline className={styles.masterHeadVideo} key={params.id}>
+					<video muted autoPlay controls={false} loop playsInline className={styles.masterHeadVideo} key={params.id}>
 						<source src={serviceDetails.background} type="video/mp4" />
 					</video>
 				</div>
@@ -414,13 +414,13 @@ function ServiceDetails() {
 			</section>
 			<section className={styles.whyChooseUsSection}>
 				<div className={cx(styles.videoWrapper, styles.whyChooseUsVideo)}>
-					<video muted autoPlay controls={false} loop={false} playsInline className={styles.masterHeadVideo} key={params.id}>
+					<video muted autoPlay controls={false} loop playsInline className={styles.masterHeadVideo} key={params.id}>
 						<source src={require("../assets/videos/why-choose-us-video.mp4")} type="video/mp4" />
 					</video>
 				</div>
 				<Container maxWidth="xl" className={styles.mainContainer}>
-					<Grid size={12} container className={styles.textCenter} justifyContent="center">
-						<Grid size={8} container className={styles.whyChooseUsContentContainer}>
+					<Grid size={12} container className={styles.whyChooseUsContentContainer}>
+						<Grid size={12} container className={styles.textCenter} justifyContent="center">
 							<Animate.FadeUp
 								element={Grid}
 								elementProps={{
@@ -458,13 +458,13 @@ function ServiceDetails() {
 								Work directly with the creators, guided by senior designers, with quality and confidentiality at every step.
 							</Animate.FadeUp>
 						</Grid>
-					</Grid>
-					<Grid size={12}>
-						<WhyChooseUsBox whyChooseUsContent={whyChooseUsContent} />
-					</Grid>
-					<Grid size={12} className={styles.textCenter}>
-						<LinkButton direction="right">Let's Discuss Your Project</LinkButton>
-						<LinkButton direction="left">GET FREE CONSULTATION</LinkButton>
+						<Grid size={12}>
+							<WhyChooseUsBox whyChooseUsContent={whyChooseUsContent} />
+						</Grid>
+						<Grid size={12} className={styles.textCenter}>
+							<LinkButton direction="right">Let's Discuss Your Project</LinkButton>
+							<LinkButton direction="left">GET FREE CONSULTATION</LinkButton>
+						</Grid>
 					</Grid>
 				</Container>
 			</section>
