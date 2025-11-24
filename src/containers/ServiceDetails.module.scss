@@ -254,3 +254,46 @@
 	margin: 0 0 60px;
 	font-weight: 300;
 }
+
+
+@media screen and (max-width: 899px) {
+	.masterHead {
+		padding-top: 70vh;
+	}
+	.masterHead {
+		.videoWrapper, .masterHeadVideo{
+			height: 100%;
+		}
+	}
+	
+	
+	.projectInfoBoxes > div:not(:last-child) {
+		border-bottom: 1px solid #222;
+		padding-bottom: 40px;
+		margin-bottom: 10px;
+	}
+	.threeDRenderImageWrapper {
+		height: 60vh;
+		object-fit: cover;
+	}
+	.threeDRenderImage {
+		height: 100%;
+		object-fit: cover;
+	}
+	.partnerWithProfessionalContainer {
+		margin-top: -50vh;
+	}
+	.whyChooseUsSection{
+		padding-top: 250px;
+	}
+	.whyChooseUsVideo {
+		&::after {
+			height: 150px;
+		}
+	}
+	.whyChooseUsContentContainer {
+		padding: 80px 10px;
+		margin-top: -20%;
+	}
+	
+}

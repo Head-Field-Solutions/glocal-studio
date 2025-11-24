@@ -105,3 +105,21 @@
 		z-index: -1;
 	}
 }
+
+@media screen and (max-width: 899px) {
+	.whatWeDoBox {
+		padding: 40px 20px;
+		.button {
+			padding: 8px;
+		}
+		&.floting {
+			margin-bottom: 132px;
+			height: auto;
+
+			&:nth-last-child(2) {
+				margin-bottom: 132px;
+			}
+		}
+	}
+	
+}

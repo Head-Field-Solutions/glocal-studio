@@ -9,15 +9,23 @@ function WhyChooseUsBox(props) {
 	const { whyChooseUsContent } = props;
 
 	return (
-		<div className={styles.whyChooseUsBoxContainer}>
+		<Grid size={12} container spacing={{xs: 0, sm: 5}} className={styles.whyChooseUsBoxContainer}>
 			{
 				whyChooseUsContent.map((box, index) => (
 					<Animate.FadeUp
 						className={styles.whyChooseUsBox}
 						key={index}
+						element={Grid}
+						elementProps={{
+							size: {xs: 12, sm: 6, md: 4, lg: 2.4},
+							container: true,
+							mb:{xs: 5, md: 0}
+							
+						}}
+						
 						delay={`${index * 150}ms`}
-					>
-						<Grid size={12} container spacing={3}>
+					>	
+						<Grid size={12} container spacing={3} >
 							<Grid size={12}>
 								<img
 									src={box.image}
@@ -53,7 +61,7 @@ function WhyChooseUsBox(props) {
 					</Animate.FadeUp>
 				))
 			}
-		</div>
+		</Grid>
 	)
 }
 

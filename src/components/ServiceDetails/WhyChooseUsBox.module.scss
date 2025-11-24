@@ -1,12 +1,12 @@
 .whyChooseUsBoxContainer {
-	display: flex;
-	align-items: stretch;
+	// display: flex;
+	// align-items: stretch;
 	margin: 80px 0;
 }
 
 .whyChooseUsBox {
-	width: 20%;
-	margin-right: 4%;
+	// width: 20%;
+	// margin-right: 4%;
 	position: relative;
 
     padding-bottom: 80px;
@@ -39,4 +39,9 @@
 
 .tickIcon {
 	width: 24px;
+}
+
+
+@media screen and (max-width: 899px) {
+	
 }

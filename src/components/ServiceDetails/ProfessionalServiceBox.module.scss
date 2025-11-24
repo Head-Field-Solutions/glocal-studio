@@ -21,6 +21,7 @@
 
 .iconImage {
 	width: 100%;
+	max-width: 30px;
 	display: block;
 }
 
@@ -40,4 +41,12 @@
 
 .arrowIcon {
 	width: 35%;
+}
+
+
+@media screen and (max-width: 899px) {
+	.contentContainer{
+		padding: 0;
+	}
+	
 }

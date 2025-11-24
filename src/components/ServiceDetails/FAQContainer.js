@@ -18,7 +18,7 @@ function FAQContainer(props) {
 					<Animate.FadeUp
 						element={Grid}
 						elementProps={{
-							size: 3,
+							size: {xs: 12, sm: 6, lg: 3},
 							container: true,
 							spacing: 0,
 						}}

@@ -11,7 +11,7 @@ function ProfessionalServiceBox(props) {
 	const { image, heading, content, keyServices } = props;
 
 	return (
-		<Grid size={3} container spacing={4} className={styles.container}>
+		<Grid size={{xs:12, md: 6, lg: 3}} container spacing={4} className={styles.container}>
 			<Grid size={12} alignSelf="flex-start">
 				<img
 					src={image}
@@ -58,19 +58,19 @@ function ProfessionalServiceBox(props) {
 								key={index}
 								delay={`${index * 50}ms`}
 							>
-								<Grid size={4}>
+								<Grid size={{md:4}}>
 									<img
 										src={service.image}
 										alt={service.content}
 										className={styles.iconImage}
 									/>
 								</Grid>
-								<Grid size={8} className={styles.extraSmallfontsize}>{service.content}</Grid>
+								<Grid size={{xs:8}} className={styles.extraSmallfontsize}>{service.content}</Grid>
 							</Animate.FadeUp>
 						))
 					}
 				</Grid>
-				<Grid size={12}>
+				<Grid size={{xs: 8, md: 12}}>
 					<img
 						src={require("../../assets/images/service-details/arrow-icon.png")}
 						alt=""

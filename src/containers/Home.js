@@ -155,7 +155,7 @@ function Home() {
 					<Grid size={12}>
 						<Heading variant="secondary" className={styles.portfolioSecondaryHeading}>Believe the Budget.</Heading>
 					</Grid>
-					<Grid size={12} container justifyContent={"center"} className={styles.textCenter}>
+					<Grid size={12} container justifyContent={"center"} className={`${styles.textCenter} ${styles.seeStunningText}`}>
 						<Grid size={{xs: 12, md: 6}}>
 							Explore some of our favorite works—from photorealistic home interiors to cinematic exterior walkthroughs. You’ll be amazed what we deliver for the price.
 						</Grid>
@@ -195,7 +195,7 @@ function Home() {
 			<section className={styles.letUsRenderHeading}>
 				<Container maxWidth="xl">
 					<Grid size={12} container justifyContent="center">
-						<Grid size={8} className={styles.letUsRenderText}>
+						<Grid size={{md: 12, lg: 8}} className={styles.letUsRenderText}>
 							Our services cover everything from architectural visualization and 3D modeling to product renders, animations, virtual tours, and technical documentation—giving you a complete creative and technical partner under one roof.
 						</Grid>
 					</Grid>

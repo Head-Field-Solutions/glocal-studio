@@ -151,8 +151,9 @@ function ServiceDetails() {
 						<Animate.FadeUp
 							element={Grid}
 							elementProps={{
-								size: 8,
-								offset: 2,
+								size: {xs: 12, md: 8},
+								offset: {xs: 0, md: 2},
+								mx: "20px",
 							}}
 							className={cx(styles.masterHeadText, styles.textWhite)}
 						>
@@ -216,7 +217,6 @@ function ServiceDetails() {
 				</Container>
 			</section>
 			<section>
-<<<<<<< HEAD
 				{
 					serviceDetails?.show3dRenderSection ? (
 						<>
@@ -250,16 +250,16 @@ function ServiceDetails() {
 								<Grid
 									size={12}
 									container
-									spacing={4}
+									spacing={{xs: 5, md: 4}}
 									alignItems="flex-start"
 									className={styles.projectInfoBoxes}
 								>
 									<Animate.FadeUp
 										element={Grid}
 										elementProps={{
-											size: 3,
+											size: {xs: 12, sm: 6, md: 3},
 											container: true,
-											spacing: 4,
+											spacing: {xs: 2, md: 4},
 										}}
 										delay="0"
 									>
@@ -277,9 +277,9 @@ function ServiceDetails() {
 									<Animate.FadeUp
 										element={Grid}
 										elementProps={{
-											size: 3,
+											size: {xs: 12, sm: 6, md: 3},
 											container: true,
-											spacing: 4,
+											spacing: {xs: 2, md: 4},
 										}}
 										delay="50ms"
 									>
@@ -297,9 +297,9 @@ function ServiceDetails() {
 									<Animate.FadeUp
 										element={Grid}
 										elementProps={{
-											size: 3,
+											size: {xs: 12, sm: 6, md: 3},
 											container: true,
-											spacing: 4,
+											spacing: {xs: 2, md: 4},
 										}}
 										delay="100ms"
 									>
@@ -317,9 +317,9 @@ function ServiceDetails() {
 									<Animate.FadeUp
 										element={Grid}
 										elementProps={{
-											size: 3,
+											size: {xs: 12, sm: 6, md: 3},
 											container: true,
-											spacing: 4,
+											spacing: {xs: 2, md: 4},
 										}}
 										delay="150ms"
 									>
@@ -339,90 +339,13 @@ function ServiceDetails() {
 						</>
 					) : null
 				}
-=======
-				<img
-					src={require("../assets/images/service-details/3d-walkthroughs-bg.jpg")}
-					alt=""
-					className={styles.threeDRenderImage}
-				/>
-				<Container maxWidth="xl">
-					<Grid size={12}>
-						<Heading
-							className={cx(styles.textCenter, styles.textWhite, styles.extraLightText, styles.uppercase)}
-						>
-							Step Inside Your Project—
-						</Heading>
-						<Heading
-							className={cx(styles.textCenter, styles.textWhite, styles.uppercase)}
-						>
-							Before It’s Built
-						</Heading>
-					</Grid>
-					<Grid size={12}>
-						<Heading
-							variant="seconndary"
-							className={styles.weDesignSecondaryHeading}
-						>
-							We design walkthroughs that help you present, persuade, and close with confidence.
-						</Heading>
-					</Grid>
-					<Grid size={12} container spacing={4} alignItems="flex-start">
-						<Grid size={{xs: 12, sm: 6, md: 3}} container spacing={4}>
-							<Grid size={12} className={styles.textCenter}>
-								<img
-									src={require("../assets/images/service-details/project-info-icon-1.png")}
-									alt=""
-									className={styles.projectInfoImage}
-								/>
-							</Grid>
-							<Grid size={12} className={cx(styles.textCenter, styles.textWhite)}>
-								Dynamic camera movements & smooth transitions
-							</Grid>
-						</Grid>
-						<Grid size={{xs: 12, sm: 6, md: 3}} container spacing={4}>
-							<Grid size={12} className={styles.textCenter}>
-								<img
-									src={require("../assets/images/service-details/project-info-icon-2.png")}
-									alt=""
-									className={styles.projectInfoImage}
-								/>
-							</Grid>
-							<Grid size={12} className={cx(styles.textCenter, styles.textWhite)}>
-								Realistic lighting, textures, and materials
-							</Grid>
-						</Grid>
-						<Grid size={{xs: 12, sm: 6, md: 3}} container spacing={4}>
-							<Grid size={12} className={styles.textCenter}>
-								<img
-									src={require("../assets/images/service-details/project-info-icon-3.png")}
-									alt=""
-									className={styles.projectInfoImage}
-								/>
-							</Grid>
-							<Grid size={12} className={cx(styles.textCenter, styles.textWhite)}>
-								Exterior flythroughs + interior walkthroughs
-							</Grid>
-						</Grid>
-						<Grid size={{xs: 12, sm: 6, md: 3}} container spacing={4}>
-							<Grid size={12} className={styles.textCenter}>
-								<img
-									src={require("../assets/images/service-details/project-info-icon-4.png")}
-									alt=""
-									className={styles.projectInfoImage}
-								/>
-							</Grid>
-							<Grid size={12} className={cx(styles.textCenter, styles.textWhite)}>
-								Music, narration & branding integration
-							</Grid>
-						</Grid>
-					</Grid>
-				</Container>
->>>>>>> ca5f2a0 (service ansd about us page responsive)
-				<img
-					src={require("../assets/images/service-details/step-into-section-bg.jpg")}
-					alt=""
-					className={styles.threeDRenderImage}
-				/>
+				<div className={styles.threeDRenderImageWrapper}>
+					<img
+						src={require("../assets/images/service-details/step-into-section-bg.jpg")}
+						alt=""
+						className={styles.threeDRenderImage}
+					/>
+				</div>
 			</section>
 			<section className={styles.partnerWithProfessionalSection}>
 				<Container maxWidth="xl" className={styles.partnerWithProfessionalContainer}>
@@ -467,7 +390,7 @@ function ServiceDetails() {
 						<Grid size={12} container spacing={3} className={styles.serviceUsp}>
 							{
 								serviceDetails.professionalServiceContent.map((service, index) => (
-									<Grid size={3} container spacing={4} key={index}>
+									<Grid size={{xs: 12, sm: 6, md: 3}} container spacing={4} key={index}>
 										<Animate.FadeUp
 											element={Grid}
 											elementProps={{
