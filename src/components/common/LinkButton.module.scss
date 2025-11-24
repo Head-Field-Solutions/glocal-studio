@@ -70,6 +70,16 @@
 	}
 }
 
+
+@media screen and (max-width: 768px) {
+	.buttonWrapper{
+		margin: 0 0 15px;
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+}
+
 @media screen and (max-width: 900px) {
 	.buttonWrapper:last-child{
 		margin-right: 0;

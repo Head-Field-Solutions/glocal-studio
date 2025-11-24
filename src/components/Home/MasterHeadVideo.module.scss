@@ -42,3 +42,20 @@
 .buttons {
 	margin-top: 32px;
 }
+
+@media (max-width: 768px) {
+  .headings {
+    width: 100%;
+    padding: 0 20px;
+  }
+  h1{
+    line-height: 1.3 !important;
+  }
+  .mainHeading {
+    text-transform: capitalize;
+  }
+  .textSmallBox{
+    color: #f2f2f2;
+    font-weight: 300;
+  }
+}

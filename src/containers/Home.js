@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { Helmet } from "react-helmet-async";
-import { Container, Grid2 as Grid } from "@mui/material";
+import { Container, Grid2 as Grid, Typography } from "@mui/material";
 import { useScroll } from "framer-motion";
 import cx from "classnames";
 
@@ -20,6 +20,7 @@ import masterHeadVideo from "@/assets/videos/home-masterhead-video.mp4";
 import fullSupportImage from "@/assets/images/fullsuite-image.webp";
 
 import * as styles from "./Home.module.scss";
+import { isMobile } from "react-device-detect";
 
 function Home() {
 	const servicesList = [
@@ -88,8 +89,11 @@ function Home() {
 					<source src={masterHeadVideo} />
 				</video>
 			</section>
+			
 			<CylinderText />
+			
 			<MaskVideoSection />
+			
 			<section className={styles.fullSuiteSolutionSection}>
 				<Container maxWidth="xl">
 					<Grid size={12}>
@@ -125,8 +129,9 @@ function Home() {
 							without paying the premium.
 						</Heading>
 					</Grid>
-					<Grid size={12} justifySelf="center">
-						<LinkButton style={{ "--button-bg": "#f2f0ea" }} direction="right">GET A FREE QUOTE</LinkButton>
+					<Grid size={12} justifySelf="center" sx={{ textAlign: { xs: "center", md: "left" } }}>
+						<LinkButton style={{ "--button-bg": "#f2f0ea" }}>GET A FREE QUOTE</LinkButton>
+						<LinkButton style={{ "--button-bg": "#f2f0ea" }}>BROWSE PORTFOLIO</LinkButton>
 					</Grid>
 				</Container>
 			</section>

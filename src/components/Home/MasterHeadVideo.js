@@ -1,11 +1,14 @@
 import React from "react";
 import cx from "classnames";
+import { useDevice } from '@/context/DeviceContext';
 
 import { Heading, ColorfulText, LinkButton, TextType, Animate } from "@/components/common";
 
 import * as styles from "./MasterHeadVideo.module.scss";
 
 function MasterHeadVideo() {
+	const { isMobile } = useDevice();
+
   return (
 		<div className={styles.content}>
 			<div className={styles.headings}>
@@ -18,7 +21,7 @@ function MasterHeadVideo() {
 						cursorCharacter="|"
 					/>
 				</Heading>
-				<Heading className={styles.uppercase}>
+				<Heading className={isMobile ? '' : styles.uppercase}>
 					<ColorfulText>
 						<TextType 
 							text={["3D VISUALIZATION STUDIO"]}
@@ -43,19 +46,27 @@ function MasterHeadVideo() {
 						cursorCharacter="|"
 					/>
 				</Animate.FadeUp>
+				
 				<div className={styles.buttons}>
-					<LinkButton
-						direction="right"
-						style={{ "--button-bg": "#060010", "--button-text-color":  "#f3f2ee" }}
-					>
-						SEE OUR SERVICES
-					</LinkButton>
-					<LinkButton
-						direction="left"
-						style={{ "--button-bg": "#060010", "--button-text-color":  "#f3f2ee" }}
-					>
-						BROWSE PORTFOLIO
-					</LinkButton>
+					{isMobile ?
+					<LinkButton style={{ "--button-bg": "#060010", "--button-text-color": "#fff" }}>SEE ALL OUR SERVICES</LinkButton>
+					:
+						<>
+							<LinkButton
+								direction="right"
+								style={{ "--button-bg": "#060010", "--button-text-color":  "#f3f2ee" }}
+							>
+								SEE OUR SERVICES
+							</LinkButton>
+							<LinkButton
+								direction="left"
+								style={{ "--button-bg": "#060010", "--button-text-color":  "#f3f2ee" }}
+							>
+								BROWSE PORTFOLIO
+							</LinkButton>
+						</>
+					}
+					
 				</div>
 			</div>
 		</div>

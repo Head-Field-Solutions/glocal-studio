@@ -28,7 +28,7 @@ export default function ServiceCard(props) {
 
 	return (
 		<MotionGrid
-			size={4}
+			size={{xs: 12, md: 6, lg: 4}}
 			className={styles.fullSupportItemGrid}
 			style={{
 				y: parallax,
@@ -67,42 +67,34 @@ export default function ServiceCard(props) {
 				>
 					{description}
 				</Animate.FadeUp>
-				<Grid size={12} spacing={2} container alignItems="center">
-					<Grid size={6}>
-						<LinkButton to={link} style={{ "--button-bg": "#f2f0ea" }}>GET A FREE QUOTE</LinkButton>
-					</Grid>
-					<Animate.FadeUp
-						element={Grid}
-						elementProps={{
-							size: 6,
-							container: true,
-							alignItems: "flex-start",
-							spacing: 2
-						}}
-					>
-						<Grid size={10} className={styles.itemSmallText}>
-							{usp}
-						</Grid>
-						<Grid size={2}>
-							<img src={require("../../assets/images/check-icon.png")} alt="" className={styles.checkIcon} />
-						</Grid>
-					</Animate.FadeUp>
+			</Grid>
+
+			<Grid size={12} spacing={3} container>
+				<Grid size={{xs: 12, sm: 6}} sx={{ order: { xs: 3, md: 0 } }}>
+					<LinkButton to={link} style={{ "--button-bg": "#f2f0ea" }}>GET A FREE QUOTE</LinkButton>
 				</Grid>
-				<Grid size={12} className={styles.imageContainer}>
-					{
-						imageType === "image" ? (
-							<img
-								src={image}
-								alt=""
-								className={imageClassName}
-							/>
-						) : (
-							<video muted autoPlay controls={false} loop playsInline>
-								<source src={image} />
-							</video>
-						)
-					}
+				<Grid size={{xs: 10, sm: 5}} className={styles.itemSmallText}>
+					{usp}
 				</Grid>
+				<Grid size={{xs:2, sm: 1}}>
+					<img src={require("../../assets/images/check-icon.png")} alt="" className={styles.checkIcon} />
+				</Grid>
+			</Grid>
+
+			<Grid size={12} className={styles.imageContainer}>
+				{
+					imageType === "image" ? (
+						<img
+							src={image}
+							alt=""
+							className={imageClassName}
+						/>
+					) : (
+						<video muted autoPlay controls={false} loop playsInline>
+							<source src={image} />
+						</video>
+					)
+				}
 			</Grid>
 		</MotionGrid>
 	);
