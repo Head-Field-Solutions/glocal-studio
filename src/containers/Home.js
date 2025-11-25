@@ -14,7 +14,7 @@ import CylinderText from "@/components/Home/CylinderText";
 
 import { useDevice } from '@/context/DeviceContext';
 
-import { Heading, LinkButton } from "@/components/common";
+import { Heading, LinkButton, Animate } from "@/components/common";
 
 import { routes } from "@/utils/routesPath";
 
@@ -167,7 +167,7 @@ function Home() {
 						className={`${styles.textCenter} ${styles.seeStunningText}`}
 						direction="up"
 					>
-						<Grid size={6} offset={3}>
+						<Grid size={{xs: 12, md: 6}} offset={{xs:0, md:3}}>
 							Explore some of our favorite works-from photorealistic home interiors to cinematic exterior walkthroughs. You'll be amazed what we deliver for the price.
 						</Grid>
 					</Animate.FadeUp>
