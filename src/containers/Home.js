@@ -168,7 +168,7 @@ function Home() {
 						direction="up"
 					>
 						<Grid size={6} offset={3}>
-							Explore some of our favorite works—from photorealistic home interiors to cinematic exterior walkthroughs. You’ll be amazed what we deliver for the price.
+							Explore some of our favorite works-from photorealistic home interiors to cinematic exterior walkthroughs. You'll be amazed what we deliver for the price.
 						</Grid>
 					</Animate.FadeUp>
 					<Grid size={12} justifySelf="center" className={styles.portfolioButtons}>
@@ -189,7 +189,7 @@ function Home() {
 							Expert Reviewed.<br/>
 							Technically Perfect.
 						</Heading>
-						<Heading className={cx(styles.textCenter, styles.fontBold)}>No Compromise.</Heading>
+						<Heading className={cx(styles.textCenter, styles.fontBold)}>Every Time.</Heading>
 					</Grid>
 					<Animate.FadeUp
 						element={Grid}
@@ -199,12 +199,12 @@ function Home() {
 							container: true,
 						}}
 					>
-						<Grid size={6} offset={3} className={styles.whyBrandSmallText}>
-							At Glocal Studio, we deliver premium-quality 3D visuals and design solutions that rival the world’s best—but at prices that make sense. From stunning realism to lightning-fast turnaround, we combine creativity, precision, and affordability like no one else.
+						<Grid size={8} offset={2} className={styles.whyBrandSmallText}>
+							At Glocal Studio, every render passes through a meticulous in-house review by architects, designers, and product specialists, ensuring accuracy, proportion, and realism at every stage. From light balance to material fidelity, nothing leaves our studio without expert validation. The result? Consistent, production-ready visuals that meet the highest global standards, <strong>every single time.</strong>
 						</Grid>
-						<Grid size={12}/>
-						<Grid size={{xs: 12, md: 6}} className={styles.whyBrandSmallAnotherText}>
-							When others say either quality or price—we say, why not both?
+						<Grid size={8} offset={2} className={styles.whyBrandSmallAnotherText}>
+							Because great visuals aren't guessed, they're created.<br/>
+							Every pixel checked. Every detail verified. Every time.
 						</Grid>
 					</Animate.FadeUp>
 				</Container>
