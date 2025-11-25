@@ -199,10 +199,10 @@ function Home() {
 							container: true,
 						}}
 					>
-						<Grid size={8} offset={2} className={styles.whyBrandSmallText}>
+						<Grid size={{xs: 12, md: 8}} offset={{xs: 0, md: 2}} className={styles.whyBrandSmallText}>
 							At Glocal Studio, every render passes through a meticulous in-house review by architects, designers, and product specialists, ensuring accuracy, proportion, and realism at every stage. From light balance to material fidelity, nothing leaves our studio without expert validation. The result? Consistent, production-ready visuals that meet the highest global standards, <strong>every single time.</strong>
 						</Grid>
-						<Grid size={8} offset={2} className={styles.whyBrandSmallAnotherText}>
+						<Grid size={{xs: 12, md:8}} offset={{xs:0, md:2}} className={styles.whyBrandSmallAnotherText}>
 							Because great visuals aren't guessed, they're created.<br/>
 							Every pixel checked. Every detail verified. Every time.
 						</Grid>

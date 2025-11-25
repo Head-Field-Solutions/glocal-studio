@@ -139,7 +139,7 @@ function Footer() {
 					<Animate.FadeUp
 						element={Grid}
 						elementProps={{
-							size: 3,
+							size:{xs: 12, sm: 6, md: 3},
 							container: true,
 							spacin: 3,
 						}}
