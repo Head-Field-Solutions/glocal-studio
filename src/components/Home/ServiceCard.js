@@ -1,12 +1,15 @@
 import React, { useRef } from "react";
 import { Grid2 as Grid } from '@mui/material';
 import { useTransform, motion } from "framer-motion";
+import { useDevice } from '@/context/DeviceContext';
 
 import { LinkButton, Animate } from "@/components/common";
 
 import * as styles from "./ServiceCard.module.scss";
 
 export default function ServiceCard(props) {
+	const { isMobile } = useDevice();
+
 	const {
 		heading,
 		subHeading,
@@ -15,7 +18,7 @@ export default function ServiceCard(props) {
 		image,
 		imageClassName = "",
 		progress,
-		translateY = 400,
+		translateY = isMobile ? 100 : 400,
 		link,
 		imageType = "image"
 	} = props;

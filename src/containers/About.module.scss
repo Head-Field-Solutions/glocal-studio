@@ -271,6 +271,10 @@
 }
 
 @media screen and (max-width: 899px) {
+	.videoWrapper, 
+	.masterHeadVideo {
+		height: 100vh
+	}
 	.beyondSection {
 		padding-top: 20vh;
 	}
@@ -280,4 +284,21 @@
 	.beyondInfoContent {
 		margin-top: 0;
 	}
+	.beyondSection{
+		padding-bottom: 250px;
+	}
+	.missionVisionContainer {
+		padding: 52px 30px 0;
+	}
+	.glocalAdvantageSection {
+		padding-top: 160px;
+	}
+	.glocalPrespectiveText {
+		margin-bottom: 0;
+	}
+	.explorerSection {
+		padding: 100px 0 60px;
+		margin-top: -1px;
+	}
+	
 }

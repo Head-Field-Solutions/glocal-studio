@@ -81,9 +81,12 @@
 			margin-bottom: 0;
 		}
 	}
+	.buttonWrapper:not(:last-child){
+		margin-right: 0;
+	}
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 899px) {
 	.buttonWrapper:last-child{
 		margin-right: 0;
 	}

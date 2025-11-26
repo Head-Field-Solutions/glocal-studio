@@ -76,8 +76,8 @@ function About() {
 						<Animate.FadeUp
 							element={Grid}
 							elementProps={{
-								size: 8,
-								offset: 2,
+								size: {xs: 12, md: 8},
+								offset: {xs:0, md:2},
 							}}
 							className={cx(styles.masterHeadText, styles.textWhite)}
 						>
@@ -158,7 +158,7 @@ function About() {
 			</section>
 			<section className={styles.visionMissionSection}>
 				<Container maxWidth="xl">
-					<Grid size={12} container spacing={6} className={styles.visionMissionContentSection}>
+					<Grid size={12} container spacing={{xs: 0, md: 6}} className={styles.visionMissionContentSection}>
 						<Grid size={{xs: 12, md: 6}} container>
 							<Grid size={12} className={styles.missionVisionContainer}>
 								<Grid size={12} container spacing={2} alignItems="center">
@@ -169,7 +169,7 @@ function About() {
 									<Animate.FadeUp
 										element={Grid}
 										elementProps={{
-											size: 6
+											size: {xs:12, sm:6}
 										}}
 									>
 										Our mission is to make visualization a universal language - helping companies and creators translate complex ideas into visual clarity and emotional resonance.
@@ -197,7 +197,7 @@ function About() {
 									<Animate.FadeUp
 										element={Grid}
 										elementProps={{
-											size: 6
+											size: {xs:12, sm:6}
 										}}
 									>
 										Our vision is to redefine how the world experiences visualization—by transforming imagination into structured, intelligent, and emotionally resonant visual storytelling.
@@ -224,21 +224,21 @@ function About() {
 						<Animate.FadeUp
 							element={Grid}
 							elementProps={{
-								size: 8,
-								offset: 2,
+								size: {xs: 12, md: 8},
+								offset: {xs: 0, md: 2},
 							}}
 							className={styles.visionMissionCenterContent}
 						>
 							At Glocal Studio, our approach is simple yet powerful-we listen, understand, and deliver solutions tailored to your vision.
 						</Animate.FadeUp>
 					</Grid>
-					<Grid size={12} container className={styles.textCenter} spacing={4} alignItems="flex-start">
+					<Grid size={12} container className={styles.textCenter} spacing={{xs: 6, md: 4}} alignItems="flex-start">
 						<Animate.FadeUp
 							element={Grid}
 							elementProps={{
-								size: 3,
+								size: {xs: 12, sm: 6, md: 3},
 								container: true,
-								spacing: 3,
+								spacing: {xs: 0, sm: 3, md: 3},
 							}}
 							delay="0ms"
 						>
@@ -257,9 +257,9 @@ function About() {
 						<Animate.FadeUp
 							element={Grid}
 							elementProps={{
-								size: 3,
+								size: {xs: 12, sm: 6, md: 3},
 								container: true,
-								spacing: 3,
+								spacing: {xs: 0, sm: 3, md: 3},
 							}}
 							delay="100ms"
 						>
@@ -278,9 +278,9 @@ function About() {
 						<Animate.FadeUp
 							element={Grid}
 							elementProps={{
-								size: 3,
+								size: {xs: 12, sm: 6, md: 3},
 								container: true,
-								spacing: 3,
+								spacing: {xs: 0, sm: 3, md: 3},
 							}}
 							delay="200ms"
 						>
@@ -299,9 +299,9 @@ function About() {
 						<Animate.FadeUp
 							element={Grid}
 							elementProps={{
-								size: 3,
+								size: {xs: 12, sm: 6, md: 3},
 								container: true,
-								spacing: 3,
+								spacing: {xs: 0, sm: 3, md: 3},
 							}}
 							delay="300ms"
 						>
@@ -334,8 +334,8 @@ function About() {
 						<Animate.FadeUp
 							element={Grid}
 							elementProps={{
-								size: 8,
-								offset: 2,
+								size: {xs: 12, md: 8},
+								offset: {xs: 0, md: 2},
 							}}
 							className={cx(styles.advantageText, styles.textWhite, styles.glocalPrespectiveText)}
 						>
@@ -343,7 +343,7 @@ function About() {
 						</Animate.FadeUp>
 					</Grid>
 					<Grid size={12} container spacing={4} alignItems="flex-start" className={styles.qualityMetricsContainer}>
-						<Grid size={6} container>
+						<Grid size={{xs: 12, md: 6}} container>
 							<Animate.FadeUp
 								element={Grid}
 								elementProps={{
@@ -364,7 +364,7 @@ function About() {
 									<Animate.FadeUp
 										element={Grid}
 										elementProps={{
-											size: 6,
+											size: {xs: 12, sm: 6},
 										}}
 										className={styles.textWhite}
 									>
@@ -415,7 +415,7 @@ function About() {
 								</Grid>
 							</Animate.FadeUp>
 						</Grid>
-						<Grid size={6} container>
+						<Grid size={{xs: 12, md: 6}} container>
 							<Animate.FadeUp
 								element={Grid}
 								elementProps={{
@@ -478,7 +478,7 @@ function About() {
 									<Animate.FadeUp
 										element={Grid}
 										elementProps={{
-											size: 6,
+											size: {xs: 12, sm: 6},
 										}}
 										className={styles.textWhite}
 									>
@@ -503,8 +503,8 @@ function About() {
 						<Animate.FadeUp
 							element={Grid}
 							elementProps={{
-								size: 8,
-								offset: 2,
+								size: {xs: 12, md: 8},
+								offset: {xs: 0, md: 2},
 							}}
 							className={styles.advantageText}
 						>
@@ -566,7 +566,7 @@ function About() {
 						</Grid>
 					</Grid>
 					<Grid size={12} container spacing={4} alignItems="flex-start">
-						<Grid size={6} container spacing={3}>
+						<Grid size={{xs: 12, md: 6}} container spacing={3}>
 							<Animate.FadeUp
 								direction="right"
 								element={Grid}
@@ -599,7 +599,7 @@ function About() {
 									direction="right"
 									element={Grid}
 									elementProps={{
-										size: 5
+										size: {xs: 12, sm: 5}
 									}}
 								>
 									<div className={styles.teamMemberName}>Kunal Jaggi</div>
@@ -609,14 +609,14 @@ function About() {
 									direction="left"
 									element={Grid}
 									elementProps={{
-										size: 7
+										size: {xs: 12, sm: 7}
 									}}
 								>
 									Kunal drives Glocal Studio's creative vision with over two decades of design expertise. He combines strategy, technology, and artistry to deliver visuals that inspire and impress globally.
 								</Animate.FadeUp>
 							</Grid>
 						</Grid>
-						<Grid size={6} container spacing={3}>
+						<Grid size={{xs: 12, md: 6}} container spacing={3}>
 							<Animate.FadeUp
 								direction="left"
 								element={Grid}
@@ -649,7 +649,7 @@ function About() {
 									direction="right"
 									element={Grid}
 									elementProps={{
-										size: 5
+										size: {xs: 12, sm: 5}
 									}}
 								>
 									<div className={styles.teamMemberName}>Srishti Khatri</div>
@@ -659,7 +659,7 @@ function About() {
 									direction="left"
 									element={Grid}
 									elementProps={{
-										size: 7
+										size: {xs: 12, sm: 7}
 									}}
 								>
 									Kunal drives Glocal Studio's creative vision with over two decades of design expertise. He combines strategy, technology, and artistry to deliver visuals that inspire and impress globally.

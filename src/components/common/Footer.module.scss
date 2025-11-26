@@ -249,6 +249,9 @@
 }
 
 @media (max-width: 899px) {
+	.footerInfoPanel {
+		padding-top: 100px;
+	}
 	.footerContainer{
 		padding: 40px 30px;
         background: rgba(6, 0, 16, 0.9);
