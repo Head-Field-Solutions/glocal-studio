@@ -20,7 +20,7 @@ function QualityMetrics(props) {
 	} = props; 
 	return (
 		<Grid size={12} container spacing={4} alignItems="flex-start" className={styles.qualityMetricsContainer}>
-			<Grid size={6} container>
+			<Grid size={{xs: 12, md: 6}} container>
 				<Animate.FadeUp
 					element={Grid}
 					elementProps={{
@@ -76,7 +76,7 @@ function QualityMetrics(props) {
 					</Grid>
 				</Animate.FadeUp>
 			</Grid>
-			<Grid size={6} container>
+			<Grid size={{xs: 12, md: 6}} container>
 				<Animate.FadeUp
 					element={Grid}
 					elementProps={{
@@ -95,7 +95,7 @@ function QualityMetrics(props) {
 								Years of Experience
 							</Heading>
 						</Grid>
-						<Grid size={4} className={styles.servingClientText}>
+						<Grid size={{xs: 12, sm: 4}} className={styles.servingClientText}>
 							Serving clients across the US, Europe, and Asia with consistent quality and reliability.
 						</Grid>
 					</Grid>

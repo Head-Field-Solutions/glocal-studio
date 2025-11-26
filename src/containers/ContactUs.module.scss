@@ -154,3 +154,15 @@
 	border: 0;
 	display: block;
 }
+
+
+@media screen and (max-width: 899px) {
+	.videoWrapper, .masterHeadVideo{
+		height: 100vh;
+	}
+	.qualityMetricsContainer {
+		padding: 100px 0 0px;
+	}
+	
+	
+}
