@@ -249,7 +249,12 @@
 }
 
 @media (max-width: 899px) {
+	.greatDesignHeading {
+		font-size: 50px;
+    	line-height: 1.2;
+	}
 	.footerInfoPanel {
+		background: #fff;
 		padding-top: 100px;
 	}
 	.footerContainer{
@@ -261,6 +266,18 @@
 		text-align: center;
 		padding-top: 150px;
 	}
+	.footerInfoContent,
+	.formContent {
+		padding: 0 1rem;
+	}
+	.mobileGetInTouch {
+		font-size: 20px;
+	}
+	.scrollabelText {
+		color: #cfc640;
+		margin-top: 50px;
+		font-weight: 100;
+	}
 	.footerLogo{
 		margin: 100px 0 -30px;
 		padding: 0 30px;
@@ -270,9 +287,7 @@
 			max-width: 300px;
 		}
 	}
-	.footerInfoPanel{
-		background: #fff;
-	}
+	
 	.formContent {
 		margin-top: -100px;
 		margin-bottom: 0;
@@ -293,6 +308,9 @@
 	}
 	.uspSection{
 		margin-top: 50px;
+	}
+	.uspContainer {
+		padding: 1rem;
 	}
 
 	.navBar{

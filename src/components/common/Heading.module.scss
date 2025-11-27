@@ -1,5 +1,5 @@
 .primaryHeading {
-	font-size: clamp(2.5rem, 5vw, 5rem);
+	font-size: clamp(3rem, 5vw, 5rem);
 	color: #060010;
 	letter-spacing: -1px;
 	line-height: 1.1;
@@ -17,7 +17,7 @@
 }
 
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 899px) {
 	.secondaryHeading{
 		line-height: 1.3;
 	}

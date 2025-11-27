@@ -5,13 +5,16 @@ import { Heading, Animate } from "@/components/common";
 
 import { StarGradiantIcon } from "@/components/Icons";
 
+import { useDevice } from '@/context/DeviceContext';
+
 import * as styles from "./ProfessionalServiceBox.module.scss";
 
 function ProfessionalServiceBox(props) {
-	const { image, heading, content, keyServices } = props;
+	const { image, heading, content, keyServices, footer } = props;
+	const { isMobile } = useDevice();
 
-	return (
-		<Grid size={{xs:12, md: 6, lg: 3}} container spacing={4} className={styles.container}>
+	return (<Grid size={{xs:12, md: 6, lg: 3}} container spacing={4}>
+		<Grid size={{xs:12}} container spacing={4} className={styles.container}>
 			<Grid size={12} alignSelf="flex-start">
 				<img
 					src={image}
@@ -39,6 +42,7 @@ function ProfessionalServiceBox(props) {
 						element={Grid}
 						elementProps={{
 							size: 12,
+							mb: {xs: 2, md: 0}
 						}}
 						className={styles.mediumBold}
 					>
@@ -69,7 +73,10 @@ function ProfessionalServiceBox(props) {
 							</Animate.FadeUp>
 						))
 					}
+				
 				</Grid>
+				
+				{!isMobile ?
 				<Grid size={{xs: 8, md: 12}}>
 					<img
 						src={require("../../assets/images/service-details/arrow-icon.png")}
@@ -77,9 +84,36 @@ function ProfessionalServiceBox(props) {
 						className={styles.arrowIcon}
 					/>
 				</Grid>
+				: null}
 			</Grid>
 		</Grid>
-	)
+		{isMobile ? 
+		<Grid 
+			size={{xs:12}}
+			container spacing={4}
+			mb={{xs: 4, md: 0}}
+			sx={{
+				display: { xs: "block", lg: "none" }
+			}}
+		>
+			<Animate.FadeUp
+				element={Grid}
+				elementProps={{
+					size: 12,
+					container: true,
+					spacing: 2,
+					alignItems: "flex-start",
+					justifyContent:"center"
+				}}
+			>
+				<Grid>
+					<StarGradiantIcon width="35px" height="39px" />
+				</Grid>
+				<Grid size={9} className={styles.smallFontSize}>{footer}</Grid>
+			</Animate.FadeUp>
+		</Grid>
+		: null}
+	</Grid>)
 }
 
 export default ProfessionalServiceBox;

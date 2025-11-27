@@ -271,34 +271,70 @@
 }
 
 @media screen and (max-width: 899px) {
+	.masterHead{
+		padding-left: 1rem;
+        padding-right: 1rem;
+	}
+	.masterHeadInfoSection{
+		background: transparent;
+	}
 	.videoWrapper, 
 	.masterHeadVideo {
 		height: 100vh
 	}
-	.beyondSection {
-		padding-top: 20vh;
-	}
+	
 	.astronautImage {
 		margin-left: 0;
+        margin-bottom: 100px;
+        margin-top: 150px;
 	}
 	.beyondInfoContent {
 		margin-top: 0;
 	}
 	.beyondSection{
-		padding-bottom: 250px;
+		background: url("../assets/images/about-us/beyond-section-bg-mobile.jpg") no-repeat 0 -100px;
+		padding: 0 1rem 350px;
+        padding-top: 0;
+        background-size: contain;
+	}
+	.visionMissionSection {
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+	.visionMissionStatement {
+		font-size: 16px;
+	}
+	.missionVisionContent {
+		font-size: 20px;
 	}
 	.missionVisionContainer {
-		padding: 52px 30px 0;
+		padding: 52px 30px 50px;
+        border: 1px solid #000;
+	}
+	.visionMissionContentSection {
+		margin-bottom: 70px;
+	}
+	.glassContainerWrapper {
+		padding: 52px 30px;
 	}
 	.glocalAdvantageSection {
+		background: url("../assets/images/about-us/advantage-section-bg-MOBILE.jpg") no-repeat 50% 45vh;
+		background-size: contain;
 		padding-top: 160px;
+		padding-left: 1rem;
+		padding-right: 1rem;
 	}
 	.glocalPrespectiveText {
 		margin-bottom: 0;
 	}
 	.explorerSection {
-		padding: 100px 0 60px;
-		margin-top: -1px;
+		padding-right: 1rem;
+        padding-left: 1rem;
+        background: #fff;
+        margin-top: -1px;
+	}
+	.qualityMetricsContainer {
+		margin: 250px 0 0px;
 	}
 	
 }

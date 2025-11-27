@@ -98,7 +98,7 @@ function About() {
 					<Grid size={12} container>
 						<Grid size={{xs: 12, lg: 10}} offset={{xs: 0, lg: 1}} container spacing={6}>
 							{isMobile && 
-								<Grid size={12} ref={astronautImage}>
+								<Grid size={12} ref={astronautImage} textAlign={"center"}>
 									<motion.img
 										src={require("../assets/images/about-us/astronaut.png")}
 										alt=""
@@ -159,7 +159,7 @@ function About() {
 			<section className={styles.visionMissionSection}>
 				<Container maxWidth="xl">
 					<Grid size={12} container spacing={{xs: 0, md: 6}} className={styles.visionMissionContentSection}>
-						<Grid size={{xs: 12, md: 6}} container>
+						<Grid size={{xs: 12, md: 6}} container mb={{xs: 4, md:0}}>
 							<Grid size={12} className={styles.missionVisionContainer}>
 								<Grid size={12} container spacing={2} alignItems="center">
 									<Grid size={{xs : 12, sm: 6}}>
@@ -168,6 +168,7 @@ function About() {
 									</Grid>
 									<Animate.FadeUp
 										element={Grid}
+										className={styles.missionVisionContent}
 										elementProps={{
 											size: {xs:12, sm:6}
 										}}
@@ -176,7 +177,7 @@ function About() {
 									</Animate.FadeUp>
 								</Grid>
 								<Grid size={12} container>
-									<Grid size={12} className={styles.starContentContainer}>
+									<Grid size={12} className={styles.starContentContainer} mt={{xs: 4, md:0}}>
 										<Animate.ScaleIn>
 											<StarGradiantIcon width="30px" height="33px" />
 										</Animate.ScaleIn>
@@ -196,6 +197,7 @@ function About() {
 									</Grid>
 									<Animate.FadeUp
 										element={Grid}
+										className={styles.missionVisionContent}
 										elementProps={{
 											size: {xs:12, sm:6}
 										}}
@@ -204,7 +206,7 @@ function About() {
 									</Animate.FadeUp>
 								</Grid>
 								<Grid size={12} container>
-									<Grid size={12} className={styles.starContentContainer}>
+									<Grid size={12} className={styles.starContentContainer}  mt={{xs: 4, md:0}}>
 										<Animate.ScaleIn>
 											<StarGradiantIcon width="30px" height="33px" />
 										</Animate.ScaleIn>
@@ -328,7 +330,7 @@ function About() {
 				<Container maxWidth="xl">
 					<Grid size={12} container spacing={3} className={styles.textCenter}>
 						<Grid size={12}>
-							<Heading className={cx(styles.textWhite, styles.extraLightText)}>The Glocal Studio</Heading>
+							<Heading className={cx(styles.textWhite, styles.extraLightText)}>The Glocal {isMobile && <br/>}Studio</Heading>
 							<Heading className={styles.textWhite}>Advantage</Heading>
 						</Grid>
 						<Animate.FadeUp
@@ -339,7 +341,11 @@ function About() {
 							}}
 							className={cx(styles.advantageText, styles.textWhite, styles.glocalPrespectiveText)}
 						>
-							Our difference lies in discipline. Every project moves through a structured review by specialists - ensuring that each image is accurate, purposeful, and market-ready. With global insight and local sensitivity, we deliver clarity you can trust.
+							{isMobile ?
+								"With a global perspective and local precision, our work adapts seamlessly to diverse cultural and market needs."
+								:
+								"Our difference lies in discipline. Every project moves through a structured review by specialists - ensuring that each image is accurate, purposeful, and market-ready. With global insight and local sensitivity, we deliver clarity you can trust."
+							}
 						</Animate.FadeUp>
 					</Grid>
 					<Grid size={12} container spacing={4} alignItems="flex-start" className={styles.qualityMetricsContainer}>
@@ -490,9 +496,12 @@ function About() {
 					</Grid>
 				</Container>
 			</section>
-			<section className={styles.curvedLoopSection}>
-				<CurvedLoop marqueeText="Not just a team-an expedition of thinkers, makers, and visionaries." />
-			</section>
+			{!isMobile && 
+				<section className={styles.curvedLoopSection}>
+					<CurvedLoop marqueeText="Not just a team-an expedition of thinkers, makers, and visionaries." />
+				</section>
+			}
+			
 			<section className={styles.explorerSection}>
 				<Container maxWidth="xl">
 					<Grid size={12} container spacing={3} className={styles.textCenter}>

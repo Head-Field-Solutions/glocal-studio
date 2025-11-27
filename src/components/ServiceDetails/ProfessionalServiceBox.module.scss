@@ -48,5 +48,18 @@
 	.contentContainer{
 		padding: 0;
 	}
+	.headingText {
+		font-size: clamp(2rem, 2.5vw, 2.5rem);
+	}
+	.smallFontSize {
+		font-size: 16px;
+	}
+	.contentContainer {
+		font-size: 18px;
+	}
+	.extraSmallfontsize{
+		font-size: 16px;
+		line-height: 19px;
+	}
 	
 }

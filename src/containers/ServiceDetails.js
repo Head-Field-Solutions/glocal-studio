@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 import cx from "classnames";
 
 import { StarGradiantIcon } from "@/components/Icons";
-
+import { useDevice } from '@/context/DeviceContext';
 import {
 	ColorfulText,
 	Heading,
@@ -27,6 +27,7 @@ import * as styles from "./ServiceDetails.module.scss";
 
 function ServiceDetails() {
 	const params = useParams();
+	const { isMobile } = useDevice();
 
 	const serviceDetails = servicesInfo[params.id] || null;
 
@@ -387,28 +388,35 @@ function ServiceDetails() {
 								))
 							}
 						</Grid>
-						<Grid size={12} container spacing={3} className={styles.serviceUsp}>
-							{
-								serviceDetails.professionalServiceContent.map((service, index) => (
-									<Grid size={{xs: 12, sm: 6, md: 3}} container spacing={4} key={index}>
-										<Animate.FadeUp
-											element={Grid}
-											elementProps={{
-												size: 12,
-												container: true,
-												spacing: 2,
-												alignItems: "flex-start"
-											}}
-										>
-											<Grid size={2} offset={1}>
-												<StarGradiantIcon width="35px" height="39px" />
-											</Grid>
-											<Grid size={8} className={styles.smallFontSize}>{service.footer}</Grid>
-										</Animate.FadeUp>
-									</Grid>
-								))
-							}
-						</Grid>
+						{!isMobile ?
+							<Grid 
+								size={12}
+								container
+								spacing={3}
+								className={styles.serviceUsp}
+							>
+								{
+									serviceDetails.professionalServiceContent.map((service, index) => (
+										<Grid size={{xs: 12, sm: 6, md: 3}} container spacing={4} key={index}>
+											<Animate.FadeUp
+												element={Grid}
+												elementProps={{
+													size: 12,
+													container: true,
+													spacing: 2,
+													alignItems: "flex-start"
+												}}
+											>
+												<Grid size={2} offset={1}>
+													<StarGradiantIcon width="35px" height="39px" />
+												</Grid>
+												<Grid size={8} className={styles.smallFontSize}>{service.footer}</Grid>
+											</Animate.FadeUp>
+										</Grid>
+									))
+								}
+							</Grid>
+						: null}
 						<Grid size={12} className={styles.textCenter}>
 							<LinkButton>GET FREE CONSULTATION</LinkButton>
 						</Grid>
@@ -465,7 +473,7 @@ function ServiceDetails() {
 							<WhyChooseUsBox whyChooseUsContent={whyChooseUsContent} />
 						</Grid>
 						<Grid size={12} className={styles.textCenter}>
-							<LinkButton direction="right">Let's Discuss Your Project</LinkButton>
+							{!isMobile ? <LinkButton direction="right">Let's Discuss Your Project</LinkButton> : null}
 							<LinkButton direction="left">GET FREE CONSULTATION</LinkButton>
 						</Grid>
 					</Grid>

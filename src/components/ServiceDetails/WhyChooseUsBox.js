@@ -3,10 +3,14 @@ import { Grid2 as Grid } from "@mui/material";
 
 import { Animate } from "@/components/common";
 
+import { useDevice } from '@/context/DeviceContext';
+
 import * as styles from "./WhyChooseUsBox.module.scss";
 
 function WhyChooseUsBox(props) {
 	const { whyChooseUsContent } = props;
+
+	const { isMobile } = useDevice();
 
 	return (
 		<Grid size={12} container spacing={{xs: 0, sm: 5}} className={styles.whyChooseUsBoxContainer}>
@@ -19,7 +23,10 @@ function WhyChooseUsBox(props) {
 						elementProps={{
 							size: {xs: 12, sm: 6, md: 4, lg: 2.4},
 							container: true,
-							mb:{xs: 5, md: 0}
+							mb:{xs: 5, md: 0},
+							sx: {
+								textAlign: {xs: "center", md: "left"}
+							}
 							
 						}}
 						
@@ -39,24 +46,26 @@ function WhyChooseUsBox(props) {
 							<Grid size={12}>
 								{box.content}
 							</Grid>
-							<Grid size={12} container spacing={2}>
-								{
-									box.usps.map((usp, index) => (
-										<Grid size={12} container alignItems="flex-start" key={index}>
-											<Grid size={2}>
-												<img
-													src={require("../../assets/images/service-details/tick-icon.png")}
-													alt=""
-													className={styles.tickIcon}
-												/>
+							{!isMobile ?
+								<Grid size={12} container spacing={2}>
+									{
+										box.usps.map((usp, index) => (
+											<Grid size={12} container alignItems="flex-start" key={index}>
+												<Grid size={2}>
+													<img
+														src={require("../../assets/images/service-details/tick-icon.png")}
+														alt=""
+														className={styles.tickIcon}
+													/>
+												</Grid>
+												<Grid size={10}>
+													{usp}
+												</Grid>
 											</Grid>
-											<Grid size={10}>
-												{usp}
-											</Grid>
-										</Grid>
-									))
-								}
-							</Grid>
+										))
+									}
+								</Grid>
+							: null}
 						</Grid>
 					</Animate.FadeUp>
 				))

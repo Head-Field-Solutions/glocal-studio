@@ -43,7 +43,13 @@
 
 
 @media screen and (max-width: 899px) {
+	.whyChooseUsBoxContainer {
+		margin: 60px 0 20px;
+	}
 	.whyChooseUsBox {
 		padding-bottom: 40px;
+	}
+	.title {
+		font-size: 32px;
 	}
 }
