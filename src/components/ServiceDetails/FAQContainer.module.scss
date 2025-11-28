@@ -24,3 +24,15 @@
 		margin: 20px 0;
 	}
 }
+
+@media screen and (max-width: 899px) {
+	.heading::after {
+		height: 2px;
+		background: linear-gradient(to left, #347bed, #de0d89);
+	}
+	.faqContent {
+		border-bottom: 1px solid #000;
+		padding-bottom: 40px;
+	}
+	
+}

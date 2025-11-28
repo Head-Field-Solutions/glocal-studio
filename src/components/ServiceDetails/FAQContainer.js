@@ -5,10 +5,11 @@ import cx from "classnames";
 import { ColorfulText, Animate } from "@/components/common";
 
 import * as styles from "./FAQContainer.module.scss";
+import { useDevice } from '@/context/DeviceContext';
 
 function FAQContainer(props) {
 	const { faqContent } = props;
-
+	const { isMobile } = useDevice();
 	const [activeIndex, setActiveIndex] = useState(0);
 
 	return (
@@ -48,7 +49,7 @@ function FAQContainer(props) {
 						</Grid>
 						{
 							index === activeIndex ? (
-								<Grid size={12}>
+								<Grid size={12} className={styles.faqContent}>
 									{item.content}
 								</Grid>
 							) : null
