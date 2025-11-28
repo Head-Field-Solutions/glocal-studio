@@ -326,8 +326,11 @@
 		padding: 15px 0;
 		margin: 15px 0;
 		text-align: center;
+		justify-content: center;
+		flex-direction: column;
+		gap: 12px;
 		span {
-			display: block;
+			display: flex;
 		}
 	}
 	.socialMediaContainer{
