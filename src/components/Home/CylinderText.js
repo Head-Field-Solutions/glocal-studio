@@ -1,7 +1,7 @@
 import React, { useEffect, useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-
+import { useDevice } from '@/context/DeviceContext';
 import { ColorfulText } from "@/components/common";
 
 import * as styles from "./CylinderText.module.scss";
@@ -9,6 +9,7 @@ import * as styles from "./CylinderText.module.scss";
 gsap.registerPlugin(ScrollTrigger);
 
 function CylinderText() {
+	const { isMobile } = useDevice();
 	const textWrapper = useRef(null);
 	const wrapper = useRef(null);
 
@@ -43,7 +44,7 @@ function CylinderText() {
 		let ctx = gsap.context(() => {
 			ScrollTrigger.create({
 				trigger: wrapper.current,
-				start: 'top top',
+				start: `top ${isMobile ? '20%' : 'top'}`,
 				pin: wrapper.current,
 				scrub: 2,
 				animation: gsap.fromTo(textWrapper.current, { rotateX: -80 }, { rotateX: 270, ease: 'none' }),
@@ -52,8 +53,10 @@ function CylinderText() {
 		return () => ctx.revert(); // <- cleanup!
 	}, []);
 
+	const wrapperStyle = { height: "50vh", overflow: "hidden" }
+
 	return (
-		<section className={styles.cylinderWrapper} ref={wrapper}>
+		<section className={styles.cylinderWrapper} ref={wrapper} style={isMobile ? wrapperStyle : {}}>
 			<ul className={styles.cylinderTextWrapper} ref={textWrapper}>
 				<li className={styles.cylinderTextItem}>We</li>
 				<li className={styles.cylinderTextItem}>explore,</li>

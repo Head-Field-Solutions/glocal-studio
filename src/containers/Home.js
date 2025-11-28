@@ -139,7 +139,7 @@ function Home() {
 							without paying the premium.
 						</Heading>
 					</Grid>
-					<Grid size={12} justifySelf="center" sx={{ textAlign: { xs: "center", md: "left" } }}>
+					<Grid size={12} justifySelf="center" className={styles.fullSuiteBtnGroup} sx={{ textAlign: { xs: "center", md: "left" } }}>
 						<LinkButton style={{ "--button-bg": "#f2f0ea" }}>GET A FREE QUOTE</LinkButton>
 						<LinkButton style={{ "--button-bg": "#f2f0ea" }}>BROWSE PORTFOLIO</LinkButton>
 					</Grid>
