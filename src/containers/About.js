@@ -226,8 +226,8 @@ function About() {
 						<Animate.FadeUp
 							element={Grid}
 							elementProps={{
-								size: {xs: 12, md: 8},
-								offset: {xs: 0, md: 2},
+								size: {xs: 12, md: 12},
+								offset: {xs: 0, md: 0},
 							}}
 							className={styles.visionMissionCenterContent}
 						>
