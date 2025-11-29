@@ -22,7 +22,7 @@ function ProfessionalServiceBox(props) {
 					className={styles.image}
 				/>
 			</Grid>
-			<Grid size={12} container className={styles.contentContainer} alignSelf="flex-start">
+			<Grid size={12} spacing={{xs:2, md: 4}} container className={styles.contentContainer} alignSelf="flex-start">
 				<Grid size={12}>
 					<Heading variant="secondary" className={styles.headingText}>{heading}</Heading>
 				</Grid>
@@ -42,7 +42,6 @@ function ProfessionalServiceBox(props) {
 						element={Grid}
 						elementProps={{
 							size: 12,
-							mb: {xs: 2, md: 0}
 						}}
 						className={styles.mediumBold}
 					>

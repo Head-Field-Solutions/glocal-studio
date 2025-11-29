@@ -109,20 +109,18 @@
 @media screen and (max-width: 899px) {
 	.whatWeDoBox {
 		padding: 40px 20px;
+		border-radius: 20px;
 		.button {
 			padding: 8px;
 		}
 		&.floting {
-			margin-bottom: 80px;
+			margin-bottom: 80px !important;
 			height: auto;
 			&::before {
 				display: none;
 			}
 			&::after {
 				height: 55%;
-			}
-			&:nth-last-child(2) {
-				margin-bottom: 132px;
 			}
 		}
 	}
