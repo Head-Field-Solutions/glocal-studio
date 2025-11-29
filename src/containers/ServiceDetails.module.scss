@@ -260,6 +260,9 @@
 	.masterHead {
 		padding-top: 70vh;
 	}
+	.masterHeadText {
+		font-size: 16px;
+	}
 	.masterHead {
 		.videoWrapper, .masterHeadVideo{
 			height: 100%;
@@ -268,6 +271,21 @@
 	.masterHeadInfoSection {
 		background: transparent;
 		padding: 50px 0 0px;
+	}
+
+	.whatWeDoContent {
+		margin-bottom: 0;
+		font-size: 20px;
+    	letter-spacing: 0;
+	}
+
+	.acturalVisualizationHeading {
+		margin-bottom: 40px;
+		&::after {
+			width: 100px;
+			bottom: -20px;
+			height: 2px;
+		}
 	}
 	
 	.partnerWithProfessionalSection {
@@ -294,19 +312,28 @@
 		width: 200vw;
 		margin-left: -50vw;
 	}
+	.stepIntoSectionContainer {
+		margin-top: -50px;
+	}
+	.weDesignSecondaryHeading {
+		margin-bottom: 60px;
+	}
 	.partnerWithProfessionalContainer {
-		margin-top: -50vh;
+		margin-top: -60vh;
 	}
 	.whyChooseUsSection{
-		padding-top: 250px;
+		padding-top: 350px;
 	}
 	.whyChooseUsVideo {
 		&::after {
-			height: 150px;
+			height: 350px;
+		}
+		.masterHeadVideo {
+			height: 500px;
 		}
 	}
 	.whyChooseUsContentContainer {
-		padding: 80px 10px 0;
+		padding: 50px 10px 0;
 		margin-top: -20%;
 	}
 	.faqContainer {

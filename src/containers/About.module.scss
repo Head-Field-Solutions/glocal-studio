@@ -272,9 +272,11 @@
 }
 
 @media screen and (max-width: 899px) {
-	.masterHead{
-		padding-left: 1rem;
-        padding-right: 1rem;
+	.masterHead {
+		padding: 75vh 0 0;
+	}
+	.masterHeadText {
+		font-size: 16px;
 	}
 	.masterHeadInfoSection{
 		background: transparent;
@@ -283,27 +285,36 @@
 	.masterHeadVideo {
 		height: 100vh
 	}
+
+	.acturalVisualizationHeading {
+		margin-bottom: 40px;
+		&::after {
+			width: 100px;
+			bottom: -20px;
+			height: 2px;
+		}
+	}
 	
 	.astronautImage {
+		width: 100%;
 		margin-left: 0;
         margin-bottom: 100px;
-        margin-top: 150px;
+        margin-top: 100px;
 	}
 	.beyondInfoContent {
 		margin-top: 0;
 	}
 	.beyondSection{
-		background: url("../assets/images/about-us/beyond-section-bg-mobile.jpg") no-repeat 0 -100px;
-		padding: 0 1rem 350px;
+		background: url("../assets/images/about-us/beyond-section-bg-mobile.jpg") no-repeat 0 -60px;
+		padding: 0 0rem 350px;
         padding-top: 0;
         background-size: contain;
 	}
-	.visionMissionSection {
-		padding-left: 1rem;
-		padding-right: 1rem;
+	.missionVisionConten {
+		font-size: 18px;
 	}
 	.visionMissionStatement {
-		font-size: 16px;
+		font-size: 14px;
 	}
 	.missionVisionContent {
 		font-size: 20px;
@@ -315,27 +326,51 @@
 	.visionMissionContentSection {
 		margin-bottom: 70px;
 	}
+	.visionMissionCenterContent {
+		margin-bottom: 40px;
+	}
+	.listingResultSection {
+		margin-top: -150px;
+	}
 	.glassContainerWrapper {
 		padding: 52px 30px;
 	}
 	.glocalAdvantageSection {
-		background: url("../assets/images/about-us/advantage-section-bg-MOBILE.jpg") no-repeat 50% 45vh;
+		background: url("../assets/images/about-us/advantage-section-bg-MOBILE.jpg") no-repeat 50% 20%;
 		background-size: contain;
-		padding-top: 160px;
-		padding-left: 1rem;
-		padding-right: 1rem;
+		padding: 140px 0 140px;
 	}
 	.glocalPrespectiveText {
 		margin-bottom: 0;
 	}
+	.advantageIcon {
+		max-width: 100px;
+	}
 	.explorerSection {
-		padding-right: 1rem;
-        padding-left: 1rem;
         background: #fff;
         margin-top: -1px;
+		padding-top: 130px;
+	}
+	.teamSection{
+		margin: 40px 0 10px;
+	}
+	.advantageText {
+		font-size: 16px;
+	}
+	.linkedInIcon {
+		width: 35px;
+	}
+	.imageContainer {
+		border-radius: 20px;
+	}
+	.linkedInSmallIcon {
+		position: inherit;
+	}
+	.teamMemberPosition {
+		font-size: 16px;
 	}
 	.qualityMetricsContainer {
-		margin: 250px 0 0px;
+		margin: 150px 0 0px;
 	}
 	
 }

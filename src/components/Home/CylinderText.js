@@ -47,7 +47,7 @@ function CylinderText() {
 				start: `top ${isMobile ? '20%' : 'top'}`,
 				pin: wrapper.current,
 				scrub: 2,
-				animation: gsap.fromTo(textWrapper.current, { rotateX: -80 }, { rotateX: 270, ease: 'none' }),
+				animation: gsap.fromTo(textWrapper.current, { rotateX: -82 }, { rotateX: 270, ease: 'none' }),
 			});
 		});
 		return () => ctx.revert(); // <- cleanup!

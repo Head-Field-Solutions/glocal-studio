@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
 import * as styles from './MaskVideoSection.module.scss';
+import { useDevice } from '@/context/DeviceContext';
 
 const shadowColors = [
   "#00d4f3", // Orange
@@ -11,6 +12,7 @@ const shadowColors = [
 ];
 
 export default function SvgMaskDemo() {
+  const { isMobile } = useDevice();
   const container = useRef(null);
   
   const { scrollYProgress } = useScroll({
@@ -19,7 +21,8 @@ export default function SvgMaskDemo() {
   });
 
   // Mask size animation - grows to fill entire screen and reveal full video
-  const maskSize = useTransform(scrollYProgress, [0, 1], ["48vh", "420vw"]);
+  let maskWidth = isMobile ? ["60vh", "1000vw"] : ["48vh", "1000vw"];
+  const maskSize = useTransform(scrollYProgress, [0, 1], maskWidth);//60vh 1000vw
   
   // Transform animation after mask is revealed
   const yTransform = useTransform(scrollYProgress, [0.9, 1], ["0px", "100px"]);
