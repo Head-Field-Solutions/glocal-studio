@@ -15,7 +15,7 @@ function WhatWeDoBox(props) {
 		<Animate.FadeUp
 			element={Grid}
 			elementProps={{
-				size: 6,
+				size: {xs: 12, md: 6},
 				container: true,
 				spacing: 2,
 				alignItems: "flex-start"
@@ -44,24 +44,33 @@ function WhatWeDoBox(props) {
 				className={styles.whatWeDoBoxContentBox}
 			>
 				<Grid size={12} container spacing={2} alignItems="center">
-					<Grid size={1}>
+					<Grid size={{xs:1.5, md:1}} >
 						<StarGradiantIcon width="35px" height="39px" />
 					</Grid>
-					<Grid size={9}>
-						{title}
-					</Grid>
-					<Grid size={2} className={styles.textRight}>
+					<Grid
+						size={2} 
+						sx={{
+							display: { xs: "none", md: "block" }, // hide on mobile, show on tablet+
+							order: { xs: 0, md: 3 }
+						}}
+						className={styles.textRight}
+						
+					>
 						<div className={styles.button}>{id}.</div>
 					</Grid>
+					<Grid size={{xs: 10, md: 9}} >
+						{title}
+					</Grid>
+					
 				</Grid>
-				<Grid size={12} container spacing={2} className={styles.whatWeDoBoxHeadingSection}>
-					<Grid size={6}>
+				<Grid size={12} container spacing={2}  className={styles.whatWeDoBoxHeadingSection}>
+					<Grid size={{xs: 12, md: 6}}>
 						<Heading variant="secondary" className={styles.lightText}>{heading}</Heading>
 					</Grid>
 					<Animate.FadeUp
 						element={Grid}
 						elementProps={{
-							size: 6
+							size: {xs: 12, md: 6}
 						}}
 						className={styles.mediumBold}
 					>

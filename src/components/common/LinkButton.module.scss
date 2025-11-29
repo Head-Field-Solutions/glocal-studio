@@ -3,8 +3,11 @@
 	border-radius: 50px;
 	display: inline-block;
 	padding: 2px;
-	margin-right: 20px;
+	// margin-right: 20px;
 	position: relative;
+	&:not(:last-child){
+		margin-right: 20px;
+	}
 
 	&:hover {
 		background-image: linear-gradient(to left, #ff005b, #00d4f3);
@@ -12,19 +15,19 @@
 
 	&::before {
 		content: '';
-    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
-    position: absolute;
-    top: -2px;
-    left:-2px;
-    background-size: 400%;
-    z-index: 0;
-    filter: blur(5px);
-    width: calc(100% + 4px);
-    height: calc(100% + 4px);
-    animation: glowing 20s linear infinite;
-    opacity: 0;
-    transition: opacity .3s ease-in-out;
-    border-radius: 50px;
+		background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+		position: absolute;
+		top: -2px;
+		left:-2px;
+		background-size: 400%;
+		z-index: 0;
+		filter: blur(5px);
+		width: calc(100% + 4px);
+		height: calc(100% + 4px);
+		animation: glowing 20s linear infinite;
+		opacity: 0;
+		transition: opacity .3s ease-in-out;
+		border-radius: 50px;
 	}
 
 	&:hover:before {
@@ -70,7 +73,20 @@
 	}
 }
 
-@media screen and (max-width: 900px) {
+
+@media screen and (max-width: 768px) {
+	.buttonWrapper{
+		margin: 0 0 15px;
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+	.buttonWrapper:not(:last-child){
+		margin-right: 0;
+	}
+}
+
+@media screen and (max-width: 899px) {
 	.buttonWrapper:last-child{
 		margin-right: 0;
 	}

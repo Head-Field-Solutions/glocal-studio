@@ -85,7 +85,7 @@ function Menu() {
 
 	return (
 		<>
-			<Hamburger color="#f3f2ee" toggled={showMenu} toggle={setShowMenu} />
+			<Hamburger color="#fff" toggled={showMenu} toggle={setShowMenu} />
 
 			<MenuPortal>
 				<AnimatePresence mode="wait">

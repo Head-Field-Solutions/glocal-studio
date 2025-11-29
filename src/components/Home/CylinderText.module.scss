@@ -20,7 +20,7 @@
 }
 
 .cylinderTextItem {
-  font-size: clamp(3rem, 9vw, 7rem);
+  font-size: clamp(2.3rem, 9vw, 7rem);
   font-weight: 700;
   text-transform: uppercase;
   position: absolute;
@@ -29,4 +29,14 @@
   left: 50%;
   width: 100%;
   backface-visibility: hidden;
+}
+
+@media screen and (max-width: 899px) {
+  // .cylinderWrapper {
+  //   height: 50vh !important;
+  // }
+  // .cylinderTextWrapper{
+  //   height: 70%;
+  // }
+  
 }

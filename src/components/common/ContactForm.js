@@ -90,7 +90,7 @@ function ContactForm(props) {
 						)}
 					/>
 					<Grid container size={12} spacing={3}>
-						<Grid size={4}>
+						<Grid size={{xs: 12, md: 4}}>
 							<InputField
 								slotProps={{
 									inputLabel: {
@@ -108,7 +108,7 @@ function ContactForm(props) {
 								}}
 							/>
 						</Grid>
-						<Grid size={4}>
+						<Grid size={{xs: 12, md: 4}}>
 							<InputField
 								slotProps={{
 									inputLabel: {
@@ -130,7 +130,7 @@ function ContactForm(props) {
 								}}
 							/>
 						</Grid>
-						<Grid size={4}>
+						<Grid size={{xs: 12, md: 4}}>
 							<InputField
 								slotProps={{
 									inputLabel: {
@@ -180,10 +180,15 @@ function ContactForm(props) {
 								}}
 							/>
 						</Grid>
-						<Grid size={12} className={styles.submitWrapper}>
+						<Grid size={12}  className={styles.submitWrapper} 
+							sx={{
+								display: "flex",
+								justifyContent: { xs: "center", md: "flex-start" },
+							}}
+						>
 							<Button
 								type="submit"
-								fullWidth
+								// fullWidth
 								className={styles.submitButton}
 							>
 								{

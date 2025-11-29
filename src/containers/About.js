@@ -4,7 +4,7 @@ import { Container, Grid2 as Grid } from "@mui/material";
 import { useScroll, useTransform, motion } from "framer-motion";
 import Lottie from "lottie-react";
 import cx from "classnames";
-
+import { useDevice } from '@/context/DeviceContext';
 import { StarGradiantIcon } from "@/components/Icons";
 
 import {
@@ -21,6 +21,7 @@ import masterHeadVideo from "@/assets/videos/about-us-masterhead.mp4";
 import * as styles from "./About.module.scss";
 
 function About() {
+	const { isMobile } = useDevice();
 	const astronautImage = useRef(null);
 
 	const { scrollYProgress } = useScroll({
@@ -75,8 +76,8 @@ function About() {
 						<Animate.FadeUp
 							element={Grid}
 							elementProps={{
-								size: 8,
-								offset: 2,
+								size: {xs: 12, md: 8},
+								offset: {xs:0, md:2},
 							}}
 							className={cx(styles.masterHeadText, styles.textWhite)}
 						>
@@ -95,14 +96,9 @@ function About() {
 			<section className={styles.beyondSection}>
 				<Container maxWidth="xl">
 					<Grid size={12} container>
-						<Grid size={10} offset={1} container spacing={6}>
-							<Grid size={6}>
-								<Heading className={styles.textWhite}>Design.</Heading>
-								<Heading className={cx(styles.textWhite, styles.extraLightText)}>Beyond</Heading>
-								<Heading className={cx(styles.textWhite, styles.extraLightText)}>Imagination.</Heading>
-							</Grid>
-							<Grid size={6} container spacing={3} className={styles.beyondInfoContent}>
-								<Grid size={12} ref={astronautImage}>
+						<Grid size={{xs: 12, lg: 10}} offset={{xs: 0, lg: 1}} container spacing={6}>
+							{isMobile && 
+								<Grid size={12} ref={astronautImage} textAlign={"center"}>
 									<motion.img
 										src={require("../assets/images/about-us/astronaut.png")}
 										alt=""
@@ -112,6 +108,26 @@ function About() {
 										}}
 									/>
 								</Grid>
+							}
+							<Grid size={{xs: 12, md: 6}}>
+								<Heading className={styles.textWhite}>Design.</Heading>
+								<Heading className={cx(styles.textWhite, styles.extraLightText)}>Beyond</Heading>
+								<Heading className={cx(styles.textWhite, styles.extraLightText)}>Imagination.</Heading>
+							</Grid>
+							<Grid size={{xs: 12, md: 6}} container spacing={3} className={styles.beyondInfoContent}>
+								{!isMobile && 
+									<Grid size={12} ref={astronautImage}>
+										<motion.img
+											src={require("../assets/images/about-us/astronaut.png")}
+											alt=""
+											className={styles.astronautImage}
+											style={{
+												y: parallax,
+											}}
+										/>
+									</Grid>
+								}
+								
 								<Grid size={12}>
 									<Heading variant="secondary" className={cx(styles.textWhite, styles.lightText)}>
 										We don't just render- we venture into the unknown and deliver the extraordinary.
@@ -142,25 +158,26 @@ function About() {
 			</section>
 			<section className={styles.visionMissionSection}>
 				<Container maxWidth="xl">
-					<Grid size={12} container spacing={6} className={styles.visionMissionContentSection}>
-						<Grid size={6} container>
+					<Grid size={12} container spacing={{xs: 0, md: 6}} className={styles.visionMissionContentSection}>
+						<Grid size={{xs: 12, md: 6}} container mb={{xs: 4, md:0}}>
 							<Grid size={12} className={styles.missionVisionContainer}>
 								<Grid size={12} container spacing={2} alignItems="center">
-									<Grid size={6}>
+									<Grid size={{xs : 12, sm: 6}}>
 										<Heading className={styles.lightText}>Our</Heading>
 										<Heading className={styles.lightText}>Mission</Heading>
 									</Grid>
 									<Animate.FadeUp
 										element={Grid}
+										className={styles.missionVisionContent}
 										elementProps={{
-											size: 6
+											size: {xs:12, sm:6}
 										}}
 									>
 										Our mission is to make visualization a universal language - helping companies and creators translate complex ideas into visual clarity and emotional resonance.
 									</Animate.FadeUp>
 								</Grid>
 								<Grid size={12} container>
-									<Grid size={12} className={styles.starContentContainer}>
+									<Grid size={12} className={styles.starContentContainer} mt={{xs: 4, md:0}}>
 										<Animate.ScaleIn>
 											<StarGradiantIcon width="30px" height="33px" />
 										</Animate.ScaleIn>
@@ -171,24 +188,25 @@ function About() {
 								</Grid>
 							</Grid>
 						</Grid>
-						<Grid size={6} container>
+						<Grid size={{xs: 12, md: 6}} container>
 							<Grid size={12} className={styles.missionVisionContainer}>
 								<Grid size={12} container spacing={2} alignItems="center">
-									<Grid size={6}>
+									<Grid size={{xs : 12, sm: 6}}>
 										<Heading className={styles.lightText}>Our</Heading>
 										<Heading className={styles.lightText}>Vision</Heading>
 									</Grid>
 									<Animate.FadeUp
 										element={Grid}
+										className={styles.missionVisionContent}
 										elementProps={{
-											size: 6
+											size: {xs:12, sm:6}
 										}}
 									>
 										Our vision is to redefine how the world experiences visualization—by transforming imagination into structured, intelligent, and emotionally resonant visual storytelling.
 									</Animate.FadeUp>
 								</Grid>
 								<Grid size={12} container>
-									<Grid size={12} className={styles.starContentContainer}>
+									<Grid size={12} className={styles.starContentContainer}  mt={{xs: 4, md:0}}>
 										<Animate.ScaleIn>
 											<StarGradiantIcon width="30px" height="33px" />
 										</Animate.ScaleIn>
@@ -208,21 +226,21 @@ function About() {
 						<Animate.FadeUp
 							element={Grid}
 							elementProps={{
-								size: 8,
-								offset: 2,
+								size: {xs: 12, md: 8},
+								offset: {xs: 0, md: 2},
 							}}
 							className={styles.visionMissionCenterContent}
 						>
 							At Glocal Studio, our approach is simple yet powerful-we listen, understand, and deliver solutions tailored to your vision.
 						</Animate.FadeUp>
 					</Grid>
-					<Grid size={12} container className={styles.textCenter} spacing={4} alignItems="flex-start">
+					<Grid size={12} container className={styles.textCenter} spacing={{xs: 6, md: 4}} alignItems="flex-start">
 						<Animate.FadeUp
 							element={Grid}
 							elementProps={{
-								size: 3,
+								size: {xs: 12, sm: 6, md: 3},
 								container: true,
-								spacing: 3,
+								spacing: {xs: 0, sm: 3, md: 3},
 							}}
 							delay="0ms"
 						>
@@ -241,9 +259,9 @@ function About() {
 						<Animate.FadeUp
 							element={Grid}
 							elementProps={{
-								size: 3,
+								size: {xs: 12, sm: 6, md: 3},
 								container: true,
-								spacing: 3,
+								spacing: {xs: 0, sm: 3, md: 3},
 							}}
 							delay="100ms"
 						>
@@ -262,9 +280,9 @@ function About() {
 						<Animate.FadeUp
 							element={Grid}
 							elementProps={{
-								size: 3,
+								size: {xs: 12, sm: 6, md: 3},
 								container: true,
-								spacing: 3,
+								spacing: {xs: 0, sm: 3, md: 3},
 							}}
 							delay="200ms"
 						>
@@ -283,9 +301,9 @@ function About() {
 						<Animate.FadeUp
 							element={Grid}
 							elementProps={{
-								size: 3,
+								size: {xs: 12, sm: 6, md: 3},
 								container: true,
-								spacing: 3,
+								spacing: {xs: 0, sm: 3, md: 3},
 							}}
 							delay="300ms"
 						>
@@ -312,22 +330,26 @@ function About() {
 				<Container maxWidth="xl">
 					<Grid size={12} container spacing={3} className={styles.textCenter}>
 						<Grid size={12}>
-							<Heading className={cx(styles.textWhite, styles.extraLightText)}>The Glocal Studio</Heading>
+							<Heading className={cx(styles.textWhite, styles.extraLightText)}>The Glocal {isMobile && <br/>}Studio</Heading>
 							<Heading className={styles.textWhite}>Advantage</Heading>
 						</Grid>
 						<Animate.FadeUp
 							element={Grid}
 							elementProps={{
-								size: 8,
-								offset: 2,
+								size: {xs: 12, md: 8},
+								offset: {xs: 0, md: 2},
 							}}
 							className={cx(styles.advantageText, styles.textWhite, styles.glocalPrespectiveText)}
 						>
-							Our difference lies in discipline. Every project moves through a structured review by specialists - ensuring that each image is accurate, purposeful, and market-ready. With global insight and local sensitivity, we deliver clarity you can trust.
+							{isMobile ?
+								"With a global perspective and local precision, our work adapts seamlessly to diverse cultural and market needs."
+								:
+								"Our difference lies in discipline. Every project moves through a structured review by specialists - ensuring that each image is accurate, purposeful, and market-ready. With global insight and local sensitivity, we deliver clarity you can trust."
+							}
 						</Animate.FadeUp>
 					</Grid>
 					<Grid size={12} container spacing={4} alignItems="flex-start" className={styles.qualityMetricsContainer}>
-						<Grid size={6} container>
+						<Grid size={{xs: 12, md: 6}} container>
 							<Animate.FadeUp
 								element={Grid}
 								elementProps={{
@@ -340,7 +362,7 @@ function About() {
 								}}
 							>
 								<Grid size={12} container className={styles.glassContainerWrapper} spacing={4}>
-									<Grid size={6}>
+									<Grid size={{xs: 12, sm: 6}}>
 										<Heading variant="secondary" className={cx(styles.fontNormal, styles.textWhite)}>
 											Scalable & Reliable
 										</Heading>
@@ -348,7 +370,7 @@ function About() {
 									<Animate.FadeUp
 										element={Grid}
 										elementProps={{
-											size: 6,
+											size: {xs: 12, sm: 6},
 										}}
 										className={styles.textWhite}
 									>
@@ -399,7 +421,7 @@ function About() {
 								</Grid>
 							</Animate.FadeUp>
 						</Grid>
-						<Grid size={6} container>
+						<Grid size={{xs: 12, md: 6}} container>
 							<Animate.FadeUp
 								element={Grid}
 								elementProps={{
@@ -454,7 +476,7 @@ function About() {
 								}}
 							>
 								<Grid size={12} container className={styles.glassContainerWrapper} spacing={4}>
-									<Grid size={6}>
+									<Grid size={{xs: 12, sm: 6}}>
 										<Heading variant="secondary" className={cx(styles.fontNormal, styles.textWhite)}>
 											Partnership-Oriented
 										</Heading>
@@ -462,7 +484,7 @@ function About() {
 									<Animate.FadeUp
 										element={Grid}
 										elementProps={{
-											size: 6,
+											size: {xs: 12, sm: 6},
 										}}
 										className={styles.textWhite}
 									>
@@ -474,9 +496,12 @@ function About() {
 					</Grid>
 				</Container>
 			</section>
-			<section className={styles.curvedLoopSection}>
-				<CurvedLoop marqueeText="Not just a team-an expedition of thinkers, makers, and visionaries." />
-			</section>
+			{!isMobile && 
+				<section className={styles.curvedLoopSection}>
+					<CurvedLoop marqueeText="Not just a team-an expedition of thinkers, makers, and visionaries." />
+				</section>
+			}
+			
 			<section className={styles.explorerSection}>
 				<Container maxWidth="xl">
 					<Grid size={12} container spacing={3} className={styles.textCenter}>
@@ -487,8 +512,8 @@ function About() {
 						<Animate.FadeUp
 							element={Grid}
 							elementProps={{
-								size: 8,
-								offset: 2,
+								size: {xs: 12, md: 8},
+								offset: {xs: 0, md: 2},
 							}}
 							className={styles.advantageText}
 						>
@@ -496,14 +521,14 @@ function About() {
 						</Animate.FadeUp>
 					</Grid>
 					<Grid size={12} container spacing={6} alignItems="flex-start" className={styles.teamSection}>
-						<Grid size={6}>
+						<Grid size={{xs: 12, md: 6}}>
 							<img
 								src={require("../assets/images/about-us/vasu-dev-chawla.jpg")}
 								alt=""
 								className={styles.teamMainImage}
 							/>
 						</Grid>
-						<Grid size={6} container spacing={0}>
+						<Grid size={{xs: 12, md: 6}} container spacing={0}>
 							<Grid size={12}>
 								<Heading variant="secondary" direction="down">Vasu Dev Chawla</Heading>
 							</Grid>
@@ -550,7 +575,7 @@ function About() {
 						</Grid>
 					</Grid>
 					<Grid size={12} container spacing={4} alignItems="flex-start">
-						<Grid size={6} container spacing={3}>
+						<Grid size={{xs: 12, md: 6}} container spacing={3}>
 							<Animate.FadeUp
 								direction="right"
 								element={Grid}
@@ -583,7 +608,7 @@ function About() {
 									direction="right"
 									element={Grid}
 									elementProps={{
-										size: 5
+										size: {xs: 12, sm: 5}
 									}}
 								>
 									<div className={styles.teamMemberName}>Kunal Jaggi</div>
@@ -593,14 +618,14 @@ function About() {
 									direction="left"
 									element={Grid}
 									elementProps={{
-										size: 7
+										size: {xs: 12, sm: 7}
 									}}
 								>
 									Kunal drives Glocal Studio's creative vision with over two decades of design expertise. He combines strategy, technology, and artistry to deliver visuals that inspire and impress globally.
 								</Animate.FadeUp>
 							</Grid>
 						</Grid>
-						<Grid size={6} container spacing={3}>
+						<Grid size={{xs: 12, md: 6}} container spacing={3}>
 							<Animate.FadeUp
 								direction="left"
 								element={Grid}
@@ -633,7 +658,7 @@ function About() {
 									direction="right"
 									element={Grid}
 									elementProps={{
-										size: 5
+										size: {xs: 12, sm: 5}
 									}}
 								>
 									<div className={styles.teamMemberName}>Srishti Khatri</div>
@@ -643,7 +668,7 @@ function About() {
 									direction="left"
 									element={Grid}
 									elementProps={{
-										size: 7
+										size: {xs: 12, sm: 7}
 									}}
 								>
 									Kunal drives Glocal Studio's creative vision with over two decades of design expertise. He combines strategy, technology, and artistry to deliver visuals that inspire and impress globally.

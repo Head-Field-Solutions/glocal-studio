@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { Helmet } from "react-helmet-async";
-import { Container, Grid2 as Grid } from "@mui/material";
+import { Container, Grid2 as Grid, Typography } from "@mui/material";
 import { useScroll } from "framer-motion";
 import cx from "classnames";
 
@@ -12,6 +12,8 @@ import ServiceCard from "@/components/Home/ServiceCard";
 import ScrollCarousel from "@/components/Home/ScrollCarousel";
 import CylinderText from "@/components/Home/CylinderText";
 
+import { useDevice } from '@/context/DeviceContext';
+
 import { Heading, LinkButton, Animate } from "@/components/common";
 
 import { routes } from "@/utils/routesPath";
@@ -21,7 +23,10 @@ import fullSupportImage from "@/assets/images/fullsuite-image.webp";
 
 import * as styles from "./Home.module.scss";
 
+
 function Home() {
+	const { isMobile } = useDevice();
+	
 	const servicesList = [
 		{
 			heading: <>Architectural <br />Visualization</>,
@@ -88,14 +93,23 @@ function Home() {
 					<source src={masterHeadVideo} />
 				</video>
 			</section>
+			
 			<CylinderText />
+			
 			<MaskVideoSection />
+			
 			<section className={styles.fullSuiteSolutionSection}>
 				<Container maxWidth="xl">
 					<Grid size={12}>
-						<Heading className={styles.fullSuiteMainHeading} direction="down">
-							Full-Suite<br />3D Rendering Solutions
-						</Heading>
+						{isMobile ?
+							<Heading className={styles.fullSuiteMainHeading}>
+								Full-Suite <span>3D Rendering</span> Solutions
+							</Heading>
+						:
+							<Heading className={styles.fullSuiteMainHeading}>
+								Full-Suite<br />3D Rendering Solutions
+							</Heading>
+						}
 					</Grid>
 					<Grid size={12}>
 						<img src={fullSupportImage} alt="" className={styles.fullSupportImage} />
@@ -125,8 +139,9 @@ function Home() {
 							without paying the premium.
 						</Heading>
 					</Grid>
-					<Grid size={12} justifySelf="center">
-						<LinkButton style={{ "--button-bg": "#f2f0ea" }} direction="right">GET A FREE QUOTE</LinkButton>
+					<Grid size={12} justifySelf="center" className={styles.fullSuiteBtnGroup} sx={{ textAlign: { xs: "center", md: "left" } }}>
+						<LinkButton style={{ "--button-bg": "#f2f0ea" }}>GET A FREE QUOTE</LinkButton>
+						{/* <LinkButton style={{ "--button-bg": "#f2f0ea" }}>BROWSE PORTFOLIO</LinkButton> */}
 					</Grid>
 				</Container>
 			</section>
@@ -140,16 +155,19 @@ function Home() {
 					<Grid size={12}>
 						<Heading variant="secondary" className={styles.portfolioSecondaryHeading}>Believe the Budget.</Heading>
 					</Grid>
+					{/* <Grid size={12} container justifyContent={"center"} className={`${styles.textCenter} ${styles.seeStunningText}`}>
+						<Grid size={{xs: 12, md: 6}}> */}
 					<Animate.FadeUp
 						element={Grid}
 						elementProps={{
 							size: 12,
 							container: true,
+							justifyContent:"center"
 						}}
-						className={styles.textCenter}
+						className={`${styles.textCenter} ${styles.seeStunningText}`}
 						direction="up"
 					>
-						<Grid size={6} offset={3}>
+						<Grid size={{xs: 12, md: 6}} offset={{xs:0, md:3}}>
 							Explore some of our favorite works-from photorealistic home interiors to cinematic exterior walkthroughs. You'll be amazed what we deliver for the price.
 						</Grid>
 					</Animate.FadeUp>
@@ -164,7 +182,9 @@ function Home() {
 					<Grid size={12}>
 						<Heading variant="secondary" className={styles.whyBrandHeading} direction="down">Why Brands Love Us?</Heading>
 					</Grid>
-					<Grid size={12}>
+					<Grid size={12} sx={{
+							mt: { xs: 3, md: 0 },
+						}}>
 						<Heading className={styles.whyBrandHeading}>
 							Expert Reviewed.<br/>
 							Technically Perfect.
@@ -179,10 +199,10 @@ function Home() {
 							container: true,
 						}}
 					>
-						<Grid size={8} offset={2} className={styles.whyBrandSmallText}>
+						<Grid size={{xs: 12, md: 8}} offset={{xs: 0, md: 2}} className={styles.whyBrandSmallText}>
 							At Glocal Studio, every render passes through a meticulous in-house review by architects, designers, and product specialists, ensuring accuracy, proportion, and realism at every stage. From light balance to material fidelity, nothing leaves our studio without expert validation. The result? Consistent, production-ready visuals that meet the highest global standards, <strong>every single time.</strong>
 						</Grid>
-						<Grid size={8} offset={2} className={styles.whyBrandSmallAnotherText}>
+						<Grid size={{xs: 12, md:8}} offset={{xs:0, md:2}} className={styles.whyBrandSmallAnotherText}>
 							Because great visuals aren't guessed, they're created.<br/>
 							Every pixel checked. Every detail verified. Every time.
 						</Grid>
@@ -193,7 +213,7 @@ function Home() {
 			<section className={styles.letUsRenderHeading}>
 				<Container maxWidth="xl">
 					<Grid size={12} container justifyContent="center">
-						<Grid size={8} className={styles.letUsRenderText}>
+						<Grid size={{md: 12, lg: 8}} className={styles.letUsRenderText}>
 							Our services cover everything from architectural visualization and 3D modeling to product renders, animations, virtual tours, and technical documentation—giving you a complete creative and technical partner under one roof.
 						</Grid>
 					</Grid>

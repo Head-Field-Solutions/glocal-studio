@@ -2,6 +2,7 @@ import React from "react";
 import { Helmet } from 'react-helmet-async';
 import { Container, Grid2 as Grid } from "@mui/material";
 import cx from "classnames";
+import { useDevice } from '@/context/DeviceContext';
 
 import { StarGradiantIcon } from "@/components/Icons";
 
@@ -17,6 +18,8 @@ import masterHeadVideo from "@/assets/videos/contact-us-masterhead.mp4";
 import * as styles from "./ContactUs.module.scss";
 
 function ContactUs() {
+	const { isMobile } = useDevice();
+
 	return (
 		<>
 			<Helmet>
@@ -62,8 +65,9 @@ function ContactUs() {
 						<Animate.FadeUp
 							element={Grid}
 							elementProps={{
-								size: 8,
-								offset: 2,
+								px: {xs: 2, md: 0},
+								size: {xs: 12, md: 8},
+								offset: {xs: 0, md: 2},
 							}}
 							className={cx(styles.masterHeadText, styles.textWhite)}
 						>
@@ -90,7 +94,9 @@ function ContactUs() {
 					/>
 				</Container>
 			</section>
-			<section className={styles.dividerSection} />
+			{!isMobile &&
+				<section className={styles.dividerSection} />
+			}
 		</>
 	);
 };

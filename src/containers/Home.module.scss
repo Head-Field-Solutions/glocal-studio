@@ -5,7 +5,7 @@
 	overflow: hidden;
 
 	&::before {
-		background: linear-gradient(to bottom,rgba(6, 0, 16, 0.2) 0%, rgba(6, 0, 16, 1) 100%);;
+		background: linear-gradient(to bottom,rgba(6, 0, 16, 0.2) 0%, rgba(6, 0, 16, 1) 100%);
 		content: '';
 		width: 100%;
 		height: 100%;
@@ -112,8 +112,7 @@
 }
 
 .whyBrandSmallText {
-	margin-top: 48px;
-	margin-bottom: 28px;
+	margin: 48px 0 28px 0;
 	text-align: center;
 }
 
@@ -143,4 +142,55 @@
 
 .letUsRenderHeadingLast {
 	padding: 52px 0 200px;
+}
+@media screen and (max-width: 768px) {
+	.whyBrandSmallAnotherText{
+		margin-bottom: 100px;
+	}
+}
+
+@media screen and (max-width: 899px) {
+	.videoSectionContent {
+		margin-top: 70px;
+	}
+	.fullSuiteMainHeading {
+		font-weight: 300;
+		span{
+			display: block;
+			font-weight: 600;
+		}
+	}
+	.seeStunningText {
+		color: #b7b4ab;
+    	font-size: 24px;
+	}
+	// .letUsRenderHeading {
+	// 	padding: 100px 0;
+	// }
+	// .letUsRenderHeadingLast {
+	// 	padding: 52px 0 100px;
+	// }
+	// .portfolioSection,
+	// .whyBrandLoveSection,
+	// .footerInfoPanel{
+	// 	padding-top: 100px;
+	// }
+	.fullSuiteSolutionSection,
+	.whyBrandLoveSection,
+	.letUsRenderHeading {
+		padding: 100px 0;
+	}
+	.portfolioSection{
+		padding: 100px 0 0;
+	}
+	.etUsRenderHeadingLast {
+		padding-bottom: 100px;
+	}
+	.fullSupportItemsList {
+		margin-top: 0;
+	}
+	.fullSuiteBtnGroup > div {
+		margin-left: 10px !important;
+		margin-right: 10px !important;
+	}
 }
