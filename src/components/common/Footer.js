@@ -42,7 +42,7 @@ function Footer() {
 				{isMobile ?
 					<>
 						<Container maxWidth="xl" className={styles.formContainer}>
-							<Grid size={12} container className={styles.footerInfoContent}>
+							<Grid size={12} container>
 								<Grid size={{xs: 12, md: 6}} offset={{xs: 0, md: 6}}>
 									<Grid size={12}>
 										<div className={styles.mobileGetInTouch}>GET IN TOUCH WITH US</div>
@@ -137,7 +137,7 @@ function Footer() {
 			</div>
 
 			<Container maxWidth="xl" className={styles.uspSection}>
-				<Grid size={12} spacing={4} container className={styles.uspContainer}>
+				<Grid size={12} spacing={4} container>
 					<Animate.FadeUp
 						element={Grid}
 						elementProps={{
