@@ -12,9 +12,9 @@ function MasterHeadVideo() {
   return (
 		<div className={styles.content}>
 			<div className={styles.headings}>
-				<Heading className={styles.mainHeading}>
+				<Heading className={`${styles.mainHeading} ${styles.masterHeadingMobile}`}>
 					<TextType 
-						text={["THE WORLD's LEADING"]}
+						text={["THE WORLD'S LEADING"]}
 						typingSpeed={100}
 						pauseDuration={1500}
 						showCursor

@@ -147,7 +147,7 @@ function Home() {
 			</section>
 			<section className={styles.portfolioSection}>
 				<Container maxWidth="xl">
-					<Grid size={12}>
+					<Grid size={12} mb={{xs: 2, md: 0}}>
 						<Heading className={styles.portfolioHeading} direction="down">
 							See the Stunning. 
 						</Heading>
