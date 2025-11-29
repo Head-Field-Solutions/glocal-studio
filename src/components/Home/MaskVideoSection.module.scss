@@ -52,14 +52,14 @@
   svg {
     height: 40vh;
 
-    @media (min-width: 899px) {
+    @media (min-width: 900px) {
       height: 90vh;
     }
   }
 }
 
 @media (max-width: 899px) {
-  .container {
-      height: 600vh ;
-    }
+  // .container {
+  //     height: 450vh;
+  //   }
 }

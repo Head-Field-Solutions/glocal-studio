@@ -29,9 +29,14 @@ function FAQContainer(props) {
 						<Grid size={12} className={styles.count}>
 							{
 								index === activeIndex ? (
-									<ColorfulText>0{item.id}.</ColorfulText>
+									<ColorfulText className={styles.colorfulTextFaq}>0{item.id}.</ColorfulText>
 								) : (
-									<>0{item.id}.</>
+									isMobile ?
+										<ColorfulText className={styles.colorfulTextFaq}>0{item.id}.</ColorfulText>
+										:
+										<>0{item.id}.</>
+									
+									
 								)
 							}
 						</Grid>

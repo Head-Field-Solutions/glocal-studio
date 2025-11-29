@@ -48,7 +48,7 @@ function About() {
 						size={12}
 						container
 						className={cx(styles.masterHeadInfoSection, styles.textCenter)}
-						spacing={4}
+						spacing={{xs: 1, md: 4}}
 					>
 						<Animate.ScaleIn
 							element={Grid}
@@ -69,7 +69,7 @@ function About() {
 						>
 							ABOUT GLOCAL STUDIO
 						</Animate.FadeUp>
-						<Grid size={12}>
+						<Grid size={12} mb={{xs:2, md:0}}>
 							<Heading className={cx(styles.masterHeadingHeading, styles.extraLightText)}>From Earthly Plans to</Heading>
 							<Heading className={styles.masterHeadingHeading}>Cosmic Visuals</Heading>
 						</Grid>
@@ -78,6 +78,7 @@ function About() {
 							elementProps={{
 								size: {xs: 12, md: 8},
 								offset: {xs:0, md:2},
+								 mb:{xs:2, md:0}
 							}}
 							className={cx(styles.masterHeadText, styles.textWhite)}
 						>
@@ -218,7 +219,7 @@ function About() {
 							</Grid>
 						</Grid>
 					</Grid>
-					<Grid size={12} container className={styles.textCenter}>
+					<Grid size={12} container className={`${styles.textCenter} ${styles.listingResultSection}`}>
 						<Grid size={12}>
 							<Heading className={styles.extraLightText}>From Listening to</Heading>
 							<Heading>Lasting Results</Heading>
@@ -234,7 +235,7 @@ function About() {
 							At Glocal Studio, our approach is simple yet powerful-we listen, understand, and deliver solutions tailored to your vision.
 						</Animate.FadeUp>
 					</Grid>
-					<Grid size={12} container className={styles.textCenter} spacing={{xs: 6, md: 4}} alignItems="flex-start">
+					<Grid size={12} container className={styles.textCenter} spacing={4} alignItems="flex-start">
 						<Animate.FadeUp
 							element={Grid}
 							elementProps={{
@@ -251,7 +252,7 @@ function About() {
 									className={styles.visionMisionIcon}
 								/>
 							</Grid>
-							<Grid size={12} className={styles.visionMissionBoxHeading}>Client-Centric</Grid>
+							<Grid size={12} mb={{xs: 2, md:0}} className={styles.visionMissionBoxHeading}>Client-Centric</Grid>
 							<Grid size={12}>
 								We don't just take briefs-we listen, question, and understand your goals to deliver solutions tailored exactly to your vision.
 							</Grid>
@@ -272,7 +273,7 @@ function About() {
 									className={styles.visionMisionIcon}
 								/>
 							</Grid>
-							<Grid size={12} className={styles.visionMissionBoxHeading}>End-to-End Clarity</Grid>
+							<Grid size={12} mb={{xs: 2, md:0}} className={styles.visionMissionBoxHeading}>End-to-End Clarity</Grid>
 							<Grid size={12}>
 								From early sketches and mockups to photorealistic renders and execution-ready drawings, we ensure seamless clarity throughout.
 							</Grid>
@@ -293,7 +294,7 @@ function About() {
 									className={styles.visionMisionIcon}
 								/>
 							</Grid>
-							<Grid size={12} className={styles.visionMissionBoxHeading}>Technical Depth</Grid>
+							<Grid size={12} mb={{xs: 2, md:0}} className={styles.visionMissionBoxHeading}>Technical Depth</Grid>
 							<Grid size={12}>
 								Each render undergoes expert review by architects, interior designers, and product specialists-guaranteeing precision, design integrity, and refined visual quality.
 							</Grid>
@@ -314,7 +315,7 @@ function About() {
 									className={styles.visionMisionIcon}
 								/>
 							</Grid>
-							<Grid size={12} className={styles.visionMissionBoxHeading}>Collaborative</Grid>
+							<Grid size={12} mb={{xs: 2, md:0}} className={styles.visionMissionBoxHeading}>Collaborative</Grid>
 							<Grid size={12}>
 								We integrate smoothly with designers, contractors, and vendors, creating a streamlined process guaranteeing cohesive outcomes.
 							</Grid>
@@ -361,7 +362,7 @@ function About() {
 									background: "rgba(23, 32, 60, 0.7)"
 								}}
 							>
-								<Grid size={12} container className={styles.glassContainerWrapper} spacing={4}>
+								<Grid size={12} container className={styles.glassContainerWrapper} spacing={{xs: 2, md: 4}}>
 									<Grid size={{xs: 12, sm: 6}}>
 										<Heading variant="secondary" className={cx(styles.fontNormal, styles.textWhite)}>
 											Scalable & Reliable
@@ -390,8 +391,8 @@ function About() {
 									background: "rgba(242, 240, 234, 0.7)"
 								}}
 							>
-								<Grid size={12} container className={styles.glassContainerWrapper} spacing={5} alignItems="flex-end">
-									<Grid size={9} container spacing={3}>
+								<Grid size={12} container className={styles.glassContainerWrapper} spacing={{xs: 0, sm: 5}} alignItems="flex-end">
+									<Grid size={{xs: 12, sm: 9}} sx={{ order: { xs: 2, sm: 0 } }} container spacing={{xs: 2, md:3}}>
 										<Grid size={12}>
 											<Heading variant="secondary" className={styles.fontNormal}>
 												Idea Meets Visualization
@@ -409,7 +410,8 @@ function About() {
 									<Animate.ScaleIn
 										element={Grid}
 										elementProps={{
-											size: 3,
+											size: {xs: 12, sm: 3},
+											// sx:{display: { xs: "none", sm: "flex" }}
 										}}
 									>
 										<Lottie
@@ -425,7 +427,8 @@ function About() {
 							<Animate.FadeUp
 								element={Grid}
 								elementProps={{
-									size: 12
+									size: 12,
+									sx:{ order: { xs: 4, md: 3 } }
 								}}
 								className={styles.glassContainer}
 								direction="left"
@@ -434,8 +437,8 @@ function About() {
 									background: "rgba(242, 240, 234, 0.7)"
 								}}
 							>
-								<Grid size={12} container className={styles.glassContainerWrapper} spacing={5} alignItems="flex-end">
-									<Grid size={9} container spacing={3}>
+								<Grid size={12} container className={styles.glassContainerWrapper} spacing={{xs: 0, sm: 5}} alignItems="flex-end">
+									<Grid size={{xs: 12, sm: 9}} sx={{ order: { xs: 2, sm: 0 } }} container spacing={{xs: 2, md:3}}>
 										<Grid size={12}>
 											<Heading variant="secondary" className={styles.fontNormal}>
 												Global Perspective, Local Precision
@@ -453,7 +456,8 @@ function About() {
 									<Animate.ScaleIn
 										element={Grid}
 										elementProps={{
-											size: 3,
+											size: {xs: 12, sm: 3},
+											// sx:{display: { xs: "none", sm: "flex" }}
 										}}
 									>
 										<Lottie
@@ -475,7 +479,7 @@ function About() {
 									background: "rgba(23, 32, 60, 0.7)"
 								}}
 							>
-								<Grid size={12} container className={styles.glassContainerWrapper} spacing={4}>
+								<Grid size={12} container className={styles.glassContainerWrapper} spacing={{xs: 2, md: 4}}>
 									<Grid size={{xs: 12, sm: 6}}>
 										<Heading variant="secondary" className={cx(styles.fontNormal, styles.textWhite)}>
 											Partnership-Oriented
@@ -520,7 +524,7 @@ function About() {
 							Every project we deliver is shaped by a multidisciplinary team of artists, designers and visualization experts-driven by precision, collaboration, and a shared pursuit of excellence.
 						</Animate.FadeUp>
 					</Grid>
-					<Grid size={12} container spacing={6} alignItems="flex-start" className={styles.teamSection}>
+					<Grid size={12} container spacing={{xs: 3, md: 6}} alignItems="flex-start" className={styles.teamSection}>
 						<Grid size={{xs: 12, md: 6}}>
 							<img
 								src={require("../assets/images/about-us/vasu-dev-chawla.jpg")}
@@ -529,8 +533,26 @@ function About() {
 							/>
 						</Grid>
 						<Grid size={{xs: 12, md: 6}} container spacing={0}>
-							<Grid size={12}>
+							<Grid size={12} container alignItems="top" justifyContent="space-between" spacing={{xs: 2, md:0}}>
 								<Heading variant="secondary" direction="down">Vasu Dev Chawla</Heading>
+								{isMobile &&
+									<Animate.ScaleIn style={{
+										display: "inline-block"
+									}}>
+										<a
+											href="https://www.linkedin.com/in/vasu-dev-chawla-b655b368/"
+											target="_blank"
+											rel="nofollow noreferrer"
+											label="Srishti Khatri"
+										>
+											<img
+												src={require("../assets/images/about-us/linkedin-icon.png")}
+												alt=""
+												className={styles.linkedInIcon}
+											/>
+										</a>
+									</Animate.ScaleIn>
+								}
 							</Grid>
 							<Animate.FadeUp
 								element={Grid}
@@ -554,27 +576,29 @@ function About() {
 								<br/>
 								Passionate about bridging creativity with practicality, he works closely with both design teams and clients, making Glocal Studio a trusted partner for architects, developers, and homeowners alike.
 							</Animate.FadeUp>
-							<Grid size={12}>
-								<Animate.ScaleIn style={{
-									display: "inline-block"
-								}}>
-									<a
-										href="https://www.linkedin.com/in/vasu-dev-chawla-b655b368/"
-										target="_blank"
-										rel="nofollow noreferrer"
-										label="Srishti Khatri"
-									>
-										<img
-											src={require("../assets/images/about-us/linkedin-icon.png")}
-											alt=""
-											className={styles.linkedInIcon}
-										/>
-									</a>
-								</Animate.ScaleIn>
-							</Grid>
+							{!isMobile &&
+								<Grid size={12}>
+									<Animate.ScaleIn style={{
+										display: "inline-block"
+									}}>
+										<a
+											href="https://www.linkedin.com/in/vasu-dev-chawla-b655b368/"
+											target="_blank"
+											rel="nofollow noreferrer"
+											label="Srishti Khatri"
+										>
+											<img
+												src={require("../assets/images/about-us/linkedin-icon.png")}
+												alt=""
+												className={styles.linkedInIcon}
+											/>
+										</a>
+									</Animate.ScaleIn>
+								</Grid>
+							}
 						</Grid>
 					</Grid>
-					<Grid size={12} container spacing={4} alignItems="flex-start">
+					<Grid size={12} container spacing={{xs: 6, md: 4}} alignItems="flex-start">
 						<Grid size={{xs: 12, md: 6}} container spacing={3}>
 							<Animate.FadeUp
 								direction="right"
@@ -589,18 +613,20 @@ function About() {
 										alt=""
 										className={styles.teamImage}
 									/>
-									<a
-										href="https://www.linkedin.com/in/kunal-jaggi-0b5a182/"
-										target="_blank"
-										rel="nofollow noreferrer"
-										label="Srishti Khatri"
-										className={styles.linkedInSmallIcon}
-									>
-										<img
-											src={require("../assets/images/about-us/linkedin-icon-white.png")}
-											alt=""
-										/>
-									</a>
+									{!isMobile &&
+										<a
+											href="https://www.linkedin.com/in/kunal-jaggi-0b5a182/"
+											target="_blank"
+											rel="nofollow noreferrer"
+											label="Srishti Khatri"
+											className={styles.linkedInSmallIcon}
+										>
+											<img
+												src={require("../assets/images/about-us/linkedin-icon-white.png")}
+												alt=""
+											/>
+										</a>
+									}
 								</div>
 							</Animate.FadeUp>
 							<Grid size={12} container>
@@ -611,7 +637,23 @@ function About() {
 										size: {xs: 12, sm: 5}
 									}}
 								>
-									<div className={styles.teamMemberName}>Kunal Jaggi</div>
+									<Grid size={12} container alignItems="top" justifyContent="space-between" spacing={{xs: 2, md:0}}>
+										<div className={styles.teamMemberName}>Kunal Jaggi</div>
+										{isMobile &&
+											<a
+												href="https://www.linkedin.com/in/kunal-jaggi-0b5a182/"
+												target="_blank"
+												rel="nofollow noreferrer"
+												label="Srishti Khatri"
+												className={styles.linkedInSmallIcon}
+											>
+												<img
+													src={require("../assets/images/about-us/linkedin-icon.png")}
+													alt=""
+												/>
+											</a>
+										}		
+									</Grid>
 									<div className={styles.teamMemberPosition}>Founder & Managing Director</div>
 								</Animate.FadeUp>
 								<Animate.FadeUp
@@ -639,18 +681,20 @@ function About() {
 										alt=""
 										className={styles.teamImage}
 									/>
-									<a
-										href="https://www.linkedin.com/in/srishtikhatri/"
-										target="_blank"
-										rel="nofollow noreferrer"
-										label="Srishti Khatri"
-										className={styles.linkedInSmallIcon}
-									>
-										<img
-											src={require("../assets/images/about-us/linkedin-icon-white.png")}
-											alt=""
-										/>
-									</a>
+									{!isMobile &&
+										<a
+											href="https://www.linkedin.com/in/srishtikhatri/"
+											target="_blank"
+											rel="nofollow noreferrer"
+											label="Srishti Khatri"
+											className={styles.linkedInSmallIcon}
+										>
+											<img
+												src={require("../assets/images/about-us/linkedin-icon-white.png")}
+												alt=""
+											/>
+										</a>
+									}
 								</div>
 							</Animate.FadeUp>
 							<Grid size={12} container>
@@ -661,7 +705,24 @@ function About() {
 										size: {xs: 12, sm: 5}
 									}}
 								>
-									<div className={styles.teamMemberName}>Srishti Khatri</div>
+									<Grid size={12} container alignItems="top" justifyContent="space-between" spacing={{xs: 2, md:0}}>
+										<div className={styles.teamMemberName}>Srishti Khatri</div>
+										{isMobile &&
+											<a
+												href="https://www.linkedin.com/in/srishtikhatri/"
+												target="_blank"
+												rel="nofollow noreferrer"
+												label="Srishti Khatri"
+												className={styles.linkedInSmallIcon}
+											>
+												<img
+													src={require("../assets/images/about-us/linkedin-icon.png")}
+													alt=""
+												/>
+											</a>
+										}
+
+									</Grid>
 									<div className={styles.teamMemberPosition}>Business Head</div>
 								</Animate.FadeUp>
 								<Animate.FadeUp

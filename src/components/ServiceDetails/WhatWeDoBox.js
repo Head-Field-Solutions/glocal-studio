@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid2 as Grid } from "@mui/material";
+import { Grid2 as Grid, Box } from "@mui/material";
 import cx from "classnames";
 
 import { StarGradiantIcon } from "@/components/Icons";
@@ -43,27 +43,31 @@ function WhatWeDoBox(props) {
 				container
 				className={styles.whatWeDoBoxContentBox}
 			>
-				<Grid size={12} container spacing={2} alignItems="center">
-					<Grid size={{xs:1.5, md:1}} >
+				<Grid size={12} container spacing={2} className={styles.titleBox} alignItems="top">
+					{/* <Grid size={{xs:1.5, md:1}} >
 						<StarGradiantIcon width="35px" height="39px" />
+					</Grid> */}
+					<Grid size={{xs: 12, md: 10}} >
+						<Box sx={{ display: 'flex', gap: 2 }}>
+							<StarGradiantIcon width="35px" height="39px" />
+							{title}
+						</Box>
 					</Grid>
+
 					<Grid
 						size={2} 
 						sx={{
 							display: { xs: "none", md: "block" }, // hide on mobile, show on tablet+
-							order: { xs: 0, md: 3 }
+							// order: { xs: 0, md: 3 }
 						}}
 						className={styles.textRight}
 						
 					>
 						<div className={styles.button}>{id}.</div>
 					</Grid>
-					<Grid size={{xs: 10, md: 9}} >
-						{title}
-					</Grid>
 					
 				</Grid>
-				<Grid size={12} container spacing={2}  className={styles.whatWeDoBoxHeadingSection}>
+				<Grid size={12} container spacing={2} className={styles.whatWeDoBoxHeadingSection}>
 					<Grid size={{xs: 12, md: 6}}>
 						<Heading variant="secondary" className={styles.lightText}>{heading}</Heading>
 					</Grid>

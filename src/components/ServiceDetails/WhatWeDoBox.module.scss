@@ -113,16 +113,32 @@
 			padding: 8px;
 		}
 		&.floting {
-			margin-bottom: 132px;
+			margin-bottom: 80px;
 			height: auto;
-
+			&::before {
+				display: none;
+			}
+			&::after {
+				height: 55%;
+			}
 			&:nth-last-child(2) {
 				margin-bottom: 132px;
 			}
 		}
 	}
+	.titleBox {
+		font-size: 12px;
+		svg {
+			width: 50px;
+		}
+	}
+	.whatWeDoBoxHeadingSection {
+		margin-top: 0;
+		margin-bottom: 50px;
+	}
 	.whatWeDoItemImage {
-		margin-top: -130px;
+		margin-top: -120px;
+        bottom: -120px;
 	}
 	
 }
