@@ -11,7 +11,6 @@ module.exports = {
   externals: [nodeExternals({
     allowlist: [
 			'colorette',
-			'date-fns',
 			'decode-uri-component',
 			'es-module-lexer',
 			'eslint-scope',
@@ -28,7 +27,6 @@ module.exports = {
 			'react-use-measure',
 			'split-on-first',
 			'stylis',
-			'swiper',
 			'synckit',
 			'terser',
 			'ts-api-utils'

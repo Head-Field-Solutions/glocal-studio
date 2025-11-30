@@ -68,22 +68,6 @@ export default (req, res, initialData = {}) => {
 				<link rel="preconnect" href="https://cdnjs.cloudflare.com" />
 				<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 				<link rel="icon" type="image/png" href="/assets/favicon.png">
-				<link
-					rel="stylesheet"
-					type="text/css"
-					charset="UTF-8"
-					href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
-				/>
-				<link
-					rel="stylesheet"
-					type="text/css"
-					href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
-				/>
-				<link
-					rel="stylesheet"
-					type="text/css"
-					href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-				/>
 				${helmet.title.toString()}
 				<script>window.__INITIAL_DATA__ = ${JSON.stringify(initialData)}</script>
 				${extractor.getLinkTags()}

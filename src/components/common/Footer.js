@@ -15,17 +15,17 @@ import fbIcon from "@/assets/images/fb-icon.png";
 import instagramIcon from "@/assets/images/instagram-icon.png";
 import linkedinIcon from "@/assets/images/linkedin-icon.png";
 
+import { useDevice } from '@/context/DeviceContext';
+
 import GlassContainer from './GlassContainer';
 import Heading from "./Heading";
 import ContactForm from "./ContactForm";
 import ScrollableMotionText from "./ScrollableMotionText";
 import ColorfulText from "./ColorfulText";
 import Animate from "./Animate";
-
-import { LinkButton } from "@/components/common";
+import LinkButton from "./LinkButton";
 
 import * as styles from "./Footer.module.scss";
-import { useDevice } from '@/context/DeviceContext';
 
 function Footer() {
 	const { isMobile } = useDevice();
@@ -62,7 +62,7 @@ function Footer() {
 						<div className={styles.scrollableContainer} ref={scrollabelContainerRef}>
 							<ScrollableMotionText
 								direction="right"
-								left="-40%"
+								left="50%"
 								progress={scrollYProgress}
 							>
 								<div className={styles.scrollabelText}>Spaces that feel Alive / Designs that inspire</div>
@@ -114,7 +114,7 @@ function Footer() {
 						<div className={styles.scrollableContainer} ref={scrollabelContainerRef}>
 							<ScrollableMotionText
 								direction="right"
-								left="-19%"
+								left="0"
 								progress={scrollYProgress}
 							>
 								<div className={styles.scrollabelText}>Spaces that feel Alive / Designs that inspire</div>
@@ -162,7 +162,7 @@ function Footer() {
 							</Grid>
 						</Grid>
 						<Grid size={12}>
-							Got a vision? Let's sketch it together-no obligations.
+							Got a vision? Let&apos;s sketch it together-no obligations.
 						</Grid>
 					</Animate.FadeUp>
 					<Animate.FadeUp
@@ -206,7 +206,7 @@ function Footer() {
 					>
 						<Grid size={12} spacing={3} container>
 							<Grid size={10} className={styles.footerCardHeading}>
-								Share Your Idea. We'll Visualize It.
+								Share Your Idea. We&apos;ll Visualize It.
 							</Grid>
 							<Grid size={2}>
 								<img

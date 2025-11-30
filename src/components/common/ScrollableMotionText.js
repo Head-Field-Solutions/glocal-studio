@@ -11,12 +11,12 @@ function ScrollableMotionText(props) {
 	const { isMobile } = useDevice();
 
 	const dir = direction === 'left' ? -1 : 1;
-	const progression = isMobile ? 150 : 350;
+	const progression = isMobile ? 4100 : 2800;
 
 	const translateX = useTransform(
 		progress,
 		[0, 1],
-		[progression * dir, -progression * dir]
+		[150 * dir, -progression * dir]
 	);
 
 	return (
