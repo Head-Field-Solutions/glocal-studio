@@ -37,7 +37,7 @@
 }
 
 .yearsOfExperienceHeading {
-	font-size: clamp(2.5rem, 12.2vw, 12.2rem);
+	font-size: clamp(4.5rem, 12.2vw, 12.2rem);
 }
 
 .letterSpacing {
@@ -68,5 +68,8 @@
 	}
 	.servingClientText {
 		font-size: 16px;
+	}
+	.numberOfClientHeading {
+		font-size: clamp(3.5rem, 5vw, 5rem);
 	}
 }	

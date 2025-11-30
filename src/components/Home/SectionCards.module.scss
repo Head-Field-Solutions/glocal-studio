@@ -111,7 +111,9 @@
 		}
 		&::after {
 			height: 50%;
-			background: url("../../assets/images/card-bg-gradiant-mobile.png") no-repeat top right;
+			background: url("../../assets/images/card-bg-gradiant-mobile.png") no-repeat bottom right;
+			background-size: 100%;
+			opacity: 0.5;
 		}
 		// &:after {
 		// 	background: transparent;

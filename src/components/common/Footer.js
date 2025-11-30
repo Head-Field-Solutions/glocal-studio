@@ -62,7 +62,7 @@ function Footer() {
 						<div className={styles.scrollableContainer} ref={scrollabelContainerRef}>
 							<ScrollableMotionText
 								direction="right"
-								left="-19%"
+								left="-40%"
 								progress={scrollYProgress}
 							>
 								<div className={styles.scrollabelText}>Spaces that feel Alive / Designs that inspire</div>
