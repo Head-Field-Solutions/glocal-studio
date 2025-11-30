@@ -105,8 +105,13 @@
 		border-radius: 0;
 		&::before {
 			left: auto;
-			right: -40px;
+			right: -60px;
 			top: 10px;
+			color: #211e26;
+		}
+		&::after {
+			height: 50%;
+			background: url("../../assets/images/card-bg-gradiant-mobile.png") no-repeat top right;
 		}
 		// &:after {
 		// 	background: transparent;
@@ -120,6 +125,15 @@
 		max-height: 700px;
 		aspect-ratio: 1.2;
 		// padding: 24px 24px 0;
+		&:first-child {
+			.container {
+				&:first-child{
+					&::before {
+						right: -40px;
+					}	
+				}
+			}
+		}
 		&:last-child {
 			margin-bottom: 0;
 		}
