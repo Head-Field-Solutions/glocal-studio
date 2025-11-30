@@ -157,11 +157,31 @@
 
 
 @media screen and (max-width: 899px) {
+	.masterHead {
+		padding: 75vh 0 0;
+	}
 	.videoWrapper, .masterHeadVideo{
 		height: 100vh;
 	}
+	.masterHeadInfoSection {
+		background: transparent;
+	}
+	.acturalVisualizationHeading {
+		margin-bottom: 40px;
+		&::after {
+			width: 100px;
+			bottom: -20px;
+			height: 2px;
+		}
+	}
+	.masterHeadText {
+		font-size: 16px;
+	}
+	.glassContainer {
+		border-radius: 20px;
+	}
 	.qualityMetricsContainer {
-		padding: 100px 0 0px;
+		padding: 50px 0 0px;
 	}
 	
 	

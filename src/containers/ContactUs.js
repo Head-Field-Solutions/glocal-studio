@@ -37,7 +37,7 @@ function ContactUs() {
 						size={12}
 						container
 						className={cx(styles.masterHeadInfoSection, styles.textCenter)}
-						spacing={4}
+						spacing={{xs: 1, md: 4}}
 					>
 						<Animate.ScaleIn
 							element={Grid}
@@ -58,14 +58,14 @@ function ContactUs() {
 						>
 							CONTACT GLOCAL STUDIO
 						</Animate.FadeUp>
-						<Grid size={12}>
+						<Grid size={12} mb={{xs:2, md:0}}>
 							<Heading className={cx(styles.masterHeadingHeading, styles.extraLightText)}>A GLOBAL LEADER IN</Heading>
 							<Heading className={styles.masterHeadingHeading}>3D VISUALIZATION</Heading>
 						</Grid>
 						<Animate.FadeUp
 							element={Grid}
 							elementProps={{
-								px: {xs: 2, md: 0},
+								mb:{xs:2, md:0},
 								size: {xs: 12, md: 8},
 								offset: {xs: 0, md: 2},
 							}}

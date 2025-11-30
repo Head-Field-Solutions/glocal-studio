@@ -78,7 +78,7 @@ function About() {
 							elementProps={{
 								size: {xs: 12, md: 8},
 								offset: {xs:0, md:2},
-								 mb:{xs:2, md:0}
+								mb:{xs:2, md:0}
 							}}
 							className={cx(styles.masterHeadText, styles.textWhite)}
 						>

@@ -37,7 +37,7 @@
 }
 
 .yearsOfExperienceHeading {
-	font-size: clamp(2.5rem, 12.2vw, 12.2rem);
+	font-size: clamp(4.5rem, 12.2vw, 12.2rem);
 }
 
 .letterSpacing {
@@ -52,6 +52,24 @@
 @media screen and (max-width: 899px) {
 	.glassContainerWrapper {
 		padding: 57px 30px;
+	}	
+	.glassContainer {
+		border-radius: 20px;
 	}
-	
-}
+	.trustedHeading {
+		font-size: clamp(2rem, 3vw, 3rem);
+		line-height: 1.3;
+		text-transform: capitalize;
+	}
+	.trustedContent {
+		font-weight: 400;
+    	font-size: 16px;
+		margin-top: 0;
+	}
+	.servingClientText {
+		font-size: 16px;
+	}
+	.numberOfClientHeading {
+		font-size: clamp(3.5rem, 5vw, 5rem);
+	}
+}	

@@ -32,7 +32,7 @@ function QualityMetrics(props) {
 						background: trustedBg
 					}}
 				>
-					<Grid size={12} container className={styles.glassContainerWrapper} spacing={4}>
+					<Grid size={12} container className={styles.glassContainerWrapper} spacing={{xs: 2, md: 4}}>
 						<Grid size={12}>
 							<StarGradiantIcon width="56px" height="62px" />
 						</Grid>
@@ -59,11 +59,11 @@ function QualityMetrics(props) {
 						background: globalClientBg
 					}}
 				>
-					<Grid size={12} container className={styles.glassContainerWrapper} spacing={8}>
-						<Grid size={3}>
-							<Heading className={cx(styles.fontNormal, styles.letterSpacing)}><ColorfulText>50+</ColorfulText></Heading>
+					<Grid size={12} container className={styles.glassContainerWrapper} spacing={{xs: 1, sm: 6, md: 8}}>
+						<Grid size={{xs: 12, sm: 3}}>
+							<Heading className={cx(styles.fontNormal, styles.letterSpacing, styles.numberOfClientHeading)}><ColorfulText>50+</ColorfulText></Heading>
 						</Grid>
-						<Grid size={9} container spacing={0}>
+						<Grid size={{xs: 12, sm: 9}} container spacing={{xs: 1, md: 0}}>
 							<Grid size={12}>
 								<Heading variant="secondary" className={styles.fontNormal}>
 									Global Clients
@@ -88,14 +88,14 @@ function QualityMetrics(props) {
 						background: yearsOfExperienceBg
 					}}
 				>
-					<Grid size={12} container className={styles.glassContainerWrapper} spacing={0} alignItems="flex-start">
-						<Grid size={{xs: 12, sm: 8}}>
+					<Grid size={12} container className={styles.glassContainerWrapper} spacing={{xs: 1, md: 0}} alignItems="flex-start">
+						<Grid size={{xs: 12, md: 8}}>
 							<Heading className={styles.yearsOfExperienceHeading}><ColorfulText>25+</ColorfulText></Heading>
 							<Heading variant="secondary" className={styles.fontNormal}>
 								Years of Experience
 							</Heading>
 						</Grid>
-						<Grid size={{xs: 12, sm: 4}} className={styles.servingClientText}>
+						<Grid size={{xs: 12, md: 4}} className={styles.servingClientText}>
 							Serving clients across the US, Europe, and Asia with consistent quality and reliability.
 						</Grid>
 					</Grid>
@@ -111,11 +111,11 @@ function QualityMetrics(props) {
 						background: repeatedClientBg
 					}}
 				>
-					<Grid size={12} container className={styles.glassContainerWrapper} spacing={12}>
-						<Grid size={3}>
+					<Grid size={12} container className={styles.glassContainerWrapper} spacing={{xs: 1, sm: 6, md: 12}}>
+						<Grid size={{xs: 12, sm: 3}}>
 							<Heading className={cx(styles.fontNormal, styles.textWhite, styles.letterSpacing)}>90%</Heading>
 						</Grid>
-						<Grid size={9} container spacing={1}>
+						<Grid size={{xs: 12, sm: 9}} container spacing={1}>
 							<Grid size={12}>
 								<Heading variant="secondary" className={cx(styles.fontNormal, styles.textWhite)}>
 									Repeated Clients
@@ -138,11 +138,11 @@ function QualityMetrics(props) {
 						background: projectsBg
 					}}
 				>
-					<Grid size={12} container className={styles.glassContainerWrapper} spacing={6}>
-						<Grid size={5}>
+					<Grid size={12} container className={styles.glassContainerWrapper} spacing={{xs: 1, sm: 6}}>
+						<Grid size={{xs: 12, sm: 3, md: 5}}>
 							<Heading className={cx(styles.fontNormal, styles.letterSpacing)}>4,000+</Heading>
 						</Grid>
-						<Grid size={7} container spacing={1}>
+						<Grid size={{xs: 12, sm: 9, md: 7}} container spacing={1}>
 							<Grid size={12}>
 								<Heading variant="secondary" className={styles.fontNormal}>
 									Projects

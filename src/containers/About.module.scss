@@ -322,6 +322,7 @@
 	.missionVisionContainer {
 		padding: 52px 30px 50px;
         border: 1px solid #000;
+		border-radius: 20px;
 	}
 	.visionMissionContentSection {
 		margin-bottom: 70px;
@@ -334,6 +335,9 @@
 	}
 	.glassContainerWrapper {
 		padding: 52px 30px;
+	}
+	.glassContainer {
+		border-radius: 20px;
 	}
 	.glocalAdvantageSection {
 		background: url("../assets/images/about-us/advantage-section-bg-MOBILE.jpg") no-repeat 50% 20%;
