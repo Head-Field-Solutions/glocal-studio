@@ -16,7 +16,7 @@
 	z-index: 10;
 	margin: 0;
 	// font-size: 3rem;
-	font-size: clamp(2.6rem, 4vw, 3rem);
+	font-size: clamp(2rem, 4vw, 3rem);
 	font-weight: 700;
 }
 
@@ -103,5 +103,12 @@
 	.scene__title {
 		text-align: center;
 		padding: 0 20px;
+
+		font-weight: 600;
+		letter-spacing: -1px;
+		line-height: 32px;
 	}
-}	
+	.carousel__cell {
+		width: 280px;
+	}
+}

@@ -35,9 +35,10 @@
 
 @media screen and (max-width: 900px) {
 	.backToTop {
-		width: 48px;
-		height: 48px;
-		padding: 6px;
+		width: 40px;
+        height: 40px;
+        padding: 2px;
+        background-image: none;
 
 		svg {
 			width: 36px;

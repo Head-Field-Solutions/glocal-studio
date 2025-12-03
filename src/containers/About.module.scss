@@ -285,6 +285,10 @@
 	.masterHeadVideo {
 		height: 100vh
 	}
+	.masterHeadVideo {
+		width: 150%;
+        left: -15%;
+	}
 
 	.acturalVisualizationHeading {
 		margin-bottom: 40px;
@@ -304,9 +308,16 @@
 	.beyondInfoContent {
 		margin-top: 0;
 	}
+	.beyondSecoundaryHeading {
+		font-size: clamp(1.6rem, 3vw, 3rem);
+    	letter-spacing: -1px;
+	}
+	.beyondInfoParagraph {
+		font-weight: 300;
+	}
 	.beyondSection{
 		background: url("../assets/images/about-us/beyond-section-bg-mobile.jpg") no-repeat 0 -60px;
-		padding: 0 0rem 350px;
+		padding: 0 0rem 250px;
         padding-top: 0;
         background-size: contain;
 	}
@@ -334,7 +345,10 @@
 		margin-top: -150px;
 	}
 	.glassContainerWrapper {
-		padding: 52px 30px;
+		padding: 40px 30px;
+		h2 {
+			letter-spacing: -1px;
+		}
 	}
 	.glassContainer {
 		border-radius: 20px;
@@ -342,7 +356,10 @@
 	.glocalAdvantageSection {
 		background: url("../assets/images/about-us/advantage-section-bg-MOBILE.jpg") no-repeat 50% 20%;
 		background-size: contain;
-		padding: 140px 0 140px;
+		padding: 120px 0 140px;
+	}
+	.advantageStarIcon {
+		top: -125px
 	}
 	.glocalPrespectiveText {
 		margin-bottom: 0;
@@ -375,6 +392,10 @@
 	}
 	.teamMemberPosition {
 		font-size: 16px;
+	}
+	.teamContent,
+	.teamParagraph {
+		font-weight: 300;
 	}
 	.qualityMetricsContainer {
 		margin: 150px 0 0px;

@@ -78,7 +78,7 @@ function ContactForm(props) {
 	return (
 		<Grid container size={12}>
 			<Grid size={12}>
-				<form onSubmit={handleSubmit(onSubmit)}>
+				<form onSubmit={handleSubmit(onSubmit)} className={styles.contactForm}>
 					<Controller
 						name="page_url"
 						control={control}

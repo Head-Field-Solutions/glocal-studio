@@ -84,6 +84,20 @@
 		text-align: left;
 	}
 	.fullSupportItemGrid{
-		padding: 40px 20px;
+		padding: 30px 30px 100px;
+		margin-bottom: 60px;
+	}
+	.checkIcon {
+		max-width: 16px;
+		max-height: 16px;
+		margin-top: 2px;
+	}
+
+
+
+	.itemHeading {
+		font-size: 32px;
+		font-weight: 500;
+		letter-spacing: -0.5px;
 	}
 }

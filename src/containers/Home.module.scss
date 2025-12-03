@@ -160,9 +160,19 @@
 			font-weight: 600;
 		}
 	}
+	.fullSupportImageContainerMobile {
+		margin: 0 -15px;
+		overflow: hidden;
+		.fullSupportImage {
+			width: 200%;
+			object-fit: cover;
+			margin-left: -50%;
+		}
+	}
 	.seeStunningText {
 		color: #b7b4ab;
-    	font-size: 24px;
+    	font-size: 18px;
+        line-height: 24px;
 	}
 	// .letUsRenderHeading {
 	// 	padding: 100px 0;
@@ -180,17 +190,34 @@
 	.letUsRenderHeading {
 		padding: 100px 0;
 	}
+	.letUsRenderHeading {
+		padding-top: 0;
+	}
 	.portfolioSection{
 		padding: 100px 0 0;
+	}
+	.whyBrandSmallText {
+		font-weight: 300;
+	}
+	.whyBrandSmallAnotherText {
+		font-weight: 500;
 	}
 	.etUsRenderHeadingLast {
 		padding-bottom: 100px;
 	}
 	.fullSupportItemsList {
-		margin-top: 0;
+		margin-top: -90%;
+	}
+	.fullSuiteBottomHeading {
+		margin-top: 50px;
 	}
 	.fullSuiteBtnGroup > div {
 		margin-left: 10px !important;
 		margin-right: 10px !important;
+	}
+
+	.letUsRenderText {
+		font-size: 20px;
+		line-height: 26px;
 	}
 }

@@ -82,7 +82,7 @@ export default function ServiceCard(props) {
 					</Grid>
 					<Grid flexDirection={"row"} size={{xs: 10, sm: 6}} sx={{ order: { xs: 2, sm: 0 } }} className={styles.itemSmallText}>
 						<span>{usp}</span>
-						<img src={require("../../assets/images/check-icon.png")} alt="" className={styles.checkIcon} />
+						<img src={require("../../assets/images/check-icon.svg")} alt="" className={styles.checkIcon} />
 					</Grid>
 					{/* <Grid size={{xs: 2, sm: 1}} >
 						<img src={require("../../assets/images/check-icon.png")} alt="" className={styles.checkIcon} />
