@@ -59,6 +59,11 @@
 }
 
 @media (max-width: 899px) {
+  .shadow {
+    svg {
+      height: 50vh;
+    }
+  }
   // .container {
   //     height: 450vh;
   //   }

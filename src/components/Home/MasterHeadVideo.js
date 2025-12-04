@@ -49,7 +49,7 @@ function MasterHeadVideo() {
 				
 				<div className={styles.buttons}>
 					{isMobile ?
-					<LinkButton style={{ "--button-bg": "#060010", "--button-text-color": "#fff" }}>SEE ALL OUR SERVICES</LinkButton>
+					<LinkButton style={{ "--button-bg": "#060010", "--button-text-color": "#fff" }}>EXPLORE MORE</LinkButton>
 					:
 						<>
 							<LinkButton

@@ -111,7 +111,7 @@ function Home() {
 							</Heading>
 						}
 					</Grid>
-					<Grid size={12}>
+					<Grid size={12} className={isMobile ? styles.fullSupportImageContainerMobile : ''}>
 						<img src={fullSupportImage} alt="" className={styles.fullSupportImage} />
 					</Grid>
 					<Grid size={12} spacing={4} container className={styles.fullSupportItemsList} ref={serviceListContainer}>
@@ -147,7 +147,7 @@ function Home() {
 			</section>
 			<section className={styles.portfolioSection}>
 				<Container maxWidth="xl">
-					<Grid size={12} mb={{xs: 2, md: 0}}>
+					<Grid size={12} mb={{xs: 1, md: 0}}>
 						<Heading className={styles.portfolioHeading} direction="down">
 							See the Stunning. 
 						</Heading>
@@ -171,9 +171,9 @@ function Home() {
 							Explore some of our favorite works-from photorealistic home interiors to cinematic exterior walkthroughs. You'll be amazed what we deliver for the price.
 						</Grid>
 					</Animate.FadeUp>
-					<Grid size={12} justifySelf="center" className={styles.portfolioButtons}>
+					{/* <Grid size={12} justifySelf="center" className={styles.portfolioButtons}>
 						<LinkButton style={{ "--button-bg": "#060010", "--button-text-color": "#ece9e2" }}>BROWSE PORTFOLIO</LinkButton>
-					</Grid>
+					</Grid> */}
 				</Container>
 				<ZoomParallax />
 			</section>
@@ -200,7 +200,7 @@ function Home() {
 						}}
 					>
 						<Grid size={{xs: 12, md: 8}} offset={{xs: 0, md: 2}} className={styles.whyBrandSmallText}>
-							At Glocal Studio, every render passes through a meticulous in-house review by architects, designers, and product specialists, ensuring accuracy, proportion, and realism at every stage. From light balance to material fidelity, nothing leaves our studio without expert validation. The result? Consistent, production-ready visuals that meet the highest global standards, <strong>every single time.</strong>
+							At Glocal Studio, every render passes through a meticulous in-house review by architects, designers, and product specialists, ensuring accuracy, proportion, and realism at every stage. From light balance to material fidelity, nothing leaves our studio without expert validation. {isMobile && <><br/> <br/></>}The result? Consistent, production-ready visuals that meet the highest global standards.
 						</Grid>
 						<Grid size={{xs: 12, md:8}} offset={{xs:0, md:2}} className={styles.whyBrandSmallAnotherText}>
 							Because great visuals aren't guessed, they're created.<br/>
