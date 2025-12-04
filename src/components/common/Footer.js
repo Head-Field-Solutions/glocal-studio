@@ -53,7 +53,7 @@ function Footer() {
 											Great Conversations.
 										</Heading>
 									</Grid>
-									<Grid size={12}>
+									<Grid size={12} className={styles.footerParagraph}>
 										Whether you’re looking for jaw-dropping renders or exceptional design solutions, we’re just a message away.
 									</Grid>
 								</Grid>
@@ -94,7 +94,7 @@ function Footer() {
 										Great Conversations.
 									</Heading>
 								</Grid>
-								<Grid size={12} className={styles.footerParagraph}>
+								<Grid size={12}>
 									Whether you’re looking for jaw-dropping renders or exceptional design solutions, we’re just a message away.
 								</Grid>
 							</Grid>
