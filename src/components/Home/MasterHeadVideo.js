@@ -21,7 +21,7 @@ function MasterHeadVideo() {
 						cursorCharacter="|"
 					/>
 				</Heading>
-				<Heading className={isMobile ? '' : styles.uppercase}>
+				<Heading className={isMobile ? styles.master3DHeadingMobile : styles.uppercase}>
 					<ColorfulText>
 						<TextType 
 							text={["3D VISUALIZATION STUDIO"]}
