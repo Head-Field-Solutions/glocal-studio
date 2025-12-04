@@ -23,7 +23,6 @@ import fullSupportImage from "@/assets/images/fullsuite-image.webp";
 
 import * as styles from "./Home.module.scss";
 
-
 function Home() {
 	const { isMobile } = useDevice();
 	

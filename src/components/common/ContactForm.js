@@ -74,7 +74,7 @@ function ContactForm(props) {
 			}
 		}, 3000);
 	};
-
+	
 	return (
 		<Grid container size={12}>
 			<Grid size={12}>
