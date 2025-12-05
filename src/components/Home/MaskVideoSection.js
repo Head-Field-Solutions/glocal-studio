@@ -21,7 +21,7 @@ export default function SvgMaskDemo() {
   });
 
   // Mask size animation - grows to fill entire screen and reveal full video
-  let maskWidth = isMobile ? ["60vh", "1000vw"] : ["48vh", "1000vw"];
+  let maskWidth = isMobile ? ["90vh", "1000vw"] : ["48vh", "1000vw"];
   const maskSize = useTransform(scrollYProgress, [0, 1], maskWidth);//60vh 1000vw
   
   // Transform animation after mask is revealed

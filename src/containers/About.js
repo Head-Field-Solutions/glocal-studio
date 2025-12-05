@@ -130,7 +130,7 @@ function About() {
 								}
 								
 								<Grid size={12}>
-									<Heading variant="secondary" className={cx(styles.textWhite, styles.lightText)}>
+									<Heading variant="secondary" className={cx(styles.textWhite, styles.lightText, styles.beyondSecoundaryHeading)}>
 										We don't just render- we venture into the unknown and deliver the extraordinary.
 									</Heading>
 								</Grid>
@@ -139,7 +139,7 @@ function About() {
 									elementProps={{
 										size: 12
 									}}
-									className={styles.textWhite}
+									className={cx(styles.textWhite, styles.beyondInfoParagraph)}
 								>
 									At Glocal Studio, we bring imagination to life through photorealistic 3D visualization, crafting spaces, products, and experiences that blend the conceptual with the tangible.
 								</Animate.FadeUp>
@@ -148,9 +148,9 @@ function About() {
 									elementProps={{
 										size: 12
 									}}
-									className={styles.textWhite}
+									className={cx(styles.textWhite, styles.beyondInfoParagraph)}
 								>
-									Our expertise spans architecture, interiors, product design, and immersive environments, focusing on materiality, light, and atmosphere. We believe true visualization evokes emotion while ensuring technical precision. With a global perspective, we create visuals that convey intent, function, and value, transforming vision into reality with clarity and impact.
+									Our expertise spans architecture, interiors, product design, and immersive environments, focusing on materiality, light, and atmosphere. We believe true visualization evokes emotion while ensuring technical precision. {!isMobile ? "With a global perspective, we create visuals that convey intent, function, and value, transforming vision into reality with clarity and impact." : ''}
 								</Animate.FadeUp>
 							</Grid>
 						</Grid>
@@ -659,6 +659,7 @@ function About() {
 								<Animate.FadeUp
 									direction="left"
 									element={Grid}
+									className={styles.teamParagraph}
 									elementProps={{
 										size: {xs: 12, sm: 7}
 									}}
@@ -728,11 +729,12 @@ function About() {
 								<Animate.FadeUp
 									direction="left"
 									element={Grid}
+									className={styles.teamParagraph}
 									elementProps={{
 										size: {xs: 12, sm: 7}
 									}}
 								>
-									Kunal drives Glocal Studio's creative vision with over two decades of design expertise. He combines strategy, technology, and artistry to deliver visuals that inspire and impress globally.
+									Srishti Khatri is a visionary leader transforming ideas into compelling visuals. Her grounded, decisive, and collaborative approach nurtures and refines every concept with clarity and purpose. She empowers others, builds effective systems, and creates impact through creativity and consistency.
 								</Animate.FadeUp>
 							</Grid>
 						</Grid>

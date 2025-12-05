@@ -21,7 +21,7 @@ function MasterHeadVideo() {
 						cursorCharacter="|"
 					/>
 				</Heading>
-				<Heading className={isMobile ? '' : styles.uppercase}>
+				<Heading className={isMobile ? styles.master3DHeadingMobile : styles.uppercase}>
 					<ColorfulText>
 						<TextType 
 							text={["3D VISUALIZATION STUDIO"]}
@@ -49,7 +49,7 @@ function MasterHeadVideo() {
 				
 				<div className={styles.buttons}>
 					{isMobile ?
-					<LinkButton style={{ "--button-bg": "#060010", "--button-text-color": "#fff" }}>SEE ALL OUR SERVICES</LinkButton>
+					<LinkButton style={{ "--button-bg": "#060010", "--button-text-color": "#fff" }}>EXPLORE MORE</LinkButton>
 					:
 						<>
 							<LinkButton

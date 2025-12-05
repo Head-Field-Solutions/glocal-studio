@@ -14,7 +14,7 @@ function CylinderText() {
 	const wrapper = useRef(null);
 
 	const calculatePositions = () => {
-		const offset = 0.4;
+		const offset = isMobile ? 0.6 : 0.4;
 		const radius = Math.min(window.innerWidth, window.innerHeight) * offset;
 		const textItems = textWrapper.current.querySelectorAll(`.${styles.cylinderTextItem}`);
 		const spacing = 180 / textItems.length;
@@ -53,7 +53,7 @@ function CylinderText() {
 		return () => ctx.revert(); // <- cleanup!
 	}, []);
 
-	const wrapperStyle = { height: "50vh", overflow: "hidden" }
+	const wrapperStyle = { height: "60vh", overflow: "hidden" }
 
 	return (
 		<section className={styles.cylinderWrapper} ref={wrapper} style={isMobile ? wrapperStyle : {}}>
@@ -69,7 +69,11 @@ function CylinderText() {
 				<li className={styles.cylinderTextItem}>we</li>
 				<li className={styles.cylinderTextItem}>reveal</li>
 				<li className={styles.cylinderTextItem}>the</li>
-				<li className={styles.cylinderTextItem}><ColorfulText>extraordinary</ColorfulText></li>
+				{isMobile ?
+					<li className={styles.cylinderTextItem}><ColorfulText>Magic!</ColorfulText></li>
+					:
+					<li className={styles.cylinderTextItem}><ColorfulText>extraordinary</ColorfulText></li>
+				}
 			</ul>
 		</section>
 	)
