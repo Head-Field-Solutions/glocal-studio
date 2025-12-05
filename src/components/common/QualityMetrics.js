@@ -113,7 +113,7 @@ function QualityMetrics(props) {
 				>
 					<Grid size={12} container className={styles.glassContainerWrapper} spacing={{xs: 1, sm: 6, md: 12}}>
 						<Grid size={{xs: 12, sm: 3}}>
-							<Heading className={cx(styles.fontNormal, styles.textWhite, styles.letterSpacing)}>90%</Heading>
+							<Heading className={cx(styles.fontNormal, styles.textWhite, styles.letterSpacing, styles.boxheading)}><ColorfulText>90%</ColorfulText></Heading>
 						</Grid>
 						<Grid size={{xs: 12, sm: 9}} container spacing={1}>
 							<Grid size={12}>
@@ -140,7 +140,7 @@ function QualityMetrics(props) {
 				>
 					<Grid size={12} container className={styles.glassContainerWrapper} spacing={{xs: 1, sm: 6}}>
 						<Grid size={{xs: 12, sm: 3, md: 5}}>
-							<Heading className={cx(styles.fontNormal, styles.letterSpacing)}>4,000+</Heading>
+							<Heading className={cx(styles.fontNormal, styles.letterSpacing,  styles.boxheading)}><ColorfulText>4,000+</ColorfulText></Heading>
 						</Grid>
 						<Grid size={{xs: 12, sm: 9, md: 7}} container spacing={1}>
 							<Grid size={12}>

@@ -16,7 +16,8 @@ import {
 import CurvedLoop from "@/components/About/CurvedLoop";
 import CircularText from "@/components/About/CircularText";
 
-import masterHeadVideo from "@/assets/videos/about-us-masterhead.mp4";
+// import masterHeadVideo from "@/assets/videos/about-us-masterhead.mp4";
+import masterHeadVideo from "@/assets/videos/about-us-masterhead.mov";
 
 import * as styles from "./About.module.scss";
 

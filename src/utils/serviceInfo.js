@@ -7,8 +7,9 @@ export const servicesInfo = {
 		"seoContent": {
 			"title": "Architectural Visualization | Glocal Studio"
 		},
+		"id": "architectural-visualization",
 		"title":"Architectural Visualization",
-		"background": require("../assets/videos/architectural-visualization.mp4"),
+		"background": require("../assets/videos/architectural-visualization.mov"),
 		"mobileMainHeading": <>Simplify <br/>Your <br/>Workflow</>,
 		"desktopMainHeading": "Turning Blueprints Into",
 		"secondaryHeading": "Photoreal Experiences",
@@ -136,8 +137,9 @@ export const servicesInfo = {
 		"seoContent": {
 			"title": "3D MODELLING | Glocal Studio"
 		},
+		"id": "three-d-modeling",
 		"title":"3D MODELLING",
-		"background": require("../assets/videos/3d-modelling.mp4"),
+		"background": require("../assets/videos/3d-modelling.mov"),
 		"mobileMainHeading": <>Simplify <br/>Your <br/>Workflow</>,
 		"desktopMainHeading": "Turning Ideas Into",
 		"secondaryHeading": "TANGIBLE 3D MODELS",
@@ -265,8 +267,9 @@ export const servicesInfo = {
 		"seoContent": {
 			"title": "Technical Drawings & Documentation | Glocal Studio"
 		},
+		"id": "technical-drawings",
 		"title":"Technical Drawings & Documentation",
-		"background": require("../assets/videos/technical-drawings.mp4"),
+		"background": require("../assets/videos/technical-drawings.mov"),
 		"mobileMainHeading": <>Simplify <br/>Your <br/>Workflow</>,
 		"desktopMainHeading": "Drawings That Leave",
 		"secondaryHeading": "No Room for Guesswork",
@@ -387,8 +390,9 @@ export const servicesInfo = {
 		"seoContent": {
 			"title": "Product Visualization | Glocal Studio"
 		},
+		"id": "product-visualization",
 		"title":"Product Visualization",
-		"background": require("../assets/videos/product-visualization3.mp4"),
+		"background": require("../assets/videos/product-visualization3.mov"),
 		"mobileMainHeading": <>Simplify <br/>Your <br/>Workflow</>,
 		"desktopMainHeading": "From Concept to",
 		"secondaryHeading": "Photoreal Reality",
@@ -502,8 +506,9 @@ export const servicesInfo = {
 		"seoContent": {
 			"title": "3D Animation & Interactive Experiences | Glocal Studio"
 		},
+		"id": "three-d-animation-and-experiences",
 		"title":"3D Animation & Interactive Experiences",
-		"background": require("../assets/videos/3d-animation-and-experiences.mp4"),
+		"background": require("../assets/videos/3d-animation-and-experiences.mov"),
 		"mobileMainHeading": <>Simplify <br/>Your <br/>Workflow</>,
 		"desktopMainHeading": "Interact. Explore.",
 		"secondaryHeading": "Experience.",
@@ -617,8 +622,9 @@ export const servicesInfo = {
 		"seoContent": {
 			"title": "360° & Virtual Tours | Glocal Studio"
 		},
+		"id": "three-sixty-degree-and-virtual-tours",
 		"title":"360° & Virtual Tours",
-		"background": require("../assets/videos/360-degree-and-virtual-tours.mp4"),
+		"background": require("../assets/videos/360-degree-and-virtual-tours.mov"),
 		"mobileMainHeading": <>Simplify <br/>Your <br/>Workflow</>,
 		"desktopMainHeading": "Immersive Tours",
 		"secondaryHeading": "That Sell Faster.",

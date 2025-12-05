@@ -13,7 +13,7 @@ function ProfessionalServiceBox(props) {
 	const { image, heading, content, keyServices, footer } = props;
 	const { isMobile } = useDevice();
 
-	return (<Grid size={{xs:12, md: 6, lg: 3}} container spacing={4}>
+	return (<Grid size={{xs:12, md: 6, lg: 3}} container spacing={{xs: 2, md: 4}}>
 		<Grid size={{xs:12}} container spacing={4} className={styles.container}>
 			<Grid size={12} alignSelf="flex-start">
 				<img
@@ -54,7 +54,7 @@ function ProfessionalServiceBox(props) {
 								elementProps={{
 									size: 6,
 									container: true,
-									spacing: 2,
+									spacing: {xs:1, md:2},
 									alignItems: "flex-start"
 								}}
 								className={styles.mediumBold}
@@ -97,6 +97,7 @@ function ProfessionalServiceBox(props) {
 		>
 			<Animate.FadeUp
 				element={Grid}
+				className={styles.starBox}
 				elementProps={{
 					size: 12,
 					container: true,

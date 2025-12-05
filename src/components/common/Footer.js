@@ -70,7 +70,7 @@ function Footer() {
 						</div>
 
 						<div className={styles.footerImagePanel}>
-							<img src={require("../../assets/images/footer-img.jpg")} alt="" />
+							<img src={require("../../assets/images/footer-decor-image.png")} alt="" />
 						</div>
 
 						<Container maxWidth="xl" className={styles.formContainer}>

@@ -69,14 +69,14 @@ function WhatWeDoBox(props) {
 				</Grid>
 				<Grid size={12} container spacing={2} className={styles.whatWeDoBoxHeadingSection}>
 					<Grid size={{xs: 12, md: 6}}>
-						<Heading variant="secondary" className={styles.lightText}>{heading}</Heading>
+						<Heading variant="secondary" className={cx(styles.lightText, styles.cardHeading)}>{heading}</Heading>
 					</Grid>
 					<Animate.FadeUp
 						element={Grid}
 						elementProps={{
 							size: {xs: 12, md: 6}
 						}}
-						className={styles.mediumBold}
+						className={cx(styles.mediumBold, styles.cardContent)}
 					>
 						{content}
 					</Animate.FadeUp>
