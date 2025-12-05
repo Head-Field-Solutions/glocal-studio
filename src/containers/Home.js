@@ -167,7 +167,7 @@ function Home() {
 						className={`${styles.textCenter} ${styles.seeStunningText}`}
 						direction="up"
 					>
-						<Grid size={{xs: 12, md: 6}} offset={{xs:0, md:3}}>
+						<Grid size={{xs: 12, md: 6}} offset={{xs:0, md:0}}>
 							Explore some of our favorite works-from photorealistic home interiors to cinematic exterior walkthroughs. You'll be amazed what we deliver for the price.
 						</Grid>
 					</Animate.FadeUp>
