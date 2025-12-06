@@ -21,6 +21,13 @@ import * as styles from "./ContactUs.module.scss";
 function ContactUs() {
 	const { isMobile } = useDevice();
 
+	const onContactClick = () => {
+		window.scrollTo({
+			top: document.getElementById("formContainer").offsetTop, // Gets the vertical position of the element
+			behavior: 'smooth'
+		});
+	};
+
 	return (
 		<>
 			<Helmet>
@@ -77,6 +84,7 @@ function ContactUs() {
 						</Animate.FadeUp>
 						<Grid size={12}>
 							<LinkButton
+								onClick={onContactClick}
 								style={{ "--button-bg": "#060010", "--button-text-color":  "#f3f2ee" }}
 							>
 								let's get started

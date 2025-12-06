@@ -8,6 +8,8 @@
 	font-size: 24px;
 	font-weight: 500;
 	cursor: pointer;
+	min-height: 152px;
+	position: relative;
 
 	&.active {
 		&::after {
@@ -22,6 +24,8 @@
 		background: #d6d3c9;
 		width: 100%;
 		margin: 20px 0;
+		position: absolute;
+		bottom: 0;
 	}
 }
 
