@@ -172,6 +172,13 @@ function Header() {
 										<span>{routes.services.label}</span>
 									</Link>
 									<Link
+										to={routes.portfolio.href}
+										data-replace={routes.portfolio.label}
+										className={styles.headerLink}
+									>
+										<span>{routes.portfolio.label}</span>
+									</Link>
+									<Link
 										to={routes["contact-us"].href}
 										data-replace={routes["contact-us"].label}
 										className={styles.headerLink}

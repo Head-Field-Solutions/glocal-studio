@@ -23,6 +23,7 @@ const menuItems = [
 			{ ...routes["360-degree-and-virtual-tours"] },
     ],
   },
+	{ ...routes.portfolio },
   { ...routes["contact-us"] },
   // { ...routes.faq },
 ];

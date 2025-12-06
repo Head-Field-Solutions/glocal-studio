@@ -77,7 +77,7 @@ function Footer() {
 							<Grid size={12} container>
 								<Grid size={{xs: 12, md: 6}} offset={{xs: 0, md: 6}} className={styles.formContent}>
 									<Grid size={12} container className={styles.contactFormWrapper}>
-										{/* <ContactForm /> */}
+										<ContactForm />
 									</Grid>
 								</Grid>
 							</Grid>
@@ -306,6 +306,13 @@ function Footer() {
 									<span>{routes.services.label}</span>
 								</Link>
 								<Link
+									to={routes.portfolio.href}
+									data-replace={routes.portfolio.label}
+									className={styles.footerLink}
+								>
+									<span>{routes.portfolio.label}</span>
+								</Link>
+								<Link
 									to={routes["contact-us"].href}
 									data-replace={routes["contact-us"].label}
 									className={styles.footerLink}
@@ -331,7 +338,9 @@ function Footer() {
 							{!isMobile ? 
 								<Grid size={12}>
 									<div className={styles.copyrightText}>Copyright &copy; 2025 - All rights Reserved By Glocal Studio.</div>
-									<div className={styles.creditText}>Made with &hearts; by Radical Reflex</div>
+									<div className={styles.creditText}>
+										<a href="https://www.radicalreflex.com" rel="noreferrer" target="_blank">Made with &hearts; by Radical Reflex</a>
+									</div>
 								</Grid>
 								:
 								null
@@ -351,7 +360,9 @@ function Footer() {
 						{isMobile ? 
 							<Grid size={12}>
 								<div className={styles.copyrightText}>Copyright &copy; 2025 - All rights Reserved By Glocal Studio.</div>
-								<div className={styles.creditText}>Made with &hearts; by Radical Reflex</div>
+								<div className={styles.creditText}>
+									<a href="https://www.radicalreflex.com" rel="noreferrer" target="_blank">Made with &hearts; by Radical Reflex</a>
+								</div>
 							</Grid>
 							:
 							null

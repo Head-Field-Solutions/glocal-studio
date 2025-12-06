@@ -12,14 +12,12 @@ import {
 	Animate,
 } from "@/components/common";
 
-// import masterHeadVideo from "@/assets/videos/about-us-masterhead.mp4";
-import masterHeadVideo from "@/assets/videos/about-us-masterhead.mov";
+import masterHeadVideo from "@/assets/videos/portfolio-masterhead.mp4";
+import masterHeadVideoSmall from "@/assets/videos/portfolio-masterhead.webm";
 
 import * as styles from "./Services.module.scss";
 
 function About() {
-	const { isMobile } = useDevice();
-
 	return (
 		<>
 			<Helmet>
@@ -29,6 +27,7 @@ function About() {
 			<section className={styles.masterHead}>
 				<div className={styles.videoWrapper}>
 					<video muted autoPlay controls={false} loop playsInline className={styles.masterHeadVideo}>
+						<source src={masterHeadVideoSmall} type="video/webm" />
 						<source src={masterHeadVideo} type="video/mp4" />
 					</video>
 				</div>
@@ -56,7 +55,7 @@ function About() {
 							className={styles.acturalVisualizationHeading}
 							direction="down"
 						>
-							ABOUT GLOCAL STUDIO
+							Portfolio
 						</Animate.FadeUp>
 						<Grid size={12} mb={{xs:2, md:0}}>
 							<Heading className={cx(styles.masterHeadingHeading, styles.extraLightText)}>From Earthly Plans to</Heading>

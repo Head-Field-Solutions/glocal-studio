@@ -117,8 +117,8 @@
 	color: #000;
 	text-align: left;
 	border-bottom: 1px solid #5A565E;
-	padding-bottom: 32px;
-	margin-bottom: 32px;
+	padding-bottom: 40px;
+	margin-bottom: 40px;
 	display: flex;
 	align-items: center;
 }
@@ -156,6 +156,12 @@
 
 .creditText {
 	color: #b7b4ab;
+
+	a {
+		color: #b7b4ab;
+		text-decoration: none;
+		display: inline-block;
+	}
 }
 
 .socialMediaContainer {

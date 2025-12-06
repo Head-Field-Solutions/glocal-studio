@@ -86,15 +86,7 @@ module.exports = {
       patterns: [
         { from: path.resolve(__dirname, 'public/favicon.png'), to: "" },
 				{ from: path.resolve(__dirname, 'public/robots.txt'), to: "" },
-				{ from: path.resolve(__dirname, 'public/emailer/main.jpg'), to: "emailer" },
-				{ from: path.resolve(__dirname, 'public/emailer/2.jpg'), to: "emailer" },
-				{ from: path.resolve(__dirname, 'public/emailer/1.jpg'), to: "emailer" },
-				{ from: path.resolve(__dirname, 'public/emailer/3.jpg'), to: "emailer" },
-				{ from: path.resolve(__dirname, 'public/emailer/Glocal_assist_logo_svg.png'), to: "emailer" },
-				{ from: path.resolve(__dirname, 'public/emailer/instagram2x.png'), to: "emailer" },
-				{ from: path.resolve(__dirname, 'public/emailer/twitter2x.png'), to: "emailer" },
-				{ from: path.resolve(__dirname, 'public/emailer/facebook2x.png'), to: "emailer" },
-				{ from: path.resolve(__dirname, 'public/emailer/linkedin2x.png'), to: "emailer" }
+				{ from: path.resolve(__dirname, 'public/emailer/*'), to: "emailer" },
       ],
     }),
   ],

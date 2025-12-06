@@ -22,9 +22,9 @@ export const routes = {
 		label: 'Services',
 		href: "/services"
 	},
-	caseStudy: {
-		label: 'Why Choose Us?',
-		href: "/why-choose-us"
+	portfolio: {
+		label: 'Portfolio',
+		href: "/portfolio"
 	},
 	"contact-us": {
 		label: 'Contact Us',
