@@ -1,6 +1,6 @@
 .menuContainer {
 	position: fixed;
-	background: rgba(7, 12, 30, 0.9);
+	background: rgba(6, 0, 16, 0.8);
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -17,12 +17,14 @@
 
 .menuItems,
 .subMenuItems {
-	display: block;
+	display: flex;
 	text-decoration: none;
 	margin-bottom: 12px;
 	font-weight: 600;
 	text-align: center;
 	transition: all 0.3s ease;
+	justify-content: center;
+  align-items: center;
 }
 
 .menuItems {
@@ -80,17 +82,17 @@
 
 @media screen and (max-width: 899px) {
 	.menuContainer{
-		background: rgba(255,255,255, 0.9);
+		background: rgba(6, 0, 16, 0.8);
 	}
 
 	.menuItems {
-		color: #060010;
+		color: #ece9e2;
 
 		&:hover {
-			color: #060010;
+			color: #ece9e2;
 		}
 	}
 	.subMenuItems a{
-		color: #060010;
+		color: #ece9e2;
 	}
 }

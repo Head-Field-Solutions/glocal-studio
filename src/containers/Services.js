@@ -15,6 +15,8 @@ import {
 import masterHeadVideo from "@/assets/videos/services-masterhead.mp4";
 import masterHeadVideoSmall from "@/assets/videos/services-masterhead.webm";
 
+import { routes } from "@/utils/routesPath";
+
 import * as styles from "./Services.module.scss";
 
 function About() {
@@ -74,9 +76,10 @@ function About() {
 						</Animate.FadeUp>
 						<Grid size={12}>
 							<LinkButton
+								to={routes["contact-us"].href}
 								style={{ "--button-bg": "#060010", "--button-text-color":  "#f3f2ee" }}
 							>
-								explore our services
+								let's get started
 							</LinkButton>
 						</Grid>
 					</Grid>

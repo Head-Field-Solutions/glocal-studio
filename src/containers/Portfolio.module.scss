@@ -99,21 +99,16 @@
 	font-size: 24px;
 }
 
-.advantageText {
-	font-size: 24px;
-	font-weight: 300;
+.gallerySection {
+	width: 100vw;
+	height: 100vh;
+	margin-top: 32px;
+	margin-bottom: 120px;
 }
 
-.glassContainer {
-	position: relative;
-	overflow: hidden;
-  border-radius: 40px;
-}
-
-.glassContainerWrapper {
-	position: relative;
-	z-index: 4;
-	padding: 52px;
+.galleryContainer,
+.galleryGrid {
+	height: 100vh;
 }
 
 @media screen and (max-width: 899px) {

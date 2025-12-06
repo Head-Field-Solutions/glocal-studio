@@ -115,6 +115,7 @@
 
 .seeStunningText {
 	justify-content: center;
+	margin-bottom: 100px;
 }
 
 @media screen and (max-width: 768px) {
@@ -129,20 +130,10 @@
 	}
 	.seeStunningText {
 		color: #b7b4ab;
-    	font-size: 18px;
-        line-height: 24px;
+		font-size: 18px;
+		line-height: 24px;
+		margin-bottom: 48px;
 	}
-	// .letUsRenderHeading {
-	// 	padding: 100px 0;
-	// }
-	// .letUsRenderHeadingLast {
-	// 	padding: 52px 0 100px;
-	// }
-	// .portfolioSection,
-	// .whyBrandLoveSection,
-	// .footerInfoPanel{
-	// 	padding-top: 100px;
-	// }
 	.whyBrandLoveSection,
 	.letUsRenderHeading {
 		padding: 100px 0;

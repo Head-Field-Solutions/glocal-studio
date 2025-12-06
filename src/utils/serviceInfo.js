@@ -153,10 +153,6 @@ export const servicesInfo = {
 				id: 4,
 				title: "Do you provide multiple versions or alternate material options?",
 				content: "Yes. Alternate finish options and additional variations can be created based on project needs.",
-			}, {
-				id: 5,
-				title: "Can you handle large volume projects for developers or stock plan libraries?",
-				content: "Absolutely. We regularly support high-volume render requirements with structured workflows, and every render is internally reviewed by senior architects and visualization leads to ensure noise-free, error-free, and consistent output across all volumes.",
 			}
 		],
   },
@@ -308,10 +304,6 @@ export const servicesInfo = {
 				id: 4,
 				title: "Do your models go through a technical review?",
 				content: "Yes. Each model is internally reviewed by relevant subject-matter experts, including architects, product specialists, and character artists, to ensure clean topology, correct scale, and error-free production readiness.",
-			}, {
-				id: 5,
-				title: "Can you deliver models in different formats?",
-				content: "Yes. We deliver in formats such as OBJ, FBX, MAX, SKP, DWG, or any format your pipeline requires.",
 			}
 		],
 	},
@@ -456,10 +448,6 @@ export const servicesInfo = {
 				id: 4,
 				title: "How do you ensure drawings are error free?",
 				content: "Every sheet is reviewed internally by a senior architect or detailer before delivery to eliminate dimensional errors, coordination issues, and documentation gaps.",
-			}, {
-				id: 5,
-				title: "What file formats do you deliver?",
-				content: "DWG, DXF, PDF, or Revit files depending on client requirements.",
 			}
 		],
 	},
@@ -597,10 +585,6 @@ export const servicesInfo = {
 				id: 4,
 				title: "Are the product renders suitable for marketing and ecommerce?",
 				content: "Yes. We deliver clean, high-resolution, and brand-aligned product renders suitable for websites, marketplaces, and print.",
-			}, {
-				id: 5,
-				title: "Do you offer bulk pricing for large product catalogs?",
-				content: "Yes. We provide special pricing for collections or long-term catalog requirements, and all bulk product visuals are internally reviewed by senior product and visualization specialists for accuracy and noise-free output.",
 			}
 		],
 	},
@@ -738,10 +722,6 @@ export const servicesInfo = {
 				id: 4,
 				title: "Do you provide sound, text, or branding inside the video?",
 				content: "Yes. We include sound, music, labels, highlights, and branding elements if required.",
-			}, {
-				id: 5,
-				title: "Are your animations suitable for marketing and presentations?",
-				content: "Yes. Every animation is internally reviewed by senior visualization leads and subject experts to ensure technical accuracy, smooth motion, and noise-free final output before delivery.",
 			}
 		],
 	},
@@ -879,10 +859,6 @@ export const servicesInfo = {
 				id: 4,
 				title: "Do you create both residential and commercial tours?",
 				content: "Yes. We support real estate, hospitality, retail, healthcare, and other sectors.",
-			}, {
-				id: 5,
-				title: "Can you update the tour later with revised designs?",
-				content: "Yes. We can update finishes, add rooms, or revise views anytime, and each updated version goes through internal senior review to ensure accuracy and clean, noise-free interaction for end users.",
 			}
 		],
 	},

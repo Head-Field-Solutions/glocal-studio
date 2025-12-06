@@ -4,6 +4,8 @@ import { useDevice } from '@/context/DeviceContext';
 
 import { Heading, ColorfulText, LinkButton, TextType, Animate } from "@/components/common";
 
+import { routes } from "@/utils/routesPath";
+
 import * as styles from "./MasterHeadVideo.module.scss";
 
 function MasterHeadVideo() {
@@ -49,16 +51,23 @@ function MasterHeadVideo() {
 				
 				<div className={styles.buttons}>
 					{isMobile ?
-					<LinkButton style={{ "--button-bg": "#060010", "--button-text-color": "#fff" }}>EXPLORE MORE</LinkButton>
+						<LinkButton
+							to={routes.services.href}
+							style={{ "--button-bg": "#060010", "--button-text-color": "#fff" }}
+						>
+							EXPLORE MORE
+						</LinkButton>
 					:
 						<>
 							<LinkButton
+								to={routes.services.href}
 								direction="right"
 								style={{ "--button-bg": "#060010", "--button-text-color":  "#f3f2ee" }}
 							>
 								SEE OUR SERVICES
 							</LinkButton>
 							<LinkButton
+								to={routes.portfolio.href}
 								direction="left"
 								style={{ "--button-bg": "#060010", "--button-text-color":  "#f3f2ee" }}
 							>
@@ -66,7 +75,6 @@ function MasterHeadVideo() {
 							</LinkButton>
 						</>
 					}
-					
 				</div>
 			</div>
 		</div>

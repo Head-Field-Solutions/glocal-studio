@@ -5,6 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import useMeasure from 'react-use-measure';
 
 import { routes } from "@/utils/routesPath";
+
 import MenuPortal from "./MenuPortal";
 
 import * as styles from "./Menu.module.scss";
@@ -86,7 +87,7 @@ function Menu() {
 
 	return (
 		<>
-			<Hamburger color="#fff" toggled={showMenu} toggle={setShowMenu} />
+			<Hamburger color="#ece9e2" toggled={showMenu} toggle={setShowMenu} />
 
 			<MenuPortal>
 				<AnimatePresence mode="wait">
@@ -99,7 +100,7 @@ function Menu() {
 							variants={containerVariants}
 						>
 							<div className={styles.burgerMenu}>
-								<Hamburger color="#060010" toggled={showMenu} toggle={hideMenu} />
+								<Hamburger color="#ece9e2" toggled={showMenu} toggle={hideMenu} />
 							</div>
 							<div className={styles.menuItemsContainer}>
 								{menuItems.map((item) => {
@@ -115,7 +116,7 @@ function Menu() {
 														to={item.href}
 														className={`${styles.menuItems} ${submenuOpen ? styles.menuActive : ""}`}
 													>
-														{item.label}
+														<span>{item.label}</span>
 													</Link>
 												</motion.div>
 					

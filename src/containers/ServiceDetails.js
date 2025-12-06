@@ -21,6 +21,7 @@ import WhyChooseUsBox from "@/components/ServiceDetails/WhyChooseUsBox";
 
 import NotFound from "@/containers/NotFound";
 
+import { routes } from "@/utils/routesPath";
 import { servicesInfo } from "@/utils/serviceInfo";
 
 import * as styles from "./ServiceDetails.module.scss";
@@ -84,16 +85,6 @@ function ServiceDetails() {
 		}, 
 	];
 
-
-	// <video
-	// 	src="/video.mov"
-	// 	controls
-	// 	autoPlay
-	// 	muted
-	// 	onError={(e) => {
-	// 		e.target.outerHTML = `<img src='/fallback.jpg' style='width:100%' />`;
-	// 	}}
-	// />
 	return (
 		<>
 			<Helmet>
@@ -163,9 +154,10 @@ function ServiceDetails() {
 						</Animate.FadeUp>
 						<Grid size={12}>
 							<LinkButton
+								to={routes.portfolio.href}
 								style={{ "--button-bg": "#060010", "--button-text-color":  "#f3f2ee" }}
 							>
-								Let's Discuss Your Project
+								Browse portfolio
 							</LinkButton>
 						</Grid>
 					</Grid>
@@ -420,7 +412,9 @@ function ServiceDetails() {
 							</Grid>
 						: null}
 						<Grid size={12} className={styles.textCenter}>
-							<LinkButton>GET FREE CONSULTATION</LinkButton>
+							<LinkButton to={routes["contact-us"].href}>
+								let's get started
+							</LinkButton>
 						</Grid>
 					</Grid>
 				</Container>
@@ -473,10 +467,6 @@ function ServiceDetails() {
 						</Grid>
 						<Grid size={12}>
 							<WhyChooseUsBox whyChooseUsContent={whyChooseUsContent} />
-						</Grid>
-						<Grid size={12} className={styles.textCenter}>
-							{!isMobile ? <LinkButton direction="right">Let's Discuss Your Project</LinkButton> : null}
-							<LinkButton direction="left">GET FREE CONSULTATION</LinkButton>
 						</Grid>
 					</Grid>
 				</Container>

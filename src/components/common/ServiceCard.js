@@ -79,7 +79,7 @@ export default function ServiceCard(props) {
 				</Grid> */}
 				<Grid size={12} spacing={3} container>
 					<Grid size={{xs: 12, sm: 6}} sx={{ order: { xs: 3, sm: 0 } }}>
-						<LinkButton to={link} style={{ "--button-bg": "#f2f0ea" }}>GET A FREE QUOTE</LinkButton>
+						<LinkButton to={link} style={{ "--button-bg": "#f2f0ea" }}>Explore More</LinkButton>
 					</Grid>
 					<Grid flexDirection="row" size={{xs: 10, sm: 6}} sx={{ order: { xs: 2, sm: 0 } }} className={styles.itemSmallText}>
 						<span>{usp}</span>

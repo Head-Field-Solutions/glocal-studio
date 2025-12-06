@@ -79,7 +79,7 @@ function ContactUs() {
 							<LinkButton
 								style={{ "--button-bg": "#060010", "--button-text-color":  "#f3f2ee" }}
 							>
-								TALK TO AN EXPERT
+								let's get started
 							</LinkButton>
 						</Grid>
 					</Grid>

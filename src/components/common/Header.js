@@ -198,12 +198,13 @@ function Header() {
 								className={styles.getInTouchButtonWrapper}
 							>
 								<LinkButton
+									to={routes["contact-us"].href}
 									className={styles.getInTouchButton}
 									wrapperStyle={{ marginRight: 0 }}
 									onClick={() => toggleContactForm()}
 									style={{ "--button-bg": "#060010", "--button-text-color":  "#f3f2ee" }}
 								>
-									get a free quote
+									let's get started
 								</LinkButton>
 							</Grid>
 							<MenuDesktop

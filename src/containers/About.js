@@ -19,6 +19,8 @@ import CircularText from "@/components/About/CircularText";
 import masterHeadVideo from "@/assets/videos/about-us-masterhead.mp4";
 import masterHeadVideoSmall from "@/assets/videos/about-us-masterhead.webm";
 
+import { routes } from "@/utils/routesPath";
+
 import * as styles from "./About.module.scss";
 
 function About() {
@@ -88,6 +90,7 @@ function About() {
 						</Animate.FadeUp>
 						<Grid size={12}>
 							<LinkButton
+								to={routes.services.href}
 								style={{ "--button-bg": "#060010", "--button-text-color":  "#f3f2ee" }}
 							>
 								explore our services

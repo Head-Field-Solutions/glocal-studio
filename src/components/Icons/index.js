@@ -11,3 +11,5 @@ export { default as CircleLoader } from "./CircleLoader";
 export { default as CloseIcon } from "./CloseIcon";
 export { default as StarGradiantIcon } from "./StarGradiantIcon";
 export { default as TickIcon } from "./Tick";
+export { default as PlusIcon } from "./Plus";
+export { default as MinusIcon } from "./Minus";

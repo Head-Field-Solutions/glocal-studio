@@ -15,7 +15,11 @@ import {
 import masterHeadVideo from "@/assets/videos/portfolio-masterhead.mp4";
 import masterHeadVideoSmall from "@/assets/videos/portfolio-masterhead.webm";
 
-import * as styles from "./Services.module.scss";
+import DomeGallery from "@/components/Portfolio/ImageGallery";
+
+import { routes } from "@/utils/routesPath";
+
+import * as styles from "./Portfolio.module.scss";
 
 function About() {
 	return (
@@ -58,8 +62,8 @@ function About() {
 							Portfolio
 						</Animate.FadeUp>
 						<Grid size={12} mb={{xs:2, md:0}}>
-							<Heading className={cx(styles.masterHeadingHeading, styles.extraLightText)}>From Earthly Plans to</Heading>
-							<Heading className={styles.masterHeadingHeading}>Cosmic Visuals</Heading>
+							<Heading className={cx(styles.masterHeadingHeading, styles.extraLightText)}>A showcase of ideas</Heading>
+							<Heading className={styles.masterHeadingHeading}>brought to life</Heading>
 						</Grid>
 						<Animate.FadeUp
 							element={Grid}
@@ -70,15 +74,23 @@ function About() {
 							}}
 							className={cx(styles.masterHeadText, styles.textWhite)}
 						>
-							We are curious explorers of design, delivering world-class 3D renderings, product visuals, and immersive experiences-without limits.
+							Browse through the visuals that define our approach—sharp detailing, realistic light, and designs that communicate with clarity.
 						</Animate.FadeUp>
 						<Grid size={12}>
 							<LinkButton
+								to={routes.services.href}
 								style={{ "--button-bg": "#060010", "--button-text-color":  "#f3f2ee" }}
 							>
 								explore our services
 							</LinkButton>
 						</Grid>
+					</Grid>
+				</Container>
+			</section>
+			<section className={styles.gallerySection}>
+				<Container maxWidth="xl" className={styles.galleryContainer}>
+					<Grid size={12} className={styles.galleryGrid}>
+						<DomeGallery />
 					</Grid>
 				</Container>
 			</section>

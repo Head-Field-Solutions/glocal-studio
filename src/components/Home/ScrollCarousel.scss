@@ -16,7 +16,7 @@
 	z-index: 10;
 	margin: 0;
 	// font-size: 3rem;
-	font-size: clamp(2rem, 4vw, 3rem);
+	font-size: clamp(1.2rem, 4vw, 3rem);
 	font-weight: 700;
 }
 
@@ -41,7 +41,7 @@
 }
 
 .emptyChar {
-	min-width: 30px;
+	min-width: 10px;
 }
 
 .carousel {
@@ -104,8 +104,8 @@
 		text-align: center;
 		padding: 0 20px;
 		font-weight: 600;
-        letter-spacing: -1px;
-        line-height: 32px;
+		letter-spacing: -1px;
+		line-height: 32px;
 	}
 	.carousel__cell{
 		width: 280px;

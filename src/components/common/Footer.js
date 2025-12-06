@@ -143,7 +143,8 @@ function Footer() {
 						elementProps={{
 							size:{xs: 12, sm: 6, md: 3},
 							container: true,
-							spacin: 3,
+							alignItems: "flex-start",
+							alignContent: "flex-start"
 						}}
 						className={styles.footerCard}
 						direction="up"
@@ -171,7 +172,8 @@ function Footer() {
 							// size: 3,
 							size:{xs: 12, sm: 6, md: 3},
 							container: true,
-							spacin: 3,
+							alignItems: "flex-start",
+							alignContent: "flex-start"
 						}}
 						className={styles.footerCard}
 						direction="up"
@@ -198,7 +200,8 @@ function Footer() {
 						elementProps={{
 							size: {xs: 12, sm: 6, md: 3},
 							container: true,
-							spacin: 3,
+							alignItems: "flex-start",
+							alignContent: "flex-start"
 						}}
 						className={styles.footerCard}
 						direction="up"
@@ -225,7 +228,8 @@ function Footer() {
 						elementProps={{
 							size: {xs: 12, sm: 6, md: 3},
 							container: true,
-							spacin: 3,
+							alignItems: "flex-start",
+							alignContent: "flex-start"
 						}}
 						className={styles.footerCard}
 						direction="up"
@@ -233,7 +237,7 @@ function Footer() {
 					>
 						<Grid size={12} spacing={3} container>
 							<Grid size={10} className={styles.footerCardHeading}>
-								Fast Replies. Real People.
+								Fast Replies. <br/> Real People.
 							</Grid>
 							<Grid size={2}>
 								<img

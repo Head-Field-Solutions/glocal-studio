@@ -14,7 +14,7 @@ import { useDevice } from '@/context/DeviceContext';
 
 import { Heading, Animate, ServiceList } from "@/components/common";
 
-import masterHeadVideo from "@/assets/videos/home-masterhead-video.mp4";
+import masterHeadVideo from "@/assets/videos/home-masterhead-video1.mp4";
 
 import * as styles from "./Home.module.scss";
 
