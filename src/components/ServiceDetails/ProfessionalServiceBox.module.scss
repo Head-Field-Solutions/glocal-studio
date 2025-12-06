@@ -19,12 +19,6 @@
 	display: block;
 }
 
-.iconImage {
-	width: 100%;
-	max-width: 30px;
-	display: block;
-}
-
 .smallFontSize {
 	font-size: 14px;
 }
@@ -43,6 +37,9 @@
 	width: 35%;
 }
 
+.keyServiceIcon svg {
+	width: 26px;
+}
 
 @media screen and (max-width: 899px) {
 	.contentContainer{
@@ -59,9 +56,6 @@
 	.contentContainer {
 		font-size: 18px;
 	}
-	.iconImage {
-		margin-top: 2px;
-	}
 	.extraSmallfontsize{
 		font-size: 14px;
         line-height: 18px;
@@ -71,6 +65,11 @@
 	}
 	.starBox svg {
 		width: 32px;
+	}
+
+	.keyServiceIcon svg {
+		width: 24px;
+		margin-top: 2px;
 	}
 	
 }

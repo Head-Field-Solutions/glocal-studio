@@ -4,8 +4,9 @@ import cx from "classnames";
 
 import { ColorfulText, Animate } from "@/components/common";
 
-import * as styles from "./FAQContainer.module.scss";
 import { useDevice } from '@/context/DeviceContext';
+
+import * as styles from "./FAQContainer.module.scss";
 
 function FAQContainer(props) {
 	const { faqContent } = props;

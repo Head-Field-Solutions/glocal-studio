@@ -13,7 +13,8 @@ import {
 	Animate,
 } from "@/components/common";
 
-import masterHeadVideo from "@/assets/videos/contact-us-masterhead.mov";
+import masterHeadVideo from "@/assets/videos/contact-us-masterhead.mp4";
+import masterHeadVideoSmall from "@/assets/videos/contact-us-masterhead.webm";
 
 import * as styles from "./ContactUs.module.scss";
 
@@ -29,6 +30,7 @@ function ContactUs() {
 			<section className={styles.masterHead}>
 				<div className={styles.videoWrapper}>
 					<video muted autoPlay controls={false} loop playsInline className={styles.masterHeadVideo}>
+						<source src={masterHeadVideoSmall} type="video/webm" />
 						<source src={masterHeadVideo} type="video/mp4" />
 					</video>
 				</div>

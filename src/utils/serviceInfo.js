@@ -1,5 +1,7 @@
 import React from "react";
 
+import { TickIcon } from "@/components/Icons";
+
 import { routes } from "./routesPath";
 
 export const servicesInfo = {
@@ -9,7 +11,9 @@ export const servicesInfo = {
 		},
 		"id": "architectural-visualization",
 		"title":"Architectural Visualization",
-		"background": require("../assets/videos/architectural-visualization.mov"),
+		"background": require("../assets/videos/architectural-visualization.mp4"),
+		"background_webm": require("../assets/videos/architectural-visualization.webm"),
+		"background_poster": require("../assets/videos/architectural-visualization.jpg"),
 		"mobileMainHeading": <>Simplify <br/>Your <br/>Workflow</>,
 		"desktopMainHeading": "Turning Blueprints Into",
 		"secondaryHeading": "Photoreal Experiences",
@@ -56,16 +60,16 @@ export const servicesInfo = {
 				"content": "We produce photoreal exterior and interior visuals that communicate design intent with clarity and precision. Perfect for concept presentations, competitions, and client alignment.",
 				"keyServices": [
 					{
-						"image": require("../assets/images/service-details/icons/photoreal-renders.png"),
+						"image": <TickIcon />,
 						"content": "Design Accuracy",
 					}, {
-						"image": require("../assets/images/service-details/icons/technical-accuracy.png"),
+						"image": <TickIcon />,
 						"content": "Realistic Lighting",
 					}, {
-						"image": require("../assets/images/service-details/icons/fast-delivery.png"),
+						"image": <TickIcon />,
 						"content": "Material Fidelity",
 					}, {
-						"image": require("../assets/images/service-details/icons/partnered-collabration.png"),
+						"image": <TickIcon />,
 						"content": "Fast Iterations",
 					}, 
 				],
@@ -76,16 +80,16 @@ export const servicesInfo = {
 				"content": "We turn interior concepts into atmospheric, material-accurate renders that help clients fully visualize the space before execution. Ideal for mood boards, pitches, and styling validation.",
 				"keyServices": [
 					{
-						"image": require("../assets/images/service-details/icons/realistic-stylling.png"),
+						"image": <TickIcon />,
 						"content": "Photoreal Styling",
 					}, {
-						"image": require("../assets/images/service-details/icons/material-accuracy.png"),
+						"image": <TickIcon />,
 						"content": "Texture Precision",
 					}, {
-						"image": require("../assets/images/service-details/icons/flexible-options.png"),
+						"image": <TickIcon />,
 						"content": "Mood Lighting",
 					}, {
-						"image": require("../assets/images/service-details/icons/engaging-visuals.png"),
+						"image": <TickIcon />,
 						"content": "Spatial Clarity",
 					}, 
 				],
@@ -96,16 +100,16 @@ export const servicesInfo = {
 				"content": "We create high-impact marketing visuals that bring unbuilt properties to life—perfect for brochures, websites, digital campaigns, and pre-launch sales.",
 				"keyServices": [
 					{
-						"image": require("../assets/images/service-details/icons/sales-ready-visuals.png"),
+						"image": <TickIcon />,
 						"content": "Sales Focus",
 					}, {
-						"image": require("../assets/images/service-details/icons/immersive-walkthroughs.png"),
+						"image": <TickIcon />,
 						"content": "Hero Angles",
 					}, {
-						"image": require("../assets/images/service-details/icons/cost-efficiency.png"),
+						"image": <TickIcon />,
 						"content": "Marketing Polish",
 					}, {
-						"image": require("../assets/images/service-details/icons/ready-to-use.png"),
+						"image": <TickIcon />,
 						"content": "Quick Delivery",
 					}, 
 				],
@@ -116,22 +120,45 @@ export const servicesInfo = {
 				"content": "Our visuals simplify design interpretation, helping contractors understand materials, finishes, and spatial layouts clearly for smoother on-site execution.",
 				"keyServices": [
 					{
-						"image": require("../assets/images/service-details/icons/accurate-draftinng.png"),
+						"image": <TickIcon />,
 						"content": "Build Clarity",
 					}, {
-						"image": require("../assets/images/service-details/icons/build-clarity.png"),
+						"image": <TickIcon />,
 						"content": "Detail Accuracy",
 					}, {
-						"image": require("../assets/images/service-details/icons/easy-coordination.png"),
+						"image": <TickIcon />,
 						"content": "Easy Visuals",
 					}, {
-						"image": require("../assets/images/service-details/icons/time-saving-documentation.png"),
+						"image": <TickIcon />,
 						"content": "Coordination Ready",
 					}, 
 				],
 				"footer": "Less confusion on-site, smoother communication with teams, reduced rework.",
 			},
-		]
+		],
+		"faqContent": [
+			{
+				id: 1,
+				title: "What files do you need to start an architectural render?",
+				content: "We typically require AutoCAD drawings, PDFs, sketches, or 3D models (3ds Max, Revit, SKP, or any other format) you may already have. Reference images and finish details help us achieve higher accuracy.",
+			}, {
+				id: 2,
+				title: "Can you match our design intent and finishes exactly?",
+				content: "Yes. With accurate material references or finish images, we can replicate your design intent very closely.",
+			}, {
+				id: 3,
+				title: "How long does an exterior or interior render take?",
+				content: "Most architectural renders take between two to four working days depending on complexity and revision cycles. We can accommodate quicker timelines by assigning additional resources without compromising quality.",
+			}, {
+				id: 4,
+				title: "Do you provide multiple versions or alternate material options?",
+				content: "Yes. Alternate finish options and additional variations can be created based on project needs.",
+			}, {
+				id: 5,
+				title: "Can you handle large volume projects for developers or stock plan libraries?",
+				content: "Absolutely. We regularly support high-volume render requirements with structured workflows, and every render is internally reviewed by senior architects and visualization leads to ensure noise-free, error-free, and consistent output across all volumes.",
+			}
+		],
   },
 	"3d-modeling": {
 		"seoContent": {
@@ -139,7 +166,9 @@ export const servicesInfo = {
 		},
 		"id": "three-d-modeling",
 		"title":"3D MODELLING",
-		"background": require("../assets/videos/3d-modelling.mov"),
+		"background": require("../assets/videos/3d-modelling.mp4"),
+		"background_webm": require("../assets/videos/3d-modelling.webm"),
+		"background_poster": require("../assets/videos/3d-modelling.jpg"),
 		"mobileMainHeading": <>Simplify <br/>Your <br/>Workflow</>,
 		"desktopMainHeading": "Turning Ideas Into",
 		"secondaryHeading": "TANGIBLE 3D MODELS",
@@ -186,16 +215,16 @@ export const servicesInfo = {
 				"content": "We build precise 3D models that capture scale, structure, and design intent with accuracy—ideal for concept studies, client presentations, and design iterations.",
 				"keyServices": [
 					{
-						"image": require("../assets/images/service-details/icons/photoreal-renders.png"),
+						"image": <TickIcon />,
 						"content": "Accurate Proportions",
 					}, {
-						"image": require("../assets/images/service-details/icons/technical-accuracy.png"),
+						"image": <TickIcon />,
 						"content": "Clean Topology",
 					}, {
-						"image": require("../assets/images/service-details/icons/fast-delivery.png"),
+						"image": <TickIcon />,
 						"content": "Detail Focused",
 					}, {
-						"image": require("../assets/images/service-details/icons/partnered-collabration.png"),
+						"image": <TickIcon />,
 						"content": "Render Ready",
 					}, 
 				],
@@ -206,16 +235,16 @@ export const servicesInfo = {
 				"content": "We model furniture, fixtures, and products with manufacturing-grade precision—ideal for sampling, catalogs, and prototyping.",
 				"keyServices": [
 					{
-						"image": require("../assets/images/service-details/icons/realistic-stylling.png"),
+						"image": <TickIcon />,
 						"content": "Prototype Ready",
 					}, {
-						"image": require("../assets/images/service-details/icons/material-accuracy.png"),
+						"image": <TickIcon />,
 						"content": "Measurement Accurate",
 					}, {
-						"image": require("../assets/images/service-details/icons/flexible-options.png"),
+						"image": <TickIcon />,
 						"content": "Material Friendly",
 					}, {
-						"image": require("../assets/images/service-details/icons/engaging-visuals.png"),
+						"image": <TickIcon />,
 						"content": "Vendor Aligned",
 					}, 
 				],
@@ -226,16 +255,16 @@ export const servicesInfo = {
 				"content": "We create optimized 3D assets—characters, props, and environments—designed for seamless integration into game engines and cinematic sequences.",
 				"keyServices": [
 					{
-						"image": require("../assets/images/service-details/icons/sales-ready-visuals.png"),
+						"image": <TickIcon />,
 						"content": "Game Optimized",
 					}, {
-						"image": require("../assets/images/service-details/icons/immersive-walkthroughs.png"),
+						"image": <TickIcon />,
 						"content": "Low-Poly Ready",
 					}, {
-						"image": require("../assets/images/service-details/icons/cost-efficiency.png"),
+						"image": <TickIcon />,
 						"content": "Texture Friendly",
 					}, {
-						"image": require("../assets/images/service-details/icons/ready-to-use.png"),
+						"image": <TickIcon />,
 						"content": "Engine Compatible",
 					}, 
 				],
@@ -246,22 +275,45 @@ export const servicesInfo = {
 				"content": "We craft campaign-ready 3D assets that elevate brand storytelling and give marketers high-quality visuals across print, digital, and video.",
 				"keyServices": [
 					{
-						"image": require("../assets/images/service-details/icons/accurate-draftinng.png"),
+						"image": <TickIcon />,
 						"content": "High Impact",
 					}, {
-						"image": require("../assets/images/service-details/icons/build-clarity.png"),
+						"image": <TickIcon />,
 						"content": "Brand Focused",
 					}, {
-						"image": require("../assets/images/service-details/icons/easy-coordination.png"),
+						"image": <TickIcon />,
 						"content": "Stylized Options",
 					}, {
-						"image": require("../assets/images/service-details/icons/time-saving-documentation.png"),
+						"image": <TickIcon />,
 						"content": "Fast Scaling",
 					}, 
 				],
 				"footer": "More impactful ads, quicker creative execution, and standout visuals.",
 			},
-		]
+		],
+		"faqContent": [
+			{
+				id: 1,
+				title: "What types of 3D models can you create?",
+				content: "We build models for buildings, interiors, furniture, consumer products, characters, props, gaming assets, and virtual environments.",
+			}, {
+				id: 2,
+				title: "Do you create 3D models from sketches or just CAD files?",
+				content: "We can model from sketches, PDFs, CAD files, reference images, or product photos.",
+			}, {
+				id: 3,
+				title: "Are your models optimized for both rendering and real-time engines?",
+				content: "Yes. We prepare models suitable for animation, rendering, prototyping, or game engines based on your requirements.",
+			}, {
+				id: 4,
+				title: "Do your models go through a technical review?",
+				content: "Yes. Each model is internally reviewed by relevant subject-matter experts, including architects, product specialists, and character artists, to ensure clean topology, correct scale, and error-free production readiness.",
+			}, {
+				id: 5,
+				title: "Can you deliver models in different formats?",
+				content: "Yes. We deliver in formats such as OBJ, FBX, MAX, SKP, DWG, or any format your pipeline requires.",
+			}
+		],
 	},
 	"technical-drawings": {
 		"seoContent": {
@@ -269,7 +321,9 @@ export const servicesInfo = {
 		},
 		"id": "technical-drawings",
 		"title":"Technical Drawings & Documentation",
-		"background": require("../assets/videos/technical-drawings.mov"),
+		"background": require("../assets/videos/technical-drawings.mp4"),
+		"background_webm": require("../assets/videos/technical-drawings.webm"),
+		"background_poster": require("../assets/videos/technical-drawings.jpg"),
 		"mobileMainHeading": <>Simplify <br/>Your <br/>Workflow</>,
 		"desktopMainHeading": "Drawings That Leave",
 		"secondaryHeading": "No Room for Guesswork",
@@ -309,16 +363,16 @@ export const servicesInfo = {
 				"content": "We prepare construction drawings and detailing that ensure design intent is executed accurately on-site.",
 				"keyServices": [
 					{
-						"image": require("../assets/images/service-details/icons/photoreal-renders.png"),
+						"image": <TickIcon />,
 						"content": "Dimension Accuracy",
 					}, {
-						"image": require("../assets/images/service-details/icons/technical-accuracy.png"),
+						"image": <TickIcon />,
 						"content": "Clean Drafting",
 					}, {
-						"image": require("../assets/images/service-details/icons/fast-delivery.png"),
+						"image": <TickIcon />,
 						"content": "Build Ready",
 					}, {
-						"image": require("../assets/images/service-details/icons/partnered-collabration.png"),
+						"image": <TickIcon />,
 						"content": "Code Friendly",
 					}, 
 				],
@@ -329,16 +383,16 @@ export const servicesInfo = {
 				"content": "We draft furniture layouts, joinery details, and interior documentation that support flawless execution.",
 				"keyServices": [
 					{
-						"image": require("../assets/images/service-details/icons/realistic-stylling.png"),
+						"image": <TickIcon />,
 						"content": "Detail Depth",
 					}, {
-						"image": require("../assets/images/service-details/icons/material-accuracy.png"),
+						"image": <TickIcon />,
 						"content": "Finish Precision",
 					}, {
-						"image": require("../assets/images/service-details/icons/flexible-options.png"),
+						"image": <TickIcon />,
 						"content": "Designer Sync",
 					}, {
-						"image": require("../assets/images/service-details/icons/engaging-visuals.png"),
+						"image": <TickIcon />,
 						"content": "Vendor Friendly",
 					}, 
 				],
@@ -349,16 +403,16 @@ export const servicesInfo = {
 				"content": "We provide working drawings that simplify on-site execution and ensure teams stay aligned.",
 				"keyServices": [
 					{
-						"image": require("../assets/images/service-details/icons/sales-ready-visuals.png"),
+						"image": <TickIcon />,
 						"content": "Execution Clarity",
 					}, {
-						"image": require("../assets/images/service-details/icons/immersive-walkthroughs.png"),
+						"image": <TickIcon />,
 						"content": "Easy Readability",
 					}, {
-						"image": require("../assets/images/service-details/icons/cost-efficiency.png"),
+						"image": <TickIcon />,
 						"content": "Site Friendly",
 					}, {
-						"image": require("../assets/images/service-details/icons/ready-to-use.png"),
+						"image": <TickIcon />,
 						"content": "Organized Layers",
 					}, 
 				],
@@ -369,22 +423,45 @@ export const servicesInfo = {
 				"content": "We deliver coordination drawings that align architectural, structural, and MEP systems seamlessly.",
 				"keyServices": [
 					{
-						"image": require("../assets/images/service-details/icons/accurate-draftinng.png"),
+						"image": <TickIcon />,
 						"content": "System Alignment",
 					}, {
-						"image": require("../assets/images/service-details/icons/build-clarity.png"),
+						"image": <TickIcon />,
 						"content": "Technical Precision",
 					}, {
-						"image": require("../assets/images/service-details/icons/easy-coordination.png"),
+						"image": <TickIcon />,
 						"content": "Clear Markups",
 					}, {
-						"image": require("../assets/images/service-details/icons/time-saving-documentation.png"),
+						"image": <TickIcon />,
 						"content": "Coordination Ready",
 					}, 
 				],
 				"footer": "Better interdisciplinary coordination, fewer conflicts, and smoother approvals.",
 			},
-		]
+		],
+		"faqContent": [
+			{
+				id: 1,
+				title: "What types of drawings do you prepare?",
+				content: "We prepare plans, elevations, sections, interior detailing, joinery drawings, furniture details, and full construction documentation.",
+			}, {
+				id: 2,
+				title: "Do your drawings follow specific client standards?",
+				content: "Yes. We align with your templates, layers, dimension styles, and drawing conventions.",
+			}, {
+				id: 3,
+				title: "Can your team handle both small and large drawing sets?",
+				content: "Yes. We work on single drawings, large construction packages, and ongoing drafting support for studios.",
+			}, {
+				id: 4,
+				title: "How do you ensure drawings are error free?",
+				content: "Every sheet is reviewed internally by a senior architect or detailer before delivery to eliminate dimensional errors, coordination issues, and documentation gaps.",
+			}, {
+				id: 5,
+				title: "What file formats do you deliver?",
+				content: "DWG, DXF, PDF, or Revit files depending on client requirements.",
+			}
+		],
 	},
 	"product-visualization": {
 		"seoContent": {
@@ -392,7 +469,9 @@ export const servicesInfo = {
 		},
 		"id": "product-visualization",
 		"title":"Product Visualization",
-		"background": require("../assets/videos/product-visualization3.mov"),
+		"background": require("../assets/videos/product-visualization3.mp4"),
+		"background_webm": require("../assets/videos/product-visualization3.webm"),
+		"background_poster": require("../assets/videos/3d-product-visualization.jpg"),
 		"mobileMainHeading": <>Simplify <br/>Your <br/>Workflow</>,
 		"desktopMainHeading": "From Concept to",
 		"secondaryHeading": "Photoreal Reality",
@@ -425,16 +504,16 @@ export const servicesInfo = {
 				"content": "We produce high-quality product renders that elevate catalogues, websites, and marketing campaigns with lifelike detail.",
 				"keyServices": [
 					{
-						"image": require("../assets/images/service-details/icons/photoreal-renders.png"),
+						"image": <TickIcon />,
 						"content": "Material Realism",
 					}, {
-						"image": require("../assets/images/service-details/icons/technical-accuracy.png"),
+						"image": <TickIcon />,
 						"content": "Fabric Detail",
 					}, {
-						"image": require("../assets/images/service-details/icons/fast-delivery.png"),
+						"image": <TickIcon />,
 						"content": "Hero Lighting",
 					}, {
-						"image": require("../assets/images/service-details/icons/partnered-collabration.png"),
+						"image": <TickIcon />,
 						"content": "Catalog Ready",
 					}, 
 				],
@@ -445,16 +524,16 @@ export const servicesInfo = {
 				"content": "We visualize shoes, bags, apparel, and accessories with precision—highlighting textures, finishes, and craftsmanship.",
 				"keyServices": [
 					{
-						"image": require("../assets/images/service-details/icons/realistic-stylling.png"),
+						"image": <TickIcon />,
 						"content": "Texture Rich",
 					}, {
-						"image": require("../assets/images/service-details/icons/material-accuracy.png"),
+						"image": <TickIcon />,
 						"content": "Style Accurate",
 					}, {
-						"image": require("../assets/images/service-details/icons/flexible-options.png"),
+						"image": <TickIcon />,
 						"content": "Color Perfect",
 					}, {
-						"image": require("../assets/images/service-details/icons/engaging-visuals.png"),
+						"image": <TickIcon />,
 						"content": "Trend Aware",
 					}, 
 				],
@@ -465,16 +544,16 @@ export const servicesInfo = {
 				"content": "We create cinematic product renders that showcase shine, cuts, and craftsmanship for premium branding.",
 				"keyServices": [
 					{
-						"image": require("../assets/images/service-details/icons/sales-ready-visuals.png"),
+						"image": <TickIcon />,
 						"content": "Macro Detailing",
 					}, {
-						"image": require("../assets/images/service-details/icons/immersive-walkthroughs.png"),
+						"image": <TickIcon />,
 						"content": "Gem Precision",
 					}, {
-						"image": require("../assets/images/service-details/icons/cost-efficiency.png"),
+						"image": <TickIcon />,
 						"content": "Premium Polish",
 					}, {
-						"image": require("../assets/images/service-details/icons/ready-to-use.png"),
+						"image": <TickIcon />,
 						"content": "Luxury Focus",
 					}, 
 				],
@@ -485,22 +564,45 @@ export const servicesInfo = {
 				"content": "We deliver high-impact visuals for gadgets, devices, and tech launches with immaculate detailing and lighting.",
 				"keyServices": [
 					{
-						"image": require("../assets/images/service-details/icons/accurate-draftinng.png"),
+						"image": <TickIcon />,
 						"content": "Tech Precision",
 					}, {
-						"image": require("../assets/images/service-details/icons/build-clarity.png"),
+						"image": <TickIcon />,
 						"content": "Sleek Lighting",
 					}, {
-						"image": require("../assets/images/service-details/icons/easy-coordination.png"),
+						"image": <TickIcon />,
 						"content": "Launch Ready",
 					}, {
-						"image": require("../assets/images/service-details/icons/time-saving-documentation.png"),
+						"image": <TickIcon />,
 						"content": "E-Com Optimized",
 					}, 
 				],
 				"footer": "Better product launches, stronger storytelling, and standout e-commerce imagery.",
 			},
-		]
+		],
+		"faqContent": [
+			{
+				id: 1,
+				title: "What types of products can you visualize?",
+				content: "Furniture, lighting, decor, consumer electronics, lifestyle products, fashion items, industrial tools, and prototypes.",
+			}, {
+				id: 2,
+				title: "Can you visualize products without a physical sample?",
+				content: "Yes. We can work from sketches, CAD files, product photos, or technical specifications.",
+			}, {
+				id: 3,
+				title: "Can you create multiple color or material options?",
+				content: "Yes. Material variations are simple to produce once the base model and scene are ready.",
+			}, {
+				id: 4,
+				title: "Are the product renders suitable for marketing and ecommerce?",
+				content: "Yes. We deliver clean, high-resolution, and brand-aligned product renders suitable for websites, marketplaces, and print.",
+			}, {
+				id: 5,
+				title: "Do you offer bulk pricing for large product catalogs?",
+				content: "Yes. We provide special pricing for collections or long-term catalog requirements, and all bulk product visuals are internally reviewed by senior product and visualization specialists for accuracy and noise-free output.",
+			}
+		],
 	},
 	"3d-animation-and-experiences": {
 		"seoContent": {
@@ -508,7 +610,9 @@ export const servicesInfo = {
 		},
 		"id": "three-d-animation-and-experiences",
 		"title":"3D Animation & Interactive Experiences",
-		"background": require("../assets/videos/3d-animation-and-experiences.mov"),
+		"background": require("../assets/videos/3d-animation-and-experiences.mp4"),
+		"background_webm": require("../assets/videos/3d-animation-and-experiences.webm"),
+		"background_poster": require("../assets/videos/3d-animations-and-experiences.jpg"),
 		"mobileMainHeading": <>Simplify <br/>Your <br/>Workflow</>,
 		"desktopMainHeading": "Interact. Explore.",
 		"secondaryHeading": "Experience.",
@@ -541,16 +645,16 @@ export const servicesInfo = {
 				"content": "We produce cinematic walkthroughs and flythroughs that bring unbuilt spaces to life—boosting client understanding and pre-sales momentum.",
 				"keyServices": [
 					{
-						"image": require("../assets/images/service-details/icons/photoreal-renders.png"),
+						"image": <TickIcon />,
 						"content": "Cinematic Motion",
 					}, {
-						"image": require("../assets/images/service-details/icons/technical-accuracy.png"),
+						"image": <TickIcon />,
 						"content": "Realistic Atmosphere",
 					}, {
-						"image": require("../assets/images/service-details/icons/fast-delivery.png"),
+						"image": <TickIcon />,
 						"content": "Story-Driven",
 					}, {
-						"image": require("../assets/images/service-details/icons/partnered-collabration.png"),
+						"image": <TickIcon />,
 						"content": "Sales Focused",
 					}, 
 				],
@@ -561,16 +665,16 @@ export const servicesInfo = {
 				"content": "We create immersive animation and interactive previews that showcase experience-driven spaces like hotels, resorts, and retail environments.",
 				"keyServices": [
 					{
-						"image": require("../assets/images/service-details/icons/realistic-stylling.png"),
+						"image": <TickIcon />,
 						"content": "Experience First",
 					}, {
-						"image": require("../assets/images/service-details/icons/material-accuracy.png"),
+						"image": <TickIcon />,
 						"content": "Mood Precision",
 					}, {
-						"image": require("../assets/images/service-details/icons/flexible-options.png"),
+						"image": <TickIcon />,
 						"content": "Customer-Centric",
 					}, {
-						"image": require("../assets/images/service-details/icons/engaging-visuals.png"),
+						"image": <TickIcon />,
 						"content": "High Realism",
 					}, 
 				],
@@ -581,16 +685,16 @@ export const servicesInfo = {
 				"content": "We build product animations and configurators that showcase features, mechanisms, and design details in the most engaging way.",
 				"keyServices": [
 					{
-						"image": require("../assets/images/service-details/icons/sales-ready-visuals.png"),
+						"image": <TickIcon />,
 						"content": "Feature Focused",
 					}, {
-						"image": require("../assets/images/service-details/icons/immersive-walkthroughs.png"),
+						"image": <TickIcon />,
 						"content": "High Detailing",
 					}, {
-						"image": require("../assets/images/service-details/icons/cost-efficiency.png"),
+						"image": <TickIcon />,
 						"content": "Interactive Options",
 					}, {
-						"image": require("../assets/images/service-details/icons/ready-to-use.png"),
+						"image": <TickIcon />,
 						"content": "Launch Ready",
 					}, 
 				],
@@ -601,22 +705,45 @@ export const servicesInfo = {
 				"content": "We create technical animations and demos for vehicles, machinery, and industrial systems—highlighting function, movement, and engineering clarity.",
 				"keyServices": [
 					{
-						"image": require("../assets/images/service-details/icons/accurate-draftinng.png"),
+						"image": <TickIcon />,
 						"content": "Technical Accuracy",
 					}, {
-						"image": require("../assets/images/service-details/icons/build-clarity.png"),
+						"image": <TickIcon />,
 						"content": "Mechanism Clarity",
 					}, {
-						"image": require("../assets/images/service-details/icons/easy-coordination.png"),
+						"image": <TickIcon />,
 						"content": "Smooth Motion",
 					}, {
-						"image": require("../assets/images/service-details/icons/time-saving-documentation.png"),
+						"image": <TickIcon />,
 						"content": "Industrial Precision",
 					}, 
 				],
 				"footer": "Improved training, better demos, and enhanced investor/partner understanding.",
 			},
-		]
+		],
+		"faqContent": [
+			{
+				id: 1,
+				title: "What types of animations do you create?",
+				content: "Architectural walkthroughs, interior flythroughs, product animations, character shots, brand videos, and interactive visualization sequences.",
+			}, {
+				id: 2,
+				title: "How long does a typical animation take to produce?",
+				content: "Timelines vary by length and complexity, but a standard one-minute flythrough usually takes one to two weeks.",
+			}, {
+				id: 3,
+				title: "Can you help define the movement path or storyboard?",
+				content: "Yes. Our team can create the camera path, storyboard, or movement logic for you.",
+			}, {
+				id: 4,
+				title: "Do you provide sound, text, or branding inside the video?",
+				content: "Yes. We include sound, music, labels, highlights, and branding elements if required.",
+			}, {
+				id: 5,
+				title: "Are your animations suitable for marketing and presentations?",
+				content: "Yes. Every animation is internally reviewed by senior visualization leads and subject experts to ensure technical accuracy, smooth motion, and noise-free final output before delivery.",
+			}
+		],
 	},
 	"360-degree-and-virtual-tours": {
 		"seoContent": {
@@ -624,7 +751,9 @@ export const servicesInfo = {
 		},
 		"id": "three-sixty-degree-and-virtual-tours",
 		"title":"360° & Virtual Tours",
-		"background": require("../assets/videos/360-degree-and-virtual-tours.mov"),
+		"background": require("../assets/videos/360-degree-and-virtual-tours.mp4"),
+		"background_webm": require("../assets/videos/360-degree-and-virtual-tours.webm"),
+		"background_poster": require("../assets/videos/360-virtual.jpg"),
 		"mobileMainHeading": <>Simplify <br/>Your <br/>Workflow</>,
 		"desktopMainHeading": "Immersive Tours",
 		"secondaryHeading": "That Sell Faster.",
@@ -657,16 +786,16 @@ export const servicesInfo = {
 				"content": "We create immersive 360° tours that allow buyers to explore homes, apartments, and communities remotely with full clarity.",
 				"keyServices": [
 					{
-						"image": require("../assets/images/service-details/icons/photoreal-renders.png"),
+						"image": <TickIcon />,
 						"content": "High Resolution",
 					}, {
-						"image": require("../assets/images/service-details/icons/technical-accuracy.png"),
+						"image": <TickIcon />,
 						"content": "Smooth Navigation",
 					}, {
-						"image": require("../assets/images/service-details/icons/fast-delivery.png"),
+						"image": <TickIcon />,
 						"content": "VR Compatible",
 					}, {
-						"image": require("../assets/images/service-details/icons/partnered-collabration.png"),
+						"image": <TickIcon />,
 						"content": "Sales Ready",
 					}, 
 				],
@@ -677,16 +806,16 @@ export const servicesInfo = {
 				"content": "We produce virtual experiences for hotels, resorts, and restaurants that help guests understand ambience before booking.",
 				"keyServices": [
 					{
-						"image": require("../assets/images/service-details/icons/realistic-stylling.png"),
+						"image": <TickIcon />,
 						"content": "Mood Realism",
 					}, {
-						"image": require("../assets/images/service-details/icons/material-accuracy.png"),
+						"image": <TickIcon />,
 						"content": "Interactive Flow",
 					}, {
-						"image": require("../assets/images/service-details/icons/flexible-options.png"),
+						"image": <TickIcon />,
 						"content": "Brand Aligned",
 					}, {
-						"image": require("../assets/images/service-details/icons/engaging-visuals.png"),
+						"image": <TickIcon />,
 						"content": "Booking Focused",
 					}, 
 				],
@@ -697,16 +826,16 @@ export const servicesInfo = {
 				"content": "We build interactive office tours that help clients visualize workspace planning, design intent, and layout flow.",
 				"keyServices": [
 					{
-						"image": require("../assets/images/service-details/icons/sales-ready-visuals.png"),
+						"image": <TickIcon />,
 						"content": "Layout Clarity",
 					}, {
-						"image": require("../assets/images/service-details/icons/immersive-walkthroughs.png"),
+						"image": <TickIcon />,
 						"content": "Navigation Ease",
 					}, {
-						"image": require("../assets/images/service-details/icons/cost-efficiency.png"),
+						"image": <TickIcon />,
 						"content": "Design Sync",
 					}, {
-						"image": require("../assets/images/service-details/icons/ready-to-use.png"),
+						"image": <TickIcon />,
 						"content": "Team Friendly",
 					}, 
 				],
@@ -717,22 +846,45 @@ export const servicesInfo = {
 				"content": "We create virtual store walkthroughs that help brands showcase retail concepts, merchandising, and customer journeys.",
 				"keyServices": [
 					{
-						"image": require("../assets/images/service-details/icons/accurate-draftinng.png"),
+						"image": <TickIcon />,
 						"content": "Brand Precision",
 					}, {
-						"image": require("../assets/images/service-details/icons/build-clarity.png"),
+						"image": <TickIcon />,
 						"content": "Store Mapping",
 					}, {
-						"image": require("../assets/images/service-details/icons/easy-coordination.png"),
+						"image": <TickIcon />,
 						"content": "Product Highlighting",
 					}, {
-						"image": require("../assets/images/service-details/icons/time-saving-documentation.png"),
+						"image": <TickIcon />,
 						"content": "E-Com Friendly",
 					}, 
 				],
 				"footer": "Better brand pitches, stronger concept validation, and richer customer engagement.",
 			},
-		]
+		],
+		"faqContent": [
+			{
+				id: 1,
+				title: "What is included in a 360 virtual tour?",
+				content: "Interactive panoramas, navigation points, hotspots, and optimized rendering for web or VR headsets.",
+			}, {
+				id: 2,
+				title: "What do you need from us to begin?",
+				content: "AutoCAD drawings, 3D models if available, and references for finishes or mood boards.",
+			}, {
+				id: 3,
+				title: "Can tours be integrated into websites or marketing platforms?",
+				content: "Yes. We deliver tours in formats suitable for web embedding, presentations, or VR interfaces.",
+			}, {
+				id: 4,
+				title: "Do you create both residential and commercial tours?",
+				content: "Yes. We support real estate, hospitality, retail, healthcare, and other sectors.",
+			}, {
+				id: 5,
+				title: "Can you update the tour later with revised designs?",
+				content: "Yes. We can update finishes, add rooms, or revise views anytime, and each updated version goes through internal senior review to ensure accuracy and clean, noise-free interaction for end users.",
+			}
+		],
 	},
 };
 

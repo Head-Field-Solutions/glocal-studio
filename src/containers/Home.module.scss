@@ -38,37 +38,6 @@
 	line-height: 1.2;
 }
 
-.fullSuiteSolutionSection {
-	background: #f2f0ea url("../assets/images/fullsuite-solution-bg.jpg") no-repeat top center;
-	background-size: cover;
-	padding: 140px 0;
-}
-
-.fullSuiteMainHeading {
-	text-align: center;
-	font-weight: 600;
-	margin-bottom: 20px;
-}
-
-.fullSupportImage {
-	width: 100%;
-}
-
-.fullSupportItemsList {
-	position: relative;
-	margin-top: -45%;
-}
-
-.fullSuiteBottomHeading {
-	text-align: center;
-	font-weight: 600;
-	margin: 120px 0 40px;
-}
-
-.normalText {
-	font-weight: 300;
-}
-
 .portfolioSection {
 	padding: 140px 0 0;
 	color: #ece9e2;
@@ -158,22 +127,6 @@
 	.videoSectionContent {
 		margin-top: 70px;
 	}
-	.fullSuiteMainHeading {
-		font-weight: 300;
-		span{
-			display: block;
-			font-weight: 600;
-		}
-	}
-	.fullSupportImageContainerMobile {
-		margin: 0 -15px;
-		overflow: hidden;
-		.fullSupportImage {
-			width: 200%;
-			object-fit: cover;
-			margin-left: -50%;
-		}
-	}
 	.seeStunningText {
 		color: #b7b4ab;
     	font-size: 18px;
@@ -190,7 +143,6 @@
 	// .footerInfoPanel{
 	// 	padding-top: 100px;
 	// }
-	.fullSuiteSolutionSection,
 	.whyBrandLoveSection,
 	.letUsRenderHeading {
 		padding: 100px 0;
@@ -209,17 +161,7 @@
 	}
 	.etUsRenderHeadingLast {
 		padding-bottom: 100px;
-	}
-	.fullSupportItemsList {
-		margin-top: -90%;
-	}
-	.fullSuiteBottomHeading {
-		margin-top: 50px;
-	}
-	.fullSuiteBtnGroup > div {
-		margin-left: 10px !important;
-		margin-right: 10px !important;
-	}
+	}	
 	.letUsRenderText{
 		font-size: 20px;
         line-height: 26px;

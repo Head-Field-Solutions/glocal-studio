@@ -35,26 +35,6 @@ function ServiceDetails() {
 		return <NotFound />;
 	}
 
-	const faqContent = [
-		{
-			id: 1,
-			title: "How long does it usually take to deliver a project?",
-			content: "Most projects are delivered within 3–7 business days, depending on scope and complexity. Larger walkthroughs or animations may take longer, but we always share clear timelines upfront.",
-		}, {
-			id: 2,
-			title: "How many rounds of revisions are included in the service?",
-			content: "We include two complimentary revision rounds to fine-tune details. Additional revisions can be requested at a minimal cost, ensuring you're fully satisfied with the outcome.",
-		}, {
-			id: 3,
-			title: "In what file formats will I receive my final renders?",
-			content: "Final outputs are usually delivered in high-resolution JPEG/PNG for images and MP4 for animations. If you need alternative formats (TIFF, PSD, CAD overlays, etc.), just let us know-we'll provide them.",
-		}, {
-			id: 4,
-			title: "What do I need to share with you to begin my project?",
-			content: "To kick off, simply send us your plans, sketches, or reference images, along with any design details such as materials, furniture, or mood inspirations. The clearer your inputs, the faster and more precise our delivery.",
-		}, 
-	];
-
 	const whyChooseUsContent = [
 		{
 			image: require("../assets/images/service-details/collebration-section-icon-1.png"),
@@ -121,7 +101,17 @@ function ServiceDetails() {
 			</Helmet>
 			<section className={styles.masterHead}>
 				<div className={styles.videoWrapper}>
-					<video muted autoPlay controls={false} loop playsInline className={cx(styles.masterHeadVideo, styles[serviceDetails.id])} key={params.id}>
+					<video
+						muted
+						autoPlay
+						controls={false}
+						loop
+						playsInline
+						className={cx(styles.masterHeadVideo, styles[serviceDetails.id])}
+						key={params.id}
+						poster={serviceDetails.background_poster}
+					>
+						<source src={serviceDetails.background_webm} type="video/webm" />
 						<source src={serviceDetails.background} type="video/mp4" />
 					</video>
 				</div>
@@ -234,7 +224,8 @@ function ServiceDetails() {
 						<>
 							<div className={styles.threeDRenderVideoSection}>
 								<video muted autoPlay controls={false} loop playsInline className={styles.threeDRenderVideo}>
-									<source src={require("../assets/videos/3d-walkthough-section.mov")} />
+									<source src={require("../assets/videos/3d-walkthough-section.mp4")} type="video/webm" />
+									<source src={require("../assets/videos/3d-walkthough-section.mp4")} type="video/mp4" />
 								</video>
 							</div>
 							<Container maxWidth="xl" className={styles.stepIntoSectionContainer}>
@@ -540,7 +531,7 @@ function ServiceDetails() {
 							</div>
 						</Grid>
 					</Grid>
-					<FAQContainer faqContent={faqContent} />
+					<FAQContainer faqContent={serviceDetails.faqContent} />
 				</Container>
 			</section>
 		</>

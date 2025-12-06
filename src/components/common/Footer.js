@@ -77,7 +77,7 @@ function Footer() {
 							<Grid size={12} container>
 								<Grid size={{xs: 12, md: 6}} offset={{xs: 0, md: 6}} className={styles.formContent}>
 									<Grid size={12} container className={styles.contactFormWrapper}>
-										<ContactForm />
+										{/* <ContactForm /> */}
 									</Grid>
 								</Grid>
 							</Grid>

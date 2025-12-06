@@ -61,12 +61,8 @@ function ProfessionalServiceBox(props) {
 								key={index}
 								delay={`${index * 50}ms`}
 							>
-								<Grid size={{md:4}}>
-									<img
-										src={service.image}
-										alt={service.content}
-										className={styles.iconImage}
-									/>
+								<Grid size={{md:4}} className={styles.keyServiceIcon}>
+									{service.image}
 								</Grid>
 								<Grid size={{xs:8}} className={styles.extraSmallfontsize}>{service.content}</Grid>
 							</Animate.FadeUp>

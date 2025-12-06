@@ -17,6 +17,7 @@ import "./styles/main.scss";
 
 const Home = loadable((/* webpackChunkName: "home" */) => import('./containers/Home'));
 const About = loadable((/* webpackChunkName: "about" */) => import('./containers/About'));
+const Services = loadable((/* webpackChunkName: "services" */) => import('./containers/Services'));
 const ServiceDetails = loadable((/* webpackChunkName: "service-details" */) => import('./containers/ServiceDetails'));
 const ContactUs = loadable((/* webpackChunkName: "contact-us" */) => import('./containers/ContactUs'));
 const NotFound = loadable((/* webpackChunkName: "not-found" */) => import('./containers/NotFound'));
@@ -97,6 +98,7 @@ function App({ initialData = {} }) {
 			<Routes>
 				<Route path={routes.home.href} element={<Home initialData={bootstrappedData} />} exact />
 				<Route path={routes.about.href} element={<About initialData={bootstrappedData} />} exact />
+				<Route path={routes.services.href} element={<Services initialData={bootstrappedData} />} exact />
 				<Route path={`${routes.services.href}/:id`} element={<ServiceDetails initialData={bootstrappedData} />} exact />
 				<Route path={routes["contact-us"].href} element={<ContactUs initialData={initialData} />} exact />
 				<Route path="*" element={<NotFound />} />

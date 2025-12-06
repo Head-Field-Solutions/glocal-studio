@@ -1,85 +1,25 @@
-import React, { useRef } from "react";
+import React from "react";
 import { Helmet } from "react-helmet-async";
-import { Container, Grid2 as Grid, Typography } from "@mui/material";
-import { useScroll } from "framer-motion";
+import { Container, Grid2 as Grid } from "@mui/material";
 import cx from "classnames";
 
 import MasterHeadVideo from "@/components/Home/MasterHeadVideo";
 import MaskVideoSection from "@/components/Home/MaskVideoSection";
 import ZoomParallax from "@/components/Home/ZoomParallax";
 import UspSectionCards from "@/components/Home/UspSectionCards";
-import ServiceCard from "@/components/Home/ServiceCard";
 import ScrollCarousel from "@/components/Home/ScrollCarousel";
 import CylinderText from "@/components/Home/CylinderText";
 
 import { useDevice } from '@/context/DeviceContext';
 
-import { Heading, LinkButton, Animate } from "@/components/common";
+import { Heading, Animate, ServiceList } from "@/components/common";
 
-import { routes } from "@/utils/routesPath";
-
-import masterHeadVideo from "@/assets/videos/home-masterhead-video.mov";
-import fullSupportImage from "@/assets/images/fullsuite-image.webp";
+import masterHeadVideo from "@/assets/videos/home-masterhead-video.mp4";
 
 import * as styles from "./Home.module.scss";
 
-
 function Home() {
 	const { isMobile } = useDevice();
-	
-	const servicesList = [
-		{
-			heading: <>Architectural <br />Visualization</>,
-			subHeading: "From blueprint to breathtaking visuals.",
-			description: "Bring architectural ideas to life with stunning, photoreal renders-exteriors, interiors, isometrics, floor plans, and walkthroughs that inspire confidence and sell.",
-			usp: "IDEAL FOR Architects, real estate, developers, interior studios",
-			image: require("../assets/images/architectural-visualization.png"),
-			link: routes["architectural-visualization"].href,
-		}, {
-			heading: <>3D <br/>Modeling</>,
-			subHeading: "Every Detail, Perfectly Shaped in 3D",
-			description: "We create precise, review-ready 3D models for spaces, products, and digital environments, scalable and optimized for rendering, animation, or prototyping.",
-			usp: "IDEAL FOR ADesigners, product brands, architects, engineers",
-			image: require("../assets/images/3d-modeling.png"),
-			link: routes["3d-modeling"].href,
-		}, {
-			heading: <>Technical<br/> Drawings</>,
-			subHeading: "Designs That Build Without Guesswork",
-			description: "Precise working drawings, joinery details, and documentation that bridge design intent and execution-streamlining site work and vendor coordination.",
-			usp: "IDEAL FOR A Contractors, furniture makers, architects, developers",
-			image: require("../assets/images/technical-drawings.png"),
-			link: routes["technical-drawings"].href,
-		}, {
-			heading: <>Product <br />Visualization</>,
-			subHeading: "Your Product, Photoreal and Market-Ready",
-			description: "From furniture renders to prototypes, we showcase your products with lifelike detail-perfect for marketing, e-commerce, and investor presentations.",
-			usp: "IDEAL FOR A Product designers, startups, furniture brands, FMCG",
-			image: require("../assets/images/product-visualization.png"),
-			link: routes["product-visualization"].href,
-		}, {
-			heading: <>3D Animation & Experiences</>,
-			subHeading: "Where Vision Moves with Purpose",
-			description: "Bring ideas to life with expert-reviewed animations that create immersive experiences, from architectural walkthroughs to product demos and brand films.",
-			usp: "IDEAL FOR A Developers, architects, marketing agencies, real estate",
-			image: require("../assets/images/3d-animation.png"),
-			imageType: "image",
-			link: routes["3d-animation-and-experiences"].href,
-		}, {
-			heading: <>360° & Virtual <br />Tours</>,
-			subHeading: "Immersive tours that close deals faster.",
-			description: "Transform static visuals into immersive 3D animations and experiences with architectural flythroughs, interior presentations, and interactive storytelling.",
-			usp: "IDEAL FOR A Realtors hotels, property portals, global buyers",
-			image: require("../assets/images/360-virtual-tour.png"),
-			link: routes["360-degree-and-virtual-tours"].href,
-		}
-	];
-
-	const serviceListContainer = useRef(null);
-
-	const { scrollYProgress } = useScroll({
-		target: serviceListContainer,
-		offset: ['start end', 'end start']
-	});
 
   return (
 		<>
@@ -98,53 +38,8 @@ function Home() {
 			
 			<MaskVideoSection />
 			
-			<section className={styles.fullSuiteSolutionSection}>
-				<Container maxWidth="xl">
-					<Grid size={12}>
-						{isMobile ?
-							<Heading className={styles.fullSuiteMainHeading}>
-								Full-Suite <span>3D Rendering</span> Solutions
-							</Heading>
-						:
-							<Heading className={styles.fullSuiteMainHeading}>
-								Full-Suite<br />3D Rendering Solutions
-							</Heading>
-						}
-					</Grid>
-					<Grid size={12} className={isMobile ? styles.fullSupportImageContainerMobile : ''}>
-						<img src={fullSupportImage} alt="" className={styles.fullSupportImage} />
-					</Grid>
-					<Grid size={12} spacing={4} container className={styles.fullSupportItemsList} ref={serviceListContainer}>
-						{
-							servicesList.map((service, index) => (
-								<ServiceCard
-									key={index}
-									heading={service.heading}
-									subHeading={service.subHeading}
-									description={service.description}
-									usp={service.usp}
-									image={service.image}
-									imageClassName={service.imageClassName}
-									progress={scrollYProgress}
-									translateY={service.translateY}
-									link={service.link}
-									imageType={service.imageType}
-								/>
-							))
-						}
-					</Grid>
-					<Grid size={12}>
-						<Heading variant="secondary" className={styles.fullSuiteBottomHeading}>
-							<div className={styles.normalText}>Get premium-quality output for every need-</div>
-							without paying the premium.
-						</Heading>
-					</Grid>
-					<Grid size={12} justifySelf="center" className={styles.fullSuiteBtnGroup} sx={{ textAlign: { xs: "center", md: "left" } }}>
-						<LinkButton style={{ "--button-bg": "#f2f0ea" }}>GET A FREE QUOTE</LinkButton>
-						{/* <LinkButton style={{ "--button-bg": "#f2f0ea" }}>BROWSE PORTFOLIO</LinkButton> */}
-					</Grid>
-				</Container>
-			</section>
+			<ServiceList />
+			
 			<section className={styles.portfolioSection}>
 				<Container maxWidth="xl">
 					<Grid size={12} mb={{xs: 1, md: 0}}>

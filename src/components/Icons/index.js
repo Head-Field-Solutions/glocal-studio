@@ -10,3 +10,4 @@ export { default as WebDevelopment } from "./WebDevelopment";
 export { default as CircleLoader } from "./CircleLoader";
 export { default as CloseIcon } from "./CloseIcon";
 export { default as StarGradiantIcon } from "./StarGradiantIcon";
+export { default as TickIcon } from "./Tick";

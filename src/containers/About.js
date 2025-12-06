@@ -16,8 +16,8 @@ import {
 import CurvedLoop from "@/components/About/CurvedLoop";
 import CircularText from "@/components/About/CircularText";
 
-// import masterHeadVideo from "@/assets/videos/about-us-masterhead.mp4";
-import masterHeadVideo from "@/assets/videos/about-us-masterhead.mov";
+import masterHeadVideo from "@/assets/videos/about-us-masterhead.mp4";
+import masterHeadVideoSmall from "@/assets/videos/about-us-masterhead.webm";
 
 import * as styles from "./About.module.scss";
 
@@ -41,6 +41,7 @@ function About() {
 			<section className={styles.masterHead}>
 				<div className={styles.videoWrapper}>
 					<video muted autoPlay controls={false} loop playsInline className={styles.masterHeadVideo}>
+						<source src={masterHeadVideoSmall} type="video/webm" />
 						<source src={masterHeadVideo} type="video/mp4" />
 					</video>
 				</div>

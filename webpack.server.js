@@ -97,7 +97,7 @@ module.exports = {
       },
 			{
         /* Fonts and Images */
-        test: /\.(png|gif|jpg|jpeg|webp|svg|mp4|mov|ttf|eot|svg|otf|woff(2)?)(\?[a-z0-9]+)?$/,
+        test: /\.(png|gif|jpg|jpeg|webp|svg|mp4|mov|webm|ttf|eot|svg|otf|woff(2)?)(\?[a-z0-9]+)?$/,
         type: 'asset/resource',
 				generator: {
           filename: '[name]-[contenthash:8][ext]', // Keep original filenames

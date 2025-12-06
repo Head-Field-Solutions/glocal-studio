@@ -3,7 +3,8 @@ import { Grid2 as Grid } from '@mui/material';
 import { useTransform, motion } from "framer-motion";
 import { useDevice } from '@/context/DeviceContext';
 
-import { LinkButton, Animate } from "@/components/common";
+import LinkButton from "./LinkButton";
+import Animate from "./Animate";
 
 import * as styles from "./ServiceCard.module.scss";
 
@@ -80,7 +81,7 @@ export default function ServiceCard(props) {
 					<Grid size={{xs: 12, sm: 6}} sx={{ order: { xs: 3, sm: 0 } }}>
 						<LinkButton to={link} style={{ "--button-bg": "#f2f0ea" }}>GET A FREE QUOTE</LinkButton>
 					</Grid>
-					<Grid flexDirection={"row"} size={{xs: 10, sm: 6}} sx={{ order: { xs: 2, sm: 0 } }} className={styles.itemSmallText}>
+					<Grid flexDirection="row" size={{xs: 10, sm: 6}} sx={{ order: { xs: 2, sm: 0 } }} className={styles.itemSmallText}>
 						<span>{usp}</span>
 						<img src={require("../../assets/images/check-icon.svg")} alt="" className={styles.checkIcon} />
 					</Grid>
