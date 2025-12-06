@@ -13,7 +13,7 @@ import {
 	Animate,
 } from "@/components/common";
 
-import masterHeadVideo from "@/assets/videos/contact-us-masterhead.mp4";
+import masterHeadVideo from "@/assets/videos/contact-us-masterhead.mov";
 
 import * as styles from "./ContactUs.module.scss";
 

@@ -50,18 +50,27 @@
 	}
 	.headingText {
 		font-size: clamp(2rem, 2.5vw, 2.5rem);
+		letter-spacing: -1px;
+        line-height: 1.1;
 	}
 	.smallFontSize {
-		font-size: 16px;
+		font-size: 12px;
 	}
 	.contentContainer {
 		font-size: 18px;
 	}
+	.iconImage {
+		margin-top: 2px;
+	}
 	.extraSmallfontsize{
-		font-size: 16px;
-		line-height: 19px;
-		text-wrap: auto;
-    	word-wrap: break-word;
+		font-size: 14px;
+        line-height: 18px;
+        text-wrap: auto;
+        word-wrap: break-word;
+        font-weight: 400;
+	}
+	.starBox svg {
+		width: 32px;
 	}
 	
 }

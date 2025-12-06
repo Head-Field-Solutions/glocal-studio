@@ -151,7 +151,7 @@
 	color: #f3f2ee;
 	font-weight: 200;
 	margin: 40px 0 92px;
-	font-size: clamp(1rem, 2vw, 2rem)
+	font-size: clamp(1.2rem, 2vw, 2rem)
 }
 
 .projectInfoBoxes {
@@ -257,6 +257,10 @@
 
 
 @media screen and (max-width: 899px) {
+	.extraLightText {
+		font-weight: 300;
+	}
+	
 	.masterHead {
 		padding-top: 70vh;
 	}
@@ -266,6 +270,21 @@
 	.masterHead {
 		.videoWrapper, .masterHeadVideo{
 			height: 100%;
+		}
+		.architectural-visualization {
+			left: -50%;
+			width: 150%;
+		}
+		.three-d-modeling {
+			width: 150%;
+			left: -15%;
+		}
+		.product-visualization {
+			width: 140%;
+		}
+		.three-d-animation-and-experiences{
+			width: 120%;
+    		left: -10%;
 		}
 	}
 	.masterHeadInfoSection {
@@ -317,6 +336,13 @@
 	}
 	.weDesignSecondaryHeading {
 		margin-bottom: 60px;
+		font-weight: 300;
+		font-size: 20px;
+		line-height: 1.3;
+		letter-spacing: 0;
+	}
+	.projectInfoImage {
+		height: 80px;
 	}
 	.partnerWithProfessionalContainer {
 		margin-top: -60vh;
@@ -333,8 +359,11 @@
 		}
 	}
 	.whyChooseUsContentContainer {
-		padding: 50px 10px 0;
+		padding: 50px 20px 0;
 		margin-top: -20%;
+	}
+	.workDirectlyText {
+		font-size: 18px;
 	}
 	.faqContainer {
 		padding: 100px 0px 10px;
@@ -347,7 +376,10 @@
 	}
 	.faqHeading {
 		flex-direction: column;
-    	align-items: flex-start;
+        align-items: flex-start;
+        font-size: 32px;
+        letter-spacing: -1px;
+        line-height: 36px;
 		&::after {
     		width: 100%;
 			height: 6px;

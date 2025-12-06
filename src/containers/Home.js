@@ -18,7 +18,7 @@ import { Heading, LinkButton, Animate } from "@/components/common";
 
 import { routes } from "@/utils/routesPath";
 
-import masterHeadVideo from "@/assets/videos/home-masterhead-video.mp4";
+import masterHeadVideo from "@/assets/videos/home-masterhead-video.mov";
 import fullSupportImage from "@/assets/images/fullsuite-image.webp";
 
 import * as styles from "./Home.module.scss";

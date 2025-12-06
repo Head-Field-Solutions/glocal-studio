@@ -30,7 +30,7 @@ function ServiceDetails() {
 	const { isMobile } = useDevice();
 
 	const serviceDetails = servicesInfo[params.id] || null;
-
+	
 	if (!serviceDetails) {
 		return <NotFound />;
 	}
@@ -104,6 +104,16 @@ function ServiceDetails() {
 		}, 
 	];
 
+
+	// <video
+	// 	src="/video.mov"
+	// 	controls
+	// 	autoPlay
+	// 	muted
+	// 	onError={(e) => {
+	// 		e.target.outerHTML = `<img src='/fallback.jpg' style='width:100%' />`;
+	// 	}}
+	// />
 	return (
 		<>
 			<Helmet>
@@ -111,7 +121,7 @@ function ServiceDetails() {
 			</Helmet>
 			<section className={styles.masterHead}>
 				<div className={styles.videoWrapper}>
-					<video muted autoPlay controls={false} loop playsInline className={styles.masterHeadVideo} key={params.id}>
+					<video muted autoPlay controls={false} loop playsInline className={cx(styles.masterHeadVideo, styles[serviceDetails.id])} key={params.id}>
 						<source src={serviceDetails.background} type="video/mp4" />
 					</video>
 				</div>
@@ -224,7 +234,7 @@ function ServiceDetails() {
 						<>
 							<div className={styles.threeDRenderVideoSection}>
 								<video muted autoPlay controls={false} loop playsInline className={styles.threeDRenderVideo}>
-									<source src={require("../assets/videos/3d-walkthough-section.mp4")} />
+									<source src={require("../assets/videos/3d-walkthough-section.mov")} />
 								</video>
 							</div>
 							<Container maxWidth="xl" className={styles.stepIntoSectionContainer}>
@@ -261,7 +271,7 @@ function ServiceDetails() {
 										elementProps={{
 											size: {xs: 12, sm: 6, md: 3},
 											container: true,
-											spacing: {xs: 2, md: 4},
+											spacing: {xs: 1, md: 4},
 										}}
 										delay="0"
 									>
@@ -281,7 +291,7 @@ function ServiceDetails() {
 										elementProps={{
 											size: {xs: 12, sm: 6, md: 3},
 											container: true,
-											spacing: {xs: 2, md: 4},
+											spacing: {xs: 1, md: 4},
 										}}
 										delay="50ms"
 									>
@@ -301,7 +311,7 @@ function ServiceDetails() {
 										elementProps={{
 											size: {xs: 12, sm: 6, md: 3},
 											container: true,
-											spacing: {xs: 2, md: 4},
+											spacing: {xs: 1, md: 4},
 										}}
 										delay="100ms"
 									>
@@ -321,7 +331,7 @@ function ServiceDetails() {
 										elementProps={{
 											size: {xs: 12, sm: 6, md: 3},
 											container: true,
-											spacing: {xs: 2, md: 4},
+											spacing: {xs: 1, md: 4},
 										}}
 										delay="150ms"
 									>
