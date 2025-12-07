@@ -2,7 +2,6 @@ import React from "react";
 import { Helmet } from 'react-helmet-async';
 import { Container, Grid2 as Grid } from "@mui/material";
 import cx from "classnames";
-import { useDevice } from '@/context/DeviceContext';
 
 import { StarGradiantIcon } from "@/components/Icons";
 
@@ -19,8 +18,6 @@ import masterHeadVideoSmall from "@/assets/videos/contact-us-masterhead.webm";
 import * as styles from "./ContactUs.module.scss";
 
 function ContactUs() {
-	const { isMobile } = useDevice();
-
 	const onContactClick = () => {
 		window.scrollTo({
 			top: document.getElementById("formContainer").offsetTop, // Gets the vertical position of the element
