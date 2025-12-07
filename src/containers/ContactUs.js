@@ -104,9 +104,6 @@ function ContactUs() {
 					/>
 				</Container>
 			</section>
-			{!isMobile &&
-				<section className={styles.dividerSection} />
-			}
 		</>
 	);
 };

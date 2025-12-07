@@ -336,7 +336,7 @@ function ServiceDetails() {
 				}
 				<div className={styles.threeDRenderImageWrapper}>
 					<img
-						src={require("../assets/images/service-details/step-into-section-bg.jpg")}
+						src={require("../assets/images/service-details/step-into-section-bg.webp")}
 						alt=""
 						className={styles.threeDRenderImage}
 					/>
