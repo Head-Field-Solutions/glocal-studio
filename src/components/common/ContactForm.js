@@ -9,7 +9,7 @@ import {
 import { useLocation } from "react-router-dom";
 import { Controller, useForm } from "react-hook-form";
 
-import { CircleLoader } from "@/components/Icons";
+import { CircleLoader, ArrowIcon } from "@/components/Icons";
 
 import { ContactFormContext } from '@/context/ContactFormContext';
 
@@ -18,7 +18,7 @@ import InputField from './InputField';
 import * as styles from "./ContactForm.module.scss";
 
 function ContactForm(props) {
-	const { isFormInModal = true } = props;
+	const { isFormInModal = true, isContactPageForm = false } = props;
 	const { pathname } = useLocation();
 
 	const captchaRef = useRef();
@@ -77,6 +77,9 @@ function ContactForm(props) {
 
 	return (
 		<Grid container size={12}>
+			<Grid size={12} className={styles.requiredInfo}>
+				All the fields marked with * are required
+			</Grid>
 			<Grid size={12}>
 				<form onSubmit={handleSubmit(onSubmit)} className={styles.contactForm}>
 					<Controller
@@ -90,7 +93,11 @@ function ContactForm(props) {
 						)}
 					/>
 					<Grid container size={12} spacing={3}>
-						<Grid size={{xs: 12, md: 4}}>
+						<Grid
+							size={
+								isContactPageForm ? 12 : {xs: 12, md: 4}
+							}
+						>
 							<InputField
 								slotProps={{
 									inputLabel: {
@@ -108,7 +115,11 @@ function ContactForm(props) {
 								}}
 							/>
 						</Grid>
-						<Grid size={{xs: 12, md: 4}}>
+						<Grid
+							size={
+								isContactPageForm ? 12 : {xs: 12, md: 4}
+							}
+						>
 							<InputField
 								slotProps={{
 									inputLabel: {
@@ -130,7 +141,11 @@ function ContactForm(props) {
 								}}
 							/>
 						</Grid>
-						<Grid size={{xs: 12, md: 4}}>
+						<Grid 
+							size={
+								isContactPageForm ? 12 : {xs: 12, md: 4}
+							}
+						>
 							<InputField
 								slotProps={{
 									inputLabel: {
@@ -184,18 +199,22 @@ function ContactForm(props) {
 							sx={{
 								display: "flex",
 								justifyContent: { xs: "center", md: "flex-start" },
+								alignItems: "center"
 							}}
 						>
 							<Button
 								type="submit"
-								// fullWidth
 								className={styles.submitButton}
+								fullWidth
 							>
 								{
 									isSubmitting ? (
 										<CircleLoader className={styles.loader} width={40} height={40} />
 									) : (
-										<span className={styles.submitText}>SEND MESSAGE</span>
+										<>
+											<span className={styles.submitText}>SUBMIT</span>
+											<ArrowIcon width={48} height={48} />
+										</>
 									)
 								}
 							</Button>

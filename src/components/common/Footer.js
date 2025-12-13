@@ -41,7 +41,7 @@ function Footer() {
 			<div className={styles.footerInfoPanel}>
 				{isMobile ?
 					<>
-						<Container maxWidth="xl" className={styles.formContainer} id="formContainer">
+						<Container maxWidth="xl" className={styles.formContainer}>
 							<Grid size={12} container>
 								<Grid size={{xs: 12, md: 6}} offset={{xs: 0, md: 6}}>
 									<Grid size={12}>

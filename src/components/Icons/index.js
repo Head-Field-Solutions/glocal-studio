@@ -13,3 +13,4 @@ export { default as StarGradiantIcon } from "./StarGradiantIcon";
 export { default as TickIcon } from "./Tick";
 export { default as PlusIcon } from "./Plus";
 export { default as MinusIcon } from "./Minus";
+export { default as ArrowIcon } from "./ArrowRight";

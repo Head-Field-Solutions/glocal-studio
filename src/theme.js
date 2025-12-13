@@ -60,6 +60,7 @@ const theme = createTheme({
 				},
 				inputLabel: {
 					fontSize: "16px",
+					fontWeight: 400,
 					color: "#070c1e",
 				}
 			}
@@ -102,7 +103,7 @@ const theme = createTheme({
 				root: {
 					fontSize: "16px",
 					color: "#000",
-					fontWeight: "600",
+					fontWeight: 400,
 					transform: "translate(0, -1.5px) scale(1) !important",
 					"&.Mui-focused": {
 						color: "#000"

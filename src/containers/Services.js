@@ -28,7 +28,15 @@ function About() {
 			</Helmet>
 			<section className={styles.masterHead}>
 				<div className={styles.videoWrapper}>
-					<video muted autoPlay controls={false} loop playsInline className={styles.masterHeadVideo}>
+					<video
+						muted
+						autoPlay
+						controls={false}
+						loop
+						playsInline
+						className={styles.masterHeadVideo}
+						poster={require("../assets/images/services-masterhead.jpg")}
+					>
 						<source src={masterHeadVideoSmall} type="video/webm" />
 						<source src={masterHeadVideo} type="video/mp4" />
 					</video>

@@ -5,6 +5,5 @@ export { default as Animate } from "./Animate";
 export { default as ColorfulText } from "./ColorfulText";
 export { default as Modal } from "./Modal";
 export { default as TextType } from "./TextType";
-export { default as QualityMetrics } from "./QualityMetrics";
 export { default as ContactForm } from "./ContactForm";
 export { default as ServiceList } from "./ServiceList";

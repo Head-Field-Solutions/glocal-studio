@@ -4,6 +4,7 @@ import { Container, Grid2 as Grid } from "@mui/material";
 import { useScroll, useTransform, motion } from "framer-motion";
 import Lottie from "lottie-react";
 import cx from "classnames";
+
 import { useDevice } from '@/context/DeviceContext';
 import { StarGradiantIcon } from "@/components/Icons";
 
@@ -42,7 +43,15 @@ function About() {
 			</Helmet>
 			<section className={styles.masterHead}>
 				<div className={styles.videoWrapper}>
-					<video muted autoPlay controls={false} loop playsInline className={styles.masterHeadVideo}>
+					<video
+						muted
+						autoPlay
+						controls={false}
+						loop
+						playsInline
+						className={styles.masterHeadVideo}
+						poster={require("../assets/images/about-us/masterhead.jpg")}
+					>
 						<source src={masterHeadVideoSmall} type="video/webm" />
 						<source src={masterHeadVideo} type="video/mp4" />
 					</video>

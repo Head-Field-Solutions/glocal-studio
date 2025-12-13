@@ -125,9 +125,10 @@
 	.masterHeadVideo {
 		height: 100vh
 	}
+
 	.masterHeadVideo{
 		width: 150%;
-        left: -15%;
+    left: -15%;
 	}
 
 	.acturalVisualizationHeading {
@@ -158,6 +159,11 @@
 
 	.teamMemberPosition {
 		font-size: 16px;
+	}
+
+	.galleryContainer,
+	.galleryGrid {
+		height: 85vh;
 	}
 	
 }
