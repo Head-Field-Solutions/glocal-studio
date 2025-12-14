@@ -8,7 +8,6 @@ import { StarGradiantIcon, PhoneIcon, EmailIcon } from "@/components/Icons";
 
 import {
 	Heading,
-	LinkButton,
 	Animate,
 	ContactForm,
 } from "@/components/common";
@@ -36,13 +35,6 @@ function ContactUs() {
 		const imageSrc = require(`../assets/images/office-images/glocal-office-${i + 1}.jpg`);
 		imageList.push(imageSrc);
 	});
-
-	const onContactClick = () => {
-		window.scrollTo({
-			top: document.getElementById("formContainer").offsetTop, // Gets the vertical position of the element
-			behavior: 'smooth'
-		});
-	};
 
 	const openLightboxOnSlide = (number) => {
 		setLightboxController({
@@ -113,14 +105,6 @@ function ContactUs() {
 						>
 							Whether you're an architect, developer, or designer, we'd love to hear about your project. let's start building something extraordinary together.
 						</Animate.FadeUp>
-						<Grid size={12}>
-							<LinkButton
-								onClick={onContactClick}
-								style={{ "--button-bg": "#060010", "--button-text-color":  "#f3f2ee" }}
-							>
-								let's get started
-							</LinkButton>
-						</Grid>
 					</Grid>
 				</Container>
 			</section>
