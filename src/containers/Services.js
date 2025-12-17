@@ -23,7 +23,7 @@ function About() {
 	return (
 		<>
 			<Helmet>
-				<title>The Worlds Leading Studio You Can Trust | Glocal Studio</title>
+				<title>The World's Leading Studio You Can Trust | Glocal Studio</title>
 				<meta name="description" content="Streamline your business with professional virtual assistant services. Get remote administrative support, scheduling, customer care, and more. Enhance productivity today!" />
 			</Helmet>
 			<section className={styles.masterHead}>

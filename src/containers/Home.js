@@ -24,7 +24,7 @@ function Home() {
   return (
 		<>
 			<Helmet>
-        <title>The Worlds Leading Studio You Can Trust | Glocal Studio</title>
+        <title>The World's Leading Studio You Can Trust | Glocal Studio</title>
 				<meta name="description" content="Streamline your business with professional virtual assistant services. Get remote administrative support, scheduling, customer care, and more. Enhance productivity today!" />
       </Helmet>
 			<section className={styles.masterHead}>
@@ -75,7 +75,7 @@ function Home() {
 			<section className={styles.whyBrandLoveSection}>
 				<Container maxWidth="xl">
 					<Grid size={12}>
-						<Heading variant="secondary" className={styles.whyBrandHeading} direction="down">Why Brands Love Us?</Heading>
+						<Heading variant="secondary" className={styles.whyBrandHeading} direction="down">Why Clients Love Us?</Heading>
 					</Grid>
 					<Grid size={12} sx={{
 							mt: { xs: 3, md: 0 },

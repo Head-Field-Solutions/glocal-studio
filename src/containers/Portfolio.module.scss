@@ -68,7 +68,7 @@
 .masterHeadInfoSection {
 	background: linear-gradient(360deg,rgba(23, 33, 61, 1) 0%, rgba(23, 33, 61, 0) 100%);
 	border-radius: 60px;
-	padding: 60px 0 100px;
+	padding: 60px 0 80px;
 }
 
 .acturalVisualizationHeading {
@@ -90,6 +90,10 @@
 	}
 }
 
+.downArrowIcon {
+	height: 72px;
+}
+
 .masterHeadingHeading {
 	text-transform: uppercase;
 	color: #f3f2ee;
@@ -100,15 +104,59 @@
 }
 
 .gallerySection {
-	width: 100vw;
-	height: 100vh;
 	margin-top: 32px;
 	margin-bottom: 120px;
 }
 
-.galleryContainer,
-.galleryGrid {
-	height: 100vh;
+.imageListRoot {
+	margin: 0;
+}
+
+.imageListItem {
+	border-radius: 20px;
+	overflow: hidden;
+	cursor: pointer;
+	position: relative;
+
+	&::before {
+		position: absolute;
+		top: 0;
+		left: -85%;
+		z-index: 2;
+		display: block;
+		content: '';
+		width: 50%;
+		height: 100%;
+		background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+		background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+		-webkit-transform: skewX(-25deg);
+		transform: skewX(-25deg);
+	}
+
+	&:hover {
+		&::before {
+			-webkit-animation: shine .75s;
+			animation: shine .75s;
+		}
+	}
+}
+
+:global {
+	.fslightbox-container {
+		background: rgba(6, 0, 16, 0.6) !important;
+    backdrop-filter: blur(9.5px);
+	}
+}
+
+@-webkit-keyframes shine {
+	100% {
+		left: 125%;
+	}
+}
+@keyframes shine {
+	100% {
+		left: 125%;
+	}
 }
 
 @media screen and (max-width: 899px) {
@@ -139,31 +187,4 @@
 			height: 2px;
 		}
 	}
-
-	.missionVisionConten {
-		font-size: 18px;
-	}
-	.glassContainerWrapper {
-		padding: 40px 30px;
-		h2 {
-			letter-spacing: -1px;
-		}
-	}
-	
-	.glassContainer {
-		border-radius: 20px;
-	}
-	.advantageText {
-		font-size: 16px;
-	}
-
-	.teamMemberPosition {
-		font-size: 16px;
-	}
-
-	.galleryContainer,
-	.galleryGrid {
-		height: 85vh;
-	}
-	
 }

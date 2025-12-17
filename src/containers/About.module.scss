@@ -248,10 +248,10 @@
 }
 
 .linkedInSmallIcon {
-	position: absolute;
-	bottom: 40px;
-	right: 40px;
 	z-index: 1;
+	position: relative;
+	margin-top: 12px;
+	display: inline-block;
 
 	img {
 		width: 32px;

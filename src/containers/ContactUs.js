@@ -46,7 +46,7 @@ function ContactUs() {
 	return (
 		<>
 			<Helmet>
-				<title>The Worlds Leading Studio You Can Trust | Glocal Studio</title>
+				<title>The World's Leading Studio You Can Trust | Glocal Studio</title>
 				<meta name="description" content="Streamline your business with professional virtual assistant services. Get remote administrative support, scheduling, customer care, and more. Enhance productivity today!" />
 			</Helmet>
 			<section className={styles.masterHead}>
@@ -103,7 +103,7 @@ function ContactUs() {
 							}}
 							className={cx(styles.masterHeadText, styles.textWhite)}
 						>
-							Whether you're an architect, developer, or designer, we'd love to hear about your project. let's start building something extraordinary together.
+							Whether you're an architect, developer, or designer, we'd love to hear about your project. Let's start building something extraordinary together.
 						</Animate.FadeUp>
 					</Grid>
 				</Container>
@@ -136,31 +136,58 @@ function ContactUs() {
 									Whether it's a quick question or a detailed brief, we're ready to explore your idea
 								</Heading>
 							</Grid>
-							<Animate.FadeUp
-								element={Grid}
-								elementProps={{
-									size: 12,
-									container: true,
-									alignContent: "flex-end",
-									spacing: 0
-								}}
-							>
-								<Grid size={12}>
-									<div className={styles.addressHeading}>Glocal Studio - India</div>
-									<div>B-8, Sector 59, Noida - 201301,</div>
-									<div>Uttar Pradesh, INDIA</div>
-								</Grid>
-								<Grid size={12}>
-									<div className={styles.phoneNumber}>
-										<PhoneIcon fill="#000" width="24px" height="24px" />
-										<a href="tel:+91 917 938 7208">+91 917 938 7208</a>
-									</div>
-									<div className={styles.emailAddress}>
-										<EmailIcon fill="#000" width="24px" height="24px" />
-										<a href="mailto:info@glocalstudio.in">info@glocalstudio.in</a>
-									</div>
-								</Grid>
-							</Animate.FadeUp>
+							<Grid size={12} container alignContent="flex-end" spacing={0}>
+								<Animate.FadeUp
+									element={Grid}
+									elementProps={{
+										size: 12,
+										container: true,
+										spacing: 0
+									}}
+									className={styles.contactInfo}
+								>
+									<Grid size={12}>
+										<div className={styles.addressHeading}>Glocal Studio - USA</div>
+										<div>3422 Old Capitol Trail</div>
+										<div>Wilmington DE 19808, USA</div>
+									</Grid>
+									<Grid size={12}>
+										<div className={styles.phoneNumber}>
+											<PhoneIcon fill="#000" width="24px" height="24px" />
+											<a href="tel:+1 732 344 4260">+1 732 344 4260</a>
+										</div>
+										<div className={styles.emailAddress}>
+											<EmailIcon fill="#000" width="24px" height="24px" />
+											<a href="mailto:info@glocalstudio.in">info@glocalstudio.in</a>
+										</div>
+									</Grid>
+								</Animate.FadeUp>
+								<Animate.FadeUp
+									element={Grid}
+									elementProps={{
+										size: 12,
+										container: true,
+										alignContent: "flex-end",
+										spacing: 0
+									}}
+								>
+									<Grid size={12}>
+										<div className={styles.addressHeading}>Glocal Studio - India</div>
+										<div>B-8, Sector 59, Noida - 201301,</div>
+										<div>Uttar Pradesh, INDIA</div>
+									</Grid>
+									<Grid size={12}>
+										<div className={styles.phoneNumber}>
+											<PhoneIcon fill="#000" width="24px" height="24px" />
+											<a href="tel:+91 917 938 7208">+91 917 938 7208</a>
+										</div>
+										<div className={styles.emailAddress}>
+											<EmailIcon fill="#000" width="24px" height="24px" />
+											<a href="mailto:info@glocalstudio.in">info@glocalstudio.in</a>
+										</div>
+									</Grid>
+								</Animate.FadeUp>
+							</Grid>
 						</Grid>
 						<Animate.FadeUp
 							element={Grid}

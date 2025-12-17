@@ -1,31 +1,46 @@
-import React from "react";
+import React, { useState } from "react";
 import { Helmet } from 'react-helmet-async';
-import { Container, Grid2 as Grid } from "@mui/material";
+import { Container, Grid2 as Grid, ImageList, ImageListItem } from "@mui/material";
+import FsLightbox from "fslightbox-react";
+import Lottie from "lottie-react";
 import cx from "classnames";
 
 import { useDevice } from '@/context/DeviceContext';
 import { StarGradiantIcon } from "@/components/Icons";
 
-import {
-	Heading,
-	LinkButton,
-	Animate,
-} from "@/components/common";
+import { Heading, Animate } from "@/components/common";
 
 import masterHeadVideo from "@/assets/videos/portfolio-masterhead.mp4";
 import masterHeadVideoSmall from "@/assets/videos/portfolio-masterhead.webm";
 
-import DomeGallery from "@/components/Portfolio/ImageGallery";
-
-import { routes } from "@/utils/routesPath";
-
 import * as styles from "./Portfolio.module.scss";
 
 function About() {
+	const { isMobile } = useDevice();
+
+	const [lightboxController, setLightboxController] = useState({
+			toggler: false,
+			slide: 1
+		});
+	
+		const imageList= [];
+	
+		Array.from({ length: 55 }, (_, i) => {
+			const imageSrc = require(`../assets/images/portfolio/portfolio-${i + 1}.webp`);
+			imageList.push(imageSrc);
+		});
+	
+		const openLightboxOnSlide = (number) => {
+			setLightboxController({
+				toggler: !lightboxController.toggler,
+				slide: number
+			});
+		};
+
 	return (
 		<>
 			<Helmet>
-				<title>The Worlds Leading Studio You Can Trust | Glocal Studio</title>
+				<title>The World's Leading Studio You Can Trust | Glocal Studio</title>
 				<meta name="description" content="Streamline your business with professional virtual assistant services. Get remote administrative support, scheduling, customer care, and more. Enhance productivity today!" />
 			</Helmet>
 			<section className={styles.masterHead}>
@@ -77,23 +92,50 @@ function About() {
 							Browse through the visuals that define our approach—sharp detailing, realistic light, and designs that communicate with clarity.
 						</Animate.FadeUp>
 						<Grid size={12}>
-							<LinkButton
-								to={routes.services.href}
-								style={{ "--button-bg": "#060010", "--button-text-color":  "#f3f2ee" }}
-							>
-								explore our services
-							</LinkButton>
+							<Lottie
+								animationData={require("../assets/animations/down-arrow.json")}
+								loop
+								className={styles.downArrowIcon}
+							/>
 						</Grid>
 					</Grid>
 				</Container>
 			</section>
 			<section className={styles.gallerySection}>
-				<Container maxWidth="xl" className={styles.galleryContainer}>
-					<Grid size={12} className={styles.galleryGrid}>
-						<DomeGallery />
+				<Container maxWidth="xl">
+					<Grid size={12} spacing={{xs: 6, md: 3}} container>
+						<ImageList
+							variant="masonry"
+							cols={isMobile ? 2 : 3}
+							gap={isMobile ? 10 : 20}
+							className={styles.imageListRoot}
+						>
+							{
+								imageList.map((image, i) => (
+									<ImageListItem
+										key={i}
+										className={styles.imageListItem}
+										onClick={() => openLightboxOnSlide(i + 1)}
+										size={{xs:6}}
+									>
+										<img
+											srcSet={image}
+											src={image}
+											loading="lazy"
+											alt=""
+										/>
+									</ImageListItem>
+								))
+							}
+						</ImageList>
 					</Grid>
 				</Container>
 			</section>
+			<FsLightbox
+				toggler={lightboxController.toggler}
+				sources={imageList}
+				slide={lightboxController.slide}
+			/>
 		</>
 	);
 };

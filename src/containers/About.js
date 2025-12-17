@@ -38,7 +38,7 @@ function About() {
 	return (
 		<>
 			<Helmet>
-				<title>The Worlds Leading Studio You Can Trust | Glocal Studio</title>
+				<title>The World's Leading Studio You Can Trust | Glocal Studio</title>
 				<meta name="description" content="Streamline your business with professional virtual assistant services. Get remote administrative support, scheduling, customer care, and more. Enhance productivity today!" />
 			</Helmet>
 			<section className={styles.masterHead}>
@@ -627,20 +627,6 @@ function About() {
 										alt=""
 										className={styles.teamImage}
 									/>
-									{!isMobile &&
-										<a
-											href="https://www.linkedin.com/in/kunal-jaggi-0b5a182/"
-											target="_blank"
-											rel="nofollow noreferrer"
-											label="Srishti Khatri"
-											className={styles.linkedInSmallIcon}
-										>
-											<img
-												src={require("../assets/images/about-us/linkedin-icon-white.png")}
-												alt=""
-											/>
-										</a>
-									}
 								</div>
 							</Animate.FadeUp>
 							<Grid size={12} container>
@@ -669,6 +655,22 @@ function About() {
 										}		
 									</Grid>
 									<div className={styles.teamMemberPosition}>Founder & Managing Director</div>
+									{!isMobile &&
+										<div>
+											<a
+												href="https://www.linkedin.com/in/kunal-jaggi-0b5a182/"
+												target="_blank"
+												rel="nofollow noreferrer"
+												label="Srishti Khatri"
+												className={styles.linkedInSmallIcon}
+											>
+												<img
+													src={require("../assets/images/about-us/linkedin-icon.png")}
+													alt=""
+												/>
+											</a>
+										</div>
+									}
 								</Animate.FadeUp>
 								<Animate.FadeUp
 									direction="left"
@@ -696,20 +698,6 @@ function About() {
 										alt=""
 										className={styles.teamImage}
 									/>
-									{!isMobile &&
-										<a
-											href="https://www.linkedin.com/in/srishtikhatri/"
-											target="_blank"
-											rel="nofollow noreferrer"
-											label="Srishti Khatri"
-											className={styles.linkedInSmallIcon}
-										>
-											<img
-												src={require("../assets/images/about-us/linkedin-icon-white.png")}
-												alt=""
-											/>
-										</a>
-									}
 								</div>
 							</Animate.FadeUp>
 							<Grid size={12} container>
@@ -739,6 +727,22 @@ function About() {
 
 									</Grid>
 									<div className={styles.teamMemberPosition}>Business Head</div>
+									{!isMobile &&
+										<div>
+											<a
+												href="https://www.linkedin.com/in/srishtikhatri/"
+												target="_blank"
+												rel="nofollow noreferrer"
+												label="Srishti Khatri"
+												className={styles.linkedInSmallIcon}
+											>
+												<img
+													src={require("../assets/images/about-us/linkedin-icon.png")}
+													alt=""
+												/>
+											</a>
+										</div>
+									}
 								</Animate.FadeUp>
 								<Animate.FadeUp
 									direction="left"

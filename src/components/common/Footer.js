@@ -341,10 +341,7 @@ function Footer() {
 							</Grid>
 							{!isMobile ? 
 								<Grid size={12}>
-									<div className={styles.copyrightText}>Copyright &copy; 2025 - All rights Reserved By Glocal Studio.</div>
-									<div className={styles.creditText}>
-										<a href="https://www.radicalreflex.com" rel="noreferrer" target="_blank">Made with &hearts; by Radical Reflex</a>
-									</div>
+									<div className={styles.copyrightText}>Copyright &copy; 2025 - All rights reserved By Glocal Studio.</div>
 								</Grid>
 								:
 								null
