@@ -1,14 +1,14 @@
 {
   "version": 2,
 	"buildCommand": "npm run build",
-	"installCommand": "npm ci",
 	"outputDirectory": "build",
   "builds": [
     {
       "src": "build/public/server.js",
       "use": "@vercel/node",
 			"config": {
-        "includeFiles": ["build/assets-manifest.json"]
+        "includeFiles": ["build/assets-manifest.json"],
+				"excludeFiles": "{.next,*.cache,node_modules,public,app}/**"
       }
     },
 		{

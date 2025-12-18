@@ -70,7 +70,7 @@ function Footer() {
 						</div>
 
 						<div className={styles.footerImagePanel}>
-							<img src={require("../../assets/images/footer-decor-image.png")} alt="" />
+							<img src={require("../../assets/images/footer-decor-image.webp")} alt="" />
 						</div>
 
 						<Container maxWidth="xl" className={styles.formContainer}>
@@ -125,7 +125,7 @@ function Footer() {
 							<Container maxWidth="xl">
 								<Grid size={12} container>
 									<Grid size={8} className={styles.footerImage}>
-										<img src={require("../../assets/images/footer-decor-image.png")} alt="" className={styles.decorImage} />
+										<img src={require("../../assets/images/footer-decor-image.webp")} alt="" className={styles.decorImage} />
 									</Grid>
 								</Grid>
 							</Container>

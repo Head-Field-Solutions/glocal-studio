@@ -32,7 +32,7 @@ function ContactUs() {
 	const imageList= [];
 
 	Array.from({ length: 23 }, (_, i) => {
-		const imageSrc = require(`../assets/images/office-images/glocal-office-${i + 1}.jpg`);
+		const imageSrc = require(`../assets/images/office-images/glocal-office-${i + 1}.webp`);
 		imageList.push(imageSrc);
 	});
 

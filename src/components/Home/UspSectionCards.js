@@ -1,10 +1,10 @@
 import React, { useRef } from "react";
 import { useScroll } from 'framer-motion';
 
-import uspIcon1 from "@/assets/images/card-image-1.png";
-import uspIcon2 from "@/assets/images/card-image-2.png";
-import uspIcon3 from "@/assets/images/card-image-3.png";
-import uspIcon4 from "@/assets/images/card-image-4.png";
+import uspIcon1 from "@/assets/images/card-image-1.webp";
+import uspIcon2 from "@/assets/images/card-image-2.webp";
+import uspIcon3 from "@/assets/images/card-image-3.webp";
+import uspIcon4 from "@/assets/images/card-image-4.webp";
 
 import SectionCards from "./SectionCards";
 
