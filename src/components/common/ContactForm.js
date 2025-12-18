@@ -190,7 +190,7 @@ function ContactForm(props) {
 								multiline
 								variant="standard"
 								rules={{
-									required: "Please share your query details",
+									required: "Please share your requirements",
 									minLength: { value: 2, message: "Minimum 2 characters" }
 								}}
 							/>

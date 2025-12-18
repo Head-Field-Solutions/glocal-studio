@@ -11,7 +11,6 @@ import {
 import { routes } from "@/utils/routesPath";
 
 import logo from "@/assets/images/footer-logo.png";
-import fbIcon from "@/assets/images/fb-icon.png";
 import instagramIcon from "@/assets/images/instagram-icon.png";
 import linkedinIcon from "@/assets/images/linkedin-icon.png";
 
@@ -348,22 +347,28 @@ function Footer() {
 							}
 						</Grid>
 						<Grid size={{xs: 12, md: 3}} className={styles.socialMediaContainer}>
-							<a href="https://www.facebook.com" label="Facebook" className={styles.socialLinks}>
-								<img src={fbIcon} className={styles.socialIcon} alt="" />
-							</a>
-							<a href="https://www.instagram.com" label="Instagram" className={styles.socialLinks}>
+							<a
+								href="https://www.instagram.com/glocalstudio_/"
+								target="_blank"
+								rel="noreferrer"
+								label="Instagram"
+								className={styles.socialLinks}
+							>
 								<img src={instagramIcon} className={styles.socialIcon} alt="" />
 							</a>
-							<a href="https://www.linkedin.com" label="Linkedin" className={styles.socialLinks}>
+							<a
+								href="https://www.linkedin.com/company/glocal-studio/posts/?feedView=all"
+								target="_blank"
+								rel="noreferrer"
+								label="Linkedin"
+								className={styles.socialLinks}
+							>
 								<img src={linkedinIcon} className={styles.socialIcon} alt="" />
 							</a>
 						</Grid>
 						{isMobile ? 
 							<Grid size={12}>
 								<div className={styles.copyrightText}>Copyright &copy; 2025 - All rights Reserved By Glocal Studio.</div>
-								<div className={styles.creditText}>
-									<a href="https://www.radicalreflex.com" rel="noreferrer" target="_blank">Made with &hearts; by Radical Reflex</a>
-								</div>
 							</Grid>
 							:
 							null

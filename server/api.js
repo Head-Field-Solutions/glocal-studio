@@ -12,7 +12,7 @@ apiInstance.setApiKey(
 const verifyEndpoint = 'https://challenges.cloudflare.com/turnstile/v0/siteverify'
 const secret = '0x4AAAAAAB8A-3aFELgns1KeBm1J2bO6nE4';
 
-const imagePath = "https://glocal-studio-one.vercel.app/assets/emailer/";
+const imagePath = "https://glocal-studio-two.vercel.app/assets/emailer/";
 
 const apiRouter = express.Router();
 
@@ -386,10 +386,8 @@ const getClientEmailContent = () => `<!DOCTYPE html>
 																<div class="alignment" align="center">
 																	<table class="social-table" width="144px" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; display: inline-block;">
 																		<tr>
-																			<td style="padding:0 2px 0 2px;"><a href="https://facebook.com/" target="_blank"><img src="${imagePath}5_facebook2x.png" width="32" height="auto" alt="Facebook" title="facebook" style="display: block; height: auto; border: 0;"></a></td>
-																			<td style="padding:0 2px 0 2px;"><a href="https://twitter.com/" target="_blank"><img src="${imagePath}6_twitter2x.png" width="32" height="auto" alt="X" title="X" style="display: block; height: auto; border: 0;"></a></td>
-																			<td style="padding:0 2px 0 2px;"><a href="https://www.linkedin.com/" target="_blank"><img src="${imagePath}7_linkedin2x.png" width="32" height="auto" alt="Linkedin" title="linkedin" style="display: block; height: auto; border: 0;"></a></td>
-																			<td style="padding:0 2px 0 2px;"><a href="https://instagram.com/" target="_blank"><img src="${imagePath}8_instagram2x.png" width="32" height="auto" alt="Instagram" title="instagram" style="display: block; height: auto; border: 0;"></a></td>
+																			<td style="padding:0 2px 0 2px;"><a href="https://www.linkedin.com/company/glocal-studio/posts/?feedView=all" target="_blank"><img src="${imagePath}7_linkedin2x.png" width="32" height="auto" alt="Linkedin" title="linkedin" style="display: block; height: auto; border: 0;"></a></td>
+																			<td style="padding:0 2px 0 2px;"><a href="https://www.instagram.com/glocalstudio_/" target="_blank"><img src="${imagePath}8_instagram2x.png" width="32" height="auto" alt="Instagram" title="instagram" style="display: block; height: auto; border: 0;"></a></td>
 																		</tr>
 																	</table>
 																</div>
@@ -442,18 +440,18 @@ const handleSendEmail = (formData, res) => {
 			Name: ${name}<br />
 			Email: ${email}<br />
 			Phone: ${phone}<br />
-			Service Info: ${serviceInfo}<br />
+			Requirements: ${serviceInfo}<br />
 			Page: ${pageUrl}<br /><br />
 			Request you to please get in touch as soon as possible.<br /><br />
 			Thank You.
 		</body>
 		</html>`;
 	sendAdminEmail.sender = {
-		email: 'info@glocalassist.com',
+		email: 'info@glocalstudio.com',
 		name: 'Glocal Studio'
 	};
 	sendAdminEmail.to = [{
-		email: "info@glocalassist.com",
+		email: "info@glocalstudio.com",
 		name: "Glocal Studio"
 	}];
 	sendAdminEmail.replyTo = {
@@ -466,7 +464,7 @@ const handleSendEmail = (formData, res) => {
 	sendClientEmail.subject = "Thanks for Reaching Out - We'll Get Back to You Soon!";
 	sendClientEmail.htmlContent = getClientEmailContent(name);
 	sendClientEmail.sender = {
-		email: 'info@glocalassist.com',
+		email: 'info@glocalstudio.com',
 		name: 'Glocal Studio'
 	};
 	sendClientEmail.to = [{
@@ -474,7 +472,7 @@ const handleSendEmail = (formData, res) => {
 		name
 	}];
 	sendClientEmail.replyTo = {
-		"email": 'info@glocalassist.com',
+		"email": 'info@glocalstudio.com',
 		"name": 'Glocal Studio'
 	};
 
