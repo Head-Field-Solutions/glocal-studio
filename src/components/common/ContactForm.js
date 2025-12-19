@@ -18,7 +18,7 @@ import InputField from './InputField';
 import * as styles from "./ContactForm.module.scss";
 
 function ContactForm(props) {
-	const { isFormInModal = true, isContactPageForm = false } = props;
+	const { isFormInModal = false, isContactPageForm = false } = props;
 	const { pathname } = useLocation();
 
 	const captchaRef = useRef();
