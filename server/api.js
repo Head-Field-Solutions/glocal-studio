@@ -447,11 +447,11 @@ const handleSendEmail = (formData, res) => {
 		</body>
 		</html>`;
 	sendAdminEmail.sender = {
-		email: 'info@glocalstudio.com',
+		email: 'info@glocalstudio.in',
 		name: 'Glocal Studio'
 	};
 	sendAdminEmail.to = [{
-		email: "info@glocalstudio.com",
+		email: "info@glocalstudio.in",
 		name: "Glocal Studio"
 	}];
 	sendAdminEmail.replyTo = {
@@ -464,7 +464,7 @@ const handleSendEmail = (formData, res) => {
 	sendClientEmail.subject = "Thanks for Reaching Out - We'll Get Back to You Soon!";
 	sendClientEmail.htmlContent = getClientEmailContent(name);
 	sendClientEmail.sender = {
-		email: 'info@glocalstudio.com',
+		email: 'info@glocalstudio.in',
 		name: 'Glocal Studio'
 	};
 	sendClientEmail.to = [{
@@ -472,7 +472,7 @@ const handleSendEmail = (formData, res) => {
 		name
 	}];
 	sendClientEmail.replyTo = {
-		"email": 'info@glocalstudio.com',
+		"email": 'info@glocalstudio.in',
 		"name": 'Glocal Studio'
 	};
 
