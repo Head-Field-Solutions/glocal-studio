@@ -12,7 +12,7 @@ apiInstance.setApiKey(
 const verifyEndpoint = 'https://challenges.cloudflare.com/turnstile/v0/siteverify'
 const secret = '0x4AAAAAAB8A-3aFELgns1KeBm1J2bO6nE4';
 
-const imagePath = "https://glocalstudio.in/assets/emailer/";
+const imagePath = "https://www.glocalstudio.in/assets/emailer/";
 
 const apiRouter = express.Router();
 
