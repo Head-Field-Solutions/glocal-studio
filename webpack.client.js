@@ -86,7 +86,15 @@ module.exports = {
       patterns: [
         { from: path.resolve(__dirname, 'public/favicon.png'), to: "" },
 				{ from: path.resolve(__dirname, 'public/robots.txt'), to: "" },
-				{ from: path.resolve(__dirname, 'public/emailer/*'), to: "emailer" },
+				{ from: path.resolve(__dirname, 'public/emailer/1_logo.svg'), to: "emailer" },
+				{ from: path.resolve(__dirname, 'public/emailer/2_Pattern.png'), to: "emailer" },
+				{ from: path.resolve(__dirname, 'public/emailer/3_astro_1.png'), to: "emailer" },
+				{ from: path.resolve(__dirname, 'public/emailer/4_Pattern_footer.png'), to: "emailer" },
+				{ from: path.resolve(__dirname, 'public/emailer/5_facebook2x.png'), to: "emailer" },
+				{ from: path.resolve(__dirname, 'public/emailer/6_twitter2x.png'), to: "emailer" },
+				{ from: path.resolve(__dirname, 'public/emailer/7_linkedin2x.png'), to: "emailer" },
+				{ from: path.resolve(__dirname, 'public/emailer/9_Beefree-logo.png'), to: "emailer" },
+				{ from: path.resolve(__dirname, 'public/emailer/8_instagram2x.png'), to: "emailer" }
       ],
     }),
   ],

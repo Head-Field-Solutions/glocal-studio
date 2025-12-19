@@ -173,7 +173,7 @@ function ContactUs() {
 								>
 									<Grid size={12}>
 										<div className={styles.addressHeading}>Glocal Studio - India</div>
-										<div>B-8, Sector 59, Noida - 201301,</div>
+										<div>B-73, Sector 57, Noida - 201301,</div>
 										<div>Uttar Pradesh, INDIA</div>
 									</Grid>
 									<Grid size={12}>
