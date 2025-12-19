@@ -6,13 +6,13 @@ const apiInstance = new brevo.TransactionalEmailsApi();
 
 apiInstance.setApiKey(
 	brevo.TransactionalEmailsApiApiKeys.apiKey,
-	'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'
+	'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'
 );
 
 const verifyEndpoint = 'https://challenges.cloudflare.com/turnstile/v0/siteverify'
 const secret = '0x4AAAAAAB8A-3aFELgns1KeBm1J2bO6nE4';
 
-const imagePath = "https://glocal-studio-two.vercel.app/assets/emailer/";
+const imagePath = "https://glocalstudio.in/assets/emailer/";
 
 const apiRouter = express.Router();
 
