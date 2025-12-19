@@ -65,14 +65,12 @@ function ContactForm(props) {
 	};
 
 	const handleClose = () => {
-		setTimeout(() => {
-			setStatus("");
-			setMessage("");
-			setOpen(false);
-			if (status === "success" && isFormInModal) {
-				toggleContactForm(false);
-			}
-		}, 3000);
+		setStatus("");
+		setMessage("");
+		setOpen(false);
+		if (status === "success" && isFormInModal) {
+			toggleContactForm(false);
+		}
 	};
 
 	return (
