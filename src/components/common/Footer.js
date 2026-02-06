@@ -331,7 +331,7 @@ function Footer() {
 							>
 								<span className={styles.phone}>
 									<PhoneIcon fill="#fff" width="20px" height="20px" />
-									<a href="tel:+1732-344-4260">+1732-344-4260</a>
+									<a href="tel:+1213-510-4140">+1 213-510-4140</a>
 								</span>
 								<span className={styles.email}>
 									<EmailIcon fill="#fff" width="24px" height="24px" />

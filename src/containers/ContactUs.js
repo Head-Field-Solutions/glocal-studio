@@ -154,7 +154,7 @@ function ContactUs() {
 									<Grid size={12}>
 										<div className={styles.phoneNumber}>
 											<PhoneIcon fill="#000" width="24px" height="24px" />
-											<a href="tel:+1 732 344 4260">+1 732 344 4260</a>
+											<a href="tel:+1213-510-4140">+1 213-510-4140</a>
 										</div>
 										<div className={styles.emailAddress}>
 											<EmailIcon fill="#000" width="24px" height="24px" />
