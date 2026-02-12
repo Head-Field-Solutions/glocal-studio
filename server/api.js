@@ -459,7 +459,11 @@ const handleSendEmail = (formData, res) => {
 		},
 		{
 			email: 'rohit@headfield.com',
-			name: 'Rohit Admin',
+			name: 'Rohit Chaudhary',
+		},
+		{
+			email: 'sk@head-field.com',
+			name: 'Shweta Khandelwal',
 		},
 	];
 
@@ -479,8 +483,16 @@ const handleSendEmail = (formData, res) => {
 	};
 	sendClientEmail.to = [
 		{
-			email,
-			name,
+			email: 'info@glocalstudio.in',
+			name: 'Glocal Studio',
+		},
+		{
+			email: 'rohit@headfield.com',
+			name: 'Rohit Chaudhary',
+		},
+		{
+			email: 'sk@head-field.com',
+			name: 'Shweta Khandelwal',
 		},
 	];
 	sendClientEmail.replyTo = {
