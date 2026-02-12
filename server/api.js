@@ -6,13 +6,14 @@ const apiInstance = new brevo.TransactionalEmailsApi();
 
 apiInstance.setApiKey(
 	brevo.TransactionalEmailsApiApiKeys.apiKey,
-	'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'
+	'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',
 );
 
-const verifyEndpoint = 'https://challenges.cloudflare.com/turnstile/v0/siteverify'
+const verifyEndpoint =
+	'https://challenges.cloudflare.com/turnstile/v0/siteverify';
 const secret = '0x4AAAAAAB8A-3aFELgns1KeBm1J2bO6nE4';
 
-const imagePath = "https://www.glocalstudio.in/assets/emailer/";
+const imagePath = 'https://www.glocalstudio.in/assets/emailer/';
 
 const apiRouter = express.Router();
 
@@ -426,7 +427,7 @@ const handleSendEmail = (formData, res) => {
 		email,
 		phone,
 		service_info: serviceInfo,
-		page_url: pageUrl
+		page_url: pageUrl,
 	} = formData;
 
 	const sendAdminEmail = new brevo.SendSmtpEmail();
@@ -448,64 +449,77 @@ const handleSendEmail = (formData, res) => {
 		</html>`;
 	sendAdminEmail.sender = {
 		email: 'info@glocalstudio.in',
-		name: 'Glocal Studio'
+		name: 'Glocal Studio',
 	};
-	sendAdminEmail.to = [{
-		email: "info@glocalstudio.in",
-		name: "Glocal Studio"
-	}];
+
+	sendAdminEmail.to = [
+		{
+			email: 'info@glocalstudio.in',
+			name: 'Glocal Studio',
+		},
+		{
+			email: 'rohit@headfield.com',
+			name: 'Rohit Admin',
+		},
+	];
+
 	sendAdminEmail.replyTo = {
-		"email": email,
-		"name": `${name}`,
+		email: email,
+		name: `${name}`,
 	};
 
 	const sendClientEmail = new brevo.SendSmtpEmail();
 
-	sendClientEmail.subject = "Thanks for Reaching Out - We'll Get Back to You Soon!";
+	sendClientEmail.subject =
+		"Thanks for Reaching Out - We'll Get Back to You Soon!";
 	sendClientEmail.htmlContent = getClientEmailContent(name);
 	sendClientEmail.sender = {
 		email: 'info@glocalstudio.in',
-		name: 'Glocal Studio'
+		name: 'Glocal Studio',
 	};
-	sendClientEmail.to = [{
-		email,
-		name
-	}];
+	sendClientEmail.to = [
+		{
+			email,
+			name,
+		},
+	];
 	sendClientEmail.replyTo = {
-		"email": 'info@glocalstudio.in',
-		"name": 'Glocal Studio'
+		email: 'info@glocalstudio.in',
+		name: 'Glocal Studio',
 	};
 
 	Promise.all([
 		apiInstance.sendTransacEmail(sendAdminEmail),
-		apiInstance.sendTransacEmail(sendClientEmail)
-	]).then(() => {
-		res.send({
-			success: true,
-			message: "Thanks for Reaching Out - We'll Get Back to You Soon!",
+		apiInstance.sendTransacEmail(sendClientEmail),
+	])
+		.then(() => {
+			res.send({
+				success: true,
+				message: "Thanks for Reaching Out - We'll Get Back to You Soon!",
+			});
+		})
+		.catch(() => {
+			res.status(500);
+			res.send({
+				success: false,
+				message: 'Sorry! Something went wrong.',
+			});
 		});
-	}).catch(() => {
-		res.status(500);
-		res.send({
-			success: false,
-			message: "Sorry! Something went wrong."
-		});
-	});
-}
+};
 
 apiRouter.post('/submit-form', (req, res) => {
-  const { captchaToken } = req.body;
+	const { captchaToken } = req.body;
 
 	fetch(verifyEndpoint, {
-    method: 'POST',
-    body: JSON.stringify({
-      secret,
-      response: captchaToken
-    }),
-    headers: {
-      'Content-Type': 'application/json'
-    }
-  })
+		method: 'POST',
+		body: JSON.stringify({
+			secret,
+			response: captchaToken,
+		}),
+		headers: {
+			'Content-Type': 'application/json',
+		},
+	})
 		.then((response) => response.json())
 		.then(() => {
 			handleSendEmail(req.body, res);
@@ -514,7 +528,7 @@ apiRouter.post('/submit-form', (req, res) => {
 			res.status(500);
 			res.send({
 				success: false,
-				message: "Recaptcha verification failed. Please try again."
+				message: 'Recaptcha verification failed. Please try again.',
 			});
 		});
 });
