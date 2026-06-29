@@ -182,7 +182,7 @@ function ContactForm(props) {
 								}}
 								control={control}
 								name="service_info"
-								label="Tell us about your requirements*"
+								label="Please Describe The Type Of Service You Are Interested In*"
 								fullWidth
 								minRows={4}
 								multiline

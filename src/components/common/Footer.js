@@ -322,6 +322,13 @@ function Footer() {
 								>
 									<span>{routes["contact-us"].label}</span>
 								</Link>
+								<Link
+									to={routes["contact-us"].href}
+									data-replace={routes["contact-us"].label}
+									className={styles.footerLink}
+								>
+									<span>{routes["contact-us"].label}</span>
+								</Link>
 							</div>
 						</Grid>
 						<Grid container alignContent="space-between" size={{xs: 12, md: 5}}>

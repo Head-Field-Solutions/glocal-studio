@@ -9,6 +9,8 @@ import ZoomParallax from "@/components/Home/ZoomParallax";
 import UspSectionCards from "@/components/Home/UspSectionCards";
 import ScrollCarousel from "@/components/Home/ScrollCarousel";
 import CylinderText from "@/components/Home/CylinderText";
+import SalesTalentPopup from '@/components/Home/SalesTalentPopup';
+
 
 import { useDevice } from '@/context/DeviceContext';
 
@@ -189,6 +191,7 @@ function Home() {
 					</Grid>
 				</Container>
 			</section>
+			<SalesTalentPopup/>
 		</>
   );
 }
