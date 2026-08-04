@@ -3,7 +3,6 @@ import * as styles from './SalesTalentPopup.module.scss';
 
 const DELAY = 2000;
 const STORAGE_KEY = 'hf_registered_2026';
-const CTA_URL = 'https://headfield.com/india-first-global-sales-talent-hunt-2026/';
 const LOGO_URL = 'https://beige-oyster-766501.hostingersite.com/hf-popup/assets/logo.png';
 
 const SalesTalentPopup = () => {
@@ -22,13 +21,6 @@ const SalesTalentPopup = () => {
     document.body.style.overflowX = '';
     document.body.style.overflowY = '';
   }, []);
-
-  const handleRegister = useCallback(() => {
-    if (typeof window === 'undefined') return;
-    localStorage.setItem(STORAGE_KEY, '1');
-    if (CTA_URL) window.open(CTA_URL, '_blank');
-    closePopup();
-  }, [closePopup]);
 
   // Auto-trigger after delay
   useEffect(() => {
@@ -69,7 +61,7 @@ const SalesTalentPopup = () => {
           aria-label="Close popup"
         />
 
-        <div className={styles.left}>
+        <div className={`${styles.left} ${styles.closedLayout}`}>
           <div className={styles.leftTop}>
             <img
               src={LOGO_URL}
@@ -78,45 +70,49 @@ const SalesTalentPopup = () => {
             />
 
             <h2 className={styles.title} id="hf-popup-title">
-              India's First<br />
-              Global Sales<br />
-              <span className={styles.highlight}>Talent Hunt</span><br />
-              2026
+              Registrations<br />
+              <span className={styles.highlight}>CLOSED!</span>
             </h2>
 
-            <p className={styles.tagline}>
-              Participate<span className={`${styles.dot} ${styles.dotBlue}`}>.</span>
-              Compete<span className={`${styles.dot} ${styles.dotOrange}`}>.</span>
-              Grow<span className={`${styles.dot} ${styles.dotGreen}`}>.</span>
+            <p className={styles.taglineClosed}>
+              Thank you for the overwhelming response. <br />
+              The registrations are now closed.
             </p>
+          </div>
 
-            <div className={styles.infoList}>
-              {/* Date */}
-              <div className={styles.infoRow}>
-                <div className={styles.icon}>
-                  <div className={styles.iconCal}></div>
+          <div className={styles.helpSection}>
+            <p className={styles.helpTitle}>Need help or have questions?</p>
+            <div className={styles.contactRow}>
+              {/* <div className={styles.qrCode}>
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=tel:+919876543210&color=0c2b5c"
+                  alt="Scan to call" />
+              </div> */}
+              <div className={styles.contactDetails}>
+                <span className={styles.contactLabel}>Support Contact</span>
+                <div className={styles.contactGroup}>
+                  <div className={styles.iconPhone}></div>
+                  <div className={styles.contactTexts}>
+                    <a href="tel:+919870481008" className={styles.contactLink}>+91 98704 81008,</a>
+                    <a href="tel:+918127222290" className={styles.contactLink}>+91 81272 22290,</a>
+                    <a href="tel:+919211733881" className={styles.contactLink}>+91 92117 33881</a>
+                  </div>
                 </div>
-                <span className={styles.infoText}>
-                  8<sup>th</sup> – 9<sup>th</sup> August 2026
-                </span>
-              </div>
-              {/* Venue */}
-              <div className={styles.infoRow}>
-                <div className={styles.icon}>
-                  <div className={styles.iconPin}></div>
+
+                <div className={styles.contactGroup}>
+                  <div className={styles.iconEnv}></div>
+                  <div className={styles.contactTexts}>
+                    <a href="mailto:jobs@headfield.com" className={styles.contactLink}>Jobs@headfield.com</a>
+                  </div>
                 </div>
-                <span className={styles.infoText}>Bharat Mandapam, New Delhi</span>
+                <span className={styles.contactTiming}>Available Mon-Fri, 9am - 6pm</span>
               </div>
             </div>
           </div>
-
-          <button className={styles.btn} onClick={handleRegister}>
-            Register Now
-            <span className={styles.arrow}></span>
-          </button>
         </div>
 
-        <div className={styles.right}></div>
+        <div className={styles.right}>
+          <img src="https://beige-oyster-766501.hostingersite.com/hf-popup/assets/banner-close-mobile.jpeg" className={styles.mobileBanner} alt="Event Banner" />
+        </div>
       </div>
     </div>
   );
