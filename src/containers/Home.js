@@ -191,7 +191,7 @@ function Home() {
 					</Grid>
 				</Container>
 			</section>
-			<SalesTalentPopup/>
+			{/* <SalesTalentPopup/> */}
 		</>
   );
 }
