@@ -323,11 +323,11 @@ function Footer() {
 									<span>{routes["contact-us"].label}</span>
 								</Link>
 								<Link
-									to={routes["contact-us"].href}
-									data-replace={routes["contact-us"].label}
+									to={routes["privacy-policy"].href}
+									data-replace={routes["privacy-policy"].label}
 									className={styles.footerLink}
 								>
-									<span>{routes["contact-us"].label}</span>
+									<span>{routes["privacy-policy"].label}</span>
 								</Link>
 							</div>
 						</Grid>

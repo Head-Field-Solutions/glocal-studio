@@ -36,8 +36,7 @@ module.exports = {
     filename: 'server.js',
     path: path.resolve(__dirname, 'build/public'),
     libraryTarget: 'commonjs2',
-		publicPath: '/assets/',
-		clean: true
+		publicPath: '/assets/'
   },
 	devtool: isProduction ? false : "source-map",
   module: {

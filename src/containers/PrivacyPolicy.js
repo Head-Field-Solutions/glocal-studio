@@ -9,9 +9,7 @@ import { StarGradiantIcon } from "@/components/Icons";
 
 import * as styles from "./PrivacyPolicy.module.scss";
 
-
-import privacyPolicyVideo from "@/assets/videos/privacy-policy.mp4";
-// import privacyPolicyVideo from "https://beige-oyster-766501.hostingersite.com/glocal-studio/privacy-policy.mp4";
+const privacyPolicyVideo = "https://beige-oyster-766501.hostingersite.com/glocal-studio/privacy-policy.mp4";
 function PrivacyPolicy() {
     const videoRef = useRef(null);
 

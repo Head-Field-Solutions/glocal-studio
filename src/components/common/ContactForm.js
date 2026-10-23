@@ -6,8 +6,9 @@ import {
 	Alert,
 	Portal
 } from "@mui/material";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { Controller, useForm } from "react-hook-form";
+import emailjs from "@emailjs/browser";
 
 import { CircleLoader, ArrowIcon } from "@/components/Icons";
 
@@ -17,9 +18,14 @@ import InputField from './InputField';
 
 import * as styles from "./ContactForm.module.scss";
 
+const EMAILJS_SERVICE_ID = "service_5ukbpwr";
+const EMAILJS_TEMPLATE_ID = "template_3fxsae4";
+const EMAILJS_PUBLIC_KEY = "QpkBmnT4LJ4PGyWTX";
+
 function ContactForm(props) {
 	const { isFormInModal = false, isContactPageForm = false } = props;
 	const { pathname } = useLocation();
+	const navigate = useNavigate();
 
 	const captchaRef = useRef();
 
@@ -40,37 +46,55 @@ function ContactForm(props) {
   }, []);
 
 	const onSubmit = async (data) => {
-		const captchaToken = await captchaRef.current?.getResponse();
-		const response = await fetch("/api/submit-form", {
-			method: "POST",
-			headers: {
-				"Content-Type": "application/json",
-			},
-			body: JSON.stringify({
-				...data,
-				captchaToken
-			}),
-		});
+		try {
+			const captchaToken = await captchaRef.current?.getResponse();
 
-		const result = await response.json();
-		if (result.success) {
-			setStatus("success");
+			if (!captchaToken) {
+				setStatus("error");
+				setMessage("Please complete the CAPTCHA verification.");
+				setOpen(true);
+				return;
+			}
+
+			const templateParams = {
+				name: data.name,
+				email: data.email,
+				phone: data.phone,
+				service_info: data.service_info,
+				page_url: data.page_url,
+				time: new Date().toLocaleString(),
+			};
+
+			await emailjs.send(
+				EMAILJS_SERVICE_ID,
+				EMAILJS_TEMPLATE_ID,
+				templateParams,
+				EMAILJS_PUBLIC_KEY
+			);
+
 			reset();
-		} else {
+			captchaRef.current?.reset();
+
+			// Close the modal if form is in modal
+			if (isFormInModal) {
+				toggleContactForm(false);
+			}
+
+			// Set flag and redirect to thank you page
+			sessionStorage.setItem("formSubmitted", "true");
+			navigate("/thank-you");
+		} catch (error) {
 			setStatus("error");
+			setMessage("Sorry! Something went wrong. Please try again.");
+			setOpen(true);
+			captchaRef.current?.reset();
 		}
-		setMessage(result.message);
-		setOpen(true);
-		captchaRef.current?.reset();
 	};
 
 	const handleClose = () => {
 		setStatus("");
 		setMessage("");
 		setOpen(false);
-		if (status === "success" && isFormInModal) {
-			toggleContactForm(false);
-		}
 	};
 
 	return (
@@ -85,7 +109,7 @@ function ContactForm(props) {
 						control={control}
 						defaultValue={pathname}
 						render={({
-							field: { onChange, value }
+							field: { value }
 						}) => (
 							<input type="hidden" name="page_url" value={value} />
 						)}
