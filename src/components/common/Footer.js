@@ -330,6 +330,7 @@ function Footer() {
 									<span>{routes["privacy-policy"].label}</span>
 								</Link> */}
 							</div>
+							
 						</Grid>
 						<Grid container alignContent="space-between" size={{xs: 12, md: 5}}>
 							<Grid
