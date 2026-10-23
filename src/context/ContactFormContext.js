@@ -8,7 +8,11 @@ function ContactFormProvider({ children }) {
 	const [toggleModal, setToggleModal] = useState(false);
 
   const toggleContactForm = (status) => {
-    setToggleModal(status || !toggleModal);
+    if (typeof status === 'boolean') {
+      setToggleModal(status);
+    } else {
+      setToggleModal((prev) => !prev);
+    }
   };
 
   return (
@@ -17,9 +21,9 @@ function ContactFormProvider({ children }) {
 
 			<Modal
 				open={toggleModal}
-				onClose={() => toggleContactForm()}
+				onClose={() => toggleContactForm(false)}
 			>
-				<ContactForm />
+				<ContactForm isFormInModal={true} />
 			</Modal>
     </ContactFormContext.Provider>
   );

@@ -198,10 +198,9 @@ function Header() {
 								className={styles.getInTouchButtonWrapper}
 							>
 								<LinkButton
-									to={routes["contact-us"].href}
 									className={styles.getInTouchButton}
 									wrapperStyle={{ marginRight: 0 }}
-									onClick={() => toggleContactForm()}
+									onClick={() => toggleContactForm(true)}
 									style={{ "--button-bg": "#060010", "--button-text-color":  "#f3f2ee" }}
 								>
 									let's get started

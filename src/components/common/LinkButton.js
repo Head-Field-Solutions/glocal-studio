@@ -26,11 +26,25 @@ function LinkButton(props) {
 			className={cx(styles.buttonWrapper, wrapperClassName)}
 			style={wrapperStyle}
 		>
-			<Link to={to} className={cx(styles.button, className)} style={style} onClick={onClick}>
-				{children}
-			</Link>
+			{to ? (
+				<Link to={to} className={cx(styles.button, className)} style={style} onClick={onClick}>
+					{children}
+				</Link>
+			) : (
+				<button
+					type="button"
+					className={cx(styles.button, className)}
+					style={style}
+					onClick={(e) => {
+						e.preventDefault();
+						onClick(e);
+					}}
+				>
+					{children}
+				</button>
+			)}
 		</Animate.FadeUp>
-	)
+	);
 }
 
 export default LinkButton;

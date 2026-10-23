@@ -21,6 +21,8 @@ const Services = loadable((/* webpackChunkName: "services" */) => import('./cont
 const Portfolio = loadable((/* webpackChunkName: "portfolio" */) => import('./containers/Portfolio'));
 const ServiceDetails = loadable((/* webpackChunkName: "service-details" */) => import('./containers/ServiceDetails'));
 const ContactUs = loadable((/* webpackChunkName: "contact-us" */) => import('./containers/ContactUs'));
+const PrivacyPolicy = loadable((/* webpackChunkName: "privacy-policy" */) => import('./containers/PrivacyPolicy'));
+const ThankYou = loadable((/* webpackChunkName: "thank-you" */) => import('./containers/ThankYou'));
 const NotFound = loadable((/* webpackChunkName: "not-found" */) => import('./containers/NotFound'));
 
 // Register the ScrollTrigger plugin
@@ -103,6 +105,8 @@ function App({ initialData = {} }) {
 				<Route path={routes.portfolio.href} element={<Portfolio initialData={bootstrappedData} />} exact />
 				<Route path={`${routes.services.href}/:id`} element={<ServiceDetails initialData={bootstrappedData} />} exact />
 				<Route path={routes["contact-us"].href} element={<ContactUs initialData={initialData} />} exact />
+				<Route path='/privacy-policy' element={<PrivacyPolicy />} exact />
+				<Route path='/thank-you' element={<ThankYou />} exact />
 				<Route path="*" element={<NotFound />} />
 			</Routes>
 			<Footer />
