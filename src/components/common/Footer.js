@@ -322,13 +322,13 @@ function Footer() {
 								>
 									<span>{routes["contact-us"].label}</span>
 								</Link>
-								<Link
+								{/* <Link
 									to={routes["privacy-policy"].href}
 									data-replace={routes["privacy-policy"].label}
 									className={styles.footerLink}
 								>
 									<span>{routes["privacy-policy"].label}</span>
-								</Link>
+								</Link> */}
 							</div>
 						</Grid>
 						<Grid container alignContent="space-between" size={{xs: 12, md: 5}}>
