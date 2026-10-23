@@ -109,7 +109,7 @@ function ContactForm(props) {
 						control={control}
 						defaultValue={pathname}
 						render={({
-							field: { onChange, value }
+							field: { value }
 						}) => (
 							<input type="hidden" name="page_url" value={value} />
 						)}

@@ -99,7 +99,7 @@ function ThankYou() {
 
 						<Grid size={12}>
 							<Heading className={styles.mainHeading}>
-								WE'VE RECEIVED YOUR
+								{"WE'VE RECEIVED YOUR"}
 							</Heading>
 							<Heading className={styles.mainHeadingBold}>
 								INQUIRY
