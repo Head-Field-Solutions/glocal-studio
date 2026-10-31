@@ -9,9 +9,8 @@ apiInstance.setApiKey(
 	'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',
 );
 
-const verifyEndpoint =
-	'https://challenges.cloudflare.com/turnstile/v0/siteverify';
-const secret = '0x4AAAAAAB8A-3aFELgns1KeBm1J2bO6nE4';
+const verifyEndpoint = 'https://www.google.com/recaptcha/api/siteverify';
+const secret = '6LdMfgkuAAAAAMry6jjXtAToC0-LpfF6nOQhNiV2';
 
 const imagePath = 'https://www.glocalstudio.in/assets/emailer/';
 
@@ -522,23 +521,36 @@ const handleSendEmail = (formData, res) => {
 apiRouter.post('/submit-form', (req, res) => {
 	const { captchaToken } = req.body;
 
+	if (!captchaToken) {
+		return res.status(400).send({
+			success: false,
+			message: 'Please complete the CAPTCHA verification.',
+		});
+	}
+
+	const params = new URLSearchParams();
+	params.append('secret', secret);
+	params.append('response', captchaToken);
+
 	fetch(verifyEndpoint, {
 		method: 'POST',
-		body: JSON.stringify({
-			secret,
-			response: captchaToken,
-		}),
+		body: params,
 		headers: {
-			'Content-Type': 'application/json',
+			'Content-Type': 'application/x-www-form-urlencoded',
 		},
 	})
 		.then((response) => response.json())
-		.then(() => {
+		.then((data) => {
+			if (!data.success) {
+				return res.status(400).send({
+					success: false,
+					message: 'Recaptcha verification failed. Please try again.',
+				});
+			}
 			handleSendEmail(req.body, res);
 		})
 		.catch(() => {
-			res.status(500);
-			res.send({
+			res.status(500).send({
 				success: false,
 				message: 'Recaptcha verification failed. Please try again.',
 			});
