@@ -8,15 +8,17 @@ import MaskVideoSection from "@/components/Home/MaskVideoSection";
 import ZoomParallax from "@/components/Home/ZoomParallax";
 import UspSectionCards from "@/components/Home/UspSectionCards";
 import ScrollCarousel from "@/components/Home/ScrollCarousel";
-import CylinderText from "@/components/Home/CylinderText";
 import SalesTalentPopup from '@/components/Home/SalesTalentPopup';
+import SiteExplorer from "@/components/Home/SiteExplorer";
 
 
 import { useDevice } from '@/context/DeviceContext';
 
 import { Heading, Animate, ServiceList } from "@/components/common";
 
-import masterHeadVideo from "@/assets/videos/home-masterhead-video1.mp4";
+import masterHeadVideo from "@/assets/videos/home-masterhead-1080.mp4";
+import masterHeadVideoWebm from "@/assets/videos/home-masterhead-1080.webm";
+import masterHeadVideoMobile from "@/assets/videos/home-masterhead-720.mp4";
 
 import * as styles from "./Home.module.scss";
 
@@ -32,12 +34,14 @@ function Home() {
 			<section className={styles.masterHead}>
 				<MasterHeadVideo />
 				<video muted autoPlay controls={false} loop playsInline className={styles.masterHeadVideo}>
-					<source src={masterHeadVideo} />
+					<source src={masterHeadVideoMobile} type="video/mp4" media="(max-width: 900px)" />
+					<source src={masterHeadVideoWebm} type="video/webm" />
+					<source src={masterHeadVideo} type="video/mp4" />
 				</video>
 			</section>
-			
-			<CylinderText />
-			
+
+			<SiteExplorer />
+
 			<MaskVideoSection />
 			
 			<ServiceList />
