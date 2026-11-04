@@ -4,13 +4,15 @@ const brevo = require('@getbrevo/brevo');
 
 const apiInstance = new brevo.TransactionalEmailsApi();
 
+// Secrets come from the environment (.env locally, Vercel project env vars in production)
 apiInstance.setApiKey(
 	brevo.TransactionalEmailsApiApiKeys.apiKey,
-	'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',
+	process.env.BREVO_API_KEY || '',
 );
 
-const verifyEndpoint = 'https://www.google.com/recaptcha/api/siteverify';
-const secret = '6LdMfgkuAAAAAMry6jjXtAToC0-LpfF6nOQhNiV2';
+const verifyEndpoint =
+	'https://challenges.cloudflare.com/turnstile/v0/siteverify';
+const secret = process.env.TURNSTILE_SECRET_KEY || '';
 
 const imagePath = 'https://www.glocalstudio.in/assets/emailer/';
 
@@ -521,36 +523,23 @@ const handleSendEmail = (formData, res) => {
 apiRouter.post('/submit-form', (req, res) => {
 	const { captchaToken } = req.body;
 
-	if (!captchaToken) {
-		return res.status(400).send({
-			success: false,
-			message: 'Please complete the CAPTCHA verification.',
-		});
-	}
-
-	const params = new URLSearchParams();
-	params.append('secret', secret);
-	params.append('response', captchaToken);
-
 	fetch(verifyEndpoint, {
 		method: 'POST',
-		body: params,
+		body: JSON.stringify({
+			secret,
+			response: captchaToken,
+		}),
 		headers: {
-			'Content-Type': 'application/x-www-form-urlencoded',
+			'Content-Type': 'application/json',
 		},
 	})
 		.then((response) => response.json())
-		.then((data) => {
-			if (!data.success) {
-				return res.status(400).send({
-					success: false,
-					message: 'Recaptcha verification failed. Please try again.',
-				});
-			}
+		.then(() => {
 			handleSendEmail(req.body, res);
 		})
 		.catch(() => {
-			res.status(500).send({
+			res.status(500);
+			res.send({
 				success: false,
 				message: 'Recaptcha verification failed. Please try again.',
 			});

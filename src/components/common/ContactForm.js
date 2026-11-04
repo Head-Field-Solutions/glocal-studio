@@ -1,5 +1,4 @@
-import React, { useState, useRef, useContext } from "react";
-import ReCAPTCHA from "react-google-recaptcha";
+import React, { useEffect, useState, useRef, useContext } from "react";
 import {
 	Grid2 as Grid,
 	Button,
@@ -12,10 +11,10 @@ import { Controller, useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 
 import { CircleLoader, ArrowIcon } from "@/components/Icons";
-import { ContactFormContext } from "@/context/ContactFormContext";
-import { RECAPTCHA_SITE_KEY } from "@/constants/recaptcha";
-import ResponsiveRecaptcha from "./ResponsiveRecaptcha";
-import InputField from "./InputField";
+
+import { ContactFormContext } from '@/context/ContactFormContext';
+
+import InputField from './InputField';
 
 import * as styles from "./ContactForm.module.scss";
 
@@ -28,39 +27,35 @@ function ContactForm(props) {
 	const { pathname } = useLocation();
 	const navigate = useNavigate();
 
-	const recaptchaRef = useRef(null);
-	const [captchaToken, setCaptchaToken] = useState(null);
+	const captchaRef = useRef();
 
 	const { toggleContactForm } = useContext(ContactFormContext);
 
 	const [open, setOpen] = useState(false);
 	const [message, setMessage] = useState("");
 	const [status, setStatus] = useState("");
+	const [TurnstileComponent, setTurnstileComponent] = useState(null);
 
-	const {
-		handleSubmit,
-		control,
-		formState: { isSubmitting },
-		reset
-	} = useForm();
+	const { handleSubmit, control, formState: { isSubmitting }, reset } = useForm();
 
-	const onCaptchaChange = (token) => {
-		setCaptchaToken(token);
-	};
-
-	const onCaptchaExpired = () => {
-		setCaptchaToken(null);
-	};
+	useEffect(() => {
+    // Dynamically import only on client-side after hydration
+    import('@marsidev/react-turnstile').then((mod) => {
+      setTurnstileComponent(() => mod.Turnstile);
+    });
+  }, []);
 
 	const onSubmit = async (data) => {
-		if (!captchaToken) {
-			setStatus("error");
-			setMessage("Please verify that you are not a robot.");
-			setOpen(true);
-			return;
-		}
-
 		try {
+			const captchaToken = await captchaRef.current?.getResponse();
+
+			if (!captchaToken) {
+				setStatus("error");
+				setMessage("Please complete the CAPTCHA verification.");
+				setOpen(true);
+				return;
+			}
+
 			const templateParams = {
 				name: data.name,
 				email: data.email,
@@ -68,7 +63,6 @@ function ContactForm(props) {
 				service_info: data.service_info,
 				page_url: data.page_url,
 				time: new Date().toLocaleString(),
-				"g-recaptcha-response": captchaToken
 			};
 
 			await emailjs.send(
@@ -79,8 +73,7 @@ function ContactForm(props) {
 			);
 
 			reset();
-			setCaptchaToken(null);
-			recaptchaRef.current?.reset();
+			captchaRef.current?.reset();
 
 			// Close the modal if form is in modal
 			if (isFormInModal) {
@@ -91,12 +84,10 @@ function ContactForm(props) {
 			sessionStorage.setItem("formSubmitted", "true");
 			navigate("/thank-you");
 		} catch (error) {
-			console.error("Submission error:", error);
 			setStatus("error");
 			setMessage("Sorry! Something went wrong. Please try again.");
 			setOpen(true);
-			setCaptchaToken(null);
-			recaptchaRef.current?.reset();
+			captchaRef.current?.reset();
 		}
 	};
 
@@ -117,21 +108,23 @@ function ContactForm(props) {
 						name="page_url"
 						control={control}
 						defaultValue={pathname}
-						render={({ field: { value } }) => (
+						render={({
+							field: { value }
+						}) => (
 							<input type="hidden" name="page_url" value={value} />
 						)}
 					/>
 					<Grid container size={12} spacing={3}>
 						<Grid
 							size={
-								isContactPageForm ? 12 : { xs: 12, md: 4 }
+								isContactPageForm ? 12 : {xs: 12, md: 4}
 							}
 						>
 							<InputField
 								slotProps={{
 									inputLabel: {
-										shrink: true
-									}
+										shrink: true,
+									},
 								}}
 								control={control}
 								name="name"
@@ -146,14 +139,14 @@ function ContactForm(props) {
 						</Grid>
 						<Grid
 							size={
-								isContactPageForm ? 12 : { xs: 12, md: 4 }
+								isContactPageForm ? 12 : {xs: 12, md: 4}
 							}
 						>
 							<InputField
 								slotProps={{
 									inputLabel: {
-										shrink: true
-									}
+										shrink: true,
+									},
 								}}
 								label="Email*"
 								type="email"
@@ -170,16 +163,16 @@ function ContactForm(props) {
 								}}
 							/>
 						</Grid>
-						<Grid
+						<Grid 
 							size={
-								isContactPageForm ? 12 : { xs: 12, md: 4 }
+								isContactPageForm ? 12 : {xs: 12, md: 4}
 							}
 						>
 							<InputField
 								slotProps={{
 									inputLabel: {
-										shrink: true
-									}
+										shrink: true,
+									},
 								}}
 								label="Phone*"
 								type="tel"
@@ -208,8 +201,8 @@ function ContactForm(props) {
 							<InputField
 								slotProps={{
 									inputLabel: {
-										shrink: true
-									}
+										shrink: true,
+									},
 								}}
 								control={control}
 								name="service_info"
@@ -224,20 +217,7 @@ function ContactForm(props) {
 								}}
 							/>
 						</Grid>
-						<Grid size={12} sx={{ my: 1 }}>
-							<ResponsiveRecaptcha align="left">
-								<ReCAPTCHA
-									ref={recaptchaRef}
-									sitekey="6LdHfgkuAAAAAH-FVT78ZFyMHMfbDeEIyM8hVhIu"
-									onChange={onCaptchaChange}
-									onExpired={onCaptchaExpired}
-									onErrored={onCaptchaExpired}
-								/>
-							</ResponsiveRecaptcha>
-						</Grid>
-						<Grid
-							size={12}
-							className={styles.submitWrapper}
+						<Grid size={12}  className={styles.submitWrapper} 
 							sx={{
 								display: "flex",
 								justifyContent: { xs: "center", md: "flex-start" },
@@ -249,17 +229,25 @@ function ContactForm(props) {
 								className={styles.submitButton}
 								fullWidth
 							>
-								{isSubmitting ? (
-									<CircleLoader className={styles.loader} width={40} height={40} />
-								) : (
-									<>
-										<span className={styles.submitText}>SUBMIT</span>
-										<ArrowIcon width={48} height={48} />
-									</>
-								)}
+								{
+									isSubmitting ? (
+										<CircleLoader className={styles.loader} width={40} height={40} />
+									) : (
+										<>
+											<span className={styles.submitText}>SUBMIT</span>
+											<ArrowIcon width={48} height={48} />
+										</>
+									)
+								}
 							</Button>
 						</Grid>
 					</Grid>
+					{TurnstileComponent && (
+						<TurnstileComponent
+							ref={captchaRef}
+							siteKey='0x4AAAAAAB8A-8cleGROSkc1'
+						/>
+					)}
 				</form>
 			</Grid>
 			<Portal>
@@ -268,15 +256,15 @@ function ContactForm(props) {
 					autoHideDuration={3000}
 					onClose={handleClose}
 					anchorOrigin={{
-						horizontal: "center",
-						vertical: "top"
+						horizontal: 'center',
+						vertical: 'top',
 					}}
 				>
 					<Alert
 						onClose={handleClose}
 						severity={status}
 						variant="filled"
-						sx={{ width: "100%" }}
+						sx={{ width: '100%' }}
 					>
 						{message}
 					</Alert>
@@ -284,6 +272,6 @@ function ContactForm(props) {
 			</Portal>
 		</Grid>
 	);
-}
+};
 
 export default ContactForm;

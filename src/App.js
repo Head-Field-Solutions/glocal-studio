@@ -10,7 +10,6 @@ import Header from './components/common/Header';
 import Footer from './components/common/Footer';
 
 import { routes } from "./utils/routesPath";
-import { initRecaptchaChallengeHandler } from "./utils/recaptchaChallengeHandler";
 
 import * as styles from "./App.module.scss";
 
@@ -95,13 +94,6 @@ function App({ initialData = {} }) {
 	useEffect(() => {
     scrollToTop();
   }, [pathname]);
-
-	useEffect(() => {
-		const cleanupChallenge = initRecaptchaChallengeHandler();
-		return () => {
-			if (cleanupChallenge) cleanupChallenge();
-		};
-	}, []);
 
   return (  
 		<>
